@@ -127,13 +127,13 @@ export default function Navbar() {
               </button>
             </div>
 
-            <Link to="/bookstores" className="py-3 text-[#241a15] hover:text-[#8c2d19]">
-              Bookstores
-            </Link>
+           <Link to="/bookstores" className="py-3 text-[#241a15] hover:text-[#8c2d19]">
+  Bookstores
+</Link>
 
             <Link to="/sell-books" className="py-3 text-[#241a15] hover:text-[#8c2d19]">
-              Sell Books
-            </Link>
+  Sell Books
+</Link>
 
           </nav>
 
@@ -309,21 +309,27 @@ export default function Navbar() {
   </div>
 </Link>
         
-              <Link to="/" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
+              
+<Link to="/archival-gift-certificates" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
+
                 <Gift className="w-4 h-4 text-[#8c2d19] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold text-[#241a15] block">Archival Gift Certificates</span>
                   <span className="text-[11px] text-[#6b584a]">Elegant present certificates for discerning book lovers.</span>
                 </div>
               </Link>
-              <Link to="/" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
+             
+<Link to="/curated-markdowns" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
+
                 <Tag className="w-4 h-4 text-[#8c2d19] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold text-[#241a15] block">Curated Markdowns</span>
                   <span className="text-[11px] text-[#6b584a]">Exceptional discounts on rare and pre-owned volumes.</span>
                 </div>
               </Link>
-              <Link to="/" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
+              
+<Link to="/complimentary-shipping" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
+
                 <Truck className="w-4 h-4 text-[#8c2d19] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold text-[#241a15] block">Complimentary Shipping</span>
