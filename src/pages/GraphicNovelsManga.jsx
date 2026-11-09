@@ -1,154 +1,233 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { BookOpen, ArrowLeft } from 'lucide-react';
+
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  BookOpen,
+  ArrowLeft,
+  ArrowUpRight,
+} from "lucide-react";
 
 export default function GraphicNovelsManga() {
 
-  // ========================================================
-  // 5 BOOKS DATA (Change Title, Author, and Images here easily)
-  // ========================================================
+  // ===================================================
+  // GRAPHIC NOVELS & MANGA
+  // Images: public/comics/
+  // Screenshot-matching titles and creators
+  // No prices
+  // Amazon ISBN/search links
+  // ===================================================
+
   const books = [
     {
       id: 1,
-      title: "Watchmen (Deluxe Edition)",
-      author: "Alan Moore & Dave Gibbons",
-      format: "First Edition Hardcover",
-      price: "$65.00",
-      // 👇 CHANGE YOUR BOOK 1 IMAGE HERE:
-      image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400"
+      title: "Dungeon Crawler Carl: The Graphic Novel",
+      author: "Matt Dinniman & Laurel Pursuit Studios",
+      format: "Fantasy Graphic Novel",
+      image: "/comics/comic1.webp",
+      amazonUrl:
+        "https://www.amazon.com/Dungeon-Crawler-Carl-Graphic-Novel/dp/1638494819/ref=sr_1_1?dib=eyJ2IjoiMSJ9.SL6WKRpkjBvQ0YECnkBJ0vOwebbkbSzxV8bbfH02bGfKgOSPYCTLLNq9_CSbt4w00dHbasPaDSXqq8ZsMkobaG5Dpz5ZPoCoqH7JRjp5eGK2GgXY2ksrshKGCJDstOPhaTI1SReuviSJnUADkDtltLbK6NS7ZWdsc2Dw4WeKNW5_AVZQhP5SL7HaCFG6qR0r6p0Mm3PLS4cSeufFQpuUxRc63JLC9jywSif5aFeEULg.QF--rDTf_keYeHdGVhhg-u7Pc-TnhKduxGbRVXX_TO4&dib_tag=se&keywords=Dungeon+Crawler+Carl+Graphic+Novel+Matt+Dinniman&qid=1794009678&sr=8-1",
     },
     {
       id: 2,
-      title: "Akira: The Original Folio",
-      author: "Katsuhiro Otomo",
-      format: "Hardcover Graphic Folio",
-      price: "$95.00",
-      // 👇 CHANGE YOUR BOOK 2 IMAGE HERE:
-      image: "https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=400"
+      title: "The Hobbit: A Graphic Novel",
+      author: "J. R. R. Tolkien, Charles Dixon & David Wenzel",
+      format: "Fantasy Graphic Adaptation",
+      image: "/comics/comic2.webp",
+      amazonUrl:
+        "https://www.amazon.com/Hobbit-Graphic-J-R-Tolkien-ebook/dp/B0CKT929N4",
     },
     {
       id: 3,
-      title: "Maus: A Survivor's Tale",
-      author: "Art Spiegelman",
-      format: "Author Signed Edition",
-      price: "$45.00",
-      // 👇 CHANGE YOUR BOOK 3 IMAGE HERE:
-      image: "https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&w=400"
+      title: "Dungeon Crawler Carl, Vol. 1 (Graphic Novel)",
+      author: "Matt Dinniman, Aethon & Laurel Pursuit Studios",
+      format: "LitRPG Graphic Novel",
+      image: "/comics/comic3.webp",
+      amazonUrl:
+        "https://www.amazon.com/dp/1638493650",
     },
     {
       id: 4,
-      title: "The Sandman: Overture",
-      author: "Neil Gaiman",
-      format: "Deluxe Slipcased Edition",
-      price: "$55.00",
-      // 👇 CHANGE YOUR BOOK 4 IMAGE HERE:
-      image: "https://images.pexels.com/photos/1005324/pexels-photo-1005324.jpeg?auto=compress&cs=tinysrgb&w=400"
+      title: "Dog Man: A Sprinkle in Time",
+      author: "Dav Pilkey",
+      format: "Children's Graphic Novel",
+      image: "/comics/comic4.jpg",
+      amazonUrl:
+        "https://www.amazon.com/dp/1546199357",
     },
     {
       id: 5,
-      title: "Berserk: Deluxe Masterwork",
-      author: "Kentaro Miura",
-      format: "Embossed Leatherbound",
-      price: "$50.00",
-      // 👇 CHANGE YOUR BOOK 5 IMAGE HERE:
-      image: "https://images.pexels.com/photos/415071/pexels-photo-415071.jpeg?auto=compress&cs=tinysrgb&w=400"
-    }
+      title: "One Piece (Omnibus Edition), Vol. 1: East Blue 1-2-3",
+      author: "Eiichiro Oda",
+      format: "Japanese Adventure Manga",
+      image: "/comics/comic5.jpg",
+      amazonUrl:
+        "https://www.amazon.com/dp/1421536250",
+    },
   ];
 
   return (
-    <div className="w-full bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
+    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
       <div className="max-w-7xl mx-auto">
-        
-        {/* Breadcrumb Navigation */}
-        <div className="flex items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
-          <Link to="/" className="hover:text-[#8c2d19] hover:underline flex items-center gap-1">
-            <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
+
+        {/* ================================
+            BREADCRUMB NAVIGATION
+        ================================= */}
+
+        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+
+          <Link
+            to="/"
+            className="hover:text-[#8c2d19] hover:underline flex items-center gap-1"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            Back to Home
           </Link>
+
           <span>/</span>
           <span>Categories</span>
           <span>/</span>
-          <span className="text-[#8c2d19] font-bold">Graphic Novels & Manga</span>
+
+          <span className="text-[#8c2d19] font-bold">
+            Graphic Novels & Manga
+          </span>
+
         </div>
 
-        {/* Page Header */}
+        {/* ================================
+            PAGE HEADER
+        ================================= */}
+
         <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+
           <div>
+
             <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
               <BookOpen className="w-4 h-4" />
-              <span>Illustrated Narrative Arts & Sequential Folios</span>
+
+              <span>
+                Illustrated Adventures & Visual Storytelling
+              </span>
             </div>
+
             <h1 className="text-3xl sm:text-4xl font-bold font-serif">
               Graphic Novels & Manga
             </h1>
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic">
-              Explore iconic illustrated literature, original serialized manga masterworks, and scarce collector graphic folios from visionary writers and visual artists.
+
+            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
+              Explore extraordinary graphic novels,
+              illustrated fantasy adventures, bestselling
+              manga, and imaginative stories brought
+              to life through captivating artwork.
             </p>
+
           </div>
 
-          <div className="text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+
             <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
               Curated Index
             </span>
-            <span className="text-2xl font-bold font-sans text-white">5 Volumes</span>
+
+            <span className="text-2xl font-bold font-sans text-white">
+              {books.length} Volumes
+            </span>
+
           </div>
         </div>
 
-        {/* ================= 5 BOOKS COLLECTION GRID ================= */}
+        {/* ================================
+            BOOK COLLECTION GRID
+        ================================= */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
           {books.map((book) => (
+
             <div
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col justify-between hover:border-[#8c2d19]"
+              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col hover:border-[#8c2d19]"
             >
-              <div>
-                {/* Book Cover Image Placeholder */}
-                <div className="w-full h-56 bg-[#efe8db] p-1 border border-[#c7b8a3] shadow-inner overflow-hidden mb-4 flex items-center justify-center">
-                  <img
-                    src={book.image}
-                    alt={book.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.src = "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400";
-                    }}
-                  />
-                </div>
 
-                {/* Format Badge */}
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-0.5 uppercase tracking-wide inline-block mb-2">
+              {/* BOOK COVER */}
+
+              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] shadow-inner overflow-hidden mb-4 flex items-center justify-center">
+
+                <img
+                  src={book.image}
+                  alt={`${book.title} by ${book.author}`}
+                  loading="lazy"
+                  className="w-full h-full object-contain"
+                />
+
+              </div>
+
+              {/* BOOK DETAILS */}
+
+              <div className="flex flex-col flex-1">
+
+                {/* CATEGORY BADGE */}
+
+                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
                   {book.format}
                 </span>
 
-                {/* Book Title Heading */}
-                <h3 className="text-sm font-bold text-[#241a15] leading-snug line-clamp-2">
+                {/* BOOK TITLE */}
+
+                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-3 min-h-[70px]">
                   {book.title}
                 </h3>
 
-                {/* Author Name */}
-                <p className="text-xs text-[#7a6452] italic mt-1">
+                {/* AUTHOR / CREATOR */}
+
+                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
                   by {book.author}
                 </p>
-              </div>
 
-              {/* Price & Action Button */}
-              <div className="mt-5 pt-3 border-t border-[#e2d7c5] flex items-center justify-between">
-                <div>
-                  <span className="text-[9px] text-[#8f8174] uppercase font-sans block">Price</span>
-                  <span className="text-sm font-bold text-[#241a15] font-sans">{book.price}</span>
+                {/* AMAZON VIEW BOOK BUTTON */}
+
+                <div className="mt-auto pt-5">
+
+                  <div className="border-t border-[#e2d7c5] pt-4">
+
+                    <a
+                      href={book.amazonUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                    >
+                      <BookOpen size={15} />
+
+                      View Book
+
+                      <ArrowUpRight size={15} />
+                    </a>
+
+                  </div>
+
                 </div>
-                <button className="bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-[10px] font-sans font-bold py-1.5 px-3 uppercase tracking-wider">
-                  Acquire
-                </button>
+
               </div>
 
             </div>
+
           ))}
+
         </div>
 
-        {/* Bottom Filigree Divider */}
+        {/* ================================
+            BOTTOM DIVIDER
+        ================================= */}
+
         <div className="flex items-center justify-center gap-4 mt-16">
-          <span className="h-[1px] w-full bg-[#d6c7b2]"></span>
-          <span className="text-[#8c7355] text-xs">♦ ♦ ♦</span>
-          <span className="h-[1px] w-full bg-[#d6c7b2]"></span>
+
+          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+
+          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+            ♦ ♦ ♦
+          </span>
+
+          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+
         </div>
 
       </div>

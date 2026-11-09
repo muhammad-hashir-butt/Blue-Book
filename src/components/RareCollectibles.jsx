@@ -1,457 +1,697 @@
-import React from 'react';
-import { Award, BookOpen, ShieldCheck, HeartHandshake, Feather, Sparkles, CheckCircle2 } from 'lucide-react';
+
+import React from "react";
+import { Link } from "react-router-dom";
+
+// =====================================================
+// BLUE BOOK - RARE COLLECTIBLES HOMEPAGE
+// Images: Existing public folders
+// No prices, hover effects, animations, or icons
+// =====================================================
+
+// SECTION 1 - GRAPHIC NOVELS & MANGA
+
+const comicBooks = [
+  {
+    id: 1,
+    entry: "COLLECTION 01",
+    title: "Dungeon Crawler Carl: The Graphic Novel",
+    author: "Matt Dinniman & Laurel Pursuit Studios",
+    format: "Fantasy Graphic Novel",
+    image: "/comics/comic1.webp",
+    description:
+      "An action-packed illustrated adaptation filled with dangerous dungeons, imaginative creatures, and extraordinary adventures.",
+    amazonUrl:
+        "https://www.amazon.com/Dungeon-Crawler-Carl-Graphic-Novel/dp/1638494819/ref=sr_1_1?dib=eyJ2IjoiMSJ9.SL6WKRpkjBvQ0YECnkBJ0vOwebbkbSzxV8bbfH02bGfKgOSPYCTLLNq9_CSbt4w00dHbasPaDSXqq8ZsMkobaG5Dpz5ZPoCoqH7JRjp5eGK2GgXY2ksrshKGCJDstOPhaTI1SReuviSJnUADkDtltLbK6NS7ZWdsc2Dw4WeKNW5_AVZQhP5SL7HaCFG6qR0r6p0Mm3PLS4cSeufFQpuUxRc63JLC9jywSif5aFeEULg.QF--rDTf_keYeHdGVhhg-u7Pc-TnhKduxGbRVXX_TO4&dib_tag=se&keywords=Dungeon+Crawler+Carl+Graphic+Novel+Matt+Dinniman&qid=1794009678&sr=8-1",
+  },
+  {
+    id: 2,
+    entry: "COLLECTION 02",
+    title: "The Hobbit: A Graphic Novel",
+    author: "J. R. R. Tolkien, Charles Dixon & David Wenzel",
+    format: "Illustrated Fantasy Classic",
+    image: "/comics/comic2.webp",
+    description:
+      "The beloved fantasy adventure brought to life through detailed illustrations and a carefully adapted graphic narrative.",
+    amazonUrl:
+        "https://www.amazon.com/Hobbit-Graphic-J-R-Tolkien-ebook/dp/B0CKT929N4",
+  },
+  {
+    id: 3,
+    entry: "COLLECTION 03",
+    title: "Dungeon Crawler Carl, Vol. 1",
+    author: "Matt Dinniman & Laurel Pursuit Studios",
+    format: "LitRPG Graphic Adventure",
+    image: "/comics/comic3.webp",
+    description:
+      "A visually striking graphic presentation of the Dungeon Crawler Carl universe, combining fantasy, action, and dark humor.",
+    amazonUrl:
+      "https://www.amazon.com/dp/1638493650",
+  },
+  {
+    id: 4,
+    entry: "COLLECTION 04",
+    title: "Dog Man: A Sprinkle in Time",
+    author: "Dav Pilkey",
+    format: "Children's Graphic Novel",
+    image: "/comics/comic4.jpg",
+    description:
+      "A lively illustrated adventure featuring the humor, imagination, and playful storytelling of the Dog Man series.",
+    amazonUrl:
+      "https://www.amazon.com/dp/1546199357",
+  },
+  {
+    id: 5,
+    entry: "COLLECTION 05",
+    title: "One Piece: East Blue 1-2-3",
+    author: "Eiichiro Oda",
+    format: "Japanese Adventure Manga",
+    image: "/comics/comic5.jpg",
+    description:
+      "Discover the beginning of Monkey D. Luffy's legendary pirate adventure in this collected manga edition.",
+    amazonUrl:
+      "https://www.amazon.com/dp/1421536250",
+  },
+];
+
+// SECTION 2 - BIOGRAPHY & MEMOIR COLLECTION
+
+const literaryBooks = [
+  {
+    id: 1,
+    entry: "NO. 01",
+    title: "Communion: Finding My Way Back to Faith",
+    author: "J. D. Vance",
+    format: "Faith & Personal Reflection",
+    image: "/biography/biography1.webp",
+    amazonUrl:
+      "https://www.amazon.com/Communion-Finding-Way-Back-Faith/dp/B0GV215K27/ref=sr_1_1?dib=eyJ2IjoiMSJ9.EuDhw6NFu29hmMy04iqcsy_-X7Wu218xSfxdzvmuRWHTe8v-e9v2RdZ_maRErQy5qTbsiPv12F9mB_KDKyaqPE241rAoxFack_QfpnCmfEKOIpw6U1GjxdhLs-rBCQxmLkHIh5XlBgsg0nLZ8dlFioDVPsUimkBnqfhvRwI-RTfSyksI44ArEeJQvCTRVxmg.D1tkrt3EwUzTkwFeTuerCeDlY3LwhhBOhot7t1jYQGQ&dib_tag=se&keywords=Communion+Finding+My+Way+Back+to+Faith+JD+Vance&nsdOptOutParam=true&qid=1794240253&sr=8-1",
+  },
+  {
+    id: 2,
+    entry: "NO. 02",
+    title: "Hillbilly Elegy",
+    author: "J. D. Vance",
+    format: "Family & Cultural Memoir",
+    image: "/biography/biography2.webp",
+    amazonUrl: "https://www.amazon.com/dp/0062300555",
+  },
+  {
+    id: 3,
+    entry: "NO. 03",
+    title: "Uniting the States",
+    author: "Brian Kilmeade",
+    format: "American Historical Nonfiction",
+    image: "/biography/biography3.webp",
+    amazonUrl:
+      "https://www.amazon.com/Uniting-States-American-Revolutionary-Democracy/dp/006349003X/ref=sr_1_1?dib=eyJ2IjoiMSJ9.VUL6rVMNndPZgC9A0Cx3NdWzSiMB9ZULkxXlK_xfE9R_haD0XdwA_cIVuFp_1_XVlNOEbMBwIP5YztsGi1nPGluS4f4RpbA87o9mwgckERcty68nsWWErtwQrd6v8AD6CD2q5-3RHhf1Rjs9ExySb4SLOGaqZLbNkg38LlAAGP6nqwudJhRNzGcG5daYOCOgFgWlRrysVzurR6CdITr9fLfKak71p8WfOqGXE3dCQg0.zYmx2XQIB1zR_ysUCFriqZRGfg8bim-rLN8PHwylP98&dib_tag=se&keywords=Uniting+the+States+Brian+Kilmeade&qid=1794240316&sr=8-1",
+  },
+  {
+    id: 4,
+    entry: "NO. 04",
+    title: "The Case for America",
+    author: "Bret Baier with Catherine Whitney",
+    format: "American History & Commentary",
+    image: "/biography/biography4.webp",
+    amazonUrl:
+      "https://www.amazon.com/Case-America-Argument-Thoughtful-Character/dp/0063360802/ref=sr_1_1?dib=eyJ2IjoiMSJ9.OZuMa0rP_6JI6HPybtfG6tmVg8T7-s-1Fa0Z8Atb9-ForZZudTOXia-UcyALE69fxg5Wt9aIlP4cee70eR09pho1umwRMTUjR-6jXA8HZ29LqEl3ZrXNZpzF0aqHbkxoVuGKCOUl4Fvt_K3IgsxRVtlNEmu9bjLd-4_Z9flm8S2INQ-7OHHfokA5u8S_DQqii_MzJ-2kULpsjFPlPtkJYTf7bEmuxcqdX-YXwKzgQqo.bBWmcBBH5uGGZJWQ_OhHDeTnlvIikmX8X6i3czpkMWg&dib_tag=se&keywords=The+Case+for+America+Bret+Baier&qid=1794240347&sr=8-1",
+  },
+  {
+    id: 5,
+    entry: "NO. 05",
+    title: "The Steps: A Memoir",
+    author: "Sylvester Stallone",
+    format: "Celebrity Memoir",
+    image: "/biography/biography5.jpg",
+    amazonUrl:
+      "https://www.amazon.com/Steps-Sylvester-Stallone/dp/0063443910/ref=sr_1_1?dib=eyJ2IjoiMSJ9.5U2pK08m48C1ciLTYs5j-z8IRvwLeQPSEJfBJZcaVqlnTmvu7h2zOnV8hJ3Aa7bzQDTJfWoNk4aIDcSJhUpwL11WTYl0cVOGxb1Pu2jkeABBZPtz5eItXJPi6O0xIsHpmgFc2xPLp_7C_zy7SnSixrJyHa8NQcR7i1ttRPKhUHObE_VRDzoTcANrXMnGrIvrhJSfpOh4B9Waq3MxULjnCmd19E9qbdb1eQl3pSRCOog.VLgdJmZMFiQSi9BMaJnDhMc6FFuAnLqluh7rrMzkxz0&dib_tag=se&keywords=The+Steps+A+Memoir+Sylvester+Stallone&qid=1794240373&sr=8-1",
+  },
+];
+
+// REUSABLE AMAZON BUTTON
+// No icons, hover styles, or animations
+
+function ViewBookButton({ url, fullWidth = false }) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`
+        inline-flex items-center justify-center
+        bg-[#241a15] text-[#fbf8f2]
+        text-[11px] font-sans font-bold
+        uppercase tracking-wider
+        px-5 py-3 text-center
+        rounded-none
+        ${fullWidth ? "w-full" : ""}
+      `}
+    >
+      View Book
+    </a>
+  );
+}
+
+// REUSABLE BOOK COVER
+
+function BookCover({ image, title, author, className = "" }) {
+  return (
+    <div
+      className={`
+        bg-[#efe8db]
+        border border-[#c7b8a3]
+        p-2 overflow-hidden
+        flex items-center justify-center
+        ${className}
+      `}
+    >
+      <img
+        src={image}
+        alt={`${title} by ${author}`}
+        loading="lazy"
+        className="w-full h-full object-contain"
+      />
+    </div>
+  );
+}
+
+// MAIN COMPONENT
 
 export default function RareCollectibles() {
-
-  // 1. DATA: Rare Comic Books Archive
-  const comicBooks = [
-    {
-      vaultId: "VAULT #01",
-      title: "Four Color #437 - Edgar Rice Burroughs' John Carter",
-      author: "Burroughs, Edgar Rice; Newman, Paul S.",
-      badges: ["First Edition"],
-      seller: "Parigi Books, Vintage & Rare",
-      topSeller: true,
-      price: "$1,500.00",
-      shipping: "+ $6.50 insured transit",
-      image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400"
-    },
-    {
-      vaultId: "VAULT #02",
-      title: "The Adventures of Dick Tracy Detective",
-      author: "Chester Gould",
-      badges: ["First Edition", "Hardcover"],
-      seller: "CraigsClassics",
-      topSeller: false,
-      price: "$425.00",
-      shipping: "+ $5.38 insured transit",
-      image: "https://images.pexels.com/photos/1005324/pexels-photo-1005324.jpeg?auto=compress&cs=tinysrgb&w=400"
-    },
-    {
-      vaultId: "VAULT #03",
-      title: "A Mad Look at Old Movies",
-      author: "DeBartolo, Dick",
-      badges: ["First Edition", "Paperback"],
-      seller: "BookRanger Archival",
-      topSeller: false,
-      price: "$300.00",
-      shipping: "+ $3.00 insured transit",
-      image: "https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=400"
-    },
-    {
-      vaultId: "VAULT #04",
-      title: "Marge's Little Lulu #146 (Dell Four Color)",
-      author: "Stanley, John",
-      badges: ["Pre-Owned", "Paperback"],
-      seller: "Tree Frog Fine Books",
-      topSeller: true,
-      price: "$325.00",
-      shipping: "+ $5.25 insured transit",
-      image: "https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&w=400"
-    },
-    {
-      vaultId: "VAULT #05",
-      title: "The Manara Library & Graphic Folios",
-      author: "Milo Manara & Hugo Pratt",
-      badges: ["Rare Folio", "Paperback"],
-      seller: "Barbed Wire Books",
-      topSeller: false,
-      price: "$100.00",
-      shipping: "+ $6.00 insured transit",
-      image: "https://images.pexels.com/photos/415071/pexels-photo-415071.jpeg?auto=compress&cs=tinysrgb&w=400"
-    }
-  ];
-
-  // 2. DATA: Rare Signed Books Archive
-  const signedBooks = [
-    {
-      id: 1,
-      title: "Interview with the Vampire (Signed Easton Press)",
-      author: "Rice, Anne",
-      badges: ["Author Signed", "First Printing"],
-      seller: "Bookcharmed Vault",
-      topSeller: false,
-      price: "$625.00",
-      shipping: "+ $5.60 insured transit",
-      image: "https://images.pexels.com/photos/2228561/pexels-photo-2228561.jpeg?auto=compress&cs=tinysrgb&w=400"
-    },
-    {
-      id: 2,
-      title: "ROBERTO BURLE MARX Uma Poetica Da Modernidade",
-      author: "Lelia Coelho Frota",
-      badges: ["Rare Copy", "Hardcover"],
-      seller: "Lauren Otis Rare Books",
-      topSeller: true,
-      price: "$500.00",
-      shipping: "+ $5.75 insured transit",
-      image: "https://images.pexels.com/photos/1130980/pexels-photo-1130980.jpeg?auto=compress&cs=tinysrgb&w=400"
-    },
-    {
-      id: 3,
-      title: "Artists: Portraits from Four Decades",
-      author: "Newman, Arnold",
-      badges: ["Author Inscribed", "Hardcover"],
-      seller: "Orpheus Booksellers",
-      topSeller: true,
-      price: "$195.00",
-      shipping: "+ $6.00 insured transit",
-      image: "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?auto=compress&cs=tinysrgb&w=400"
-    },
-    {
-      id: 4,
-      title: "Stalking the Nightmare (First Signed Edition)",
-      author: "Ellison, Harlan",
-      badges: ["Author Signed", "First Edition"],
-      seller: "Village Lights Antiquarian",
-      topSeller: false,
-      price: "$100.00",
-      shipping: "+ $7.50 insured transit",
-      image: "https://images.pexels.com/photos/1301585/pexels-photo-1301585.jpeg?auto=compress&cs=tinysrgb&w=400"
-    },
-    {
-      id: 5,
-      title: "Tower of Dawn (Signed 1st Printing)",
-      author: "Maas, Sarah J.",
-      badges: ["Author Signed", "Hardcover"],
-      seller: "Bookcharmed Vault",
-      topSeller: false,
-      price: "$390.00",
-      shipping: "+ $5.60 insured transit",
-      image: "https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=400"
-    }
-  ];
-
   return (
-    <section className="max-w-7xl mx-auto px-6 py-12 flex flex-col gap-16 font-serif">
-      
-      {/* ================= 1. UNIQUE LAYOUT: THE PANORAMIC COMIC GALLERY ================= */}
-      <div>
-        
-        {/* Gallery Top Banner */}
-        <div className="bg-[#241a15] text-[#fbf8f2] p-6 border-2 border-[#c29b38] shadow-md flex flex-wrap items-center justify-between gap-4 mb-6">
-          <div>
-            <div className="flex items-center gap-2 text-[#c29b38] text-[10px] tracking-[0.25em] uppercase font-sans font-bold">
-              <BookOpen className="w-4 h-4" />
-              <span>Illustrated Ephemera & Graphic Antiquities</span>
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-bold mt-1">
-              Rare & Collectible Vintage Comic Art
-            </h3>
-          </div>
-          <a href="#" className="border border-[#c29b38] text-[#c29b38] hover:bg-[#c29b38] hover:text-[#241a15] px-4 py-2 text-xs font-sans font-bold uppercase tracking-widest transition-none">
-            Browse All Comics Vault
-          </a>
-        </div>
+    <section className="w-full bg-[#fbf8f2] text-[#241a15] font-serif">
 
-        {/* 5-Column Pedestal Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-          {comicBooks.map((book, idx) => (
-            <div 
-              key={idx}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col justify-between hover:border-[#8c2d19] relative"
-            >
-              <div>
-                {/* Vault Badge */}
-                <div className="flex items-center justify-between border-b border-[#e2d7c5] pb-2 mb-3 font-sans">
-                  <span className="text-[9px] font-bold tracking-widest text-[#8c2d19]">
-                    {book.vaultId}
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 py-12 md:py-16 flex flex-col gap-16">
+
+        {/* ==========================================
+            SECTION 1 - GRAPHIC NOVELS
+        ========================================== */}
+
+        <section>
+
+          {/* HEADING */}
+
+          <div className="bg-[#241a15] text-[#fbf8f2] p-6 sm:p-8 border-2 border-[#c29b38] mb-7">
+
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+
+              <div className="max-w-3xl">
+
+                <p className="text-[#c29b38] text-[10px] font-sans font-bold uppercase tracking-[0.22em] mb-3">
+                  Illustrated Literature Collection
+                </p>
+
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+                  Graphic Novels & Illustrated Adventures
+                </h2>
+
+                <p className="text-sm text-[#d1c1ac] leading-7 mt-4">
+                  Explore an engaging selection of graphic
+                  storytelling, fantasy adaptations, Japanese
+                  manga, and illustrated adventures. From
+                  extraordinary fictional worlds to memorable
+                  characters, discover books that bring stories
+                  to life through visual imagination.
+                </p>
+
+              </div>
+
+              <Link
+                to="/graphic-novels-manga"
+                className="shrink-0 border border-[#c29b38] text-[#f3d9a3] px-5 py-3 text-xs font-sans font-bold uppercase tracking-wide text-center"
+              >
+                Explore All Graphic Novels
+              </Link>
+
+            </div>
+
+          </div>
+
+          {/* FIVE COMIC CARDS */}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+
+            {comicBooks.map((book) => (
+
+              <article
+                key={book.id}
+                className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] flex flex-col"
+              >
+
+                {/* COLLECTION NUMBER */}
+
+                <div className="border-b border-[#e2d7c5] pb-3 mb-4">
+
+                  <span className="text-[10px] font-sans font-bold text-[#8c2d19] tracking-widest">
+                    {book.entry}
                   </span>
-                  {book.topSeller && (
-                    <Award className="w-3.5 h-3.5 text-[#c29b38]" />
-                  )}
+
                 </div>
 
-                {/* Comic Cover Display */}
-                <div className="w-full h-48 bg-[#efe8db] p-1 border border-[#c7b8a3] shadow-inner overflow-hidden mb-3">
-                  <img
-                    src={book.image}
-                    alt={book.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.src = "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400";
-                    }}
-                  />
-                </div>
+                {/* IMAGE */}
 
-                {/* Info */}
-                <div className="flex flex-wrap gap-1 mb-1.5">
-                  {book.badges.map((b, i) => (
-                    <span key={i} className="text-[8px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] px-1 py-0.2 uppercase">
-                      {b}
-                    </span>
-                  ))}
-                </div>
-
-                <h4 className="text-xs font-bold text-[#241a15] line-clamp-2 leading-snug">
-                  {book.title}
-                </h4>
-                <p className="text-[11px] text-[#7a6452] italic mt-0.5">
-                  by {book.author}
-                </p>
-                <p className="text-[10px] text-[#8f8174] font-sans mt-1 line-clamp-1">
-                  Dealer: {book.seller}
-                </p>
-              </div>
-
-              {/* Price & Cart */}
-              <div className="mt-4 pt-3 border-t border-[#e2d7c5]">
-                <div className="flex items-baseline justify-between font-sans">
-                  <span className="text-sm font-bold text-[#241a15]">{book.price}</span>
-                  <span className="text-[9px] text-[#8f8174]">{book.shipping}</span>
-                </div>
-                <button className="bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-[10px] font-sans font-bold py-1.5 px-3 uppercase tracking-wider mt-2.5 w-full">
-                  Acquire Comic
-                </button>
-              </div>
-
-            </div>
-          ))}
-        </div>
-
-      </div>
-
-      {/* ================= 2. UNIQUE LAYOUT: THE OPEN ANTIQUE BOOK SPREAD (GUIDES) ================= */}
-      <div className="bg-[#f4eee2] p-8 sm:p-10 border-4 border-double border-[#b8a68f] shadow-xl relative">
-        
-        {/* Book Spine Center Crease Line (Visual Book Effect) */}
-        <div className="hidden lg:block absolute left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-transparent via-[#b8a68f] to-transparent -translate-x-1/2 pointer-events-none"></div>
-
-        {/* Double Page Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-          
-          {/* LEFT PAGE: Signed Books Field Manual */}
-          <div className="lg:pr-6 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between border-b border-[#d6c7b2] pb-2 mb-4">
-                <span className="text-[9px] tracking-[0.25em] uppercase font-sans font-bold text-[#8c2d19]">
-                  Folio Page • Left Spread
-                </span>
-                <Feather className="w-4 h-4 text-[#8c2d19]" />
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-5 items-start">
-                <div className="w-28 h-36 shrink-0 bg-[#efe8db] border-2 border-[#b8a68f] p-1 shadow-md overflow-hidden">
-                  <img
-                    src="https://images.pexels.com/photos/1130980/pexels-photo-1130980.jpeg?auto=compress&cs=tinysrgb&w=300"
-                    alt="Signed Manual"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#241a15] leading-tight">
-                    The Art of Collecting Signed Books
-                  </h4>
-                  <p className="text-xs text-[#5c4a3e] mt-2 leading-relaxed">
-                    Editions inscribed by the author's own quill carry personal literary intimacy. Discover provenance verification techniques and how to discern author signatures from inscriptions.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-5 pt-3 border-t border-[#d6c7b2] flex items-center justify-between font-sans">
-              <a href="#" className="text-xs font-bold text-[#8c2d19] hover:underline uppercase tracking-wider">
-                Read Signature Manual ›
-              </a>
-              <span className="text-[10px] text-[#8f8174]">Capitulum I</span>
-            </div>
-          </div>
-
-          {/* RIGHT PAGE: First Edition Identification */}
-          <div className="lg:pl-6 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between border-b border-[#d6c7b2] pb-2 mb-4">
-                <span className="text-[9px] tracking-[0.25em] uppercase font-sans font-bold text-[#8c2d19]">
-                  Folio Page • Right Spread
-                </span>
-                <ShieldCheck className="w-4 h-4 text-[#8c2d19]" />
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-5 items-start">
-                <div className="w-28 h-36 shrink-0 bg-[#efe8db] border-2 border-[#b8a68f] p-1 shadow-md overflow-hidden">
-                  <img
-                    src="https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?auto=compress&cs=tinysrgb&w=300"
-                    alt="First Edition Identification"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#241a15] leading-tight">
-                    Identifying True First Edition Printings
-                  </h4>
-                  <p className="text-xs text-[#5c4a3e] mt-2 leading-relaxed">
-                    What constitutes a genuine first impression? Learn to decipher publisher number lines, dust jacket issue points, binding variants, and typographical errata.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-5 pt-3 border-t border-[#d6c7b2] flex items-center justify-between font-sans">
-              <a href="#" className="text-xs font-bold text-[#8c2d19] hover:underline uppercase tracking-wider">
-                Read First Edition Guide ›
-              </a>
-              <span className="text-[10px] text-[#8f8174]">Capitulum II</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* ================= 3. UNIQUE LAYOUT: THE SIGNED BOOKS SALON (2 WIDE + 3 TRIO) ================= */}
-      <div>
-        
-        {/* Salon Header */}
-        <div className="flex items-center justify-between border-b-2 border-[#b8a68f] pb-3 mb-6">
-          <div className="flex items-center gap-2">
-            <Feather className="w-5 h-5 text-[#8c2d19]" />
-            <h3 className="text-2xl font-bold text-[#241a15]">
-              The Autographed Vault: Verified Signed Copies
-            </h3>
-          </div>
-          <span className="text-xs font-sans text-[#7a6452] hidden sm:inline italic">
-            Certified Authentic Author Signatures
-          </span>
-        </div>
-
-        {/* Top 2 Featured Wide Books */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {signedBooks.slice(0, 2).map((book) => (
-            <div 
-              key={book.id}
-              className="bg-[#fdfbf7] p-5 border-2 border-[#c29b38] shadow-sm flex flex-col sm:flex-row gap-5 items-center hover:border-[#8c2d19]"
-            >
-              <div className="w-32 h-44 shrink-0 bg-[#efe8db] p-1 border border-[#c7b8a3] shadow-md overflow-hidden">
-                <img
-                  src={book.image}
-                  alt={book.title}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400";
-                  }}
+                <BookCover
+                  image={book.image}
+                  title={book.title}
+                  author={book.author}
+                  className="w-full h-60 mb-5"
                 />
-              </div>
-              <div className="flex-1 flex flex-col justify-between h-full text-left">
-                <div>
-                  <div className="flex flex-wrap gap-1 mb-2">
-                    {book.badges.map((b, i) => (
-                      <span key={i} className="text-[8px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-0.5 uppercase">
-                        {b}
-                      </span>
-                    ))}
-                  </div>
-                  <h4 className="text-sm font-bold text-[#241a15] leading-snug">
+
+                {/* DETAILS */}
+
+                <div className="flex-1">
+
+                  <span className="inline-block text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] px-2 py-1 uppercase leading-4">
+                    {book.format}
+                  </span>
+
+                  <h3 className="text-base font-bold text-[#241a15] mt-4 leading-snug">
                     {book.title}
-                  </h4>
-                  <p className="text-xs text-[#7a6452] italic mt-1">
+                  </h3>
+
+                  <p className="text-xs text-[#7a6452] italic mt-2 leading-5">
                     by {book.author}
                   </p>
-                  <p className="text-[10px] text-[#8f8174] font-sans mt-2">
-                    Provenance: {book.seller}
+
+                  <p className="text-xs text-[#5c4a3e] mt-4 leading-6">
+                    {book.description}
                   </p>
-                </div>
-                <div className="mt-4 pt-3 border-t border-[#e2d7c5] flex items-center justify-between">
-                  <div>
-                    <span className="text-sm font-bold text-[#241a15] font-sans">{book.price}</span>
-                    <span className="text-[9px] text-[#8f8174] block font-sans">{book.shipping}</span>
-                  </div>
-                  <button className="bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-xs font-sans font-bold py-2 px-4 uppercase tracking-wider">
-                    Inquire / Buy
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Bottom 3 Books Trio */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {signedBooks.slice(2, 5).map((book) => (
-            <div 
-              key={book.id}
-              className="bg-[#fdfbf7] p-4 border border-[#b8a68f] shadow-sm flex flex-col justify-between hover:border-[#8c2d19]"
-            >
-              <div>
-                <div className="w-full h-40 bg-[#efe8db] p-1 border border-[#c7b8a3] shadow-inner overflow-hidden mb-3">
-                  <img
-                    src={book.image}
-                    alt={book.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.src = "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400";
-                    }}
+                </div>
+
+                {/* VIEW BOOK */}
+
+                <div className="mt-6 pt-4 border-t border-[#e2d7c5]">
+
+                  <ViewBookButton
+                    url={book.amazonUrl}
+                    fullWidth
                   />
+
                 </div>
-                <div className="flex flex-wrap gap-1 mb-1.5">
-                  {book.badges.map((b, i) => (
-                    <span key={i} className="text-[8px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] px-1.5 py-0.2 uppercase">
-                      {b}
+
+              </article>
+
+            ))}
+
+          </div>
+
+        </section>
+
+        {/* ==========================================
+            SECTION 2 - COLLECTING GUIDES
+        ========================================== */}
+
+        <section className="bg-[#f4eee2] border-2 border-[#b8a68f] p-6 sm:p-9">
+
+          <div className="border-b-2 border-[#d6c7b2] pb-5 mb-8">
+
+            <p className="text-[#8c2d19] font-sans font-bold text-[10px] uppercase tracking-[0.22em] mb-3">
+              The Collector's Library
+            </p>
+
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#241a15]">
+              Understanding Books & Collectible Editions
+            </h2>
+
+            <p className="text-sm text-[#6e5d50] leading-7 mt-4 max-w-3xl">
+              Building a meaningful personal library begins
+              with understanding the books themselves.
+              Learn what makes different editions
+              distinctive, how to assess book condition,
+              and why bibliographic details matter
+              to collectors and readers.
+            </p>
+
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+
+            {/* GUIDE 1 */}
+
+            <article className="flex flex-col">
+
+              <div className="flex items-start gap-5 flex-1">
+
+                <BookCover
+                  image="/fiction/fiction4.webp"
+                  title="The Complete Novels of Jane Austen"
+                  author="Jane Austen"
+                  className="w-28 h-40 shrink-0"
+                />
+
+                <div>
+
+                  <p className="text-[10px] font-sans font-bold uppercase tracking-wide text-[#8c2d19] mb-3">
+                    Collector's Guide 01
+                  </p>
+
+                  <h3 className="text-xl font-bold leading-tight">
+                    Understanding Special & Illustrated Editions
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-[#5c4a3e] mt-3 leading-7">
+                    Illustrated and collected editions can
+                    bring a distinctive character to a
+                    personal library. Explore the importance
+                    of publishers, binding styles, illustration,
+                    typography, and edition details when
+                    comparing different versions of a book.
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div className="mt-6 border-t border-[#d6c7b2] pt-4">
+
+                <Link
+                  to="/literary-classic-fiction"
+                  className="inline-block text-[#8c2d19] font-sans text-xs font-bold uppercase tracking-wide underline underline-offset-4"
+                >
+                  Explore Literary Editions
+                </Link>
+
+              </div>
+
+            </article>
+
+            {/* GUIDE 2 */}
+
+            <article className="flex flex-col">
+
+              <div className="flex items-start gap-5 flex-1">
+
+                <BookCover
+                  image="/poetry/poetry5.jpg"
+                  title="The Oxford Book of English Verse"
+                  author="Christopher Ricks"
+                  className="w-28 h-40 shrink-0"
+                />
+
+                <div>
+
+                  <p className="text-[10px] font-sans font-bold uppercase tracking-wide text-[#8c2d19] mb-3">
+                    Collector's Guide 02
+                  </p>
+
+                  <h3 className="text-xl font-bold leading-tight">
+                    Appreciating Literary Anthologies
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-[#5c4a3e] mt-3 leading-7">
+                    A literary anthology gathers works
+                    from different writers into a carefully
+                    selected collection. Discover how
+                    editorial choices, historical context,
+                    and literary themes shape the character
+                    of poetry and classic literature
+                    collections.
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div className="mt-6 border-t border-[#d6c7b2] pt-4">
+
+                <Link
+                  to="/poetry-fine-verse"
+                  className="inline-block text-[#8c2d19] font-sans text-xs font-bold uppercase tracking-wide underline underline-offset-4"
+                >
+                  Explore Poetry Collections
+                </Link>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        {/* ==========================================
+            SECTION 3 - BIOGRAPHY & MEMOIR
+        ========================================== */}
+
+        <section>
+
+          {/* HEADING */}
+
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 border-b-2 border-[#b8a68f] pb-5 mb-8">
+
+            <div className="max-w-3xl">
+
+              <p className="text-[#8c2d19] font-sans font-bold text-[10px] uppercase tracking-[0.22em] mb-3">
+                Lives, Legacies & Personal Journeys
+              </p>
+
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#241a15] leading-tight">
+                Biographies, Memoirs & Remarkable Lives
+              </h2>
+
+              <p className="text-sm text-[#6e5d50] leading-7 mt-4">
+                Step into the lives and experiences of
+                notable public figures, authors, and
+                individuals whose personal journeys offer
+                insight into history, culture, ambition,
+                identity, and the human experience.
+              </p>
+
+            </div>
+
+            <Link
+              to="/biography-memoir"
+              className="text-xs font-sans font-bold text-[#8c2d19] underline underline-offset-4 shrink-0"
+            >
+              Explore Biography & Memoir
+            </Link>
+
+          </div>
+
+          {/* FIRST TWO LARGE CARDS */}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+            {literaryBooks.slice(0, 2).map((book) => (
+
+              <article
+                key={book.id}
+                className="bg-[#fdfbf7] border-2 border-[#b8a68f] p-5 flex flex-col sm:flex-row gap-6"
+              >
+
+                {/* IMAGE */}
+
+                <BookCover
+                  image={book.image}
+                  title={book.title}
+                  author={book.author}
+                  className="w-36 h-52 shrink-0 mx-auto sm:mx-0"
+                />
+
+                {/* INFORMATION */}
+
+                <div className="flex-1 flex flex-col">
+
+                  <div className="flex-1">
+
+                    <span className="text-[10px] text-[#8c2d19] font-sans font-bold uppercase tracking-widest">
+                      {book.entry}
                     </span>
-                  ))}
+
+                    <div className="mt-4">
+
+                      <span className="inline-block text-[9px] font-sans font-bold uppercase text-[#8c2d19] border border-[#c29b38] px-2 py-1">
+                        {book.format}
+                      </span>
+
+                    </div>
+
+                    <h3 className="text-xl font-bold text-[#241a15] mt-4 leading-tight">
+                      {book.title}
+                    </h3>
+
+                    <p className="text-sm text-[#7a6452] italic mt-2">
+                      by {book.author}
+                    </p>
+
+                  </div>
+
+                  {/* VIEW BOOK */}
+
+                  <div className="mt-6 pt-4 border-t border-[#e2d7c5]">
+
+                    <ViewBookButton url={book.amazonUrl} />
+
+                  </div>
+
                 </div>
-                <h4 className="text-xs font-bold text-[#241a15] line-clamp-1">
-                  {book.title}
-                </h4>
-                <p className="text-[11px] text-[#7a6452] italic">
-                  by {book.author}
+
+              </article>
+
+            ))}
+
+          </div>
+
+          {/* THREE SMALLER CARDS */}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {literaryBooks.slice(2, 5).map((book) => (
+
+              <article
+                key={book.id}
+                className="bg-[#fdfbf7] border-2 border-[#b8a68f] p-5 flex flex-col"
+              >
+
+                <div className="flex items-center justify-between border-b border-[#e2d7c5] pb-3 mb-5">
+
+                  <span className="text-[10px] font-sans font-bold text-[#8c2d19] tracking-widest">
+                    {book.entry}
+                  </span>
+
+                  <span className="text-[10px] font-sans uppercase text-[#8f8174]">
+                    Featured Reading
+                  </span>
+
+                </div>
+
+                {/* IMAGE */}
+
+                <BookCover
+                  image={book.image}
+                  title={book.title}
+                  author={book.author}
+                  className="w-full h-52 mb-5"
+                />
+
+                <div className="flex-1">
+
+                  <span className="inline-block text-[9px] font-sans font-bold uppercase text-[#8c2d19] border border-[#c29b38] px-2 py-1">
+                    {book.format}
+                  </span>
+
+                  <h3 className="text-lg font-bold text-[#241a15] mt-4 leading-snug">
+                    {book.title}
+                  </h3>
+
+                  <p className="text-sm text-[#7a6452] italic mt-2">
+                    by {book.author}
+                  </p>
+
+                </div>
+
+                {/* VIEW BOOK */}
+
+                <div className="mt-6 pt-4 border-t border-[#e2d7c5]">
+
+                  <ViewBookButton
+                    url={book.amazonUrl}
+                    fullWidth
+                  />
+
+                </div>
+
+              </article>
+
+            ))}
+
+          </div>
+
+        </section>
+
+        {/* ==========================================
+            SECTION 4 - LITERARY HERITAGE
+        ========================================== */}
+
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* LITERARY COLLECTIONS */}
+
+          <article className="bg-[#fdfbf7] border-2 border-[#b8a68f] p-6">
+
+            <div className="flex flex-col sm:flex-row gap-5">
+
+              <BookCover
+                image="/fiction/fiction2.webp"
+                title="A Tree Grows in Brooklyn"
+                author="Betty Smith"
+                className="w-28 h-36 shrink-0"
+              />
+
+              <div>
+
+                <p className="text-[10px] font-sans uppercase tracking-widest font-bold text-[#8c2d19] mb-2">
+                  Literary Heritage
                 </p>
+
+                <h3 className="text-lg font-bold text-[#241a15]">
+                  Discover Timeless Literature
+                </h3>
+
+                <p className="text-xs text-[#5c4a3e] mt-3 leading-6">
+                  Explore enduring novels, unforgettable
+                  stories, and influential works that
+                  continue to inspire readers through
+                  their characters, language, and themes.
+                </p>
+
+                <Link
+                  to="/literary-classic-fiction"
+                  className="inline-block mt-4 text-xs font-sans font-bold text-[#8c2d19] underline underline-offset-4"
+                >
+                  Browse Literary Classics
+                </Link>
+
               </div>
 
-              <div className="mt-4 pt-3 border-t border-[#e2d7c5] flex items-center justify-between font-sans">
-                <span className="text-xs font-bold text-[#241a15]">{book.price}</span>
-                <button className="bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-[10px] font-bold py-1 px-3 uppercase tracking-wider">
-                  Order
-                </button>
+            </div>
+
+          </article>
+
+          {/* POETRY COLLECTIONS */}
+
+          <article className="bg-[#fdfbf7] border-2 border-[#b8a68f] p-6">
+
+            <div className="flex flex-col sm:flex-row gap-5">
+
+              <BookCover
+                image="/poetry/poetry1.webp"
+                title="The Universe in Verse"
+                author="Maria Popova"
+                className="w-28 h-36 shrink-0"
+              />
+
+              <div>
+
+                <p className="text-[10px] font-sans uppercase tracking-widest font-bold text-[#8c2d19] mb-2">
+                  Poetry & Literary Expression
+                </p>
+
+                <h3 className="text-lg font-bold text-[#241a15]">
+                  The Beauty of Poetry & Fine Verse
+                </h3>
+
+                <p className="text-xs text-[#5c4a3e] mt-3 leading-6">
+                  Discover poetic works and thoughtfully
+                  assembled anthologies exploring human
+                  emotion, nature, imagination, faith,
+                  and the enduring power of language.
+                </p>
+
+                <Link
+                  to="/poetry-fine-verse"
+                  className="inline-block mt-4 text-xs font-sans font-bold text-[#8c2d19] underline underline-offset-4"
+                >
+                  Browse Poetry Collections
+                </Link>
+
               </div>
+
             </div>
-          ))}
-        </div>
 
-      </div>
+          </article>
 
-      {/* ================= 4. HERITAGE & ETHICS CHARTER (BOTTOM PANELS) ================= */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-        
-        <div className="bg-[#fdfbf7] p-6 border-2 border-[#b8a68f] flex gap-5 items-center">
-          <div className="w-24 h-24 shrink-0 bg-[#efe8db] border border-[#c7b8a3] overflow-hidden">
-            <img
-              src="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=300"
-              alt="Archival Booksellers"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div>
-            <h4 className="font-bold text-sm text-[#241a15]">Uncommonly Good Literature</h4>
-            <p className="text-xs text-[#5c4a3e] mt-1 leading-relaxed">
-              BLUE BOOK connects collectors with over 100 million antiquarian, used, and rare volumes through independent booksellers worldwide.
-            </p>
-            <a href="#" className="inline-block text-[10px] font-sans font-bold text-[#8c2d19] hover:underline mt-2 uppercase tracking-wider">
-              Explore Our Guild Mission ›
-            </a>
-          </div>
-        </div>
-
-        <div className="bg-[#fdfbf7] p-6 border-2 border-[#b8a68f] flex gap-5 items-center">
-          <div className="w-24 h-24 shrink-0 bg-[#efe8db] border border-[#c7b8a3] overflow-hidden">
-            <img
-              src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=300"
-              alt="Social Responsibility"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div>
-            <div className="flex items-center gap-1.5 text-[#8c2d19] mb-0.5">
-              <HeartHandshake className="w-3.5 h-3.5" />
-              <span className="text-[10px] uppercase font-sans font-bold">Philanthropic Commitment</span>
-            </div>
-            <h4 className="font-bold text-sm text-[#241a15]">Building Global Community Libraries</h4>
-            <p className="text-xs text-[#5c4a3e] mt-1 leading-relaxed">
-              Since 2004, BLUE BOOK net proceeds have funded the establishment of 16 rural community libraries across South America.
-            </p>
-            <a href="#" className="inline-block text-[10px] font-sans font-bold text-[#8c2d19] hover:underline mt-2 uppercase tracking-wider">
-              Read Our Social Charter ›
-            </a>
-          </div>
-        </div>
+        </section>
 
       </div>
 

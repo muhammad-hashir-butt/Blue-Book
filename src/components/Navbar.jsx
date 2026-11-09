@@ -25,7 +25,7 @@ export default function Navbar() {
             </Link>
             <span className="text-gray-500">|</span>
             <div className="flex items-center gap-1 font-semibold text-[#e8dfcf]">
-              <span>🇵🇰</span>
+              
               <span>USD ($)</span>
             </div>
           </div>
@@ -114,18 +114,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* DROPDOWN 3: Curations */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('promotions')}
-            >
-              <button 
-                onClick={() => toggleDropdown('promotions')}
-                className={`py-3 flex items-center gap-1 hover:text-[#8c2d19] ${activeDropdown === 'promotions' ? 'text-[#8c2d19] border-b-2 border-[#8c2d19]' : 'text-[#241a15]'}`}
-              >
-                Curations <ChevronDown className="w-3 h-3" />
-              </button>
-            </div>
+           
 
            <Link to="/bookstores" className="py-3 text-[#241a15] hover:text-[#8c2d19]">
   Bookstores
@@ -293,53 +282,9 @@ export default function Navbar() {
           </div>
         )}
 
-        {/* 3. CURATIONS DROPDOWN */}
-        {activeDropdown === 'promotions' && (
-          <div 
-            onMouseLeave={() => setActiveDropdown(null)}
-            className="absolute left-1/2 -translate-x-1/2 top-full w-80 bg-[#fdfbf7] border-2 border-[#b8a68f] shadow-2xl z-50 text-xs py-3 px-3 normal-case"
-          >
-            <div className="flex flex-col gap-1.5">
+       
               
-                <Link to="/institutional-sales" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
-  <Landmark className="w-4 h-4 text-[#8c2d19] shrink-0 mt-0.5" />
-  <div>
-    <span className="font-bold text-[#241a15] block">Institutional Sales</span>
-    <span className="text-[11px] text-[#6b584a]">Special acquisition services for public and academic libraries.</span>
-  </div>
-</Link>
-        
-              
-<Link to="/archival-gift-certificates" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
-
-                <Gift className="w-4 h-4 text-[#8c2d19] shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold text-[#241a15] block">Archival Gift Certificates</span>
-                  <span className="text-[11px] text-[#6b584a]">Elegant present certificates for discerning book lovers.</span>
-                </div>
-              </Link>
-             
-<Link to="/curated-markdowns" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
-
-                <Tag className="w-4 h-4 text-[#8c2d19] shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold text-[#241a15] block">Curated Markdowns</span>
-                  <span className="text-[11px] text-[#6b584a]">Exceptional discounts on rare and pre-owned volumes.</span>
-                </div>
-              </Link>
-              
-<Link to="/complimentary-shipping" className="flex items-start gap-3 p-2.5 rounded-sm hover:bg-[#efe8db]">
-
-                <Truck className="w-4 h-4 text-[#8c2d19] shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold text-[#241a15] block">Complimentary Shipping</span>
-                  <span className="text-[11px] text-[#6b584a]">Free insured shipping on orders over qualifying amounts.</span>
-                </div>
-              </Link>
-            </div>
-          </div>
-        )}
-
+         
       </div>
     </header>
   );

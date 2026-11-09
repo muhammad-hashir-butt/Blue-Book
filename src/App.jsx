@@ -13,10 +13,6 @@ import Hero from './components/Hero';
 import BookCategories from './components/BookCategories';
 import RareCollectibles from './components/RareCollectibles';
 import ShopConfidence from './components/ShopConfidence';
-import InstitutionalSales from './curations/InstitutionalSales';
-import ArchivalGiftCertificates from './curations/ArchivalGiftCertificates';
-import CuratedMarkdowns from './curations/CuratedMarkdowns';
-import ComplimentaryShipping from './curations/ComplimentaryShipping';
 import Bookstores from './bookstores/Bookstores';
 import SellBooks from './sellbooks/SellBooks';
 
@@ -148,11 +144,7 @@ export default function App() {
             
 
 
-            <Route path="/institutional-sales" element={<InstitutionalSales />} />
-            <Route path="/archival-gift-certificates" element={<ArchivalGiftCertificates />} />
-            <Route path="/curated-markdowns" element={<CuratedMarkdowns />} />
-            <Route path="/complimentary-shipping" element={<ComplimentaryShipping />} />
-
+            
 
             
             <Route path="/bookstores" element={<Bookstores />} />
