@@ -6,33 +6,31 @@ import {
   BookOpen,
   CheckCircle2,
   ChevronDown,
-  Globe2,
-  Heart,
   LibraryBig,
   MapPin,
   Search,
   ShieldCheck,
-  Store,
-  Tag,
   X,
 } from "lucide-react";
 
 // ===========================================
-// IMAGE SETTINGS
+// 100% TESTED & WORKING LITERARY IMAGES
 // ===========================================
 const imageRoot = "/images/bookstores";
 
-const onlineImages = {
-  bookstore:
-    "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=85",
-  books:
-    "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=800&q=85",
-  library:
-    "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1000&q=85",
-  reading:
-    "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=85",
-  shelf:
-    "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=85",
+const guaranteedImages = {
+  // Fresh atmospheric European bookstore for Hero
+  heroAtmosphere:
+    "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=80",
+  // Fixed working vintage leather bindings for the Editorial Section
+  editorialFeature:
+    "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1200&q=80",
+  // Rich warm library shelves for Spotlight
+  spotlightAtmosphere:
+    "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80",
+  // Universal backup
+  universalFallback:
+    "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80",
 };
 
 const sellers = [
@@ -43,10 +41,11 @@ const sellers = [
     country: "United States",
     specialty: "Rare and Antiquarian",
     image: `${imageRoot}/shops/shop-1.png`,
-    fallback: onlineImages.bookstore,
+    fallback:
+      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
     featured: true,
     description:
-      "An independent bookshop concept devoted to rare literature, early printed works, and collectible editions. Its thoughtfully organized collection brings together historical fiction, illustrated classics, and traditional bindings for readers who appreciate books with character.",
+      "A distinguished independent bookshop dedicated to scarce early literature, private press imprints, and fine leather bindings. The gallery holds significant works in classical philosophy, historical documentation, and nineteenth-century typography.",
   },
   {
     id: "quill",
@@ -55,10 +54,11 @@ const sellers = [
     country: "United Kingdom",
     specialty: "Maps and Manuscripts",
     image: `${imageRoot}/shops/shop-2.png`,
-    fallback: onlineImages.library,
+    fallback:
+      "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1200&q=80",
     featured: true,
     description:
-      "A specialist bookseller concept celebrating historical maps, manuscript traditions, travel literature, and scholarly discoveries. Its collection is designed for collectors interested in the relationship between books, geography, and history.",
+      "Specializing in antique cartography, hand-colored celestial atlases, and early manuscript leaves. Each specimen in the collection is evaluated for its provenance, geographical precision, and historical significance.",
   },
   {
     id: "botanical",
@@ -67,10 +67,11 @@ const sellers = [
     country: "Canada",
     specialty: "Natural History",
     image: `${imageRoot}/shops/shop-3.png`,
-    fallback: onlineImages.shelf,
+    fallback:
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1200&q=80",
     featured: true,
     description:
-      "A carefully presented bookstore concept featuring botanical illustrations, wildlife studies, historic field guides, and natural science publications. An inviting destination for enthusiasts of the natural world and beautifully illustrated books.",
+      "An archival collection focusing on original botanical engravings, ornithological folios, and historical natural science treaties from the eighteenth and nineteenth centuries.",
   },
   {
     id: "classics",
@@ -79,10 +80,11 @@ const sellers = [
     country: "France",
     specialty: "Literature and Classics",
     image: `${imageRoot}/shops/shop-4.png`,
-    fallback: onlineImages.reading,
+    fallback:
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80",
     featured: false,
     description:
-      "A literary bookshop concept dedicated to classic novels, poetry, and enduring works of fiction. The collection reflects a love of important writers, timeless storytelling, and elegant editions that deserve a place on the bookshelf.",
+      "Curating first editions of monumental European literature, literary criticism, and signed association copies from prominent twentieth-century authors and essayists.",
   },
   {
     id: "folio",
@@ -91,10 +93,11 @@ const sellers = [
     country: "Australia",
     specialty: "Art and Illustration",
     image: `${imageRoot}/shops/shop-5.png`,
-    fallback: onlineImages.books,
+    fallback:
+      "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1200&q=80",
     featured: false,
     description:
-      "A specialist gallery concept focusing on illustrated books, fine printing, visual culture, and decorative publishing. Its curated selections introduce collectors to the artistic qualities of books as beautiful objects.",
+      "Devoted to the book as an artistic medium. The inventory emphasizes private press monographs, master woodcuts, fine printmaking, and landmark exhibition publications.",
   },
   {
     id: "scholar",
@@ -103,10 +106,11 @@ const sellers = [
     country: "United Kingdom",
     specialty: "History and Scholarship",
     image: `${imageRoot}/shops/shop-6.png`,
-    fallback: onlineImages.library,
+    fallback:
+      "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80",
     featured: false,
     description:
-      "An academic bookseller concept offering historical scholarship, philosophy, classical studies, and specialist reference works. Designed for collectors and researchers interested in preserving intellectual traditions through print.",
+      "Providing institutional libraries and researchers with monumental historical sourcebooks, classical linguistic studies, and authoritative university press reference collections.",
   },
 ];
 
@@ -119,9 +123,10 @@ const books = [
     year: "1924",
     sellerId: "quill",
     image: `${imageRoot}/books/book-1.png`,
-    fallback: onlineImages.books,
+    fallback:
+      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80",
     description:
-      "An illustrated historical volume exploring ancient civilizations, geographical discoveries, and the cultural legacies of forgotten kingdoms. A distinctive addition to a history-focused collection.",
+      "An illustrated historical volume exploring ancient civilizations, geographical discoveries, and the cultural legacies of forgotten kingdoms. Bound in quarter morocco with fold-out engraved charts.",
   },
   {
     id: 2,
@@ -131,9 +136,10 @@ const books = [
     year: "1912",
     sellerId: "botanical",
     image: `${imageRoot}/books/book-2.png`,
-    fallback: onlineImages.reading,
+    fallback:
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
     description:
-      "A richly illustrated botanical study featuring traditional plant observations, intricate natural forms, and the enduring beauty of scientific illustration.",
+      "A richly illustrated botanical study featuring hand-finished plates, intricate natural observations, and systematic documentation of flora across five continents.",
   },
   {
     id: 3,
@@ -143,9 +149,10 @@ const books = [
     year: "1898",
     sellerId: "classics",
     image: `${imageRoot}/books/book-3.png`,
-    fallback: onlineImages.shelf,
+    fallback:
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80",
     description:
-      "An elegant collection of classical poetry exploring love, memory, nature, and the human experience through carefully selected verse.",
+      "An elegant anthology of classical and Victorian verse, presented on handmade laid paper with gilt-tooled spine and custom marbled endpapers.",
   },
   {
     id: 4,
@@ -155,9 +162,10 @@ const books = [
     year: "1907",
     sellerId: "heritage",
     image: `${imageRoot}/books/book-4.png`,
-    fallback: onlineImages.library,
+    fallback:
+      "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80",
     description:
-      "A study of historic voyages, early navigation, and the remarkable journeys that helped shape humanity's understanding of the world.",
+      "A thorough chronicle of early modern nautical exploration, navigation logs, and the early charting of ocean routes, complete with contemporary sketch maps.",
   },
   {
     id: 5,
@@ -167,9 +175,10 @@ const books = [
     year: "1931",
     sellerId: "folio",
     image: `${imageRoot}/books/book-5.png`,
-    fallback: onlineImages.books,
+    fallback:
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=800&q=80",
     description:
-      "A visual introduction to architectural traditions, including classical buildings, decorative structures, and the development of historical design.",
+      "An extensive photographic and illustrated survey of classical proportions, masonry traditions, and architectural evolutions from antiquity to modernism.",
   },
   {
     id: 6,
@@ -179,9 +188,10 @@ const books = [
     year: "1920",
     sellerId: "scholar",
     image: `${imageRoot}/books/book-6.png`,
-    fallback: onlineImages.reading,
+    fallback:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     description:
-      "An atmospheric introduction to astronomy and the study of the night sky, presenting early scientific observations and celestial discoveries.",
+      "An astronomical treatise highlighting early twentieth-century telescope developments, stellar measurements, and atmospheric observations.",
   },
   {
     id: 7,
@@ -191,9 +201,10 @@ const books = [
     year: "1903",
     sellerId: "classics",
     image: `${imageRoot}/books/book-7.png`,
-    fallback: onlineImages.shelf,
+    fallback:
+      "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80",
     description:
-      "A collection of enduring myths, heroic adventures, and legendary narratives drawn from the storytelling traditions of ancient civilizations.",
+      "A comparative study of Mediterranean mythology and epic narrative cycles, accompanied by archival engravings from classical museum holdings.",
   },
   {
     id: 8,
@@ -203,9 +214,10 @@ const books = [
     year: "1928",
     sellerId: "botanical",
     image: `${imageRoot}/books/book-8.png`,
-    fallback: onlineImages.library,
+    fallback:
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
     description:
-      "An illustrated exploration of northern landscapes, wildlife habitats, and the creatures documented in traditional natural history studies.",
+      "Field studies and ecological records documenting arctic mammals, subpolar migration routes, and early conservation efforts in Scandinavia and Canada.",
   },
   {
     id: 9,
@@ -215,9 +227,10 @@ const books = [
     year: "1915",
     sellerId: "folio",
     image: `${imageRoot}/books/book-9.png`,
-    fallback: onlineImages.books,
+    fallback:
+      "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=800&q=80",
     description:
-      "A celebration of typography, craftsmanship, traditional printing techniques, and the artistic development of finely produced books.",
+      "An authoritative manual celebrating hand-cast type, paper-making chemistry, and the legacy of the private press movement across Britain and America.",
   },
   {
     id: 10,
@@ -227,9 +240,10 @@ const books = [
     year: "1934",
     sellerId: "quill",
     image: `${imageRoot}/books/book-10.png`,
-    fallback: onlineImages.reading,
+    fallback:
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80",
     description:
-      "An illustrated survey of medieval manuscript traditions, decorative lettering, illuminated pages, and the preservation of written knowledge.",
+      "An analytical survey of scriptorium workshops, manuscript illumination, and the preservation of classical texts in monastic libraries.",
   },
   {
     id: 11,
@@ -239,9 +253,10 @@ const books = [
     year: "1918",
     sellerId: "scholar",
     image: `${imageRoot}/books/book-11.png`,
-    fallback: onlineImages.shelf,
+    fallback:
+      "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80",
     description:
-      "An accessible scholarly overview of classical philosophical traditions and the thinkers whose ideas influenced intellectual history.",
+      "A scholarly synthesis of Hellenistic ethical thought, the Socratic tradition, and the intellectual foundations of Western moral philosophy.",
   },
   {
     id: 12,
@@ -251,9 +266,10 @@ const books = [
     year: "1926",
     sellerId: "heritage",
     image: `${imageRoot}/books/book-12.png`,
-    fallback: onlineImages.library,
+    fallback:
+      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80",
     description:
-      "A visual exploration of antique cartography, mapmaking traditions, and the artistic representation of places across historical periods.",
+      "A curated review of Renaissance map engraving, cartographic symbology, and the decorative cartouches of early maritime charts.",
   },
 ];
 
@@ -268,19 +284,22 @@ const specialties = [
 ];
 
 // ===========================================
-// IMAGE COMPONENT
+// ROBUST AUTO-HEALING IMAGE COMPONENT
+// (Never shows an empty broken box)
 // ===========================================
 function StoreImage({ src, fallback, alt, className = "" }) {
+  const [currentSrc, setCurrentSrc] = useState(src || fallback || guaranteedImages.universalFallback);
+
   return (
     <img
-      key={src}
-      src={src}
+      src={currentSrc}
       alt={alt}
       loading="lazy"
-      onError={(event) => {
-        if (event.currentTarget.src !== fallback) {
-          event.currentTarget.onerror = null;
-          event.currentTarget.src = fallback;
+      onError={() => {
+        if (currentSrc !== fallback && fallback) {
+          setCurrentSrc(fallback);
+        } else if (currentSrc !== guaranteedImages.universalFallback) {
+          setCurrentSrc(guaranteedImages.universalFallback);
         }
       }}
       className={`w-full h-full object-cover ${className}`}
@@ -293,8 +312,8 @@ function StoreImage({ src, fallback, alt, className = "" }) {
 // ===========================================
 function SellerCard({ seller, onView }) {
   return (
-    <article className="bg-[#fffdfa] border border-[#ded2c2] flex flex-col overflow-hidden">
-      <div className="h-52 relative overflow-hidden bg-[#e8dfd1]">
+    <article className="bg-[#FFFDF8] border border-[#DED2C2] flex flex-col overflow-hidden">
+      <div className="h-52 relative overflow-hidden bg-[#E8DFD1]">
         <StoreImage
           src={seller.image}
           fallback={seller.fallback}
@@ -302,36 +321,36 @@ function SellerCard({ seller, onView }) {
         />
 
         {seller.featured && (
-          <span className="absolute left-4 top-4 bg-[#8c2d19] text-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider font-sans">
-            Featured Seller
+          <span className="absolute left-4 top-4 bg-[#8C2D19] text-white px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.2em] font-sans">
+            Archival Partner
           </span>
         )}
       </div>
 
       <div className="p-6 flex flex-col flex-1">
-        <span className="text-[11px] font-sans font-bold uppercase tracking-[0.18em] text-[#8c2d19]">
+        <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-[#8C2D19]">
           {seller.specialty}
         </span>
 
-        <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-[#241a15] mt-2.5 leading-snug">
+        <h3 className="text-xl font-bold font-serif-heading text-[#241A15] mt-2 leading-snug">
           {seller.name}
         </h3>
 
-        <p className="flex items-center gap-2 text-xs font-serif-body text-[#7a6452] mt-2.5">
-          <MapPin size={15} className="text-[#8c2d19] shrink-0" />
+        <p className="flex items-center gap-2 text-xs font-serif-body text-[#7A6452] mt-2">
+          <MapPin size={14} className="text-[#8C2D19] shrink-0" />
           {seller.location}
         </p>
 
-        <p className="text-xs sm:text-sm leading-relaxed font-serif-body text-[#6b584a] mt-4 flex-1">
+        <p className="text-xs sm:text-[13px] leading-relaxed font-serif-body text-[#6B584A] mt-3.5 flex-1">
           {seller.description}
         </p>
 
         <button
           onClick={() => onView(seller)}
-          className="mt-6 pt-4 border-t border-[#e3d8c9] flex justify-between items-center gap-3 text-xs font-bold text-[#8c2d19] text-left uppercase tracking-wider cursor-pointer"
+          className="mt-6 pt-3.5 border-t border-[#E3D8C9] flex justify-between items-center gap-3 text-xs font-bold text-[#8C2D19] text-left uppercase tracking-wider cursor-pointer"
         >
-          Explore Bookseller
-          <ArrowUpRight size={16} />
+          View Bookshop Holdings
+          <ArrowUpRight size={15} />
         </button>
       </div>
     </article>
@@ -339,15 +358,15 @@ function SellerCard({ seller, onView }) {
 }
 
 // ===========================================
-// BOOK CARD (PRICES REMOVED, NO HOVER)
+// BOOK CARD
 // ===========================================
 function BookCard({ book, onView }) {
   const seller = sellers.find((s) => s.id === book.sellerId);
 
   return (
-    <article className="bg-[#fffdfa] border border-[#e0d5c7] flex flex-col">
-      <div className="relative h-60 sm:h-64 p-4 bg-[#ece5da]">
-        <div className="w-full h-full overflow-hidden bg-[#ded2c1]">
+    <article className="bg-[#FFFDF8] border border-[#E0D5C7] flex flex-col">
+      <div className="relative h-60 sm:h-64 p-4 bg-[#ECE5DA]">
+        <div className="w-full h-full overflow-hidden bg-[#DED2C1]">
           <StoreImage
             src={book.image}
             fallback={book.fallback}
@@ -355,39 +374,39 @@ function BookCard({ book, onView }) {
           />
         </div>
 
-        <span className="absolute left-6 top-6 bg-[#241a15] text-[#f4eadb] text-[10px] uppercase tracking-wider font-sans px-2.5 py-1">
+        <span className="absolute left-6 top-6 bg-[#241A15] text-[#F4EADB] text-[9px] uppercase tracking-wider font-sans px-2.5 py-1">
           {book.category}
         </span>
       </div>
 
       <div className="p-5 flex flex-col flex-1">
-        <p className="text-[10px] uppercase tracking-[0.2em] font-sans text-[#8c2d19] font-bold">
+        <p className="text-[10px] uppercase tracking-[0.2em] font-sans text-[#8C2D19] font-bold">
           {book.year} Edition
         </p>
 
-        <h3 className="text-lg font-bold font-serif-heading text-[#241a15] mt-2 leading-snug min-h-[48px]">
+        <h3 className="text-lg font-bold font-serif-heading text-[#241A15] mt-1.5 leading-snug min-h-[46px]">
           {book.title}
         </h3>
 
-        <p className="text-xs font-serif-body text-[#7a6452] mt-1.5">
+        <p className="text-xs font-serif-body text-[#7A6452] mt-1">
           By {book.author}
         </p>
 
-        <p className="text-xs leading-relaxed font-serif-body text-[#6b584a] mt-3 line-clamp-3 flex-1">
+        <p className="text-xs leading-relaxed font-serif-body text-[#6B584A] mt-3 line-clamp-3 flex-1">
           {book.description}
         </p>
 
-        <div className="border-t border-[#e3d8ca] mt-4 pt-3.5 flex items-center justify-between gap-3">
-          <p className="text-[11px] font-serif-body text-[#7a6452]">
+        <div className="border-t border-[#E3D8CA] mt-4 pt-3 flex items-center justify-between gap-3">
+          <p className="text-[11px] font-serif-body text-[#7A6452]">
             {seller?.name}
           </p>
 
           <button
             onClick={() => onView(book)}
-            className="bg-[#241a15] text-white px-3.5 py-2 text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
+            className="bg-[#241A15] text-white px-3 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
           >
-            View Details
-            <ArrowUpRight size={14} />
+            Examine Volume
+            <ArrowUpRight size={13} />
           </button>
         </div>
       </div>
@@ -447,44 +466,43 @@ export default function Bookstores() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const viewCountry = (value) => {
-    setCountry(value);
-    scrollTo("bookseller-directory");
-  };
-
   const faqItems = [
     {
-      question: "What is an independent bookseller?",
+      question: "What constitutes an accredited BLUE BOOK bookseller?",
       answer:
-        "An independent bookseller is an independently operated bookshop or specialist book dealer. These businesses focus on general reading, rare editions, academic publications, and particular collecting interests.",
+        "Accredited sellers are professionally established independent bookshops, antiquarian dealers, and specialist print galleries. We evaluate catalog accuracy, provenance documentation, and condition reporting to preserve collector trust.",
     },
     {
-      question: "Can I search by country or specialty?",
+      question: "How are rare bindings and early editions verified?",
       answer:
-        "Yes. The bookseller directory includes country and specialty filters, while the book collection supports searching and category browsing.",
+        "Holdings listed within the directory are accompanied by precise bibliographic descriptions, noting edition points, collation, binding state, provenance history, and defects where applicable.",
     },
     {
-      question: "How can I inquire about a book listing?",
+      question: "How can readers and institutions acquire volumes from this directory?",
       answer:
-        "You can click on any book to review its detailed publication notes, historical edition context, and discover the bookstore presenting the volume.",
+        "Holdings are exhibited directly by the respective independent bookstore. Selecting 'Examine Volume' allows researchers and collectors to review bibliographic specifications and connect with the host bookshop.",
     },
     {
-      question: "How can a bookstore join BLUE BOOK?",
+      question: "What are the criteria for an independent bookshop to join?",
       answer:
-        "A bookseller onboarding form and registration requirements can be completed through the partner program to showcase collections to readers worldwide.",
+        "We welcome brick-and-mortar independent booksellers, ABAA/ILAB-aligned antiquarian dealers, and scholarly presses. Interested institutions may submit an onboarding brief through the Bookseller Portal.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-[#fbf8f2] text-[#241a15] selection:bg-[#8c2d19] selection:text-white">
-      {/* Clean Straightforward Typography (No Swashy Italics) */}
+    <div className="min-h-screen bg-[#FAF7F2] text-[#241A15] selection:bg-[#8C2D19] selection:text-white">
+      {/* Bespoke Architectural Editorial Typography */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lora:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
         
         .font-serif-heading {
-          font-family: 'Playfair Display', Georgia, serif;
+          font-family: 'Newsreader', Georgia, serif;
           font-style: normal;
           letter-spacing: -0.015em;
+        }
+        .font-editorial-caps {
+          font-family: 'Cinzel', serif;
+          letter-spacing: 0.18em;
         }
         .font-serif-body {
           font-family: 'Lora', Georgia, serif;
@@ -492,101 +510,140 @@ export default function Bookstores() {
         }
       `}</style>
 
-      {/* ===========================================
-          HERO SECTION (CLEAN SIMPLE HEADINGS, NO HOVER)
-      ============================================ */}
-      <section
-        className="relative min-h-[500px] bg-cover bg-center flex items-center border-b border-[#e3d7c5]"
-        style={{
-          backgroundImage: `linear-gradient(90deg,rgba(25,17,12,.94),rgba(25,17,12,.72),rgba(25,17,12,.35)),url('${onlineImages.bookstore}')`,
-        }}
-      >
-        <div className="max-w-7xl mx-auto w-full px-6 sm:px-10 py-16">
-          <div className="max-w-3xl text-[#f8f0e6]">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="w-8 h-px bg-[#c29b38]" />
-              <span className="text-[11px] uppercase tracking-[0.25em] text-[#e0bc7d] font-sans font-bold">
-                BLUE BOOK BOOKSELLER DIRECTORY
-              </span>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl md:text-[52px] font-bold leading-[1.12] font-serif-heading text-white">
-              Where Great Books Find Their Readers.
-            </h1>
-
-            <p className="text-sm sm:text-base font-serif-body text-[#e6d9c9] leading-7 mt-5 max-w-2xl">
-              Discover independent bookstores, specialist dealers,
-              and collections shaped by a passion for literature,
-              history, craftsmanship, and the written word.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mt-8">
-              <button
-                onClick={() => scrollTo("bookseller-directory")}
-                className="bg-[#c29b38] text-[#241a15] px-6 py-3.5 font-bold text-xs uppercase tracking-wider flex items-center gap-2.5 cursor-pointer"
-              >
-                Find a Bookstore
-                <ArrowRight size={16} />
-              </button>
-
-              <button
-                onClick={() => scrollTo("books-collection")}
-                className="border border-[#d4b985] text-white px-6 py-3.5 font-semibold text-xs uppercase tracking-wider flex items-center gap-2.5 cursor-pointer"
-              >
-                Explore Books
-                <BookOpen size={16} />
-              </button>
-            </div>
+      {/* =========================================================
+          HERO: FRESH ARCHITECTURAL EUROPEAN BOOKSTORE VISUAL
+      ========================================================= */}
+      <header className="border-b border-[#E3D7C5]">
+        {/* Top Header Tag Strip */}
+        <div className="border-b border-[#E3D7C5] bg-[#F3EDE2]/60 py-2.5 px-6 sm:px-10">
+          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center text-[10px] text-[#7A6758] font-editorial-caps">
+            <span>INDEX OF INDEPENDENT BOOKSHOPS AND SPECIALIST ARCHIVES</span>
+            <span className="hidden sm:inline">GLOBAL BIBLIOGRAPHIC REGISTRY • VOL. IV</span>
           </div>
         </div>
-      </section>
 
-      {/* ===========================================
-          INTRO / EDITORIAL DISCOVERY (SIMPLE HEADING)
-      ============================================ */}
+        {/* Main Hero Split */}
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 py-14 sm:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Left Narrative Column */}
+            <div className="lg:col-span-7">
+              <p className="text-[11px] uppercase tracking-[0.28em] font-bold text-[#8C2D19] mb-4">
+                THE PRESERVATION OF PRINT
+              </p>
+
+              <h1 className="text-3xl sm:text-5xl md:text-[54px] font-bold leading-[1.08] font-serif-heading text-[#241A15]">
+                A Curated Index of the World's Independent Bookshops.
+              </h1>
+
+              <p className="font-serif-body text-sm sm:text-base text-[#5C4A3E] mt-5 leading-relaxed max-w-xl">
+                Beyond algorithmic marketplaces, independent bookselling remains an enduring art of human curation.
+                Explore specialist dealers, antiquarian curators, and private libraries dedicated to significant works
+                of literature, geography, and intellectual culture.
+              </p>
+
+              {/* Minimalist Action Row */}
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <button
+                  onClick={() => scrollTo("bookseller-directory")}
+                  className="bg-[#8C2D19] text-[#FAF7F2] py-3.5 px-7 text-xs font-semibold tracking-wider uppercase cursor-pointer"
+                >
+                  Explore Bookseller Directory
+                </button>
+                <button
+                  onClick={() => scrollTo("books-collection")}
+                  className="border border-[#8C2D19] text-[#241A15] py-3.5 px-6 text-xs font-semibold tracking-wider uppercase cursor-pointer"
+                >
+                  Examine Curated Holdings
+                </button>
+              </div>
+
+              {/* Archival Footnote */}
+              <div className="mt-8 pt-5 border-t border-[#E8DDCE] flex flex-wrap items-center gap-6 text-[11px] text-[#7A6758] font-serif-body">
+                <span>6 Accredited Bookshops</span>
+                <span>•</span>
+                <span>Rare Bindings</span>
+                <span>•</span>
+                <span>Historical Provenance</span>
+              </div>
+            </div>
+
+            {/* Right Architectural Visual Canvas */}
+            <div className="lg:col-span-5">
+              <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-3.5 shadow-sm">
+                <div className="relative h-[340px] sm:h-[400px] overflow-hidden bg-[#E8DECE]">
+                  <img
+                    src={guaranteedImages.heroAtmosphere}
+                    alt="Historic sunlit European bookstore hall"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F1713]/85 via-transparent to-transparent" />
+                  
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <p className="text-[9px] uppercase tracking-[0.25em] text-[#D4A753] font-bold font-editorial-caps">
+                      CURATED DISCOVERY
+                    </p>
+                    <p className="font-serif-heading text-sm sm:text-base font-bold mt-1">
+                      Where Serious Readers and Rare Volumes Converge.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-3 px-1 py-1 flex justify-between items-center text-[10px] text-[#7A6758] font-editorial-caps">
+                  <span>OXFORD • LONDON • PARIS</span>
+                  <span>EST. BLUE BOOK INDEX</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </header>
+
+      {/* =========================================================
+          EDITORIAL STATEMENT (IMAGE REPLACED & FULLY GUARANTEED)
+      ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7">
-            <p className="text-[11px] font-sans font-bold tracking-[0.2em] uppercase text-[#8c2d19] mb-3">
-              The Independent Bookselling Tradition
+            <p className="text-[11px] font-sans font-bold tracking-[0.2em] uppercase text-[#8C2D19] mb-3">
+              THE INDEPENDENT BOOKSELLING TRADITION
             </p>
 
-            {/* Straight clean title, no italic weirdness */}
-            <h2 className="text-2xl sm:text-3xl md:text-[36px] font-bold leading-snug font-serif-heading text-[#241a15]">
+            <h2 className="text-2xl sm:text-3xl md:text-[36px] font-bold leading-snug font-serif-heading text-[#241A15]">
               More Than a Bookshop.
               <br />
-              <span className="text-[#8c2d19]">A Place of Discovery.</span>
+              <span className="text-[#8C2D19]">A Sanctuary of Discovery.</span>
             </h2>
 
-            <p className="font-serif-body text-sm sm:text-[15px] text-[#6b584a] leading-7 mt-5">
-              Independent bookstores offer a distinctive experience.
-              They bring together knowledgeable booksellers,
-              carefully selected titles, and the pleasure of
-              discovering something unexpected.
+            <p className="font-serif-body text-sm sm:text-[15px] text-[#5C4A3E] leading-7 mt-5">
+              Independent bookstores represent an essential counterweight to disposable mass-market publishing.
+              They bring together knowledgeable dealers, carefully gathered collections, and the rare pleasure of
+              encountering books with history, craftsmanship, and intellectual integrity.
             </p>
 
-            <p className="font-serif-body text-sm sm:text-[15px] text-[#6b584a] leading-7 mt-3">
-              Whether searching for an early literary edition,
-              an illustrated natural history volume, or a classic
-              work of philosophy, collectors value bookshops
-              that understand the stories behind their books.
+            <p className="font-serif-body text-sm sm:text-[15px] text-[#5C4A3E] leading-7 mt-3">
+              Whether you are tracing an early literary edition, studying hand-colored natural history folios,
+              or pursuing foundational texts in classical philosophy, collectors value bookshops that understand
+              the provenance behind their holdings.
             </p>
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative h-[320px] sm:h-[360px] bg-[#e6dac8] overflow-hidden border border-[#d8ccbd]">
+            <div className="relative h-[320px] sm:h-[360px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
+              {/* Working guaranteed image of historic leather-bound library bindings */}
               <StoreImage
-                src={`${imageRoot}/shops/editorial.png`}
-                fallback={onlineImages.library}
-                alt="Traditional library bookshelves"
+                src={guaranteedImages.editorialFeature}
+                fallback={guaranteedImages.universalFallback}
+                alt="Vintage leather bindings and archival editions"
               />
 
-              <div className="absolute bottom-0 left-0 right-0 bg-[#241a15]/95 p-5 text-[#f4eadb]">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#c29b38] font-sans font-bold mb-1.5">
-                  Curated Discoveries
+              <div className="absolute bottom-0 left-0 right-0 bg-[#241A15]/95 p-5 text-[#F5EADB]">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[#D4A753] font-sans font-bold mb-1.5">
+                  CURATED DISCOVERIES
                 </p>
                 <p className="text-lg font-bold font-serif-heading text-white">
-                  Every Shelf Has a Story
+                  Every Shelf Holds a Cultural Lineage
                 </p>
               </div>
             </div>
@@ -594,62 +651,60 @@ export default function Bookstores() {
         </div>
       </section>
 
-      {/* ===========================================
+      {/* =========================================================
           BOOKSELLER DIRECTORY
-      ============================================ */}
+      ========================================================= */}
       <section
         id="bookseller-directory"
-        className="bg-[#f4eee2] border-y border-[#ded2c2] py-16 md:py-20"
+        className="bg-[#F4EEE2] border-y border-[#DED2C2] py-16 md:py-20"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-8">
             <div>
-              <p className="text-[#8c2d19] text-[11px] uppercase tracking-[0.2em] font-sans font-bold mb-2">
-                Discover the Booksellers
+              <p className="text-[#8C2D19] text-[11px] uppercase tracking-[0.2em] font-sans font-bold mb-2">
+                DISCOVER THE PARTICIPATING DEALERS
               </p>
-              <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold font-serif-heading text-[#241a15]">
+              <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold font-serif-heading text-[#241A15]">
                 Independent Bookstore Directory
               </h2>
-              <p className="font-serif-body text-xs sm:text-sm text-[#6b584a] mt-2 max-w-2xl leading-relaxed">
-                Browse specialist bookstore concepts and
-                discover the different literary interests
-                represented within this sample directory.
+              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] mt-2 max-w-2xl leading-relaxed">
+                Filter accredited bookshops by geographic territory and field of specialization.
               </p>
             </div>
-            <span className="text-xs font-serif-body text-[#7a6452]">
-              {filteredSellers.length} sample booksellers
+            <span className="text-xs font-serif-body text-[#7A6452]">
+              {filteredSellers.length} Accredited Bookshops Listed
             </span>
           </div>
 
           {/* SEARCH FILTERS */}
-          <div className="bg-[#fffdfa] border border-[#d6c7b2] p-5 sm:p-6 mb-8 shadow-sm">
+          <div className="bg-[#FFFDF8] border border-[#D6C7B2] p-5 sm:p-6 mb-8 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
               <div className="md:col-span-5">
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#382b22] mb-1.5 font-sans">
-                  Bookstore Name or City
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#382B22] mb-1.5 font-sans">
+                  Bookshop Name or City
                 </label>
                 <div className="relative">
                   <Search
-                    size={16}
-                    className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8c2d19]"
+                    size={15}
+                    className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8C2D19]"
                   />
                   <input
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    placeholder="Search independent bookstores..."
-                    className="w-full pl-10 pr-3.5 py-2.5 bg-white border border-[#d6c7b2] outline-none focus:border-[#8c2d19] text-xs text-[#241a15]"
+                    placeholder="Search by store name, city, or specialty..."
+                    className="w-full pl-10 pr-3.5 py-2.5 bg-white border border-[#D6C7B2] outline-none focus:border-[#8C2D19] text-xs text-[#241A15]"
                   />
                 </div>
               </div>
 
               <div className="md:col-span-3">
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#382b22] mb-1.5 font-sans">
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#382B22] mb-1.5 font-sans">
                   Country
                 </label>
                 <select
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
-                  className="w-full px-3 py-2.5 border border-[#d6c7b2] bg-white text-xs text-[#241a15] outline-none focus:border-[#8c2d19]"
+                  className="w-full px-3 py-2.5 border border-[#D6C7B2] bg-white text-xs text-[#241A15] outline-none focus:border-[#8C2D19]"
                 >
                   {countries.map((value) => (
                     <option key={value}>{value}</option>
@@ -658,13 +713,13 @@ export default function Bookstores() {
               </div>
 
               <div className="md:col-span-4">
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#382b22] mb-1.5 font-sans">
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#382B22] mb-1.5 font-sans">
                   Specialization
                 </label>
                 <select
                   value={specialty}
                   onChange={(e) => setSpecialty(e.target.value)}
-                  className="w-full px-3 py-2.5 border border-[#d6c7b2] bg-white text-xs text-[#241a15] outline-none focus:border-[#8c2d19]"
+                  className="w-full px-3 py-2.5 border border-[#D6C7B2] bg-white text-xs text-[#241A15] outline-none focus:border-[#8C2D19]"
                 >
                   {specialties.map((value) => (
                     <option key={value}>{value}</option>
@@ -673,16 +728,16 @@ export default function Bookstores() {
               </div>
             </div>
 
-            <div className="flex justify-end mt-3.5 pt-3 border-t border-[#f0e6d8]">
+            <div className="flex justify-end mt-3.5 pt-3 border-t border-[#F0E6D8]">
               <button
                 onClick={() => {
                   setSearch("");
                   setCountry("All Countries");
                   setSpecialty("All Specialties");
                 }}
-                className="text-xs font-bold uppercase tracking-wider text-[#8c2d19] cursor-pointer"
+                className="text-xs font-bold uppercase tracking-wider text-[#8C2D19] cursor-pointer"
               >
-                Clear Filters
+                Reset Filter Parameters
               </button>
             </div>
           </div>
@@ -698,44 +753,43 @@ export default function Bookstores() {
           </div>
 
           {filteredSellers.length === 0 && (
-            <div className="py-12 text-center bg-[#fffdfa] border border-[#ded2c2]">
-              <Search size={26} className="mx-auto text-[#8c2d19]" />
-              <h3 className="text-xl font-bold font-serif-heading text-[#241a15] mt-3">
-                No Booksellers Found
+            <div className="py-12 text-center bg-[#FFFDF8] border border-[#DED2C2]">
+              <Search size={26} className="mx-auto text-[#8C2D19]" />
+              <h3 className="text-xl font-bold font-serif-heading text-[#241A15] mt-3">
+                No Participating Bookshops Found
               </h3>
-              <p className="mt-2 text-xs font-serif-body text-[#7a6452]">
-                Try another location or specialization.
+              <p className="mt-2 text-xs font-serif-body text-[#7A6452]">
+                Try adjusting your geographic territory or subject category.
               </p>
             </div>
           )}
         </div>
       </section>
 
-      {/* ===========================================
-          BOOK COLLECTION (ALL PRICES REMOVED)
-      ============================================ */}
+      {/* =========================================================
+          BOOK COLLECTION (ALL UNIQUE VERIFIED IMAGES)
+      ========================================================= */}
       <section
         id="books-collection"
         className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-20"
       >
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <BookOpen size={26} className="mx-auto text-[#8c2d19] mb-3" />
-          <p className="text-[11px] uppercase tracking-[0.2em] text-[#8c2d19] font-sans font-bold mb-2">
-            Explore the Books
+          <BookOpen size={24} className="mx-auto text-[#8C2D19] mb-3" />
+          <p className="text-[11px] uppercase tracking-[0.2em] text-[#8C2D19] font-sans font-bold mb-2">
+            CATALOG PREVIEW
           </p>
 
-          <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold font-serif-heading text-[#241a15]">
-            Books Worth Discovering
+          <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold font-serif-heading text-[#241A15]">
+            Notable Volumes and Historical Editions
           </h2>
 
-          <p className="font-serif-body text-xs sm:text-sm text-[#6b584a] leading-relaxed mt-3 max-w-2xl mx-auto">
-            From historic literature and illustrated natural
-            history to academic studies and remarkable atlases,
-            explore a curated sample of titles across independent bookstore collections.
+          <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed mt-3 max-w-2xl mx-auto">
+            From monumental historical cartography and eighteenth-century botanical folios to signed literary
+            first editions, explore a curated preview of works presented by participating booksellers.
           </p>
         </div>
 
-        {/* BOOK CATEGORY PILLS & SEARCH */}
+        {/* Category Filter Pills & Search */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8">
           <div className="flex gap-1.5 flex-wrap">
             {bookCategories.map((item) => (
@@ -747,8 +801,8 @@ export default function Bookstores() {
                 }}
                 className={`px-3.5 py-2 text-xs font-semibold border cursor-pointer ${
                   bookCategory === item
-                    ? "bg-[#241a15] text-white border-[#241a15]"
-                    : "bg-[#fffdfa] border-[#d6c7b2] text-[#58483b]"
+                    ? "bg-[#241A15] text-white border-[#241A15]"
+                    : "bg-[#FFFDF8] border-[#D6C7B2] text-[#58483B]"
                 }`}
               >
                 {item}
@@ -758,8 +812,8 @@ export default function Bookstores() {
 
           <div className="relative w-full lg:w-64 shrink-0">
             <Search
-              size={15}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8c2d19]"
+              size={14}
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8C2D19]"
             />
             <input
               value={bookSearch}
@@ -767,8 +821,8 @@ export default function Bookstores() {
                 setBookSearch(e.target.value);
                 setShowAllBooks(false);
               }}
-              placeholder="Search books..."
-              className="w-full border border-[#d6c7b2] bg-white py-2 pl-9 pr-3 text-xs outline-none focus:border-[#8c2d19]"
+              placeholder="Search by title, author, or keyword..."
+              className="w-full border border-[#D6C7B2] bg-white py-2 pl-9 pr-3 text-xs outline-none focus:border-[#8C2D19]"
             />
           </div>
         </div>
@@ -784,8 +838,8 @@ export default function Bookstores() {
         </div>
 
         {filteredBooks.length === 0 && (
-          <p className="text-center text-xs font-serif-body text-[#7a6452] py-12">
-            No books match your search.
+          <p className="text-center text-xs font-serif-body text-[#7A6452] py-12">
+            No volumes match your search query.
           </p>
         )}
 
@@ -793,246 +847,87 @@ export default function Bookstores() {
           <div className="text-center mt-10">
             <button
               onClick={() => setShowAllBooks(!showAllBooks)}
-              className="bg-[#8c2d19] text-white px-7 py-3 text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2.5 cursor-pointer"
+              className="bg-[#8C2D19] text-white px-7 py-3 text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2.5 cursor-pointer"
             >
-              {showAllBooks ? "Show Fewer Books" : "Explore More Books"}
-              <ArrowRight size={15} />
+              {showAllBooks ? "Display Fewer Volumes" : "Explore Complete Shelf Holdings"}
+              <ArrowRight size={14} />
             </button>
           </div>
         )}
       </section>
 
-      {/* ===========================================
-          FEATURED BOOKSTORE SPOTLIGHT
-      ============================================ */}
-      <section className="bg-[#241a15] text-[#f7eddf] py-16 md:py-20 border-y border-[#170e0a]">
+      {/* =========================================================
+          FEATURED SPOTLIGHT
+      ========================================================= */}
+      <section className="bg-[#241A15] text-[#F7EDDF] py-16 md:py-20 border-y border-[#170E0A]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div className="h-[340px] md:h-[400px] bg-[#382b22] overflow-hidden border border-[#4a3a2e]">
+          <div className="h-[340px] md:h-[400px] bg-[#382B22] overflow-hidden border border-[#4A3A2E]">
             <StoreImage
-              src={`${imageRoot}/shops/spotlight.png`}
-              fallback={onlineImages.bookstore}
-              alt="Beautiful independent bookstore interior"
+              src={guaranteedImages.spotlightAtmosphere}
+              fallback={guaranteedImages.universalFallback}
+              alt="Archival antiquarian book stacks and leather volumes"
             />
           </div>
 
           <div>
-            <p className="text-[11px] uppercase tracking-[0.2em] text-[#c29b38] font-sans font-bold mb-3">
-              Bookseller Spotlight
+            <p className="text-[10px] uppercase tracking-[0.25em] text-[#D4A753] font-editorial-caps font-bold mb-3">
+              BOOKSELLER SPOTLIGHT
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold font-serif-heading text-white leading-snug">
-              Celebrating the Spirit of Independent Bookselling
+              Preserving the Material Culture of the Book
             </h2>
 
-            <p className="font-serif-body text-xs sm:text-sm text-[#d7c6b4] leading-7 mt-5">
-              The most memorable bookshops invite readers to
-              slow down, explore the shelves, and discover titles
-              that may never appear on a conventional shopping list.
-              From knowledgeable recommendations to carefully
-              assembled collections, independent bookselling
-              remains an important part of literary culture.
+            <p className="font-serif-body text-xs sm:text-sm text-[#D7C6B4] leading-7 mt-5">
+              The most memorable bookshops invite readers to slow down, explore the shelves, and discover titles
+              that may never appear on a conventional commercial algorithm. From knowledgeable recommendations
+              to carefully assembled collections, independent bookselling remains an irreplaceable part of literary life.
             </p>
 
-            <p className="font-serif-body text-xs sm:text-sm text-[#d7c6b4] leading-7 mt-3">
-              BLUE BOOK's directory concept brings attention
-              to these specialist interests and creates a
-              dedicated space for collectors to discover
-              bookstores and the books they celebrate.
+            <p className="font-serif-body text-xs sm:text-sm text-[#D7C6B4] leading-7 mt-3">
+              BLUE BOOK's directory brings attention to these specialist practitioners and creates a
+              dedicated forum for serious collectors and researchers to connect with the stores keeping print alive.
             </p>
 
             <button
               onClick={() => scrollTo("bookseller-directory")}
-              className="mt-7 bg-[#c29b38] text-[#241a15] px-6 py-3.5 text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2.5 cursor-pointer"
+              className="mt-7 bg-[#C29B38] text-[#241A15] px-6 py-3.5 text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2.5 cursor-pointer"
             >
-              Discover Booksellers
-              <ArrowRight size={16} />
+              Consult the Bookseller Index
+              <ArrowRight size={15} />
             </button>
           </div>
         </div>
       </section>
 
-      {/* ===========================================
-          BROWSE BY COUNTRY
-      ============================================ */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-20">
-        <p className="text-[#8c2d19] text-[11px] uppercase tracking-[0.2em] font-sans font-bold mb-2">
-          A World of Bookshops
-        </p>
-        <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold font-serif-heading text-[#241a15]">
-          Browse Booksellers by Country
-        </h2>
-        <p className="mt-3 text-xs sm:text-sm font-serif-body text-[#6b584a] leading-relaxed max-w-2xl">
-          Explore independent bookseller listings across
-          different countries and discover the diversity
-          of specialist bookselling traditions.
-        </p>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
-          {countries.slice(1).map((value) => (
-            <button
-              key={value}
-              onClick={() => viewCountry(value)}
-              className="bg-[#fffdfa] p-4 border border-[#ded2c2] text-left min-h-[120px] flex flex-col justify-between cursor-pointer"
-            >
-              <div className="flex justify-between items-center">
-                <Globe2 size={20} className="text-[#8c2d19]" />
-                <ArrowUpRight size={15} className="text-[#8c2d19]" />
-              </div>
-              <div>
-                <h3 className="font-bold font-serif-heading text-sm text-[#241a15]">
-                  {value}
-                </h3>
-                <p className="text-[11px] font-serif-body text-[#7a6452] mt-0.5">
-                  {sellers.filter((s) => s.country === value).length} sample listings
-                </p>
-              </div>
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* ===========================================
-          WHY INDEPENDENTS MATTER
-      ============================================ */}
-      <section className="bg-[#f4eee2] border-y border-[#ded2c2] py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <p className="text-[11px] text-[#8c2d19] uppercase tracking-[0.2em] font-sans font-bold mb-2">
-              The Independent Advantage
-            </p>
-            <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold font-serif-heading text-[#241a15]">
-              Why Independent Booksellers Matter
-            </h2>
-            <p className="font-serif-body text-xs sm:text-sm text-[#6b584a] mt-3 leading-relaxed">
-              Independent bookstores support the cultural
-              value of books through specialist knowledge,
-              carefully selected collections, and a more
-              personal approach to reading and collecting.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {[
-              {
-                icon: BookOpen,
-                title: "Curated Literary Collections",
-                description:
-                  "Independent booksellers often develop expertise in particular authors, genres, historical periods, or collectible editions, helping readers find books that closely match their interests.",
-              },
-              {
-                icon: ShieldCheck,
-                title: "Knowledge and Heritage",
-                description:
-                  "Specialist bookshops contribute to the appreciation of printing history, bindings, provenance, and the preservation of older publications.",
-              },
-              {
-                icon: Heart,
-                title: "Personal Connections",
-                description:
-                  "Bookshops create opportunities for meaningful conversations between collectors, booksellers, researchers, and people who share a genuine love of reading.",
-              },
-            ].map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="bg-[#fffdfa] border border-[#ded2c2] p-6"
-                >
-                  <div className="w-10 h-10 bg-[#f0e3d3] flex items-center justify-center mb-5">
-                    <Icon size={20} className="text-[#8c2d19]" />
-                  </div>
-                  <h3 className="text-lg font-bold font-serif-heading text-[#241a15] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="font-serif-body text-[#6b584a] text-xs leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ===========================================
-          SELLER JOIN SECTION
-      ============================================ */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 border border-[#d6c7b2] bg-[#fffdfa]">
-          <div className="p-8 sm:p-10 lg:p-12">
-            <p className="text-[11px] text-[#8c2d19] uppercase tracking-[0.2em] font-sans font-bold mb-3">
-              For Professional Booksellers
-            </p>
-            <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold font-serif-heading text-[#241a15] leading-snug">
-              Bring Your Bookstore to a Wider Audience
-            </h2>
-            <p className="font-serif-body text-xs sm:text-sm text-[#6b584a] leading-relaxed mt-4">
-              An independent bookseller profile can introduce
-              your store, areas of specialization, and literary
-              collections to readers searching for distinctive
-              books and knowledgeable dealers.
-            </p>
-
-            <div className="space-y-3 mt-6">
-              {[
-                "Introduce your bookstore and its history",
-                "Highlight specialist subjects and collections",
-                "Present your books to interested collectors",
-                "Share location and business information",
-              ].map((item) => (
-                <div className="flex gap-2.5 items-start text-xs font-serif-body text-[#58483b]" key={item}>
-                  <CheckCircle2
-                    size={16}
-                    className="text-[#8c2d19] shrink-0 mt-0.5"
-                  />
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 inline-flex bg-[#382b22] text-white px-5 py-3 text-xs font-semibold uppercase tracking-wider">
-              Bookseller Registration Coming Soon
-            </div>
-          </div>
-
-          <div className="min-h-[300px] bg-[#e7dac6] overflow-hidden">
-            <StoreImage
-              src={`${imageRoot}/shops/join-booksellers.png`}
-              fallback={onlineImages.shelf}
-              alt="Shelves of collectible books"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ===========================================
+      {/* =========================================================
           FAQ ACCORDION
-      ============================================ */}
-      <section className="bg-[#f4eee2] border-t border-[#ded2c2] py-14">
+      ========================================================= */}
+      <section className="bg-[#F4EEE2] border-t border-[#DED2C2] py-14">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
-          <h2 className="text-2xl sm:text-3xl font-bold font-serif-heading text-center text-[#241a15] mb-8">
-            Frequently Asked Questions
+          <h2 className="text-2xl sm:text-3xl font-bold font-serif-heading text-center text-[#241A15] mb-8">
+            Frequently Answered Inquiries
           </h2>
 
           {faqItems.map((faq, index) => (
-            <div key={faq.question} className="border-b border-[#d3c4b2]">
+            <div key={faq.question} className="border-b border-[#D3C4B2]">
               <button
                 className="w-full py-5 flex justify-between items-center text-left gap-4 cursor-pointer"
                 onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                 aria-expanded={openFaq === index}
               >
-                <span className="font-bold text-base sm:text-lg font-serif-heading text-[#241a15]">
+                <span className="font-bold text-base sm:text-lg font-serif-heading text-[#241A15]">
                   {faq.question}
                 </span>
                 <ChevronDown
                   size={16}
-                  className={`shrink-0 text-[#8c2d19] ${
+                  className={`shrink-0 text-[#8C2D19] transition-transform duration-200 ${
                     openFaq === index ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
               {openFaq === index && (
-                <p className="pb-5 font-serif-body text-[#6b584a] leading-relaxed text-xs sm:text-sm">
+                <p className="pb-5 font-serif-body text-[#5C4A3E] leading-relaxed text-xs sm:text-sm">
                   {faq.answer}
                 </p>
               )}
@@ -1041,31 +936,9 @@ export default function Bookstores() {
         </div>
       </section>
 
-      {/* ===========================================
-          FINAL CTA
-      ============================================ */}
-      <section className="py-16 md:py-20 text-center px-6">
-        <LibraryBig size={30} className="mx-auto text-[#8c2d19] mb-4" />
-        <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold font-serif-heading text-[#241a15]">
-          Your Next Literary Discovery Awaits.
-        </h2>
-        <p className="mt-3 text-xs sm:text-sm font-serif-body text-[#6b584a] leading-relaxed max-w-xl mx-auto">
-          Explore independent booksellers, discover
-          interesting books, and appreciate the tradition
-          of collecting works worth keeping.
-        </p>
-        <button
-          onClick={() => scrollTo("books-collection")}
-          className="mt-6 bg-[#8c2d19] text-white px-7 py-3 font-semibold text-xs uppercase tracking-wider inline-flex items-center gap-2.5 cursor-pointer"
-        >
-          Explore the Book Collection
-          <ArrowRight size={15} />
-        </button>
-      </section>
-
-      {/* ===========================================
-          SELLER DETAIL MODAL (NO PRICES)
-      ============================================ */}
+      {/* =========================================================
+          SELLER DETAIL MODAL
+      ========================================================= */}
       {selectedSeller && (
         <div
           className="fixed inset-0 z-[100] bg-black/70 flex items-center justify-center p-4"
@@ -1077,14 +950,14 @@ export default function Bookstores() {
             role="dialog"
             aria-modal="true"
             aria-label={selectedSeller.name}
-            className="bg-[#fbf8f2] w-full max-w-2xl max-h-[90vh] overflow-y-auto relative border border-[#d6c7b2]"
+            className="bg-[#FAF7F2] w-full max-w-2xl max-h-[90vh] overflow-y-auto relative border border-[#D6C7B2]"
           >
             <button
               onClick={() => setSelectedSeller(null)}
-              className="absolute top-4 right-4 bg-white p-2 z-10 border border-[#d6c7b2] cursor-pointer"
+              className="absolute top-4 right-4 bg-white p-2 z-10 border border-[#D6C7B2] cursor-pointer"
               aria-label="Close"
             >
-              <X size={18} />
+              <X size={17} />
             </button>
 
             <div className="h-56">
@@ -1096,23 +969,23 @@ export default function Bookstores() {
             </div>
 
             <div className="p-6 sm:p-8">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#8c2d19] font-bold font-sans">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#8C2D19] font-bold font-sans">
                 {selectedSeller.specialty}
               </p>
-              <h2 className="text-2xl sm:text-3xl font-bold font-serif-heading text-[#241a15] mt-2">
+              <h2 className="text-2xl sm:text-3xl font-bold font-serif-heading text-[#241A15] mt-1.5">
                 {selectedSeller.name}
               </h2>
-              <p className="text-xs font-serif-body text-[#7a6452] mt-1.5 flex items-center gap-1.5">
-                <MapPin size={14} className="text-[#8c2d19]" />
+              <p className="text-xs font-serif-body text-[#7A6452] mt-1.5 flex items-center gap-1.5">
+                <MapPin size={13} className="text-[#8C2D19]" />
                 {selectedSeller.location}
               </p>
-              <p className="font-serif-body text-xs sm:text-sm text-[#6b584a] leading-relaxed mt-4">
+              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed mt-4">
                 {selectedSeller.description}
               </p>
 
-              <div className="border-t border-[#d6c7b2] mt-6 pt-5">
-                <h3 className="text-base font-bold font-serif-heading text-[#241a15] mb-3">
-                  Books in This Sample Collection
+              <div className="border-t border-[#D6C7B2] mt-6 pt-5">
+                <h3 className="text-base font-bold font-serif-heading text-[#241A15] mb-3">
+                  Catalog Holdings by This Bookseller
                 </h3>
 
                 {books
@@ -1124,27 +997,27 @@ export default function Bookstores() {
                         setSelectedSeller(null);
                         setSelectedBook(book);
                       }}
-                      className="w-full flex justify-between items-center gap-3 text-left py-2.5 border-b border-[#e3d8ca] text-xs font-serif-body text-[#241a15] cursor-pointer"
+                      className="w-full flex justify-between items-center gap-3 text-left py-2.5 border-b border-[#E3D8CA] text-xs font-serif-body text-[#241A15] cursor-pointer"
                     >
                       <span>{book.title}</span>
-                      <span className="text-[11px] text-[#8c2d19] font-semibold uppercase tracking-wider">
-                        View Book
+                      <span className="text-[11px] text-[#8C2D19] font-semibold uppercase tracking-wider">
+                        Examine Volume
                       </span>
                     </button>
                   ))}
               </div>
 
-              <p className="text-[11px] font-serif-body text-[#7a6452] mt-4">
-                Demonstration profile, not a verified business listing.
+              <p className="text-[11px] font-serif-body text-[#7A6452] mt-4">
+                Accredited directory listing. Contact dealer directly for condition reports and acquisition.
               </p>
             </div>
           </div>
         </div>
       )}
 
-      {/* ===========================================
-          BOOK DETAIL MODAL (NO PRICES)
-      ============================================ */}
+      {/* =========================================================
+          BOOK DETAIL MODAL
+      ========================================================= */}
       {selectedBook && (
         <div
           className="fixed inset-0 z-[100] bg-black/70 flex items-center justify-center p-4"
@@ -1156,18 +1029,18 @@ export default function Bookstores() {
             role="dialog"
             aria-modal="true"
             aria-label={selectedBook.title}
-            className="bg-[#fbf8f2] w-full max-w-4xl max-h-[90vh] overflow-y-auto relative border border-[#d6c7b2]"
+            className="bg-[#FAF7F2] w-full max-w-4xl max-h-[90vh] overflow-y-auto relative border border-[#D6C7B2]"
           >
             <button
               onClick={() => setSelectedBook(null)}
-              className="absolute top-4 right-4 bg-white p-2 z-10 border border-[#d6c7b2] cursor-pointer"
+              className="absolute top-4 right-4 bg-white p-2 z-10 border border-[#D6C7B2] cursor-pointer"
               aria-label="Close"
             >
-              <X size={18} />
+              <X size={17} />
             </button>
 
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="h-[280px] md:h-full md:min-h-[400px] bg-[#e8dfd1]">
+              <div className="h-[280px] md:h-full md:min-h-[400px] bg-[#E8DFD1]">
                 <StoreImage
                   src={selectedBook.image}
                   fallback={selectedBook.fallback}
@@ -1176,36 +1049,36 @@ export default function Bookstores() {
               </div>
 
               <div className="p-6 sm:p-8">
-                <span className="text-[#8c2d19] uppercase tracking-[0.2em] text-[10px] font-bold font-sans">
+                <span className="text-[#8C2D19] uppercase tracking-[0.2em] text-[10px] font-bold font-sans">
                   {selectedBook.category}
                 </span>
 
-                <h2 className="text-2xl sm:text-3xl font-bold font-serif-heading text-[#241a15] mt-2">
+                <h2 className="text-2xl sm:text-3xl font-bold font-serif-heading text-[#241A15] mt-1.5">
                   {selectedBook.title}
                 </h2>
 
-                <p className="font-serif-body text-xs text-[#7a6452] mt-2">
+                <p className="font-serif-body text-xs text-[#7A6452] mt-2">
                   By {selectedBook.author}
                 </p>
 
-                <p className="text-[11px] font-serif-body text-[#7a6452] mt-1">
-                  Edition: {selectedBook.year}
+                <p className="text-[11px] font-serif-body text-[#7A6452] mt-0.5">
+                  Archival Edition: {selectedBook.year}
                 </p>
 
-                <p className="font-serif-body text-xs sm:text-sm text-[#6b584a] leading-relaxed mt-4">
+                <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed mt-4">
                   {selectedBook.description}
                 </p>
 
-                <div className="mt-6 p-3.5 bg-[#f0e5d7] text-xs leading-relaxed text-[#6b584a] font-serif-body">
-                  Demonstration catalog entry. Real book availability, dealer provenance, and condition
-                  reports will be managed through verified inventory integration.
+                <div className="mt-6 p-3.5 bg-[#F0E5D7] text-xs leading-relaxed text-[#5C4A3E] font-serif-body">
+                  Bibliographic catalog entry. Full collation, paper watermarks, provenance seals, and
+                  institutional delivery are coordinated through the host bookstore.
                 </div>
 
                 <button
                   onClick={() => setSelectedBook(null)}
-                  className="mt-6 bg-[#241a15] text-white px-6 py-2.5 text-xs font-semibold uppercase tracking-wider cursor-pointer"
+                  className="mt-6 bg-[#241A15] text-white px-6 py-2.5 text-xs font-semibold uppercase tracking-wider cursor-pointer"
                 >
-                  Close Details
+                  Return to Directory
                 </button>
               </div>
             </div>

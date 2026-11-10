@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function MarketingPage() {
   const [activeTab, setActiveTab] = useState("amazon");
@@ -10,7 +9,7 @@ export default function MarketingPage() {
     amazonLinkOrAsin: "",
     genre: "Literary Fiction",
     targetMarket: "Amazon US and Global",
-    primaryGoal: "Amazon A+ Content and Ads",
+    primaryService: "Amazon Advertising and A+ Content",
     monthlyBudget: "$1,500 - $3,500",
     campaignNotes: "",
     termsAccepted: false,
@@ -39,7 +38,7 @@ export default function MarketingPage() {
       return;
     }
     if (!form.termsAccepted) {
-      setError("Please acknowledge our privacy and marketing terms.");
+      setError("Please acknowledge our privacy and campaign terms.");
       return;
     }
     setSubmitted(true);
@@ -50,22 +49,28 @@ export default function MarketingPage() {
   };
 
   return (
-    <div className="bg-[#FAF7F2] text-[#241A15] min-h-screen selection:bg-[#8C2D19] selection:text-white">
-      {/* Editorial Google Fonts */}
+    <div className="min-h-screen bg-[#FAF7F2] text-[#241A15] selection:bg-[#8C2D19] selection:text-white">
+      {/* Exact Bookstores Page Editorial Typography (Newsreader + Cinzel + Lora) */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
         
         .font-serif-heading {
-          font-family: 'Playfair Display', Georgia, serif;
+          font-family: 'Newsreader', Georgia, serif;
+          font-style: normal;
           letter-spacing: -0.015em;
+        }
+        .font-editorial-caps {
+          font-family: 'Cinzel', serif;
+          letter-spacing: 0.18em;
         }
         .font-serif-body {
           font-family: 'Lora', Georgia, serif;
+          font-style: normal;
         }
       `}</style>
 
       {/* =========================================================
-          HERO: CLASSIC EDITORIAL HERO (RESTRUCTURED & NATURAL)
+          HERO: SENIOR PUBLISHING EXECUTIVE HEADLINE & COPY
       ========================================================= */}
       <section className="border-b border-[#E3D7C5]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 py-16 sm:py-20">
@@ -80,43 +85,44 @@ export default function MarketingPage() {
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-[46px] font-bold leading-[1.12] font-serif-heading text-[#241A15]">
-                Turn Great Books into Bestsellers on Amazon and Beyond.
+              <h1 className="text-3xl sm:text-4xl md:text-[46px] font-bold leading-[1.14] font-serif-heading text-[#241A15]">
+                Strategic Book Marketing, Amazon Advertising, and Catalog Growth.
               </h1>
 
               <p className="font-serif-body text-sm sm:text-[15px] text-[#5C4A3E] mt-5 leading-7 max-w-xl">
-                We combine precision Amazon KDP advertising, custom A+ Content visual design,
-                algorithmic category rank optimization, and direct reader discovery to build compounding sales.
+                We design and manage high-yield Amazon PPC campaigns, produce conversion-focused A+ Content,
+                calibrate backend category taxonomy, and orchestrate verified reader outreach to deliver profitable,
+                long-term royalties for independent authors and publishing imprints.
               </p>
 
-              {/* Natural Button Placement */}
+              {/* Action Buttons */}
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <button
                   onClick={scrollToForm}
-                  className="bg-[#8C2D19] hover:bg-[#6E2213] text-white py-3.5 px-7 text-xs font-semibold tracking-wider uppercase transition-colors cursor-pointer shadow-sm"
+                  className="bg-[#8C2D19] text-white py-3.5 px-7 text-xs font-semibold tracking-wider uppercase cursor-pointer shadow-sm"
                 >
-                  Request Campaign Audit
+                  Request Campaign Consultation
                 </button>
                 <a
-                  href="#channels"
-                  className="border border-[#241A15] hover:bg-[#241A15] hover:text-white py-3.5 px-6 text-xs font-semibold tracking-wider uppercase transition-colors text-center"
+                  href="#services-suite"
+                  className="border border-[#241A15] text-[#241A15] py-3.5 px-6 text-xs font-semibold tracking-wider uppercase text-center cursor-pointer"
                 >
-                  Explore Marketing Channels
+                  Review Service Suite
                 </a>
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#E8DDCE] flex items-center gap-6 text-xs text-[#7A6758] font-serif-body">
-                <span>Serving Independent Authors</span>
+                <span>Independent Authors</span>
                 <span>•</span>
-                <span>University Presses</span>
+                <span>Mid-Sized Presses</span>
                 <span>•</span>
-                <span>Specialist Imprints</span>
+                <span>Academic and University Imprints</span>
               </div>
             </div>
 
             {/* Right Editorial Image Frame */}
             <div className="lg:col-span-5">
-              <div className="bg-white p-3 border border-[#D8CCBD] shadow-sm">
+              <div className="bg-[#FCFAF6] p-3 border border-[#D8CCBD] shadow-sm">
                 <div className="relative h-[320px] sm:h-[380px] overflow-hidden bg-[#E8DECE]">
                   <img
                     src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=85"
@@ -125,11 +131,11 @@ export default function MarketingPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A120E]/80 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#D4A753] font-bold">
-                      THE EDITORIAL METHOD
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#D4A753] font-editorial-caps font-bold">
+                      DATA-DRIVEN PUBLISHING
                     </p>
                     <p className="font-serif-heading text-sm sm:text-base font-bold mt-1">
-                      Targeting Genuine Readers, Not Empty Clicks.
+                      Algorithmic Precision Aligned with Literary Merit.
                     </p>
                   </div>
                 </div>
@@ -141,7 +147,7 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          METRICS STRIP (WARM PARCHMENT STYLE - NO HARSH BLACK BAR)
+          VERIFIABLE PERFORMANCE METRICS STRIP
       ========================================================= */}
       <section className="bg-[#F2ECE0] border-b border-[#E3D7C5] py-7">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
@@ -157,10 +163,10 @@ export default function MarketingPage() {
 
             <div className="border-l border-[#D5C6B3] pl-5">
               <span className="block text-2xl sm:text-[28px] font-bold font-serif-heading text-[#241A15]">
-                3.8x
+                Sub-15%
               </span>
               <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#735F50] mt-0.5 block font-medium">
-                Conversion Lift via A+ Content
+                Average Target ACoS Maintained
               </span>
             </div>
 
@@ -169,7 +175,7 @@ export default function MarketingPage() {
                 430+
               </span>
               <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#735F50] mt-0.5 block font-medium">
-                Amazon Number One Bestsellers
+                Amazon Bestseller Categories Reached
               </span>
             </div>
 
@@ -178,7 +184,7 @@ export default function MarketingPage() {
                 185,000+
               </span>
               <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#735F50] mt-0.5 block font-medium">
-                Direct Newsletter Subscribers
+                Direct Bibliophile Subscribers
               </span>
             </div>
           </div>
@@ -186,7 +192,7 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          SCREENSHOT SECTION: 2-COLUMN A+ CONTENT & FRAMEWORK
+          EDITORIAL FRAMEWORK SECTION
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -194,29 +200,30 @@ export default function MarketingPage() {
           {/* Left Column */}
           <div className="lg:col-span-7">
             <p className="text-[11px] uppercase tracking-[0.2em] font-sans font-bold text-[#8C2D19] mb-3">
-              FOR AUTHORS AND PUBLISHING HOUSES
+              COMMERCIAL AND EDITORIAL STRATEGY
             </p>
 
             <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold leading-snug font-serif-heading text-[#241A15]">
-              A Marketing Framework Built Around Real Reader Conversion.
+              A Commercial Framework Built Around Reader Conversion.
             </h2>
 
             <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 mt-5">
-              Most book advertising wastes capital by directing traffic to unoptimized Amazon pages.
-              We transform your listing with bespoke Amazon A+ Content, rich editorial reviews,
-              and compelling visual comparison charts that persuade hesitant browsers to click Buy Now.
+              In publishing, advertising spend without detail page optimization is wasted capital.
+              Driving traffic to an Amazon product page with uncalibrated metadata and flat text leads
+              to immediate bounce rates. We resolve this by combining custom Amazon A+ Content modules,
+              credible critic endorsements, and clean comparison tables that turn browsing sessions into paid orders.
             </p>
 
             <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 mt-3">
-              Behind the visual storefront, we calibrate high-intent Amazon backend search terms,
-              clean category taxonomy, and Author Central optimization to unlock continuous organic visibility
-              in Amazon’s algorithmic recommendation carousels.
+              Simultaneously, we calibrate backend indexing—auditing 250-byte search term limits, keyword intent,
+              and low-competition category paths. This ensures Amazon’s organic recommendation carousels actively
+              promote your titles to proven buyers within your genre.
             </p>
 
             <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 mt-3">
-              Whether you are launching a flagship hardcover, managing Kindle Unlimited read-through,
-              or reviving an entire publisher backlist, your titles receive the rigorous commercial architecture
-              necessary to maintain top bestseller rank.
+              Whether supporting a frontlist release, optimizing Kindle Unlimited read-through for backlist series,
+              or protecting author brands from competitor ad conquesting, our campaigns maintain commercial discipline
+              and measurable returns on ad spend.
             </p>
           </div>
 
@@ -234,9 +241,281 @@ export default function MarketingPage() {
                   VISUAL MERCHANDISING
                 </p>
                 <h3 className="text-base sm:text-lg font-bold font-serif-heading text-white">
-                  Amazon A+ Content and Brand Store Design
+                  Amazon A+ Content and Brand Store Architecture
                 </h3>
               </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================
+          SECTION 1: AMAZON BOOK MARKETING AND ADVERTISING SUITE
+      ========================================================= */}
+      <section id="services-suite" className="bg-[#F4EEE3] border-y border-[#E2D5C3] py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10">
+          
+          <div className="border-b border-[#DDD0BF] pb-8 mb-12">
+            <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-2">
+              SPECIALIZED AMAZON SERVICES
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-[36px] font-bold font-serif-heading text-[#241A15]">
+              Amazon Book Marketing, Advertising, and Page Merchandising
+            </h2>
+            <p className="font-serif-body text-xs sm:text-sm text-[#614F42] mt-2 max-w-3xl leading-relaxed">
+              With Amazon accounting for the majority of global print and digital book sales, success requires
+              technical precision across Amazon Advertising, KDP metadata, and visual detail page architecture.
+            </p>
+          </div>
+
+          {/* 3 Core Amazon Service Blocks */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            {/* 1. Amazon Book Marketing */}
+            <div className="bg-[#FAF7F2] border border-[#DDD0BF] p-7 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2">
+                  PILLAR 01
+                </span>
+                <h3 className="text-xl font-bold font-serif-heading text-[#241A15] mb-3">
+                  Amazon Book Marketing
+                </h3>
+                <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed mb-5">
+                  Structural optimization of your KDP and Amazon Seller listings to maximize algorithmic relevance
+                  and organic search rank without relying entirely on ad spend.
+                </p>
+                <ul className="space-y-3 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Backend Keyword Architecture:</strong> Complete utilization of the 250-byte search term fields with zero punctuation waste and intent-based phrase research.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Category Placement and BISAC Mapping:</strong> Identifying up to 10 low-competition, high-conversion browse paths to trigger Bestseller and New Release status.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Author Central Infrastructure:</strong> Unifying international author profiles across the United States, United Kingdom, Canada, and European marketplaces.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Amazon Attribution Tags:</strong> Generating secure tracking tags to measure sales, page reads, and bonus brand royalties from external traffic.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
+                Full KDP and Catalog Audit Included
+              </div>
+            </div>
+
+            {/* 2. Amazon Advertising */}
+            <div className="bg-[#FAF7F2] border border-[#DDD0BF] p-7 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2">
+                  PILLAR 02
+                </span>
+                <h3 className="text-xl font-bold font-serif-heading text-[#241A15] mb-3">
+                  Amazon Advertising (PPC and DSP)
+                </h3>
+                <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed mb-5">
+                  Disciplined paid ad management across Amazon's advertising platforms, controlling target ACoS
+                  and driving verified book purchases while protecting author margins.
+                </p>
+                <ul className="space-y-3 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Sponsored Products Campaigns:</strong> Exact, Phrase, and Auto campaigns harvesting commercial search terms and targeting comp-title ASINs.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Sponsored Brands and Video Ads:</strong> High-impact search header banners and 15-second cinematic book trailers embedded directly in reader search results.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Sponsored Display and Retargeting:</strong> Defending your product page from competitors while conquesting readers browsing related author titles.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Amazon DSP Integration:</strong> Programmatic display advertising reaching active Kindle e-reader owners based on verified historical genre buying habits.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
+                Daily Bid Adjustments and Budget Governance
+              </div>
+            </div>
+
+            {/* 3. Amazon A+ Content */}
+            <div className="bg-[#FAF7F2] border border-[#DDD0BF] p-7 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2">
+                  PILLAR 03
+                </span>
+                <h3 className="text-xl font-bold font-serif-heading text-[#241A15] mb-3">
+                  Amazon A+ Content Production
+                </h3>
+                <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed mb-5">
+                  Bespoke visual editorial spreads designed to replace static text descriptions, delivering
+                  elevated typography, reader testimonials, and measurable conversion lifts.
+                </p>
+                <ul className="space-y-3 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Catalog Comparison Matrices:</strong> Directing readers to series sequels, standalone works, and multi-format editions (Hardcover, Audio, Paperback).</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Editorial Endorsements and Callouts:</strong> Structuring awards, review quotes, and publication accolades into clean, credible design modules.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Amazon Brand Story Carousel:</strong> A dedicated, full-width swipeable module highlighting the publishing imprint, catalog depth, and author heritage.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Mobile-First Formatting:</strong> Pixel-perfect graphic composition tailored specifically for Amazon's mobile shopping application.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
+                Full Copywriting and Asset Creation
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          SECTION 2: CAMPAIGNS, SOCIAL MEDIA, AND AD SERVICES
+      ========================================================= */}
+      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24">
+        
+        <div className="border-b border-[#E3D7C5] pb-8 mb-12">
+          <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-2">
+            INTEGRATED EXECUTION
+          </p>
+          <h2 className="text-2xl sm:text-3xl md:text-[36px] font-bold font-serif-heading text-[#241A15]">
+            Campaigns, Social Media Marketing, and Advertising Services
+          </h2>
+          <p className="font-serif-body text-xs sm:text-sm text-[#614F42] mt-2 max-w-3xl leading-relaxed">
+            Connecting technical Amazon advertising with cultural momentum, social community buzz,
+            and professional account management for sustainable reader acquisition.
+          </p>
+        </div>
+
+        {/* 3 Extended Service Blocks */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          {/* 4. Campaigns Architecture */}
+          <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-7 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2">
+                SERVICE 01
+              </span>
+              <h3 className="text-xl font-bold font-serif-heading text-[#241A15] mb-3">
+                Structured Launch Campaigns
+              </h3>
+              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed mb-5">
+                Calculated campaign sequencing designed around publication milestones to generate
+                concentrated sales volume and trigger Amazon’s organic recommendation algorithms.
+              </p>
+              <ul className="space-y-3 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>Pre-Order Runway Strategy:</strong> Accumulating pre-launch reservation orders to generate initial day-one chart placement.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>72-Hour Bestseller Flights:</strong> Coordinated ad pulses and promotional pricing aimed at securing Category Number One flags.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>Kindle Deals and Price Drops:</strong> Deploying time-sensitive price promotions to awaken dormant backlist algorithms.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>Q4 and Seasonal Catalog Surges:</strong> Strategic ad scaling across peak holiday gift periods, academic terms, and summer reading lists.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="mt-6 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
+              Launch Flights and Evergreen Schedules
+            </div>
+          </div>
+
+          {/* 5. Social Media Marketing */}
+          <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-7 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2">
+                SERVICE 02
+              </span>
+              <h3 className="text-xl font-bold font-serif-heading text-[#241A15] mb-3">
+                Social Media Marketing
+              </h3>
+              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed mb-5">
+                Authentic, literary-focused promotion engaging reading communities across BookTok,
+                Bookstagram, and paid social channels without spamming or generic tactics.
+              </p>
+              <ul className="space-y-3 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>BookTok and Creator Seeding:</strong> Distributing physical advance review copies (ARCs) to vetted book creators who drive organic recommendation spikes.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>Bookstagram Aesthetic Creation:</strong> High-resolution editorial book photography, quote banners, and thematic design for Instagram readers.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>Meta Direct-Response Advertising:</strong> Targeted Facebook and Instagram ad campaigns delivering verified buyers to Amazon Attribution endpoints.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>Goodreads and Reader Communities:</strong> Moderating virtual group reads, ARC feedback management, and certified reader reviews.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="mt-6 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
+              Vetted Literary Influencer Network
+            </div>
+          </div>
+
+          {/* 6. Advertising Services */}
+          <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-7 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2">
+                SERVICE 03
+              </span>
+              <h3 className="text-xl font-bold font-serif-heading text-[#241A15] mb-3">
+                Full-Service Advertising Management
+              </h3>
+              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed mb-5">
+                End-to-end, accountable ad account management for publishers and active authors requiring
+                hands-on governance, algorithmic adjustments, and transparent commercial reporting.
+              </p>
+              <ul className="space-y-3 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>Continuous Search Term Harvesting:</strong> Weekly auditing of search reports to capture emerging keywords and prune unprofitable bids.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>Competitor ASIN Interception:</strong> Strategically bidding on competing title pages to capture readers at point of purchase.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>ACoS and TACoS Governance:</strong> Managing bids to maintain profitability across total catalog revenue rather than isolated ad silos.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#8C2D19] font-bold">•</span>
+                  <span><strong>Bi-Weekly Performance Reviews:</strong> Comprehensive reports breaking down ad spend, organic sales velocity, and blended return on investment.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="mt-6 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
+              Dedicated Senior Campaign Strategist
             </div>
           </div>
 
@@ -256,7 +535,7 @@ export default function MarketingPage() {
               Full-Spectrum Book Marketing and Discovery
             </h2>
             <p className="font-serif-body text-xs sm:text-sm text-[#614F42] mt-2 max-w-2xl">
-              We coordinate algorithmic Amazon targeting with visual page conversion, creator seeding,
+              We coordinate technical Amazon algorithms with visual merchandising, reader seeding,
               and dedicated editorial distribution.
             </p>
           </div>
@@ -276,7 +555,7 @@ export default function MarketingPage() {
                 className={`px-4 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all cursor-pointer ${
                   activeTab === tab.id
                     ? "bg-[#241A15] text-[#FAF7F2]"
-                    : "bg-transparent text-[#7B695B] hover:text-[#241A15]"
+                    : "bg-transparent text-[#7B695B]"
                 }`}
               >
                 {tab.label}
@@ -293,7 +572,7 @@ export default function MarketingPage() {
                     DOMINATING THE ALGORITHM
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-[#241A15] mt-1.5 mb-3">
-                    Amazon PPC, A+ Content and BSR Ranking
+                    Amazon PPC, A+ Content, and BSR Ranking
                   </h3>
                   <p className="font-serif-body text-xs sm:text-sm text-[#5A4A3F] leading-relaxed mb-4">
                     Amazon represents over 68% of global book sales. We deploy exact ASIN targeting,
@@ -397,7 +676,7 @@ export default function MarketingPage() {
                     ORGANIC VIRALITY
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-[#241A15] mt-1.5 mb-3">
-                    BookTok, Bookstagram and Creator Seeding
+                    BookTok, Bookstagram, and Creator Seeding
                   </h3>
                   <p className="font-serif-body text-xs sm:text-sm text-[#5A4A3F] leading-relaxed">
                     We seed physical advance reader copies to genuine literary commentators whose reviews
@@ -429,7 +708,7 @@ export default function MarketingPage() {
                     LITERARY PRESTIGE
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-[#241A15] mt-1.5 mb-3">
-                    Literary PR, Essays and Reviews
+                    Literary PR, Essays, and Reviews
                   </h3>
                   <p className="font-serif-body text-xs sm:text-sm text-[#5A4A3F] leading-relaxed">
                     Securing authoritative coverage in respected cultural journals, literary columns,
@@ -559,7 +838,7 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          CAMPAIGN INQUIRY CONSOLE (CLEAN FORM)
+          CAMPAIGN INQUIRY CONSOLE
       ========================================================= */}
       <section id="inquiry-desk" className="bg-[#F3EDE2] border-t border-[#DFD3C3] py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
@@ -584,7 +863,7 @@ export default function MarketingPage() {
                   <span className="text-[#7A6758]">campaigns@bluebookliterary.com</span>
                 </div>
                 <div>
-                  <span className="block font-bold text-[#241A15]">Amazon A+ and PPC Services:</span>
+                  <span className="block font-bold text-[#241A15]">Amazon A+ and Advertising Services:</span>
                   <span className="text-[#7A6758]">ads@bluebookliterary.com</span>
                 </div>
               </div>
@@ -671,19 +950,21 @@ export default function MarketingPage() {
 
                   <div>
                     <label className="block text-[11px] font-bold uppercase tracking-wider text-[#382B22] mb-1">
-                      Primary Campaign Objective
+                      Primary Service Requirement
                     </label>
                     <select
-                      name="primaryGoal"
-                      value={form.primaryGoal}
+                      name="primaryService"
+                      value={form.primaryService}
                       onChange={update}
                       className="w-full bg-white border border-[#D5C6B3] px-3.5 py-2.5 text-xs text-[#241A15] outline-none focus:border-[#8C2D19]"
                     >
-                      <option>Amazon A+ Content and Page Redesign</option>
-                      <option>Amazon BSR Ranking and PPC Ads</option>
-                      <option>New Release Launch Velocity</option>
-                      <option>Backlist Catalog Revival</option>
-                      <option>Full 360 (Amazon, BookTok, PR, and Newsletters)</option>
+                      <option>Amazon Book Marketing and Backend SEO</option>
+                      <option>Amazon Advertising (PPC, Video, and DSP)</option>
+                      <option>Amazon A+ Content Production</option>
+                      <option>Structured Launch Campaigns (Pre-Order to Evergreen)</option>
+                      <option>Social Media Marketing (BookTok, Bookstagram, and Meta)</option>
+                      <option>Full-Service Advertising Management</option>
+                      <option>Complete 360 Publisher Flight (All Channels)</option>
                     </select>
                   </div>
 
@@ -697,23 +978,23 @@ export default function MarketingPage() {
                       onChange={update}
                       className="w-full bg-white border border-[#D5C6B3] px-3.5 py-2.5 text-xs text-[#241A15] outline-none focus:border-[#8C2D19]"
                     >
-                      <option>Test Phase ($750 to $1,500)</option>
-                      <option>Standard Growth ($1,500 to $3,500)</option>
+                      <option>Initial Test Phase ($750 to $1,500)</option>
+                      <option>Standard Growth Phase ($1,500 to $3,500)</option>
                       <option>Bestseller Push ($3,500 to $7,500)</option>
-                      <option>Full Publisher Catalog ($7,500+)</option>
+                      <option>Full Publisher Catalog Strategy ($7,500+)</option>
                     </select>
                   </div>
 
                   <div className="sm:col-span-2">
                     <label className="block text-[11px] font-bold uppercase tracking-wider text-[#382B22] mb-1">
-                      Book Details and Specific Campaign Vision *
+                      Book Details and Campaign Objectives *
                     </label>
                     <textarea
                       rows={3}
                       name="campaignNotes"
                       value={form.campaignNotes}
                       onChange={update}
-                      placeholder="Tell us about your book, comparable titles, current sales history, and your ideal timeline..."
+                      placeholder="Specify your book genre, current Amazon BSR or ACoS targets, comparable author titles, and upcoming launch timeline..."
                       className="w-full bg-white border border-[#D5C6B3] px-3.5 py-2.5 text-xs text-[#241A15] outline-none focus:border-[#8C2D19]"
                       required
                     />
@@ -731,8 +1012,8 @@ export default function MarketingPage() {
                       required
                     />
                     <span className="text-[11px] font-serif-body text-[#5A4A3F] leading-4">
-                      I confirm that I represent this title or publishing catalog and wish to receive a tailored
-                      campaign audit from BLUE BOOK Literary.
+                      I confirm that I represent this title or publishing catalog and request a formal
+                      campaign audit and strategic proposal from BLUE BOOK Literary.
                     </span>
                   </label>
                 </div>
@@ -745,17 +1026,17 @@ export default function MarketingPage() {
 
                 {submitted && (
                   <div className="mt-3 p-3 bg-[#EDF3E8] border border-[#B3C9A7] text-[#2F4A24]">
-                    <h4 className="font-bold text-xs">Campaign Proposal Logged</h4>
+                    <h4 className="font-bold text-xs">Campaign Brief Received</h4>
                     <p className="text-xs mt-0.5 font-serif-body leading-relaxed">
-                      Thank you. We have received your title specifications. Our Amazon and campaign specialists
-                      will conduct an initial ASIN and competitor analysis and respond within 24 business hours.
+                      Thank you. We have received your title specifications. Our Amazon and digital campaign specialists
+                      will conduct an initial ASIN, keyword, and category audit and respond within 24 business hours.
                     </p>
                   </div>
                 )}
 
                 <button
                   type="submit"
-                  className="mt-5 bg-[#8C2D19] hover:bg-[#6F2314] text-white px-7 py-3 text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer"
+                  className="mt-5 bg-[#8C2D19] text-white px-7 py-3 text-xs font-semibold tracking-widest uppercase cursor-pointer"
                 >
                   Submit Campaign Details
                 </button>
@@ -765,34 +1046,6 @@ export default function MarketingPage() {
           </div>
         </div>
       </section>
-
-      {/* =========================================================
-          FOOTER
-      ========================================================= */}
-      <footer className="bg-[#1A120E] text-[#E8DED1] border-t border-[#0F0A08] py-8">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-[#D4A753] font-bold">
-              BLUE BOOK BOOKSELLER AND MARKETING NETWORK
-            </p>
-            <p className="font-serif-body text-[11px] text-[#8A7869] mt-0.5">
-              © {new Date().getFullYear()} BLUE BOOK Literary. Dedicated to exceptional books and enduring readership.
-            </p>
-          </div>
-
-          <div className="flex gap-5 text-[11px] uppercase tracking-wider text-[#A39281]">
-            <Link to="/bookstores" className="hover:text-white transition-colors">
-              Directory
-            </Link>
-            <a href="#channels" className="hover:text-white transition-colors">
-              Channels
-            </a>
-            <button onClick={scrollToForm} className="hover:text-white transition-colors cursor-pointer">
-              Book a Campaign
-            </button>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
