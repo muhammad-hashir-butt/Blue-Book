@@ -2,7 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  Sparkles,
   ArrowLeft,
   ArrowUpRight,
   BookOpen,
@@ -10,73 +9,85 @@ import {
 
 export default function BiographyMemoir() {
 
-  // ========================================================
-  // 5 REAL BOOKS - TITLES, AUTHORS & AMAZON LINKS
-  //
-  // Images located in: public/biography/
-  // No prices displayed.
-  // Amazon links use identified book edition IDs.
-  // ========================================================
+  // BIOGRAPHY & MEMOIR COLLECTION
+  // Images stored in public/biography/
+  // Classic Georgia font throughout
+  // Compact cards without hover animations
+  // No prices displayed
 
   const books = [
     {
       id: 1,
-      title: "Communion: Finding My Way Back to Faith",
-      author: "J. D. Vance",
-      format: "Biography & Faith",
-      image: "/biography/biography1.webp",
-      amazonUrl: "https://www.amazon.com/dp/B0GTQMJ53N",
+      title:
+        "Better Late Than Never: Transitioning Late in Life",
+      subtitle: "A Transgender Autobiography",
+      author: "Kristy McClellan",
+      format: "Autobiography & Personal Journey",
+      image: "/biography/biography1.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Better-Late-Than-Never-Transitioning-ebook/dp/B085LV28RK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.aMp1JDx6ojaqy25izulE8w.ljdxXF4O-eM_PjYxwlU-SmyTFd3eanLqeBJ2IZHguFA&dib_tag=se&keywords=Better+Late+Than+Never+Kristy+McClellan&qid=1794329782&sr=8-1",
     },
     {
       id: 2,
-      title: "Hillbilly Elegy: A Memoir of a Family and Culture in Crisis",
-      author: "J. D. Vance",
-      format: "Personal Memoir",
-      image: "/biography/biography2.webp",
-      amazonUrl: "https://www.amazon.com/dp/0062300555",
+      title: "Love Me",
+      subtitle:
+        "A Memoir of Online Dating, Mental Illness and Redemption",
+      author: "Oshun Reed",
+      format: "Personal Memoir & Redemption",
+      image: "/biography/biography2.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Love-Me-Memoir-Illness-Redemption-ebook/dp/B0DG655JHW",
     },
     {
       id: 3,
-      title: "Uniting the States: Six Crucial Moments That Forged the American Miracle",
-      author: "Brian Kilmeade",
-      format: "Historical Biography",
-      image: "/biography/biography3.webp",
-      amazonUrl: "https://www.amazon.com/dp/006349003X",
+      title:
+        "The Corfu Diaries: One Way Ticket to Paradise",
+      subtitle: "A Travel Memoir",
+      author: "Mike O'Toole",
+      format: "Travel Memoir & Adventure",
+      image: "/biography/biography3.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Corfu-Diaries-Travel-Memoir-Starting-ebook/dp/B0GX2YQT2W/ref=sr_1_1?dib=eyJ2IjoiMSJ9.ZsFRtTi9BIFYHqtn8F52NmQ0kpq2hnOq4XbWzkliQM0.Nb73wtG4NuHBYDWmB5PJPcfb2pZU5D7eZHY6v2ZH9-I&dib_tag=se&keywords=The+Corfu+Diaries+Mike+OToole&qid=1794329918&sr=8-1",
     },
     {
       id: 4,
-      title: "The Case for America: An Argument on Behalf of Our Nation",
-      author: "Bret Baier with Catherine Whitney",
-      format: "History & National Identity",
-      image: "/biography/biography4.webp",
-      amazonUrl: "https://www.amazon.com/dp/0063360802",
+      title: "Good Trouble on the High Seas",
+      subtitle: "A Memoir",
+      author: null,
+      format: "Maritime Memoir & Sea Adventures",
+      image: "/biography/biography4.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Good-Trouble-High-Seas-Memoir-ebook/dp/B0F6BNP924/ref=sr_1_1?dib=eyJ2IjoiMSJ9.0GspD2bsiA9pWv9FvQIeobPsXqAxpjgLFF-QY2T-ax4.QfdHDtUFt0dD-l8RPGAj2k3-wPYfMWDMMGf7CV9HaBY&dib_tag=se&keywords=Good+Trouble+on+the+High+Seas+A+Memoir&nsdOptOutParam=true&qid=1794329948&sr=8-1",
     },
     {
       id: 5,
-      title: "The Steps: A Memoir",
-      author: "Sylvester Stallone",
-      format: "Autobiography & Memoir",
+      title: "Strange Tribe",
+      subtitle: "A Family Memoir",
+      author: "John Hemingway",
+      format: "Family History & Memoir",
       image: "/biography/biography5.jpg",
-      amazonUrl: "https://www.amazon.com/dp/0063443910",
+      amazonUrl:
+        "https://www.amazon.co.uk/Strange-Tribe-family-John-Hemingway-ebook/dp/B081ZL8YDJ?ref_=ast_author_mpb",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
-
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        {/* =======================================
-            BREADCRUMB
-        ======================================= */}
+        {/* BREADCRUMB NAVIGATION */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
-
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
           <Link
             to="/"
-            className="hover:text-[#8c2d19] hover:underline flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
@@ -84,118 +95,120 @@ export default function BiographyMemoir() {
           <span>Categories</span>
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Biography & Memoir
           </span>
+        </nav>
 
-        </div>
+        {/* PAGE HEADER */}
 
-        {/* =======================================
-            PAGE HEADER
-        ======================================= */}
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-          <div>
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
+            <div className="flex-1">
 
-              <Sparkles className="w-4 h-4" />
-
-              <span>
+              <p className="text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
                 Extraordinary Lives & Personal Stories
+              </p>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Biography & Memoir
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Explore remarkable lives, personal memoirs,
+                historical biographies, and powerful stories
+                of perseverance, faith, and human experience.
+              </p>
+
+            </div>
+
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
+
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
+
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
               </span>
 
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Biography & Memoir
-            </h1>
-
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Explore remarkable lives, personal memoirs,
-              historical biographies, and powerful stories
-              of perseverance, faith, and human experience.
-            </p>
           </div>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+        </header>
 
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
+        {/* BOOK COLLECTION */}
 
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
-
-          </div>
-
-        </div>
-
-        {/* =======================================
-            BOOK COLLECTION GRID
-        ======================================= */}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
-            <div
+            <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col hover:border-[#8c2d19]"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
-              {/* BOOK COVER IMAGE */}
+              {/* BOOK COVER */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] shadow-inner overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
-                  alt={`${book.title} by ${book.author}`}
+                  alt={book.title}
                   loading="lazy"
                   className="w-full h-full object-contain"
                 />
 
               </div>
 
-              {/* BOOK DETAILS */}
+              {/* CATEGORY */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* FORMAT BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
-                {/* BOOK TITLE */}
+              </div>
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-3 min-h-[70px]">
+              {/* TITLE, SUBTITLE, AUTHOR */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                {/* AUTHOR NAME */}
+                {book.subtitle && (
+                  <p className="text-[12px] text-[#756052] mt-1 leading-snug">
+                    {book.subtitle}
+                  </p>
+                )}
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
-                  by {book.author}
-                </p>
+                {book.author && (
+                  <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
+                    by {book.author}
+                  </p>
+                )}
 
-                {/* AMAZON VIEW BUTTON */}
+                {/* VIEW BOOK */}
 
-                <div className="mt-auto pt-5">
+                <div className="mt-auto pt-4">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      aria-label={`Find ${book.title} on Amazon`}
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
                       <BookOpen size={15} />
-
-                      View Book
-
+                      <span>View Book</span>
                       <ArrowUpRight size={15} />
                     </a>
 
@@ -205,25 +218,23 @@ export default function BiographyMemoir() {
 
               </div>
 
-            </div>
+            </article>
 
           ))}
 
-        </div>
+        </section>
 
-        {/* =======================================
-            BOTTOM DIVIDER
-        ======================================= */}
+        {/* BOTTOM DECORATION */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 

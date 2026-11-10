@@ -2,81 +2,80 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  Heart,
   ArrowLeft,
   ArrowUpRight,
   BookOpen,
 } from "lucide-react";
 
 export default function RomanceLiterature() {
-
-  // ==========================================
-  // ROMANCE BOOKS - ACTUAL COVER DETAILS
-  // Images: public/romance/
-  // Prices removed.
-  // Amazon search links included.
-  // ==========================================
-
   const books = [
     {
       id: 1,
-      title: "Yes Sir: An Age Gap Romance",
-      author: "Sherrion Marie",
-      format: "Age Gap Romance",
+      title: "Devlin",
+      subtitle: "King's Cops",
+      author: "Sadie King",
+      format: "Contemporary Romance",
       image: "/romance/romance1.webp",
       amazonUrl:
-        "https://www.amazon.com/Yes-Sir-Romance-Feeling-Shooting/dp/B0HCY2F557/ref=sr_1_1?dib=eyJ2IjoiMSJ9.TWrgwz2xxFe51PcH5MLemA.q83f5kIu1kEJkvV-3LU2G-9FKghpo1dKqUpONzZg8iw&dib_tag=se&keywords=Yes+Sir+Sherrion+Marie&qid=1794009292&sr=8-1",
+        "https://www.amazon.com/Devlin-police-romance-Kings-Cops-ebook/dp/B08ZXQDZXK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.Hm2QmJABzvuGt5XC8OiyJp4tSWm7BZ6xmGHGJINznFdV4JoXcwe8Mr7fJ3WM96u5hKRGbx7JCzbohXNcUwSBkQ.Lg5NLUdy9jw8sCcndabZq9rP8gY1DL6IXvfssNMRcWI&dib_tag=se&keywords=Devlin+Kings+Cops+Sadie+King&qid=1794334665&sr=8-1",
     },
     {
       id: 2,
-      title: "Can I Join You?: A Why Choose Romance",
-      author: "Kyiris Ashley",
-      format: "Contemporary Romance",
+      title: "Mountain Man's Obsession",
+      subtitle: "Men of Maple Mountain",
+      author: "Sadie King",
+      format: "Mountain Man Romance",
       image: "/romance/romance2.webp",
-      amazonUrl:
-        "https://www.amazon.com/Can-Join-You-Choose-Romance-ebook/dp/B0H4YYTFRJ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.spvbbZ2zlIriJjegcyUpDillo4xOPeF4TQefsNfW9sM5fsHPgMgYJWF6IX6I1CnUeARvaLmZNSV0RrTZ_udQCriL1Ha2wksagfHmh60uilvVE8vI_rHnteDyx4RLPEpT54rw7Qo7Yr4Jue-vo69BZh3P48OZtxMbWw042q5sESNMzwfn38jWU-GFJjgKjfJC8BGZwWwhFDzTrJksqxDYe9ymIB5BoUt61O1Q26iMul8.PYn2MMrfvbgmVLFSN6T6ih5Ib0zqk9D3sRMMpuCsKHA&dib_tag=se&keywords=Can+I+Join+You+Kyiris+Ashley&qid=1794009266&sr=8-1",
+      amazonUrl: "https://www.amazon.com/dp/B09TKNBFC7",
     },
     {
       id: 3,
-      title: "Love Is Never Late",
-      author: "Sect Elder Breeze",
-      format: "Dark Billionaire Romance",
-      image: "/romance/romance3.webp",
+      title: "Mason",
+      subtitle: "King's Cops",
+      author: "Sadie King",
+      format: "Contemporary Romance",
+      image: "/romance/romance3.jpg",
       amazonUrl:
-        "https://www.amazon.com/Love-Never-Late-Possessive-Romance-ebook/dp/B0D8WLVJ6H/ref=sr_1_1?dib=eyJ2IjoiMSJ9.lXgkuxaDh5qfNjmHsyEMDNcAaahE2nOl5tABATnpBj0oPBn4n58q5N-KJVclDCV7ReCXae4hujA1X61Rsyj0yuAP6F8yfJGh-XGjBQPyg7g.ezwGiLvoA6ugI9g2jPoGuyuoWJD5_fY5mhhVxLru6T4&dib_tag=se&keywords=Love+Is+Never+Late+Sect+Elder+Breeze&qid=1794009242&sr=8-1",
+        "https://www.amazon.com/Mason-Police-Romance-Kings-Cops-ebook/dp/B08WS4RPYT/ref=sr_1_1?dib=eyJ2IjoiMSJ9.5oCEtmPhInA3epTi_MvznCWcLWymlZ02CCbfgcabAtzECWEqUR1-uCTTlu9JNEGf.m4PJWn4tDI_UOHm2tegfdq4BGuJ1yn04RRERuLcrsGs&dib_tag=se&keywords=Mason+Kings+Cops+Sadie+King&qid=1794334695&sr=8-1",
     },
     {
       id: 4,
-      title: "Sandcastles",
-      author: "Shenaye Suggs",
-      format: "Romantic Suspense",
-      image: "/romance/romance4.webp",
+      title: "Protecting His Brat",
+      subtitle: "Sunset Security",
+      author: "Sadie King",
+      format: "Protective Hero Romance",
+      image: "/romance/romance4.jpg",
       amazonUrl:
-        "https://www.amazon.com/Sand-Castles-Love-Like-Honey-ebook/dp/B0GQKK3H92/ref=sr_1_1?dib=eyJ2IjoiMSJ9.nZUongjCUczry9kDS1QtaA.TIJzQhYG3EE2LX3ycvOmf-3zb_HqrGN-zkLPvu4kUO0&dib_tag=se&keywords=Sandcastles+Shenaye+Suggs&qid=1794009220&sr=8-1",
+        "https://www.amazon.com/Protecting-His-Brat-romance-Security-ebook/dp/B0BG8H2C4X/ref=sr_1_1?dib=eyJ2IjoiMSJ9.quomnExy1HoNlARoSzZ9D2Ekx6MmefuiqbiwtI43hvUmbhHNazIcoSTHp-oDB5nSZfvaJ_1cmGIes2Qs9DkLG3k6ifEcao4IlPIV-ORvxDR0QeqosPGxVEZ0K2Qb8VK_isK8NL6QyoT7ty4SUi1iPQrVbl3kISUijV5hFm80VzE.7KHCDufQJWhT_pbeWOZIElkCwzaSyxIAeSenzSAlMQQ&dib_tag=se&keywords=Protecting+His+Brat+Sadie+King&qid=1794334718&sr=8-1",
     },
     {
       id: 5,
-      title: "Second Chances: An African American Romance",
-      author: "Nicki Drake",
-      format: "Contemporary Romance",
+      title: "The Biker's Revenge",
+      subtitle: "Underground Crows MC",
+      author: "Sadie King",
+      format: "Motorcycle Club Romance",
       image: "/romance/romance5.jpg",
-      amazonUrl:
-        "https://www.amazon.com/Second-Chances-African-American-Romance/dp/B0DV9MFKKN/ref=sr_1_1?dib=eyJ2IjoiMSJ9.z1-6nTXbSxKfwzI_7qfHvw.6iNVT5goEM4k0quLRDQ97gwr9n6myFKOWUwoF7BNvSg&dib_tag=se&keywords=Second+Chances+Nicki+Drake&qid=1794009183&sr=8-1",
+      amazonUrl: "https://www.amazon.com/dp/B0B7PW89ZJ",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        {/* BREADCRUMB NAVIGATION */}
+        {/* BREADCRUMB */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
           <Link
             to="/"
-            className="hover:text-[#8c2d19] hover:underline flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
@@ -84,59 +83,61 @@ export default function RomanceLiterature() {
           <span>Categories</span>
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Romance Literature
           </span>
-        </div>
+        </nav>
 
         {/* PAGE HEADER */}
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-          <div>
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
-              <Heart className="w-4 h-4" />
-              <span>
+            <div className="flex-1">
+              <p className="text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
                 Passionate Stories & Unforgettable Romance
+              </p>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Romance Literature
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Discover captivating romance novels featuring
+                protective heroes, mountain men, passionate
+                relationships, motorcycle club adventures,
+                and unforgettable love stories. Explore
+                emotional journeys filled with attraction,
+                devotion, suspense, and second chances.
+              </p>
+            </div>
+
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
+
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Romance Literature
-            </h1>
-
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Discover captivating romance novels, emotional
-              love stories, romantic suspense, complicated
-              relationships, and unforgettable journeys
-              of passion, heartbreak, and second chances.
-            </p>
           </div>
+        </header>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
+        {/* BOOK COLLECTION */}
 
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
-          </div>
-        </div>
-
-        {/* BOOK COLLECTION GRID */}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
-            <div
+            <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col hover:border-[#8c2d19]"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
-              {/* BOOK COVER */}
+              {/* BOOK IMAGE */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] shadow-inner overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
                 <img
                   src={book.image}
                   alt={`${book.title} by ${book.author}`}
@@ -145,59 +146,67 @@ export default function RomanceLiterature() {
                 />
               </div>
 
-              {/* BOOK DETAILS */}
+              {/* BOOK CATEGORY */}
 
-              <div className="flex flex-col flex-1">
-
-                {/* GENRE BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+              <div className="mt-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
+              </div>
 
-                {/* BOOK TITLE */}
+              {/* BOOK INFORMATION */}
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-3 min-h-[70px]">
+              <div className="flex flex-col flex-1 mt-2">
+
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                {/* AUTHOR */}
+                <p className="text-[12px] text-[#756052] mt-1 leading-snug">
+                  {book.subtitle}
+                </p>
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
+                <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
                   by {book.author}
                 </p>
 
                 {/* AMAZON VIEW BOOK BUTTON */}
 
-                <div className="mt-auto pt-5">
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                <div className="mt-auto pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
+
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      aria-label={`Find ${book.title} by ${book.author} on Amazon`}
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
                       <BookOpen size={15} />
                       View Book
                       <ArrowUpRight size={15} />
                     </a>
+
                   </div>
                 </div>
 
               </div>
-            </div>
+
+            </article>
           ))}
 
-        </div>
+        </section>
 
         {/* BOTTOM DIVIDER */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+        <div className="flex items-center gap-3 mt-9">
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
+
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
         </div>
 
       </div>

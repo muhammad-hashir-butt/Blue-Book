@@ -2,7 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  Landmark,
   ArrowLeft,
   ArrowUpRight,
   BookOpen,
@@ -10,73 +9,78 @@ import {
 
 export default function HistoricalFiction() {
 
-  // ==========================================
-  // 5 HISTORICAL FICTION BOOKS
-  // Images: public/history/
-  // Correct titles and authors
-  // Amazon links included
-  // No prices
-  // ==========================================
-
   const books = [
     {
       id: 1,
-      title: "The Frozen River",
-      author: "Ariel Lawhon",
-      format: "Historical Mystery Fiction",
-      image: "/history/history1.webp",
-      amazonUrl: "https://www.amazon.com/dp/0385546874",
+      title: "Tender Rot",
+      subtitle: "Volume One",
+      author: "Morenike Honteuse",
+      format: "Historical Gothic & Dark Fiction",
+      image: "/history/history1.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Tender-Rot-Morenike-Honteuse-ebook/dp/B0GX32KLFB/ref=sr_1_1?dib=eyJ2IjoiMSJ9.D07uH9TDfhUkzPILRJOXXQ.ae2Q7_NSpDgscXMe2bAxI7Yr6hthfMeljitc_3hb79M&dib_tag=se&keywords=Tender+Rot+Morenike+Honteuse&qid=1794332703&sr=8-1",
     },
     {
       id: 2,
-      title: "The Calamity Club",
-      author: "Kathryn Stockett",
-      format: "Historical Literary Fiction",
+      title: "Anne Black: Seed of Scotland",
+      subtitle: "",
+      author: "Rosanne Vaughan",
+      format: "Scottish Gothic Fantasy & Romance",
       image: "/history/history2.jpg",
-      amazonUrl: "https://www.amazon.com/dp/1954118813",
+      amazonUrl:
+        "https://www.amazon.com/dp/B0FSQWQMC4",
     },
     {
       id: 3,
-      title: "The Nightingale",
-      author: "Kristin Hannah",
-      format: "World War II Fiction",
+      title: "Christmas in '45",
+      subtitle: "A Novel",
+      author: "Mark W. Sasse",
+      format: "World War II Historical Fiction",
       image: "/history/history3.jpg",
-      amazonUrl: "https://www.amazon.com/s?k=The+Nightingale+Kristin+Hannah+audiobook",
+      amazonUrl:
+        "https://www.amazon.com/dp/B0B6RWCN6B",
     },
     {
       id: 4,
-      title: "The Alice Network",
-      author: "Kate Quinn",
-      format: "Historical War Fiction",
+      title: "The Mummy's Vengeance",
+      subtitle:
+        "Case Files from the Nightfall Detective Agency",
+      author: "David Alyn Gordon",
+      format: "Historical Mystery & Horror",
       image: "/history/history4.jpg",
-      amazonUrl: "https://www.amazon.com/dp/0062654195",
+      amazonUrl:
+        "https://www.amazon.com/Mummys-Vengeance-Mystery-Nightfall-Detective-ebook/dp/B0CKLKLK6G/ref=sr_1_1?dib=eyJ2IjoiMSJ9.CduKi_6DQ_MDuvkErUAkTnOIB9e3e3n5g-rQqF58pj7GjHj071QN20LucGBJIEps.ViBPJqUJlsVrq6TG6WlBj3YSL0ynx7B-yPcBOatFnA0&dib_tag=se&keywords=The+Mummys+Vengeance+David+Alyn+Gordon&qid=1794332739&sr=8-1",
     },
     {
       id: 5,
-      title: "The Pirate Queen",
-      author: "Ariel Lawhon",
-      format: "Historical Adventure Fiction",
+      title: "Beneath the Angels of Mons",
+      subtitle:
+        "Tales of the Supernatural and Psychological",
+      author: "Gregg F. Bartley",
+      format: "Historical Supernatural & War Fiction",
       image: "/history/history5.jpg",
-      amazonUrl: "https://www.amazon.com/dp/0385550340",
+      amazonUrl:
+        "https://www.amazon.com/dp/B0DJY557WN",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
-
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        {/* ======================================
-            BREADCRUMB NAVIGATION
-        ====================================== */}
+        {/* BREADCRUMB */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
-
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
           <Link
             to="/"
-            className="hover:text-[#8c2d19] hover:underline flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
@@ -84,69 +88,70 @@ export default function HistoricalFiction() {
           <span>Categories</span>
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Historical Fiction
           </span>
+        </nav>
 
-        </div>
+        {/* PAGE HEADER */}
 
-        {/* ======================================
-            PAGE HEADER
-        ====================================== */}
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-          <div>
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
+            <div className="flex-1">
 
-              <Landmark className="w-4 h-4" />
+              <p className="text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
+                History, Mystery & Extraordinary Stories
+              </p>
 
-              <span>
-                Extraordinary Stories Across History
-              </span>
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Historical Fiction
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Journey through captivating historical
+                settings, atmospheric mysteries, Gothic
+                romance, wartime experiences, and
+                supernatural adventures. Discover
+                compelling stories that bring together
+                imagination, historical inspiration,
+                unforgettable characters, and the
+                mysteries of the past.
+              </p>
+
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Historical Fiction
-            </h1>
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
 
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Journey through extraordinary historical eras,
-              unforgettable characters, remarkable women,
-              wartime courage, and powerful stories inspired
-              by the events that shaped our world.
-            </p>
-          </div>
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
+              </span>
 
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
-
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
+            </div>
 
           </div>
-        </div>
 
-        {/* ======================================
-            BOOK COLLECTION GRID
-        ====================================== */}
+        </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {/* BOOK COLLECTION */}
+
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
-            <div
+            <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col hover:border-[#8c2d19]"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
               {/* BOOK COVER */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] shadow-inner overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
@@ -157,44 +162,49 @@ export default function HistoricalFiction() {
 
               </div>
 
-              {/* BOOK DETAILS */}
+              {/* CATEGORY */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* CATEGORY BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
-                {/* BOOK TITLE */}
+              </div>
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-3 min-h-[70px]">
+              {/* BOOK DETAILS */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                {/* AUTHOR */}
+                {book.subtitle && (
+                  <p className="text-[12px] text-[#756052] mt-1 leading-snug">
+                    {book.subtitle}
+                  </p>
+                )}
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
+                <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
                   by {book.author}
                 </p>
 
                 {/* AMAZON VIEW BOOK BUTTON */}
 
-                <div className="mt-auto pt-5">
+                <div className="mt-auto pt-4">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      aria-label={`View ${book.title} on Amazon`}
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
                       <BookOpen size={15} />
-
                       View Book
-
                       <ArrowUpRight size={15} />
                     </a>
 
@@ -204,25 +214,23 @@ export default function HistoricalFiction() {
 
               </div>
 
-            </div>
+            </article>
 
           ))}
 
-        </div>
+        </section>
 
-        {/* ======================================
-            BOTTOM DIVIDER
-        ====================================== */}
+        {/* BOTTOM DIVIDER */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 

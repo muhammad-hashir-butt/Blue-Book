@@ -2,77 +2,83 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  Sparkles,
   ArrowLeft,
   ArrowUpRight,
   BookOpen,
 } from "lucide-react";
 
 export default function LiteraryClassicFiction() {
-
-  // ==========================================
-  // BOOK DATA
-  // Images: public/fiction/
-  // Amazon URLs included.
-  // No prices.
-  // ==========================================
-
   const books = [
     {
       id: 1,
-      title: "East of Eden",
-      author: "John Steinbeck",
-      format: "Literary Classic",
+      title: "Vesta and Her Children",
+      subtitle: "A Tale of the Fall of Rome",
+      author: "Marcia Twain",
+      format: "Historical Fiction",
       image: "/fiction/fiction1.webp",
-      amazonUrl: "https://www.amazon.com/East-Eden-John-Steinbeck-ebook/dp/B001BC5HXG?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.eAx_2kWpGNTsZCRGqw2U4g9xKLCyb_NPXGhnlmF0s-cErnOG21a3KETUbv1005dHUz5daVhAwyq6B203JLEUGSbB-hP9b0ntkBduFk2LXJ95CHAqRMFDA-cfr2u9CnW-qFI6YkmLhgxvABviMEqJcx0uL14c1GmH5nmQVbUFqe4WYZesOrEkrjbTAIyW7FuKV14dhu7iQbbvWHom_ki_wch8N78034ban4xAYgkl36M.J7-f3Nz5GDRrNAvScmvy-lD4TXGztjngWMilb-a6Um0&dib_tag=AUTHOR",
+      amazonUrl:
+        "https://www.amazon.com/Vesta-Her-Children-Tale-Fall/dp/B0DKTKBY8N/ref=sr_1_1?dib=eyJ2IjoiMSJ9.yHaqMcP3FSKDDGmipBWvVg.6t6ger1hqUWx_KcJCtfUaOdeGXhDix-WLVM55zUmZzE&dib_tag=se&keywords=Vesta+and+Her+Children+Marcia+Twain&qid=1794331389&sr=8-1",
     },
     {
       id: 2,
-      title: "A Tree Grows in Brooklyn",
-      author: "Betty Smith",
-      format: "Coming-of-Age Classic",
-      image: "/fiction/fiction2.webp",
-      amazonUrl: "https://www.amazon.com/dp/0060736267",
+      title: "Catholic Bible: 73 Books with Tabs",
+      subtitle: "",
+      author: "Fr. Mike Schmitz",
+      format: "Religious Literature",
+      image: "/fiction/fiction2.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Catholic-Bible-Books-Tabs-Understand/dp/B0HHM9NMX8/ref=sr_1_1?dib=eyJ2IjoiMSJ9.n4DNaf1omBbqPCUhCibf6ZjD52arEORjj3XWoyBwvqtwps7nKAiVafC59lwBLy1vSqkvREZctm_vy5wEel_NkDWm_LkfL4iLoOG0NQCkYy41WwPMp6FDZRblI0alS9nGbkxaWBClAL03FxoLL7MN0twY1t25ygoM21Pa3h-xtpLBeVkR8ohk_m8lunhdx27yTXMLpUDFBar0aWtBUxf_9w78xgZQogQ01dtes3X3P7k.m1cJOyKg4LaHT0gPhwROR52uRqaIwiyhSQC2_r1u1kU&dib_tag=se&keywords=Catholic+Bible+73+Books+with+Tabs+Fr+Mike+Schmitz&nsdOptOutParam=true&qid=1794331419&sr=8-1",
     },
     {
       id: 3,
-      title: "Animal Farm",
-      author: "George Orwell",
-      format: "Political Satire",
-      image: "/fiction/fiction3.webp",
-      amazonUrl: "https://www.amazon.de/Animal-Farm-zv%C3%AD%C5%99at-Signet-Classics/dp/0451526341",
+      title: "Mansfield Park",
+      subtitle: "A Classic Novel",
+      author: "Jane Austen",
+      format: "Classic English Fiction",
+      image: "/fiction/fiction3.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Janeite-Journal-Mansfield-Park/dp/0996947833/ref=sr_1_3?Adv-Srch-Books-Submit.x=0&Adv-Srch-Books-Submit.y=0&dib=eyJ2IjoiMSJ9.jzoZplDQcHirOwnFwFlEJyJpmlYD8F-nSvuxnDiO2V3GjHj071QN20LucGBJIEps.wwdChsNWTAoA9zAKr5cvzKZYcGXzJgcGmZiU3b3AlyM&dib_tag=se&keywords=literary+and+classic+fiction&qid=1794331507&refinements=p_30%3AIndependent&s=books&sr=1-3&unfiltered=1",
     },
     {
       id: 4,
-      title: "The Complete Novels of Jane Austen",
-      author: "Jane Austen",
-      format: "Classic Literature Collection",
-      image: "/fiction/fiction4.webp",
-      amazonUrl: "https://www.amazon.com/Complete-Novels-Austen-Knickerbocker-Classics/dp/1631066439",
+      title: "The Tenth Symphony",
+      subtitle: "",
+      author: "Dean Evans",
+      format: "Contemporary Literary Fiction",
+      image: "/fiction/fiction4.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Tenth-Symphony-Dean-Evans-ebook/dp/B0CF8BL7PW/ref=sr_1_1?dib=eyJ2IjoiMSJ9.mMFTSK8f95qsK8gJ8FFe_g.Xury2gPHNznp2IUbsyRSW1DUFFXwL487MMvO-S4aO7Q&dib_tag=se&keywords=The+Tenth+Symphony+Dean+Evans&qid=1794331541&sr=8-1",
     },
     {
       id: 5,
-      title: "To Kill a Mockingbird",
-      author: "Harper Lee",
-      format: "Literary Fiction",
+      title:
+        "El collar de diamantes / The Diamond Necklace",
+      subtitle: "Spanish Translation",
+      author: "Guy de Maupassant",
+      format: "Classic Short Fiction",
       image: "/fiction/fiction5.jpg",
-      amazonUrl: "https://www.amazon.com/dp/0060935464",
+      amazonUrl:
+        "https://www.amazon.com/diamantes-Diamond-Necklace-Maupassant-Translation-ebook/dp/B009Z1FBJU/ref=sr_1_1?dib=eyJ2IjoiMSJ9.MhO9Uu1hDsFNEB-KTvsCAjfGaBqZX74m6yvEh5IzUQQMjF16kMYKhh-My4_h-O0BSnwxLA4e155D4FVntgXr_FAvkRVfmleXbyQyWbBpZbUYvAwmsqs8S1-rQHrIrn7CCL7u6oF_w0e6rCO_7XUWwbuu1fv4pb91R712LPuA8ffyb3AAHudWKMgt8BlyZskusmRwiMqGPUWAv3CWVm44QsT70aF8N1rMTyxB94OvLg4.fQwFcBPIZCZ8I3PVOPkK3wJW3hANiShuY2yVxMFbzfg&dib_tag=se&keywords=El+collar+de+diamantes+Guy+de+Maupassant+Spanish&nsdOptOutParam=true&qid=1794331568&sr=8-1",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
-
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
         {/* BREADCRUMB */}
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
 
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
           <Link
             to="/"
-            className="hover:text-[#8c2d19] hover:underline flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
@@ -80,60 +86,70 @@ export default function LiteraryClassicFiction() {
           <span>Categories</span>
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Literary & Classic Fiction
           </span>
-
-        </div>
+        </nav>
 
         {/* PAGE HEADER */}
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
 
-          <div>
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
-              <Sparkles className="w-4 h-4" />
-              <span>Timeless Literary Masterpieces</span>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+            <div className="flex-1">
+
+              <p className="text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
+                Timeless Literary Masterpieces
+              </p>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Literary & Classic Fiction
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Explore a diverse selection of literary
+                works, historical fiction, classic
+                novels, religious literature, and
+                thought-provoking stories. Discover
+                remarkable narratives that explore
+                history, faith, human relationships,
+                culture, and the enduring power
+                of storytelling.
+              </p>
+
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Literary & Classic Fiction
-            </h1>
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
 
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Discover timeless literary masterpieces,
-              unforgettable characters, and celebrated
-              works of fiction from influential authors
-              across generations.
-            </p>
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
 
-          </div>
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
+              </span>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
-
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
-
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
+            </div>
 
           </div>
-        </div>
+
+        </header>
 
         {/* BOOK COLLECTION */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
-            <div
+            <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col hover:border-[#8c2d19]"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
               {/* BOOK COVER */}
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] shadow-inner overflow-hidden mb-4 flex items-center justify-center">
+
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
@@ -144,34 +160,46 @@ export default function LiteraryClassicFiction() {
 
               </div>
 
-              {/* BOOK INFORMATION */}
-              <div className="flex flex-col flex-1">
+              {/* CATEGORY */}
 
-                {/* GENRE BADGE */}
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+              <div className="mt-3">
+
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
-                {/* BOOK TITLE */}
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-3 min-h-[70px]">
-                  {book.title}
-                </h3>
+              </div>
 
-                {/* AUTHOR */}
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
+              {/* BOOK DETAILS */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
+                  {book.title}
+                </h2>
+
+                {book.subtitle && (
+                  <p className="text-[12px] text-[#756052] mt-1 leading-snug">
+                    {book.subtitle}
+                  </p>
+                )}
+
+                <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
                   by {book.author}
                 </p>
 
                 {/* AMAZON VIEW BUTTON */}
-                <div className="mt-auto pt-5">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                <div className="mt-auto pt-4">
+
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      aria-label={`Find ${book.title} on Amazon`}
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
                       <BookOpen size={15} />
                       View Book
@@ -184,22 +212,23 @@ export default function LiteraryClassicFiction() {
 
               </div>
 
-            </div>
+            </article>
 
           ))}
 
-        </div>
+        </section>
 
         {/* BOTTOM DIVIDER */}
-        <div className="flex items-center justify-center gap-4 mt-16">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
+
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 
