@@ -1,10 +1,6 @@
 
 import React, { useEffect } from "react";
-import {
-  Link,
-  useLocation,
-} from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 import {
   ShieldCheck,
   Mail,
@@ -15,8 +11,7 @@ import {
 import thundersmouthLogo from "../assets/Thundersmouth logo.png";
 
 // ================================================
-// FOOTER NAVIGATION
-// 4 COLUMNS - 5 LINKS IN EACH COLUMN
+// FOOTER NAVIGATION - 4 COLUMNS, 5 LINKS EACH
 // ================================================
 
 const footerSections = [
@@ -123,19 +118,11 @@ const footerSections = [
 ];
 
 export default function Footer() {
-
   const location = useLocation();
 
-  // ================================================
-  // AUTOMATIC SCROLL TO TOP ON PAGE NAVIGATION
-  // ================================================
-
+  // SCROLL TO TOP ON PAGE CHANGE
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant",
-    });
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const handleFooterNavigation = () => {
@@ -144,247 +131,202 @@ export default function Footer() {
 
   return (
     <footer
-      className="w-full bg-[#18110e] text-[#e8dfcf] text-xs border-t-4 border-[#c29b38]"
+      className="w-full bg-black text-white text-xs border-t border-[#333333]"
       style={{
         fontFamily: "Georgia, 'Times New Roman', serif",
       }}
     >
 
-      {/* =============================================
-          1. LOGO & BRAND INFORMATION
-      ============================================= */}
+      {/* ================================================
+          1. LOGO AND BRAND INFORMATION
+      ================================================ */}
 
-      <div className="max-w-7xl mx-auto px-6 py-10 border-b border-[#302119]">
+      <div className="w-full bg-black border-b border-[#333333]">
+        <div className="max-w-7xl mx-auto px-6 py-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
-          {/* LOGO AND DESCRIPTION */}
+            {/* LOGO AND DESCRIPTION */}
 
-          <div className="lg:col-span-7 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+            <div className="lg:col-span-7 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
 
-            <Link
-              to="/"
-              onClick={handleFooterNavigation}
-              aria-label="Blue Book Home"
-              className="shrink-0 flex items-center justify-center"
-            >
+              {/* BRAND LOGO */}
 
-              <img
-                src={thundersmouthLogo}
-                alt="Blue Book - Rare Books & Manuscripts"
-                loading="lazy"
-                className="block w-auto h-auto max-w-[230px] sm:max-w-[260px] max-h-[110px] object-contain"
-              />
+              <Link
+                to="/"
+                onClick={handleFooterNavigation}
+                aria-label="Blue Book Home"
+                className="shrink-0 flex items-center justify-center"
+              >
+                <img
+                  src={thundersmouthLogo}
+                  alt="Blue Book - Rare Books & Manuscripts"
+                  loading="lazy"
+                  className="block w-auto h-auto max-w-[230px] sm:max-w-[260px] max-h-[110px] object-contain"
+                />
+              </Link>
 
-            </Link>
+              {/* BRAND CONTENT */}
 
-            {/* BRAND DESCRIPTION */}
+              <div className="flex-1">
 
-            <div className="flex-1">
+                <span className="text-[10px] tracking-[0.2em] uppercase text-white font-sans font-bold block mb-2">
+                  Rare Books • Timeless Literature • Collectible Editions
+                </span>
 
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[#c29b38] font-sans font-bold block mb-2">
-                Rare Books • Timeless Literature • Collectible Editions
-              </span>
+                <h3 className="text-2xl font-bold text-white leading-snug">
+                  Preserving Stories, Inspiring Generations
+                </h3>
 
-              <h3 className="text-2xl font-bold text-[#fbf8f2] leading-snug">
-                Preserving Stories, Inspiring Generations
-              </h3>
+                <p className="text-[13px] text-white mt-2 leading-relaxed max-w-xl italic">
+                  Discover a thoughtfully curated collection
+                  of rare books, timeless literary classics,
+                  historical treasures, fine art editions,
+                  and extraordinary manuscripts.
+                  At BLUE BOOK, we celebrate the beauty
+                  of literature, the value of knowledge,
+                  and the lasting legacy of the written word.
+                </p>
 
-              <p className="text-[13px] text-[#b8a68f] mt-2 leading-relaxed max-w-xl italic">
-                Discover a thoughtfully curated collection
-                of rare books, timeless literary classics,
-                historical treasures, fine art editions,
-                and extraordinary manuscripts.
-                At BLUE BOOK, we celebrate the beauty
-                of literature, the value of knowledge,
-                and the lasting legacy of the written word.
-              </p>
-
-            </div>
-
-          </div>
-
-          {/* =============================================
-              NEWSLETTER SECTION
-          ============================================= */}
-
-          <div className="lg:col-span-5 bg-[#221814] p-6 border-2 border-[#b8a68f] shadow-lg">
-
-            <div className="flex items-center gap-2 text-[#c29b38] mb-2 font-sans font-bold text-[10px] tracking-widest uppercase">
-
-              <Feather className="w-3.5 h-3.5" />
-
-              <span>
-                The Literary Newsletter
-              </span>
-
-            </div>
-
-            <h4 className="text-base font-bold text-[#fbf8f2]">
-              Discover Your Next Great Read
-            </h4>
-
-            <p className="text-[12px] text-[#9e8c7c] mt-2 mb-4 leading-relaxed">
-              Explore new arrivals, timeless classics,
-              rare collections, and featured literary
-              discoveries from BLUE BOOK.
-            </p>
-
-            {/* NEWSLETTER FORM */}
-
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="flex items-center bg-[#fdfbf7] border border-[#b8a68f] overflow-hidden"
-            >
-
-              <div className="pl-3 text-[#7a6452]">
-                <Mail className="w-4 h-4" />
               </div>
 
-              <input
-                type="email"
-                required
-                placeholder="Enter your email address..."
-                className="w-full min-w-0 px-3 py-3 text-xs text-[#241a15] bg-transparent outline-none placeholder-[#8f8174] font-serif"
-              />
+            </div>
 
-              <button
-                type="submit"
-                className="bg-[#8c2d19] text-[#fbf8f2] font-sans font-bold px-4 py-3 uppercase tracking-wider text-[10px] whitespace-nowrap"
-              >
-                Subscribe
-              </button>
+            {/* ================================================
+                NEWSLETTER SECTION
+            ================================================ */}
 
-            </form>
+            <div className="lg:col-span-5 bg-black p-6 border border-[#444444]">
 
-          </div>
+              <div className="flex items-center gap-2 text-white mb-2 font-sans font-bold text-[10px] tracking-widest uppercase">
 
-        </div>
+                <Feather className="w-3.5 h-3.5" />
 
-      </div>
+                <span>
+                  The Literary Newsletter
+                </span>
 
-      {/* =============================================
-          2. FOOTER PAGE DIRECTORY
-          4 COLUMNS - 5 LINKS EACH
-      ============================================= */}
+              </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-10">
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-          {footerSections.map((section, index) => (
-
-            <div
-              key={index}
-              className="bg-[#1c1410] p-5 border border-[#302119] flex flex-col"
-            >
-
-              {/* COLUMN HEADING */}
-
-              <h4 className="text-[12px] font-sans font-bold uppercase tracking-wider text-[#c29b38] border-b border-[#302119] pb-3 mb-4">
-                {section.heading}
+              <h4 className="text-base font-bold text-white">
+                Discover Your Next Great Read
               </h4>
 
-              {/* PAGE LINKS */}
+              <p className="text-[12px] text-white mt-2 mb-4 leading-relaxed">
+                Explore new arrivals, timeless classics,
+                rare collections, and featured literary
+                discoveries from BLUE BOOK.
+              </p>
 
-              <div className="flex flex-col gap-3 font-sans text-[12px] text-[#b8a68f]">
+              {/* NEWSLETTER FORM */}
 
-                {section.links.map((item, itemIndex) => (
+              <form
+                onSubmit={(e) => e.preventDefault()}
+                className="flex items-center bg-white border border-[#666666] overflow-hidden"
+              >
 
-                  <Link
-                    key={itemIndex}
-                    to={item.path}
-                    onClick={handleFooterNavigation}
-                    className="flex items-start gap-2 text-[#b8a68f] no-underline leading-relaxed"
-                  >
+                <div className="pl-3 text-black">
+                  <Mail className="w-4 h-4" />
+                </div>
 
-                    <span className="text-[#a9472e] shrink-0">
-                      ›
-                    </span>
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email address..."
+                  className="w-full min-w-0 px-3 py-3 text-xs text-black bg-transparent outline-none placeholder-[#666666] font-serif"
+                />
 
-                    <span>
-                      {item.name}
-                    </span>
+                <button
+                  type="submit"
+                  className="bg-white text-black border-l border-[#cccccc] font-sans font-bold px-4 py-3 uppercase tracking-wider text-[10px] whitespace-nowrap"
+                >
+                  Subscribe
+                </button>
 
-                  </Link>
-
-                ))}
-
-              </div>
+              </form>
 
             </div>
-
-          ))}
-
-        </div>
-
-        {/* =============================================
-            QUICK NAVIGATION
-        ============================================= */}
-
-        <div className="border-t border-[#302119] mt-8 pt-6">
-
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[12px] font-sans">
-
-            <Link
-              to="/"
-              onClick={handleFooterNavigation}
-              className="text-[#c29b38] no-underline"
-            >
-              Home
-            </Link>
-
-            <Link
-              to="/bookstores"
-              onClick={handleFooterNavigation}
-              className="text-[#c29b38] no-underline"
-            >
-              Bookstores
-            </Link>
-
-            <Link
-              to="/sell-books"
-              onClick={handleFooterNavigation}
-              className="text-[#c29b38] no-underline"
-            >
-              Sell Books
-            </Link>
-
-            <Link
-              to="/advanced-search"
-              onClick={handleFooterNavigation}
-              className="text-[#c29b38] no-underline"
-            >
-              Advanced Search
-            </Link>
-
-            <Link
-              to="/help"
-              onClick={handleFooterNavigation}
-              className="text-[#c29b38] no-underline"
-            >
-              Collector Support
-            </Link>
 
           </div>
 
         </div>
-
       </div>
 
-      {/* =============================================
-          3. BOTTOM FOOTER
-      ============================================= */}
+      {/* ================================================
+          2. FOOTER PAGE DIRECTORY
+      ================================================ */}
 
-      <div className="bg-[#120c09] py-6 border-t border-[#291b14] font-sans text-[11px] text-[#7a6452]">
+      <div className="w-full bg-black">
+        <div className="max-w-7xl mx-auto px-6 py-10">
+
+          {/* FOUR COLUMNS */}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            {footerSections.map((section, index) => (
+
+              <div
+                key={index}
+                className="bg-black p-5 border border-[#333333] flex flex-col"
+              >
+
+                {/* COLUMN HEADING */}
+
+                <h4 className="text-[12px] font-sans font-bold uppercase tracking-wider text-white border-b border-[#333333] pb-3 mb-4">
+                  {section.heading}
+                </h4>
+
+                {/* COLUMN LINKS */}
+
+                <div className="flex flex-col gap-3 font-sans text-[12px] text-white">
+
+                  {section.links.map((item, itemIndex) => (
+
+                    <Link
+                      key={itemIndex}
+                      to={item.path}
+                      onClick={handleFooterNavigation}
+                      className="flex items-start gap-2 text-white no-underline leading-relaxed"
+                    >
+
+                      <span className="text-white shrink-0">
+                        ›
+                      </span>
+
+                      <span>
+                        {item.name}
+                      </span>
+
+                    </Link>
+
+                  ))}
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+          {/* QUICK NAVIGATION SECTION REMOVED */}
+
+        </div>
+      </div>
+
+      {/* ================================================
+          3. BOTTOM FOOTER
+      ================================================ */}
+
+      <div className="bg-black py-6 border-t border-[#333333] font-sans text-[11px] text-white">
 
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
 
-          {/* BRAND TRUST MESSAGE */}
+          {/* TRUST MESSAGE */}
 
-          <div className="flex items-center gap-2 border border-[#c29b38] px-3 py-2 text-[#c29b38] text-[10px] font-bold">
+          <div className="flex items-center gap-2 border border-[#555555] px-3 py-2 text-white text-[10px] font-bold">
 
-            <ShieldCheck className="w-4 h-4" />
+            <ShieldCheck className="w-4 h-4 text-white" />
 
             <span>
               RARE BOOKS & LITERARY COLLECTIONS
@@ -392,14 +334,14 @@ export default function Footer() {
 
           </div>
 
-          {/* BOTTOM NAVIGATION */}
+          {/* BOTTOM LINKS - SUPPORT REMOVED */}
 
           <div className="flex flex-wrap items-center justify-center gap-3 text-center">
 
             <Link
               to="/"
               onClick={handleFooterNavigation}
-              className="text-[#b8a68f] no-underline"
+              className="text-white no-underline"
             >
               Home
             </Link>
@@ -409,7 +351,7 @@ export default function Footer() {
             <Link
               to="/bookstores"
               onClick={handleFooterNavigation}
-              className="text-[#b8a68f] no-underline"
+              className="text-white no-underline"
             >
               Bookstores
             </Link>
@@ -417,30 +359,20 @@ export default function Footer() {
             <span>•</span>
 
             <Link
-              to="/sell-books"
+              to="/book-marketing"
               onClick={handleFooterNavigation}
-              className="text-[#b8a68f] no-underline"
+              className="text-white no-underline"
             >
-              Sell Books
-            </Link>
-
-            <span>•</span>
-
-            <Link
-              to="/help"
-              onClick={handleFooterNavigation}
-              className="text-[#b8a68f] no-underline"
-            >
-              Support
+              Book Marketing
             </Link>
 
           </div>
 
           {/* CUSTOMER SUPPORT */}
 
-          <div className="flex items-center gap-2 text-[#b8a68f]">
+          <div className="flex items-center gap-2 text-white">
 
-            <PhoneCall className="w-4 h-4 text-[#c29b38]" />
+            <PhoneCall className="w-4 h-4 text-white" />
 
             <span>
               Collector Support: 1-800-813-9432
@@ -450,18 +382,18 @@ export default function Footer() {
 
         </div>
 
-        {/* =============================================
+        {/* ================================================
             COPYRIGHT
-        ============================================= */}
+        ================================================ */}
 
-        <div className="max-w-7xl mx-auto px-6 mt-5 pt-4 border-t border-[#1f1510] text-center text-[11px] text-[#7a6452]">
+        <div className="max-w-7xl mx-auto px-6 mt-5 pt-4 border-t border-[#333333] text-center text-[11px] text-white">
 
           <p>
             Copyright © {new Date().getFullYear()} BLUE BOOK.
             All Rights Reserved.
           </p>
 
-          <p className="mt-2 italic text-[#5c4a3e]">
+          <p className="mt-2 italic text-white">
             Celebrating Rare Books, Timeless Stories,
             and the Written Legacy.
           </p>

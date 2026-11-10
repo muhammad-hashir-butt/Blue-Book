@@ -14,8 +14,7 @@ import BookCategories from './components/BookCategories';
 import RareCollectibles from './components/RareCollectibles';
 import ShopConfidence from './components/ShopConfidence';
 import Bookstores from './bookstores/Bookstores';
-import SellBooks from './sellbooks/SellBooks';
-
+import BookMarketing from './bookmarketing/bookmarketing';
 
 
 
@@ -149,7 +148,7 @@ export default function App() {
             
             <Route path="/bookstores" element={<Bookstores />} />
             
-<Route path="/sell-books" element={<SellBooks />} />
+ <Route path="/book-marketing" element={<BookMarketing />} />
 
 
              

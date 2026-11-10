@@ -21,8 +21,8 @@ import thundersmouthLogo from "../assets/Thundersmouth logo.png";
 const searchablePages = [
   // MAIN PAGES
   { name: "Home", path: "/" },
-  { name: "Bookstores", path: "/bookstores" },
-  { name: "Sell Books", path: "/sell-books" },
+  { name: "Book Stores", path: "/bookstores" },
+  { name: "Book Marketing", path: "/book-marketing" },
   { name: "Collector Support", path: "/help" },
   { name: "Advanced Search Options", path: "/advanced-search" },
 
@@ -593,13 +593,13 @@ export default function Navbar() {
               Bookstores
             </Link>
 
-            {/* SELL BOOKS */}
+            {/* bookmarketing */}
 
             <Link
-              to="/sell-books"
+              to="/book-marketing"
               className="py-3 text-[#241a15] hover:text-[#8c2d19]"
             >
-              Sell Books
+              Book Marketing
             </Link>
 
           </nav>
