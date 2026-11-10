@@ -14,20 +14,21 @@ import {
 } from "lucide-react";
 
 // ===========================================
-// 100% TESTED & WORKING LITERARY IMAGES
+// FRESH & DEDICATED BOOKSTORE IMAGES
+// (Completely separate from Marketing Page)
 // ===========================================
 const imageRoot = "/images/bookstores";
 
 const guaranteedImages = {
-  // Fresh atmospheric European bookstore for Hero
+  // Section 1 (Hero): Authentic vintage European antiquarian bookshop
   heroAtmosphere:
-    "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=80",
-  // Fixed working vintage leather bindings for the Editorial Section
+    "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1400&q=80",
+  // Section 2 (Editorial): Rich archival desk with curated antique volumes
   editorialFeature:
-    "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1200&q=80",
-  // Rich warm library shelves for Spotlight
+    "https://images.unsplash.com/photo-1533669955142-6a73332af4db?auto=format&fit=crop&w=1200&q=80",
+  // Spotlight: Atmospheric book alcove
   spotlightAtmosphere:
-    "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80",
   // Universal backup
   universalFallback:
     "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80",
@@ -228,7 +229,7 @@ const books = [
     sellerId: "folio",
     image: `${imageRoot}/books/book-9.png`,
     fallback:
-      "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
     description:
       "An authoritative manual celebrating hand-cast type, paper-making chemistry, and the legacy of the private press movement across Britain and America.",
   },
@@ -241,7 +242,7 @@ const books = [
     sellerId: "quill",
     image: `${imageRoot}/books/book-10.png`,
     fallback:
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=800&q=80",
     description:
       "An analytical survey of scriptorium workshops, manuscript illumination, and the preservation of classical texts in monastic libraries.",
   },
@@ -254,7 +255,7 @@ const books = [
     sellerId: "scholar",
     image: `${imageRoot}/books/book-11.png`,
     fallback:
-      "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80",
     description:
       "A scholarly synthesis of Hellenistic ethical thought, the Socratic tradition, and the intellectual foundations of Western moral philosophy.",
   },
@@ -267,7 +268,7 @@ const books = [
     sellerId: "heritage",
     image: `${imageRoot}/books/book-12.png`,
     fallback:
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
     description:
       "A curated review of Renaissance map engraving, cartographic symbology, and the decorative cartouches of early maritime charts.",
   },
@@ -285,7 +286,6 @@ const specialties = [
 
 // ===========================================
 // ROBUST AUTO-HEALING IMAGE COMPONENT
-// (Never shows an empty broken box)
 // ===========================================
 function StoreImage({ src, fallback, alt, className = "" }) {
   const [currentSrc, setCurrentSrc] = useState(src || fallback || guaranteedImages.universalFallback);
@@ -403,7 +403,7 @@ function BookCard({ book, onView }) {
 
           <button
             onClick={() => onView(book)}
-            className="bg-[#241A15] text-white px-3 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
+            className="bg-[#8C2D19] text-white px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
           >
             Examine Volume
             <ArrowUpRight size={13} />
@@ -511,7 +511,7 @@ export default function Bookstores() {
       `}</style>
 
       {/* =========================================================
-          HERO: FRESH ARCHITECTURAL EUROPEAN BOOKSTORE VISUAL
+          HERO: FRESH UNIQUE VINTAGE BOOKSHOP IMAGE
       ========================================================= */}
       <header className="border-b border-[#E3D7C5]">
         {/* Top Header Tag Strip */}
@@ -542,17 +542,17 @@ export default function Bookstores() {
                 of literature, geography, and intellectual culture.
               </p>
 
-              {/* Minimalist Action Row */}
+              {/* Maroon Styled Action Buttons */}
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <button
                   onClick={() => scrollTo("bookseller-directory")}
-                  className="bg-[#8C2D19] text-[#FAF7F2] py-3.5 px-7 text-xs font-semibold tracking-wider uppercase cursor-pointer"
+                  className="bg-[#8C2D19] text-white py-3.5 px-7 text-xs font-semibold tracking-wider uppercase cursor-pointer shadow-sm"
                 >
                   Explore Bookseller Directory
                 </button>
                 <button
                   onClick={() => scrollTo("books-collection")}
-                  className="border border-[#8C2D19] text-[#241A15] py-3.5 px-6 text-xs font-semibold tracking-wider uppercase cursor-pointer"
+                  className="border border-[#8C2D19] text-[#8C2D19] bg-transparent py-3.5 px-6 text-xs font-semibold tracking-wider uppercase cursor-pointer"
                 >
                   Examine Curated Holdings
                 </button>
@@ -568,13 +568,13 @@ export default function Bookstores() {
               </div>
             </div>
 
-            {/* Right Architectural Visual Canvas */}
+            {/* Right Architectural Visual Canvas (NEW VINTAGE BOOKSHOP IMAGE) */}
             <div className="lg:col-span-5">
               <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-3.5 shadow-sm">
                 <div className="relative h-[340px] sm:h-[400px] overflow-hidden bg-[#E8DECE]">
                   <img
                     src={guaranteedImages.heroAtmosphere}
-                    alt="Historic sunlit European bookstore hall"
+                    alt="Authentic antiquarian bookshop interior with classic lamps"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1F1713]/85 via-transparent to-transparent" />
@@ -601,7 +601,7 @@ export default function Bookstores() {
       </header>
 
       {/* =========================================================
-          EDITORIAL STATEMENT (IMAGE REPLACED & FULLY GUARANTEED)
+          SECTION 2: EDITORIAL STATEMENT (NEW VINTAGE BOOKS DESK IMAGE)
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -631,11 +631,11 @@ export default function Bookstores() {
 
           <div className="lg:col-span-5">
             <div className="relative h-[320px] sm:h-[360px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
-              {/* Working guaranteed image of historic leather-bound library bindings */}
+              {/* Working NEW image of antique books on reading table */}
               <StoreImage
                 src={guaranteedImages.editorialFeature}
                 fallback={guaranteedImages.universalFallback}
-                alt="Vintage leather bindings and archival editions"
+                alt="Antique leather books and reading desk"
               />
 
               <div className="absolute bottom-0 left-0 right-0 bg-[#241A15]/95 p-5 text-[#F5EADB]">
@@ -767,7 +767,7 @@ export default function Bookstores() {
       </section>
 
       {/* =========================================================
-          BOOK COLLECTION (ALL UNIQUE VERIFIED IMAGES)
+          BOOK COLLECTION
       ========================================================= */}
       <section
         id="books-collection"
@@ -801,7 +801,7 @@ export default function Bookstores() {
                 }}
                 className={`px-3.5 py-2 text-xs font-semibold border cursor-pointer ${
                   bookCategory === item
-                    ? "bg-[#241A15] text-white border-[#241A15]"
+                    ? "bg-[#8C2D19] text-white border-[#8C2D19]"
                     : "bg-[#FFFDF8] border-[#D6C7B2] text-[#58483B]"
                 }`}
               >
@@ -890,7 +890,7 @@ export default function Bookstores() {
 
             <button
               onClick={() => scrollTo("bookseller-directory")}
-              className="mt-7 bg-[#C29B38] text-[#241A15] px-6 py-3.5 text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2.5 cursor-pointer"
+              className="mt-7 bg-[#8C2D19] text-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2.5 cursor-pointer"
             >
               Consult the Bookseller Index
               <ArrowRight size={15} />
@@ -1076,7 +1076,7 @@ export default function Bookstores() {
 
                 <button
                   onClick={() => setSelectedBook(null)}
-                  className="mt-6 bg-[#241A15] text-white px-6 py-2.5 text-xs font-semibold uppercase tracking-wider cursor-pointer"
+                  className="mt-6 bg-[#8C2D19] text-white px-6 py-2.5 text-xs font-semibold uppercase tracking-wider cursor-pointer"
                 >
                   Return to Directory
                 </button>
