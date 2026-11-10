@@ -9,7 +9,7 @@ export default function MarketingPage() {
     amazonLinkOrAsin: "",
     genre: "Literary Fiction",
     targetMarket: "Amazon US and Global",
-    primaryService: "Amazon Advertising and A+ Content",
+    primaryService: "Full-Service Book Publishing and Print Production",
     monthlyBudget: "$1,500 - $3,500",
     campaignNotes: "",
     termsAccepted: false,
@@ -81,18 +81,18 @@ export default function MarketingPage() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="w-8 h-px bg-[#8C2D19]" />
                 <span className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19]">
-                  LITERARY MARKETING AND PUBLISHER ACCELERATION
+                  LITERARY PUBLISHING, MARKETING, AND ACCELERATION
                 </span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-[46px] font-bold leading-[1.18] font-serif-heading text-[#241A15]">
-                Strategic Book Marketing, Amazon Advertising, and Catalog Growth.
+                Book Publishing, Amazon Advertising, and Catalog Growth.
               </h1>
 
               <p className="font-serif-body text-sm sm:text-[15px] text-[#5C4A3E] mt-6 leading-7 sm:leading-8 max-w-xl">
-                We design and manage high-yield Amazon PPC campaigns, produce conversion-focused A+ Content,
-                calibrate backend category taxonomy, and orchestrate verified reader outreach to deliver profitable,
-                long-term royalties for independent authors and publishing imprints.
+                From structural editing and classical interior typesetting to worldwide wholesale distribution,
+                Amazon PPC management, and bespoke A+ Content, we provide an end-to-end publishing infrastructure
+                for authors, university presses, and independent imprints.
               </p>
 
               {/* Action Buttons */}
@@ -101,22 +101,24 @@ export default function MarketingPage() {
                   onClick={scrollToForm}
                   className="bg-[#8C2D19] text-white py-3.5 px-7 text-xs font-semibold tracking-wider uppercase cursor-pointer shadow-sm"
                 >
-                  Request Campaign Consultation
+                  Request Publishing Proposal
                 </button>
                 <a
-                  href="#services-suite"
+                  href="#publishing-suite"
                   className="border border-[#241A15] text-[#241A15] py-3.5 px-6 text-xs font-semibold tracking-wider uppercase text-center cursor-pointer"
                 >
-                  Review Service Suite
+                  Explore Publishing Services
                 </a>
               </div>
 
               <div className="mt-9 pt-6 border-t border-[#E8DDCE] flex flex-wrap items-center gap-6 text-xs text-[#7A6758] font-serif-body">
-                <span>Independent Authors</span>
+                <span>Manuscript Editing</span>
                 <span>•</span>
-                <span>Mid-Sized Presses</span>
+                <span>Interior Typesetting</span>
                 <span>•</span>
-                <span>Academic and University Imprints</span>
+                <span>Global Distribution</span>
+                <span>•</span>
+                <span>Amazon Advertising</span>
               </div>
             </div>
 
@@ -132,10 +134,10 @@ export default function MarketingPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A120E]/80 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-[#D4A753] font-editorial-caps font-bold">
-                      DATA-DRIVEN PUBLISHING
+                      END-TO-END PUBLISHING
                     </p>
                     <p className="font-serif-heading text-sm sm:text-base font-bold mt-1">
-                      Algorithmic Precision Aligned with Literary Merit.
+                      Crafting Volumes Worth Preserving for Decades.
                     </p>
                   </div>
                 </div>
@@ -157,16 +159,16 @@ export default function MarketingPage() {
                 $2.4M+
               </span>
               <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#735F50] mt-1 block font-medium leading-relaxed">
-                Managed Amazon Ad Spend
+                Managed Book Sales and Ad Spend
               </span>
             </div>
 
             <div className="border-l border-[#D5C6B3] pl-5 sm:pl-6">
               <span className="block text-2xl sm:text-[28px] font-bold font-serif-heading text-[#241A15]">
-                Sub-15%
+                40,000+
               </span>
               <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#735F50] mt-1 block font-medium leading-relaxed">
-                Average Target ACoS Maintained
+                Global Retail and Library Outlets
               </span>
             </div>
 
@@ -175,7 +177,7 @@ export default function MarketingPage() {
                 430+
               </span>
               <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#735F50] mt-1 block font-medium leading-relaxed">
-                Amazon Bestseller Categories Reached
+                Category Number One Bestsellers
               </span>
             </div>
 
@@ -192,9 +194,188 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          EDITORIAL FRAMEWORK SECTION (COMFORTABLE READING SPACE)
+          NEW SECTION: COMPREHENSIVE BOOK PUBLISHING AND PRINT PRODUCTION
       ========================================================= */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24">
+      <section id="publishing-suite" className="bg-[#FAF7F2] py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10">
+          
+          <div className="border-b border-[#E3D7C5] pb-8 mb-12 sm:mb-14">
+            <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-3">
+              PRODUCTION AND DISTRIBUTION ARCHITECTURE
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-[36px] font-bold font-serif-heading text-[#241A15]">
+              Full-Service Book Publishing, Editorial, and Print Production
+            </h2>
+            <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] mt-3 max-w-3xl leading-relaxed sm:leading-7">
+              Publishing is an architectural discipline combining literary editing, bespoke typography,
+              and global trade syndication. We guide manuscripts from initial draft to internationally
+              distributed hardcover and digital editions.
+            </p>
+          </div>
+
+          {/* 4 Pillars of Book Publishing */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+            
+            {/* Publishing Pillar 1: Editorial */}
+            <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-6 sm:p-7 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
+                  STAGE 01
+                </span>
+                <h3 className="text-lg font-bold font-serif-heading text-[#241A15] mb-2.5">
+                  Editorial and Manuscript Development
+                </h3>
+                <p className="font-serif-body text-xs text-[#5C4A3E] leading-relaxed mb-4">
+                  Multi-pass textual editing upholding rigorous university press standards to refine narrative pacing, voice, and thematic clarity.
+                </p>
+                <ul className="space-y-2.5 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Developmental Editing:</strong> Structural evaluation of plot architecture, character arcs, and narrative cadence.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Line and Copy Editing:</strong> Sentence-level polishing for rhythmic fluidity, syntax elegance, and tonal consistency.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Cold Proofreading:</strong> Rigorous examination for typographical errors, punctuation adherence, and styling consistency.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-3.5 border-t border-[#EADECE] text-[10px] font-bold text-[#8C2D19] uppercase tracking-wider font-editorial-caps">
+                Editorial Rigor Guaranteed
+              </div>
+            </div>
+
+            {/* Publishing Pillar 2: Typesetting */}
+            <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-6 sm:p-7 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
+                  STAGE 02
+                </span>
+                <h3 className="text-lg font-bold font-serif-heading text-[#241A15] mb-2.5">
+                  Interior Book Architecture and Typography
+                </h3>
+                <p className="font-serif-body text-xs text-[#5C4A3E] leading-relaxed mb-4">
+                  Typesetting books using classical geometric page proportions, custom drop caps, and optical kerning pairs for timeless reading comfort.
+                </p>
+                <ul className="space-y-2.5 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Bespoke Type Selection:</strong> Curating historically grounded serif fonts suited specifically to your book genre.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Pagination and Running Headers:</strong> Elegant chapter openers, clean margins, and widow and orphan suppression.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Multi-Format Master Outputs:</strong> Certified PDF/X-1a files for print alongside fully validated reflowable ePub editions.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-3.5 border-t border-[#EADECE] text-[10px] font-bold text-[#8C2D19] uppercase tracking-wider font-editorial-caps">
+                Classical Page Geometry
+              </div>
+            </div>
+
+            {/* Publishing Pillar 3: Cover & Finishes */}
+            <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-6 sm:p-7 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
+                  STAGE 03
+                </span>
+                <h3 className="text-lg font-bold font-serif-heading text-[#241A15] mb-2.5">
+                  Cover Architecture and Print Finishes
+                </h3>
+                <p className="font-serif-body text-xs text-[#5C4A3E] leading-relaxed mb-4">
+                  Striking, market-calibrated jacket design commanding attention on physical bookstore shelves and digital marketplace thumbnails.
+                </p>
+                <ul className="space-y-2.5 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Hardcover Dust Jackets and Case Laminates:</strong> Engineering cloth-bound cases, foil stamping, and French flap jackets.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Spine Width Precision:</strong> Calculating spine bulk down to the millimeter based on exact paper weight and page count.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Trade-Ready Back Covers:</strong> Structuring persuasive blurb typography, author biography portraits, and official barcode blocks.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-3.5 border-t border-[#EADECE] text-[10px] font-bold text-[#8C2D19] uppercase tracking-wider font-editorial-caps">
+                Tactile Material Quality
+              </div>
+            </div>
+
+            {/* Publishing Pillar 4: Distribution & Rights */}
+            <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-6 sm:p-7 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
+                  STAGE 04
+                </span>
+                <h3 className="text-lg font-bold font-serif-heading text-[#241A15] mb-2.5">
+                  Global Distribution and Bibliographic Registry
+                </h3>
+                <p className="font-serif-body text-xs text-[#5C4A3E] leading-relaxed mb-4">
+                  Opening worldwide retail and library distribution channels through premier book trade wholesalers across 195 countries.
+                </p>
+                <ul className="space-y-2.5 font-serif-body text-xs text-[#5C4A3E] border-t border-[#EADECE] pt-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Ingram and Wholesale Syndication:</strong> Placing titles in ordering systems used by Barnes and Noble, Waterstones, and indie shops.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Library Network Integration:</strong> Supplying Baker and Taylor and OverDrive to ensure institutional library availability.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#8C2D19] font-bold">•</span>
+                    <span><strong>Official ISBN and Copyright Registration:</strong> Bowker ISBN assignment, Barcode generation, and Library of Congress filings.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-3.5 border-t border-[#EADECE] text-[10px] font-bold text-[#8C2D19] uppercase tracking-wider font-editorial-caps">
+                Over 40,000 Retailers
+              </div>
+            </div>
+
+          </div>
+
+          {/* Deep Publishing Insight Box */}
+          <div className="mt-10 bg-[#F2ECE0] border border-[#D8CCBD] p-7 sm:p-9 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="max-w-3xl">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-1.5 font-editorial-caps">
+                PRINT ON DEMAND VS. SHORT-RUN OFFSET PRINTING
+              </span>
+              <h4 className="text-lg sm:text-xl font-bold font-serif-heading text-[#241A15] mb-2">
+                Tailored Manufacturing for Commercial and Collector Editions
+              </h4>
+              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed">
+                We coordinate both agile Print-on-Demand (POD) for zero-inventory risk and short-run offset
+                printing for luxury editions featuring Smyth-sewn binding, custom ribbon markers, headbands,
+                and premium acid-free archival papers.
+              </p>
+            </div>
+            <button
+              onClick={scrollToForm}
+              className="bg-[#241A15] text-[#FAF7F2] px-6 py-3 text-xs font-semibold tracking-wider uppercase whitespace-nowrap cursor-pointer shrink-0"
+            >
+              Consult Production Team
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================
+          EDITORIAL FRAMEWORK SECTION
+      ========================================================= */}
+      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24 border-t border-[#E3D7C5]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Column */}
@@ -440,7 +621,7 @@ export default function MarketingPage() {
                 </li>
               </ul>
             </div>
-            <div className="mt-8 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
+            <div className="mt-6 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
               Launch Flights and Evergreen Schedules
             </div>
           </div>
@@ -477,7 +658,7 @@ export default function MarketingPage() {
                 </li>
               </ul>
             </div>
-            <div className="mt-8 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
+            <div className="mt-6 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
               Vetted Literary Influencer Network
             </div>
           </div>
@@ -514,11 +695,71 @@ export default function MarketingPage() {
                 </li>
               </ul>
             </div>
-            <div className="mt-8 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
+            <div className="mt-6 pt-4 border-t border-[#EADECE] text-[11px] font-bold text-[#8C2D19] uppercase tracking-wider">
               Dedicated Senior Campaign Strategist
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* =========================================================
+          ADVANCE REVIEW COPIES (ARC) AND EDITORIAL SYNDICATION
+      ========================================================= */}
+      <section className="bg-[#FAF7F2] border-t border-[#E2D5C3] py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-6">
+              <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-3">
+                CRITIC AND READER SOCIAL PROOF
+              </p>
+              <h2 className="text-2xl sm:text-3xl md:text-[36px] font-bold font-serif-heading text-[#241A15] leading-tight">
+                Advance Review Distribution and Trade Review Pitching
+              </h2>
+              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] mt-5 leading-relaxed sm:leading-7">
+                Before launching Amazon advertising, establishing authentic customer reviews and prestigious trade
+                endorsements is essential for conversion. We organize compliance-safe Advance Review Copy (ARC)
+                distribution across verified bibliophile communities and trade review syndicates.
+              </p>
+
+              <div className="mt-8 space-y-4 font-serif-body text-xs sm:text-[13px] text-[#5C4A3E]">
+                <div className="p-4 bg-[#FCFAF6] border border-[#DDD0BF]">
+                  <strong className="text-[#241A15] block mb-1">Pre-Publication Galley Seeding:</strong>
+                  <span>Delivering digital and physical proof copies to book bloggers, Goodreads librarians, and category influencers 6 to 8 weeks before launch.</span>
+                </div>
+                <div className="p-4 bg-[#FCFAF6] border border-[#DDD0BF]">
+                  <strong className="text-[#241A15] block mb-1">Trade Journal Submission Coordination:</strong>
+                  <span>Structuring formal review submissions for consideration by Publishers Weekly, Kirkus Reviews, Booklist, and independent literary journals.</span>
+                </div>
+                <div className="p-4 bg-[#FCFAF6] border border-[#DDD0BF]">
+                  <strong className="text-[#241A15] block mb-1">Amazon Review TOS Compliance:</strong>
+                  <span>Every review initiative operates strictly within Amazon Customer Review Creation Guidelines, avoiding incentivized review penalties or listing suspensions.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6">
+              <div className="bg-[#F2ECE0] border border-[#D8CCBD] p-8 sm:p-10">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
+                  CRITICAL SOCIAL PROOF METRIC
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-[#241A15] mb-4">
+                  Why Reviews Dictate Amazon Ad Efficiency
+                </h3>
+                <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed sm:leading-7 mb-6">
+                  Amazon PPC algorithms directly monitor customer conversion rates. A book page with fewer than 15 reviews
+                  converts at an average of 4.8%. Once a title reaches 25 verified customer reviews with an average score above
+                  4.2 stars, conversion rates jump to 14.6%, cutting your customer acquisition cost by more than half.
+                </p>
+                <div className="pt-5 border-t border-[#D5C6B3] flex justify-between items-center text-xs text-[#7A6758] font-editorial-caps font-bold">
+                  <span>PRE-LAUNCH ARC CAMPAIGNS</span>
+                  <span>VERIFIED REVIEW CONVERSION</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -917,16 +1158,22 @@ export default function MarketingPage() {
                     />
                   </div>
 
+                  {/* FIELD 1: EXPLICITLY OPTIONAL (Screenshot 1) */}
                   <div>
-                    <label className="block text-[11px] font-bold uppercase tracking-wider text-[#382B22] mb-2">
-                      Amazon ASIN, ISBN, or Book URL
-                    </label>
+                    <div className="flex justify-between items-center mb-2">
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-[#382B22]">
+                        Amazon ASIN, ISBN, or Book URL
+                      </label>
+                      <span className="text-[10px] text-[#8C2D19] font-serif-body font-semibold italic">
+                        (Optional)
+                      </span>
+                    </div>
                     <input
                       type="text"
                       name="amazonLinkOrAsin"
                       value={form.amazonLinkOrAsin}
                       onChange={update}
-                      placeholder="B0XXXXXXXX or Amazon URL"
+                      placeholder="B0XXXXXXXX or Amazon URL (Leave blank if unpublished)"
                       className="w-full bg-white border border-[#D5C6B3] px-3.5 py-3 text-xs text-[#241A15] outline-none focus:border-[#8C2D19]"
                     />
                   </div>
@@ -948,6 +1195,7 @@ export default function MarketingPage() {
                     </select>
                   </div>
 
+                  {/* FIELD 2: COMPREHENSIVE DROPDOWN WITH ALL SERVICES */}
                   <div>
                     <label className="block text-[11px] font-bold uppercase tracking-wider text-[#382B22] mb-2">
                       Primary Service Requirement
@@ -958,13 +1206,21 @@ export default function MarketingPage() {
                       onChange={update}
                       className="w-full bg-white border border-[#D5C6B3] px-3.5 py-3 text-xs text-[#241A15] outline-none focus:border-[#8C2D19]"
                     >
+                      <option>Full-Service Book Publishing and Print Production</option>
+                      <option>Editorial Development and Manuscript Proofreading</option>
+                      <option>Interior Typesetting and Book Architecture</option>
+                      <option>Cover Design and Print Finishes</option>
+                      <option>Global Distribution (IngramSpark, B&N, Waterstones)</option>
                       <option>Amazon Book Marketing and Backend SEO</option>
                       <option>Amazon Advertising (PPC, Video, and DSP)</option>
-                      <option>Amazon A+ Content Production</option>
-                      <option>Structured Launch Campaigns (Pre-Order to Evergreen)</option>
+                      <option>Amazon A+ Content and Brand Story Architecture</option>
+                      <option>Structured Launch Campaigns (Pre-Order to Bestseller Surge)</option>
                       <option>Social Media Marketing (BookTok, Bookstagram, and Meta)</option>
-                      <option>Full-Service Advertising Management</option>
-                      <option>Complete 360 Publisher Flight (All Channels)</option>
+                      <option>Full-Service Advertising Account Management</option>
+                      <option>Backlist Catalog Revival and Metadata Modernization</option>
+                      <option>Editorial ARC Seeding and Advance Review Distribution</option>
+                      <option>Direct Bibliophile Newsletter and Category Takeovers</option>
+                      <option>Complete 360 Publisher Flight (All Marketing Channels)</option>
                     </select>
                   </div>
 
@@ -994,7 +1250,7 @@ export default function MarketingPage() {
                       name="campaignNotes"
                       value={form.campaignNotes}
                       onChange={update}
-                      placeholder="Specify your book genre, current Amazon BSR or ACoS targets, comparable author titles, and upcoming launch timeline..."
+                      placeholder="Specify your book genre, publishing requirements, current Amazon BSR or ACoS targets, and upcoming launch timeline..."
                       className="w-full bg-white border border-[#D5C6B3] px-3.5 py-3 text-xs text-[#241A15] outline-none focus:border-[#8C2D19]"
                       required
                     />
