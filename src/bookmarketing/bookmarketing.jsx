@@ -70,7 +70,7 @@ export default function MarketingPage() {
       `}</style>
 
       {/* =========================================================
-          HERO: SENIOR PUBLISHING EXECUTIVE HEADLINE & COPY
+          HERO SECTION
       ========================================================= */}
       <section className="border-b border-[#E3D7C5]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 py-16 sm:py-24">
@@ -194,9 +194,189 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          NEW SECTION: COMPREHENSIVE BOOK PUBLISHING AND PRINT PRODUCTION
+          EDITORIAL FRAMEWORK SECTION
       ========================================================= */}
-      <section id="publishing-suite" className="bg-[#FAF7F2] py-16 md:py-24">
+      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          
+          {/* Left Column */}
+          <div className="lg:col-span-7">
+            <p className="text-[11px] uppercase tracking-[0.2em] font-sans font-bold text-[#8C2D19] mb-4">
+              COMMERCIAL AND EDITORIAL STRATEGY
+            </p>
+
+            <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold leading-snug font-serif-heading text-[#241A15]">
+              A Commercial Framework Built Around Reader Conversion.
+            </h2>
+
+            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-6">
+              In publishing, advertising spend without detail page optimization is wasted capital.
+              Driving traffic to an Amazon product page with uncalibrated metadata and flat text leads
+              to immediate bounce rates. We resolve this by combining custom Amazon A+ Content modules,
+              credible critic endorsements, and clean comparison tables that turn browsing sessions into paid orders.
+            </p>
+
+            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-5">
+              Simultaneously, we calibrate backend indexing—auditing 250-byte search term limits, keyword intent,
+              and low-competition category paths. This ensures Amazon’s organic recommendation carousels actively
+              promote your titles to proven buyers within your genre.
+            </p>
+
+            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-5">
+              Whether supporting a frontlist release, optimizing Kindle Unlimited read-through for backlist series,
+              or protecting author brands from competitor ad conquesting, our campaigns maintain commercial discipline
+              and measurable returns on ad spend.
+            </p>
+          </div>
+
+          {/* Right Image Card with Dark Banner */}
+          <div className="lg:col-span-5">
+            <div className="relative h-[340px] sm:h-[380px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
+              <img
+                src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1200&q=85"
+                alt="Curated book collection and premium hardcovers"
+                className="w-full h-full object-cover"
+              />
+
+              <div className="absolute bottom-0 inset-x-0 bg-[#241A15]/95 p-5 sm:p-6 text-[#F5EADB]">
+                <p className="text-[10px] text-[#D4A753] uppercase tracking-[0.2em] font-sans font-bold mb-2">
+                  VISUAL MERCHANDISING
+                </p>
+                <h3 className="text-base sm:text-lg font-bold font-serif-heading text-white">
+                  Amazon A+ Content and Brand Store Architecture
+                </h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================
+          NEW EDITORIAL SECTION 1: ISBN REGISTRATION AND BARCODE
+          (Layout: Content on LEFT, Image Canvas on RIGHT)
+      ========================================================= */}
+      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24 border-t border-[#E3D7C5]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          
+          {/* Content on LEFT */}
+          <div className="lg:col-span-7">
+            <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-4 font-editorial-caps">
+              BIBLIOGRAPHIC INFRASTRUCTURE AND GLOBAL TRADE
+            </p>
+
+            <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold leading-snug font-serif-heading text-[#241A15]">
+              Official ISBN Assignment, EAN Barcodes, and Legal Deposit.
+            </h2>
+
+            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-6">
+              An International Standard Book Number (ISBN) is the legal commercial identifier of your published volume.
+              Unlike restrictive free platform identifiers that limit distribution strictly to a single retailer,
+              we provision dedicated, publisher-owned Bowker and Nielsen ISBNs. This guarantees your work retains
+              unconditional distribution rights across global bookstore chains, independent shops, and wholesale catalogues.
+            </p>
+
+            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-5">
+              Every edition receives a high-resolution, vector-rendered EAN-13 barcode embedded with the standard Bookland
+              prefix (978 and 979) and official 5-digit Price On-Product add-on extensions. Formatted to exact GS1 and
+              ISO/IEC 15420 optical print tolerances, your book barcodes guarantee flawless scanning at retail points-of-sale
+              and automated inventory checkouts worldwide.
+            </p>
+
+            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-5">
+              Beyond commercial trade data, we coordinate essential institutional filings including formal Library of Congress
+              Control Numbers (LCCN), Publisher's Cataloging-in-Publication (PCIP) metadata blocks, and legal deposit archiving
+              with national libraries to establish the permanent bibliographic record of your book for generations.
+            </p>
+          </div>
+
+          {/* Image Canvas on RIGHT with Dark Overlay */}
+          <div className="lg:col-span-5">
+            <div className="relative h-[340px] sm:h-[380px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
+              <img
+                src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=85"
+                alt="Bibliographic registers and vintage book printing"
+                className="w-full h-full object-cover"
+              />
+
+              <div className="absolute bottom-0 inset-x-0 bg-[#241A15]/95 p-5 sm:p-6 text-[#F5EADB]">
+                <p className="text-[10px] text-[#D4A753] uppercase tracking-[0.2em] font-sans font-bold mb-2">
+                  GLOBAL TRADE IDENTIFICATION
+                </p>
+                <h3 className="text-base sm:text-lg font-bold font-serif-heading text-white">
+                  Official Bowker and Nielsen Registry Infrastructure
+                </h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================
+          NEW EDITORIAL SECTION 2: PRINT-ON-DEMAND (POD)
+          (Layout: Image Canvas on LEFT, Content on RIGHT - ALTERNATING)
+      ========================================================= */}
+      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24 border-t border-[#E3D7C5]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          
+          {/* Image Canvas on LEFT with Dark Overlay */}
+          <div className="lg:col-span-5 order-2 lg:order-1">
+            <div className="relative h-[340px] sm:h-[380px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
+              <img
+                src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern precision book binding and print manufacturing"
+                className="w-full h-full object-cover"
+              />
+
+              <div className="absolute bottom-0 inset-x-0 bg-[#241A15]/95 p-5 sm:p-6 text-[#F5EADB]">
+                <p className="text-[10px] text-[#D4A753] uppercase tracking-[0.2em] font-sans font-bold mb-2">
+                  PRINT MANUFACTURING AGILITY
+                </p>
+                <h3 className="text-base sm:text-lg font-bold font-serif-heading text-white">
+                  Zero-Inventory Global Print-On-Demand Architecture
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          {/* Content on RIGHT */}
+          <div className="lg:col-span-7 order-1 lg:order-2">
+            <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-4 font-editorial-caps">
+              AGILE SUPPLY CHAIN AND DISTRIBUTION
+            </p>
+
+            <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold leading-snug font-serif-heading text-[#241A15]">
+              Print-On-Demand Architecture with Traditional Quality.
+            </h2>
+
+            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-6">
+              Modern digital Print-on-Demand (POD) technology eliminates costly warehousing overheads, unsold inventory risk,
+              and catastrophic out-of-stock notices. Each physical book is produced, bound, and drop-shipped to retail accounts
+              and direct readers within 24 to 48 hours of an order being placed across manufacturing nodes in North America,
+              the United Kingdom, Europe, and Australia.
+            </p>
+
+            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-5">
+              We uphold uncompromising material standards across both paperback and hardcover specifications: premium 50lb to
+              70lb acid-free archival cream papers, durable polyurethane reactive (PUR) perfect binding, scuff-resistant matte
+              protective laminates, and case-laminate cloth-effect boards that rival traditional high-run offset print runs.
+            </p>
+
+            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-5">
+              By coordinating dual-source distribution through Ingram Content Group (Lightning Source) and KDP Print,
+              your titles receive seamless commercial availability: automatic Prime 2-day delivery on Amazon alongside
+              guaranteed wholesale availability in ordering databases utilized by Barnes and Noble, Waterstones, and independent bookshops.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================
+          SECTION: FULL-SERVICE PUBLISHING SUITE
+      ========================================================= */}
+      <section id="publishing-suite" className="bg-[#FAF7F2] py-16 md:py-24 border-t border-[#E3D7C5]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
           
           <div className="border-b border-[#E3D7C5] pb-8 mb-12 sm:mb-14">
@@ -345,94 +525,11 @@ export default function MarketingPage() {
             </div>
 
           </div>
-
-          {/* Deep Publishing Insight Box */}
-          <div className="mt-10 bg-[#F2ECE0] border border-[#D8CCBD] p-7 sm:p-9 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="max-w-3xl">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-1.5 font-editorial-caps">
-                PRINT ON DEMAND VS. SHORT-RUN OFFSET PRINTING
-              </span>
-              <h4 className="text-lg sm:text-xl font-bold font-serif-heading text-[#241A15] mb-2">
-                Tailored Manufacturing for Commercial and Collector Editions
-              </h4>
-              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed">
-                We coordinate both agile Print-on-Demand (POD) for zero-inventory risk and short-run offset
-                printing for luxury editions featuring Smyth-sewn binding, custom ribbon markers, headbands,
-                and premium acid-free archival papers.
-              </p>
-            </div>
-            <button
-              onClick={scrollToForm}
-              className="bg-[#241A15] text-[#FAF7F2] px-6 py-3 text-xs font-semibold tracking-wider uppercase whitespace-nowrap cursor-pointer shrink-0"
-            >
-              Consult Production Team
-            </button>
-          </div>
-
         </div>
       </section>
 
       {/* =========================================================
-          EDITORIAL FRAMEWORK SECTION
-      ========================================================= */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24 border-t border-[#E3D7C5]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          
-          {/* Left Column */}
-          <div className="lg:col-span-7">
-            <p className="text-[11px] uppercase tracking-[0.2em] font-sans font-bold text-[#8C2D19] mb-4">
-              COMMERCIAL AND EDITORIAL STRATEGY
-            </p>
-
-            <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold leading-snug font-serif-heading text-[#241A15]">
-              A Commercial Framework Built Around Reader Conversion.
-            </h2>
-
-            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-6">
-              In publishing, advertising spend without detail page optimization is wasted capital.
-              Driving traffic to an Amazon product page with uncalibrated metadata and flat text leads
-              to immediate bounce rates. We resolve this by combining custom Amazon A+ Content modules,
-              credible critic endorsements, and clean comparison tables that turn browsing sessions into paid orders.
-            </p>
-
-            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-5">
-              Simultaneously, we calibrate backend indexing—auditing 250-byte search term limits, keyword intent,
-              and low-competition category paths. This ensures Amazon’s organic recommendation carousels actively
-              promote your titles to proven buyers within your genre.
-            </p>
-
-            <p className="font-serif-body text-[#5C4A3E] text-sm sm:text-[15px] leading-7 sm:leading-8 mt-5">
-              Whether supporting a frontlist release, optimizing Kindle Unlimited read-through for backlist series,
-              or protecting author brands from competitor ad conquesting, our campaigns maintain commercial discipline
-              and measurable returns on ad spend.
-            </p>
-          </div>
-
-          {/* Right Image Card with Dark Banner */}
-          <div className="lg:col-span-5">
-            <div className="relative h-[340px] sm:h-[380px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
-              <img
-                src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1200&q=85"
-                alt="Curated book collection and premium hardcovers"
-                className="w-full h-full object-cover"
-              />
-
-              <div className="absolute bottom-0 inset-x-0 bg-[#241A15]/95 p-5 sm:p-6 text-[#F5EADB]">
-                <p className="text-[10px] text-[#D4A753] uppercase tracking-[0.2em] font-sans font-bold mb-2">
-                  VISUAL MERCHANDISING
-                </p>
-                <h3 className="text-base sm:text-lg font-bold font-serif-heading text-white">
-                  Amazon A+ Content and Brand Store Architecture
-                </h3>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* =========================================================
-          SECTION 1: AMAZON BOOK MARKETING AND ADVERTISING SUITE
+          SECTION: AMAZON BOOK MARKETING AND ADVERTISING SUITE
       ========================================================= */}
       <section id="services-suite" className="bg-[#F4EEE3] border-y border-[#E2D5C3] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
@@ -569,7 +666,7 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          SECTION 2: CAMPAIGNS, SOCIAL MEDIA, AND AD SERVICES
+          SECTION: CAMPAIGNS, SOCIAL MEDIA, AND AD SERVICES
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24">
         
@@ -700,66 +797,6 @@ export default function MarketingPage() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* =========================================================
-          ADVANCE REVIEW COPIES (ARC) AND EDITORIAL SYNDICATION
-      ========================================================= */}
-      <section className="bg-[#FAF7F2] border-t border-[#E2D5C3] py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div className="lg:col-span-6">
-              <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-3">
-                CRITIC AND READER SOCIAL PROOF
-              </p>
-              <h2 className="text-2xl sm:text-3xl md:text-[36px] font-bold font-serif-heading text-[#241A15] leading-tight">
-                Advance Review Distribution and Trade Review Pitching
-              </h2>
-              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] mt-5 leading-relaxed sm:leading-7">
-                Before launching Amazon advertising, establishing authentic customer reviews and prestigious trade
-                endorsements is essential for conversion. We organize compliance-safe Advance Review Copy (ARC)
-                distribution across verified bibliophile communities and trade review syndicates.
-              </p>
-
-              <div className="mt-8 space-y-4 font-serif-body text-xs sm:text-[13px] text-[#5C4A3E]">
-                <div className="p-4 bg-[#FCFAF6] border border-[#DDD0BF]">
-                  <strong className="text-[#241A15] block mb-1">Pre-Publication Galley Seeding:</strong>
-                  <span>Delivering digital and physical proof copies to book bloggers, Goodreads librarians, and category influencers 6 to 8 weeks before launch.</span>
-                </div>
-                <div className="p-4 bg-[#FCFAF6] border border-[#DDD0BF]">
-                  <strong className="text-[#241A15] block mb-1">Trade Journal Submission Coordination:</strong>
-                  <span>Structuring formal review submissions for consideration by Publishers Weekly, Kirkus Reviews, Booklist, and independent literary journals.</span>
-                </div>
-                <div className="p-4 bg-[#FCFAF6] border border-[#DDD0BF]">
-                  <strong className="text-[#241A15] block mb-1">Amazon Review TOS Compliance:</strong>
-                  <span>Every review initiative operates strictly within Amazon Customer Review Creation Guidelines, avoiding incentivized review penalties or listing suspensions.</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6">
-              <div className="bg-[#F2ECE0] border border-[#D8CCBD] p-8 sm:p-10">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
-                  CRITICAL SOCIAL PROOF METRIC
-                </span>
-                <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-[#241A15] mb-4">
-                  Why Reviews Dictate Amazon Ad Efficiency
-                </h3>
-                <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed sm:leading-7 mb-6">
-                  Amazon PPC algorithms directly monitor customer conversion rates. A book page with fewer than 15 reviews
-                  converts at an average of 4.8%. Once a title reaches 25 verified customer reviews with an average score above
-                  4.2 stars, conversion rates jump to 14.6%, cutting your customer acquisition cost by more than half.
-                </p>
-                <div className="pt-5 border-t border-[#D5C6B3] flex justify-between items-center text-xs text-[#7A6758] font-editorial-caps font-bold">
-                  <span>PRE-LAUNCH ARC CAMPAIGNS</span>
-                  <span>VERIFIED REVIEW CONVERSION</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
         </div>
       </section>
 
@@ -1158,7 +1195,7 @@ export default function MarketingPage() {
                     />
                   </div>
 
-                  {/* FIELD 1: EXPLICITLY OPTIONAL (Screenshot 1) */}
+                  {/* FIELD 1: EXPLICITLY OPTIONAL */}
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <label className="block text-[11px] font-bold uppercase tracking-wider text-[#382B22]">
@@ -1207,6 +1244,8 @@ export default function MarketingPage() {
                       className="w-full bg-white border border-[#D5C6B3] px-3.5 py-3 text-xs text-[#241A15] outline-none focus:border-[#8C2D19]"
                     >
                       <option>Full-Service Book Publishing and Print Production</option>
+                      <option>Official ISBN Assignment and Barcode Generation</option>
+                      <option>Print-on-Demand (POD) Setup and Global Distribution</option>
                       <option>Editorial Development and Manuscript Proofreading</option>
                       <option>Interior Typesetting and Book Architecture</option>
                       <option>Cover Design and Print Finishes</option>
