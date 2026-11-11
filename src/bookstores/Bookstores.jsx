@@ -15,7 +15,6 @@ import {
 
 // ===========================================
 // FRESH & DEDICATED BOOKSTORE IMAGES
-// (Completely separate from Marketing Page)
 // ===========================================
 const imageRoot = "/images/bookstores";
 
@@ -229,7 +228,7 @@ const books = [
     sellerId: "folio",
     image: `${imageRoot}/books/book-9.png`,
     fallback:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=800&q=80",
     description:
       "An authoritative manual celebrating hand-cast type, paper-making chemistry, and the legacy of the private press movement across Britain and America.",
   },
@@ -242,7 +241,7 @@ const books = [
     sellerId: "quill",
     image: `${imageRoot}/books/book-10.png`,
     fallback:
-      "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80",
     description:
       "An analytical survey of scriptorium workshops, manuscript illumination, and the preservation of classical texts in monastic libraries.",
   },
@@ -255,7 +254,7 @@ const books = [
     sellerId: "scholar",
     image: `${imageRoot}/books/book-11.png`,
     fallback:
-      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80",
     description:
       "A scholarly synthesis of Hellenistic ethical thought, the Socratic tradition, and the intellectual foundations of Western moral philosophy.",
   },
@@ -468,7 +467,7 @@ export default function Bookstores() {
 
   const faqItems = [
     {
-      question: "What constitutes an accredited BLUE BOOK bookseller?",
+      question: "What constitutes an accredited Thundersmouth bookseller?",
       answer:
         "Accredited sellers are professionally established independent bookshops, antiquarian dealers, and specialist print galleries. We evaluate catalog accuracy, provenance documentation, and condition reporting to preserve collector trust.",
     },
@@ -568,7 +567,7 @@ export default function Bookstores() {
               </div>
             </div>
 
-            {/* Right Architectural Visual Canvas (NEW VINTAGE BOOKSHOP IMAGE) */}
+            {/* Right Architectural Visual Canvas */}
             <div className="lg:col-span-5">
               <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-3.5 shadow-sm">
                 <div className="relative h-[340px] sm:h-[400px] overflow-hidden bg-[#E8DECE]">
@@ -589,9 +588,10 @@ export default function Bookstores() {
                   </div>
                 </div>
 
+                {/* UPDATED: Thundersmouth Index */}
                 <div className="mt-3 px-1 py-1 flex justify-between items-center text-[10px] text-[#7A6758] font-editorial-caps">
                   <span>OXFORD • LONDON • PARIS</span>
-                  <span>EST. BLUE BOOK INDEX</span>
+                  <span>EST. THUNDERSMOUTH INDEX</span>
                 </div>
               </div>
             </div>
@@ -601,7 +601,7 @@ export default function Bookstores() {
       </header>
 
       {/* =========================================================
-          SECTION 2: EDITORIAL STATEMENT (NEW VINTAGE BOOKS DESK IMAGE)
+          SECTION 2: EDITORIAL STATEMENT
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -631,7 +631,6 @@ export default function Bookstores() {
 
           <div className="lg:col-span-5">
             <div className="relative h-[320px] sm:h-[360px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
-              {/* Working NEW image of antique books on reading table */}
               <StoreImage
                 src={guaranteedImages.editorialFeature}
                 fallback={guaranteedImages.universalFallback}
@@ -883,8 +882,9 @@ export default function Bookstores() {
               to carefully assembled collections, independent bookselling remains an irreplaceable part of literary life.
             </p>
 
+            {/* UPDATED: Thundersmouth's directory */}
             <p className="font-serif-body text-xs sm:text-sm text-[#D7C6B4] leading-7 mt-3">
-              BLUE BOOK's directory brings attention to these specialist practitioners and creates a
+              Thundersmouth's directory brings attention to these specialist practitioners and creates a
               dedicated forum for serious collectors and researchers to connect with the stores keeping print alive.
             </p>
 

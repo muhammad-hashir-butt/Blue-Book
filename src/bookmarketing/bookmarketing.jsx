@@ -70,7 +70,7 @@ export default function MarketingPage() {
       `}</style>
 
       {/* =========================================================
-          HERO SECTION
+          HERO SECTION: THUNDERSMOUTH LITERARY
       ========================================================= */}
       <section className="border-b border-[#E3D7C5]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 py-16 sm:py-24">
@@ -112,13 +112,11 @@ export default function MarketingPage() {
               </div>
 
               <div className="mt-9 pt-6 border-t border-[#E8DDCE] flex flex-wrap items-center gap-6 text-xs text-[#7A6758] font-serif-body">
-                <span>Manuscript Editing</span>
+                <span>Independent Authors</span>
                 <span>•</span>
-                <span>Interior Typesetting</span>
+                <span>Mid-Sized Presses</span>
                 <span>•</span>
-                <span>Global Distribution</span>
-                <span>•</span>
-                <span>Amazon Advertising</span>
+                <span>Academic and University Imprints</span>
               </div>
             </div>
 
@@ -253,7 +251,7 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          NEW EDITORIAL SECTION 1: ISBN REGISTRATION AND BARCODE
+          EDITORIAL SECTION 1: ISBN REGISTRATION AND BARCODE
           (Layout: Content on LEFT, Image Canvas on RIGHT)
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24 border-t border-[#E3D7C5]">
@@ -314,7 +312,7 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          NEW EDITORIAL SECTION 2: PRINT-ON-DEMAND (POD)
+          EDITORIAL SECTION 2: PRINT-ON-DEMAND (POD)
           (Layout: Image Canvas on LEFT, Content on RIGHT - ALTERNATING)
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24 border-t border-[#E3D7C5]">
@@ -801,6 +799,66 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
+          ADVANCE REVIEW COPIES (ARC) AND EDITORIAL SYNDICATION
+      ========================================================= */}
+      <section className="bg-[#FAF7F2] border-t border-[#E2D5C3] py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-6">
+              <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-3">
+                CRITIC AND READER SOCIAL PROOF
+              </p>
+              <h2 className="text-2xl sm:text-3xl md:text-[36px] font-bold font-serif-heading text-[#241A15] leading-tight">
+                Advance Review Distribution and Trade Review Pitching
+              </h2>
+              <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] mt-5 leading-relaxed sm:leading-7">
+                Before launching Amazon advertising, establishing authentic customer reviews and prestigious trade
+                endorsements is essential for conversion. We organize compliance-safe Advance Review Copy (ARC)
+                distribution across verified bibliophile communities and trade review syndicates.
+              </p>
+
+              <div className="mt-8 space-y-4 font-serif-body text-xs sm:text-[13px] text-[#5C4A3E]">
+                <div className="p-4 bg-[#FCFAF6] border border-[#DDD0BF]">
+                  <strong className="text-[#241A15] block mb-1">Pre-Publication Galley Seeding:</strong>
+                  <span>Delivering digital and physical proof copies to book bloggers, Goodreads librarians, and category influencers 6 to 8 weeks before launch.</span>
+                </div>
+                <div className="p-4 bg-[#FCFAF6] border border-[#DDD0BF]">
+                  <strong className="text-[#241A15] block mb-1">Trade Journal Submission Coordination:</strong>
+                  <span>Structuring formal review submissions for consideration by Publishers Weekly, Kirkus Reviews, Booklist, and independent literary journals.</span>
+                </div>
+                <div className="p-4 bg-[#FCFAF6] border border-[#DDD0BF]">
+                  <strong className="text-[#241A15] block mb-1">Amazon Review TOS Compliance:</strong>
+                  <span>Every review initiative operates strictly within Amazon Customer Review Creation Guidelines, avoiding incentivized review penalties or listing suspensions.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6">
+              <div className="bg-[#F2ECE0] border border-[#D8CCBD] p-8 sm:p-10">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
+                  CRITICAL SOCIAL PROOF METRIC
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-[#241A15] mb-4">
+                  Why Reviews Dictate Amazon Ad Efficiency
+                </h3>
+                <p className="font-serif-body text-xs sm:text-sm text-[#5C4A3E] leading-relaxed sm:leading-7 mb-6">
+                  Amazon PPC algorithms directly monitor customer conversion rates. A book page with fewer than 15 reviews
+                  converts at an average of 4.8%. Once a title reaches 25 verified customer reviews with an average score above
+                  4.2 stars, conversion rates jump to 14.6%, cutting your customer acquisition cost by more than half.
+                </p>
+                <div className="pt-5 border-t border-[#D5C6B3] flex justify-between items-center text-xs text-[#7A6758] font-editorial-caps font-bold">
+                  <span>PRE-LAUNCH ARC CAMPAIGNS</span>
+                  <span>VERIFIED REVIEW CONVERSION</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
           THE FIVE PILLARS: INTERACTIVE TABS
       ========================================================= */}
       <section id="channels" className="bg-[#F4EEE3] border-y border-[#E2D5C3] py-16 md:py-24">
@@ -998,7 +1056,7 @@ export default function MarketingPage() {
                   <div className="border border-[#E2D5C3] p-5 sm:p-6 bg-[#FCFAF6]">
                     <h4 className="text-sm font-bold font-serif-heading mb-1.5">Author Q and A Profiles</h4>
                     <p className="font-serif-body text-xs text-[#614F42] leading-relaxed sm:leading-6">
-                      Thoughtfully crafted long-form interviews distributed through BLUE BOOK digital channels.
+                      Thoughtfully crafted long-form interviews distributed through Thundersmouth digital channels.
                     </p>
                   </div>
                   <div className="border border-[#E2D5C3] p-5 sm:p-6 bg-[#FCFAF6]">
@@ -1138,11 +1196,11 @@ export default function MarketingPage() {
               <div className="mt-9 border-t border-[#E3D7C5] pt-6 space-y-3.5 text-xs font-serif-body">
                 <div>
                   <span className="block font-bold text-[#241A15]">Campaign Strategy:</span>
-                  <span className="text-[#7A6758] mt-0.5 block">campaigns@bluebookliterary.com</span>
+                  <span className="text-[#7A6758] mt-0.5 block">campaigns@thundersmouth.com</span>
                 </div>
                 <div>
                   <span className="block font-bold text-[#241A15]">Amazon A+ and Advertising Services:</span>
-                  <span className="text-[#7A6758] mt-0.5 block">ads@bluebookliterary.com</span>
+                  <span className="text-[#7A6758] mt-0.5 block">ads@thundersmouth.com</span>
                 </div>
               </div>
             </div>
@@ -1308,7 +1366,7 @@ export default function MarketingPage() {
                     />
                     <span className="text-[11px] font-serif-body text-[#5A4A3F] leading-relaxed">
                       I confirm that I represent this title or publishing catalog and request a formal
-                      campaign audit and strategic proposal from BLUE BOOK Literary.
+                      campaign audit and strategic proposal from Thundersmouth Literary.
                     </span>
                   </label>
                 </div>
@@ -1344,3 +1402,4 @@ export default function MarketingPage() {
     </div>
   );
 }
+

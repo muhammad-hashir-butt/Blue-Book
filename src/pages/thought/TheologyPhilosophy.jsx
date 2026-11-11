@@ -13,73 +13,79 @@ export default function TheologyPhilosophy() {
   // ==========================================
   // THEOLOGY & PHILOSOPHY
   // Images: public/theology/
-  // Correct titles and contributors
+  // Correct cover titles and authors
   // No prices
-  // Amazon ISBN-based links
+  // Compact cards
+  // No hover animations
   // ==========================================
 
   const books = [
     {
       id: 1,
-      title: "Philosophy & Theology: A Lutheran Perspective",
-      author: "Nathan Greeley",
-      format: "Lutheran Philosophy & Theology",
-      image: "/theology/theory1.webp",
+      title: "Hell to Pay: Discreet Cover Edition (Blackwell Bastards Discreet Editions)",
+      author: "Sadie Hunt ",
+      format: "Natural Theology & Philosophy",
+      image: "/theology/theory1.jpg",
       amazonUrl:
-        "https://www.amazon.com/Philosophy-Theology-Perspective-Nathan-Greeley/dp/1952295793/ref=sr_1_1?dib=eyJ2IjoiMSJ9.M5wpGZhIFihfSR1Imso2pA.A4TmzDVqzf98FYbxlQwrabJGAeWKV7SN5KSyngVEnqI&dib_tag=se&keywords=9781952295799&qid=1794010914&sr=8-1",
+        "https://www.amazon.com/Hell-Pay-Discreet-Blackwell-Bastards/dp/B0FFN5263T/ref=sr_1_3?crid=3HQ5T5D92K4WB&dib=eyJ2IjoiMSJ9.QSFU094QOVTxttHXePmKKn7xpMlwP33LRzxRyTENdjPGMx2uJiVZylDDQxx8YjSWlWsasix0_l3N8BgK-KmyqZ2dsf2iwf-KS9gu3hYXwP-gnemULGKmGT2JSy17iXT4l02t_QUYXbCIQu7ypsqISWHft9LEG6ec8TIwRtRqcekackrE3uiL3dwZuLaDP1JdtCPV5dyGKSqnig3xkOUbTcikqoJ53SAXSs0_5w1pEJE.ISDu8xtq81Zox5iM7kRkmblBCZ-ItOZ-2IOHca4vl3Q&dib_tag=se&keywords=the+blackwell+company+Independent&qid=1794357410&s=books&sprefix=the+blackwell+company+independent%2Cstripbooks-intl-ship%2C1321&sr=1-3-catcorr",
     },
     {
       id: 2,
-      title: "Philosophy and Theology",
-      author: "John D. Caputo",
-      format: "Philosophy of Religion",
-      image: "/theology/theory2.webp",
+      title: "Fairy Tales for a Modern Age: Book 2",
+      author: "C. R. Beaumont",
+      format: "Modern Fairy Tales & Philosophy",
+      image: "/theology/theory2.jpg",
       amazonUrl:
-        "https://www.amazon.com/dp/0687331269",
+        "https://www.amazon.com/Fairy-Tales-Modern-Age-Book-ebook/dp/B0F9FJ52ZP/ref=sr_1_1?dib=eyJ2IjoiMSJ9.mUVsI2N9qX-_yzT_c3zKTw.qzlxxoEQjaYRYnA_TVW6zmsXM_g3Sg80MNbAIML6u4Q&dib_tag=se&keywords=Fairy+Tales+for+a+Modern+Age+Book+2+C+R+Beaumont&nsdOptOutParam=true&qid=1794356545&sr=8-1",
     },
     {
       id: 3,
-      title: "101 Key Terms in Philosophy and Their Importance for Theology",
-      author: "Kelly James Clark, Richard Lints & James K. A. Smith",
-      format: "Philosophical Reference",
-      image: "/theology/theory3.webp",
+      title: "Trixi Palone: Siren",
+      author: "C. R. Beaumont",
+      format: "Fantasy & Mythological Fiction",
+      image: "/theology/theory3.jpg",
       amazonUrl:
-        "https://www.amazon.com/dp/0664225241",
+        "https://www.amazon.com/Trixi-Palone-Siren-Last-Verdant-ebook/dp/B0GL8Y7JB2/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9scqlLFsnPVXQYaxLBXkBQ.9wPhnfqUi8mlOFhZbvuwBrzE25NxHedog-dfU750h3U&dib_tag=se&keywords=trixie+palone+siren+c+r+beaumont&qid=1794356738&sr=8-1",
     },
     {
       id: 4,
-      title: "The Blackwell Companion to Natural Theology",
-      author: "William Lane Craig & J. P. Moreland (Editors)",
-      format: "Natural Theology",
-      image: "/theology/theory4.webp",
+      title: "The Stolen Scriptures: How Ancient Myths Became the Bible",
+      author: "C. R. Beaumont",
+      format: "Comparative Religion & Biblical History",
+      image: "/theology/theory4.jpg",
       amazonUrl:
-        "https://www.amazon.com/dp/1405176571",
+        "https://www.amazon.com/Stolen-Scriptures-Ancient-Philosophy-Sociology-ebook/dp/B0FKMP2HTK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.sgsdn--ABPKVL_2kbVXCnfeQgaYL3cI1CLDhyFH7JgPQH-KNwc_-hOUIxYJH3Ozx.D23RLwN3HJq4mhVKA9gTXY1KS50BABfXcZAGP55_-6w&dib_tag=se&keywords=The+Stolen+Scriptures+C+R+Beaumont&qid=1794356771&sr=8-1",
     },
     {
       id: 5,
-      title: "Primary Readings in Philosophy for Understanding Theology",
-      author: "Diogenes Allen & Eric O. Springsted (Editors)",
-      format: "Philosophy & Christian Theology",
-      image: "/theology/theory5.webp",
+      title: "The Old Ways and the Hidden Powers",
+      author: "C. R. Beaumont",
+      format: "History of Magic & Spiritual Traditions",
+      image: "/theology/theory5.jpg",
       amazonUrl:
-        "https://www.amazon.com/dp/0664252087",
+        "https://www.amazon.com/Old-Ways-Hidden-Powers-Witchcraft/dp/B0HG26MHRJ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.sk0ASPGsH6e1DWUvak75ToegMKQ_9hG0yW6ZbljnlYPB5EMLDngy5sHyyYqJx8yvUNRvOtvuyA2MkHFPJ76d6w.Sy-jwN7yQVYfn1Uc8MBjoXT5wg7f3Of4s-TvgNeaRqw&dib_tag=se&keywords=The+Old+Ways+and+the+Hidden+Powers+C+R+Beaumont&nsdOptOutParam=true&qid=1794356805&sr=8-1",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
 
       <div className="max-w-7xl mx-auto">
 
-        {/* BREADCRUMB NAVIGATION */}
+        {/* BREADCRUMB */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
 
           <Link
             to="/"
-            className="hover:text-[#8c2d19] hover:underline flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
@@ -87,69 +93,75 @@ export default function TheologyPhilosophy() {
           <span>Thought & Science</span>
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Theology & Philosophy
           </span>
 
-        </div>
+        </nav>
 
         {/* PAGE HEADER */}
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-          <div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
+            <div className="flex-1">
 
-              <Compass className="w-4 h-4" />
+              <div className="flex items-center gap-2 text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
 
-              <span>
-                Faith, Reason & Philosophical Inquiry
+                <Compass size={16} />
+
+                <span>
+                  Faith, Reason & Philosophical Inquiry
+                </span>
+
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Theology & Philosophy
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Discover thought-provoking works exploring
+                philosophy, Christian theology, religious
+                understanding, natural theology, and the
+                enduring relationship between faith and reason.
+              </p>
+
+            </div>
+
+            {/* CURATED INDEX */}
+
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
+
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
+
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
               </span>
 
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Theology & Philosophy
-            </h1>
-
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Discover thought-provoking works exploring
-              philosophy, Christian theology, religious
-              understanding, natural theology, and the
-              enduring relationship between faith and reason.
-            </p>
-
           </div>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
-
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
-
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
-
-          </div>
-
-        </div>
+        </header>
 
         {/* BOOK COLLECTION GRID */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
-            <div
+            <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col hover:border-[#8c2d19]"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
               {/* BOOK COVER */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] shadow-inner overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
@@ -160,45 +172,52 @@ export default function TheologyPhilosophy() {
 
               </div>
 
-              {/* BOOK DETAILS */}
+              {/* CATEGORY BADGE */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* CATEGORY BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
+              </div>
+
+              {/* BOOK INFORMATION */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
                 {/* BOOK TITLE */}
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-3 min-h-[70px]">
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                {/* AUTHOR / EDITOR */}
+                {/* AUTHOR */}
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
+                <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
                   by {book.author}
                 </p>
 
                 {/* AMAZON VIEW BOOK BUTTON */}
 
-                <div className="mt-auto pt-5">
+                <div className="mt-auto pt-4">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      aria-label={`Find ${book.title} by ${book.author} on Amazon`}
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
+
                       <BookOpen size={15} />
 
                       View Book
 
                       <ArrowUpRight size={15} />
+
                     </a>
 
                   </div>
@@ -207,27 +226,28 @@ export default function TheologyPhilosophy() {
 
               </div>
 
-            </div>
+            </article>
 
           ))}
 
-        </div>
+        </section>
 
         {/* BOTTOM DIVIDER */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 
       </div>
+
     </div>
   );
 }
