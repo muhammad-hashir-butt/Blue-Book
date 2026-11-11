@@ -12,147 +12,165 @@ export default function FineArtsFolios() {
   // ==========================================
   // FINE ARTS & FOLIOS
   // Images: public/Folios/
-  // Correct titles and contributors
-  // Prices removed
-  // Amazon search links included
+  // All images: .jpg
+  // Actual titles matched with covers
+  // No prices
+  // Compact cards
+  // Georgia font
   // No hover animations
+  // Amazon links included
   // ==========================================
 
   const books = [
     {
       id: 1,
-      title: "Treasures of the Addison Gallery of American Art",
-      author: "Adam D. Weinberg (Editor)",
-      format: "American Art & Museum Collections",
-      image: "/Folios/Folios1.webp",
+      title: "Folio: Columns 2003–2014",
+      author: "Luca Turin",
+      format: "Literary Essays & Cultural Commentary",
+      image: "/Folios/Folios1.jpg",
       amazonUrl:
-        "https://www.amazon.com/Treasures-Addison-Gallery-American-Folio/dp/0789207583/ref=sr_1_1?dib=eyJ2IjoiMSJ9.OIHmg1Ljf3rb2y8l6GxbWQ.uHV5jkOKCbAy54j-AlkNRsey0HBvEmZCMbnQZWGlDJ4&dib_tag=se&keywords=9780789207586&qid=1794247931&sr=8-1",
+        "https://www.amazon.com/dp/B016A53RMG",
     },
     {
       id: 2,
-      title: "Treasures of Folk Art: The Museum of American Folk Art",
-      author: "Museum of American Folk Art",
-      format: "American Folk Art",
-      image: "/Folios/Folios2.webp",
+      title: "10 Minute Plays for Kids of All Ages",
+      author: "Carlene Griffith",
+      format: "Children's Theatre & Short Plays",
+      image: "/Folios/Folios2.jpg",
       amazonUrl:
-        "https://www.amazon.com/Treasures-Folk-Art-Museum-American/dp/1558595600/ref=sr_1_1?dib=eyJ2IjoiMSJ9.hrcNtP-zXaYCelCS-b1fgw.OcwcIWaHdA7lcg6iqX_LsVvkIYIlFZjDG9k6Yb8KGxo&dib_tag=se&keywords=9781558595606&qid=1794247955&sr=8-1",
+        "https://www.amazon.com/Minute-Plays-Kids-All-Ages/dp/1537297112/ref=sr_1_1?dib=eyJ2IjoiMSJ9.UjVC0u7ruX3uYQeISshb8QZtUMj_boSxHjfFIvATg3iVsrxK045eI4X_bV8Vy4ThnDV2yFfGCkHfOfUhos31UxvUXj7aZiXYTZ-Xj82LyO16gfPkMv9n9HDUZT6eMNnPglGkejVIm3cQWga5Xcejn0ofRhnX5yeAWnpZiqDJpwhwftkHr0VW2JvuQxOCT4MGDGx4NGPP10muX1d5RLNWmZKp5Q7ZAbZp7Upf49zWJGI.pBEdeXa-5uFIPbj8L-zGEOMqcakUWSOn1vam2P6-3jY&dib_tag=se&keywords=10+Minute+Plays+For+Kids+Of+All+Ages+Carlene+Griffith&nsdOptOutParam=true&qid=1794422501&sr=8-1",
     },
     {
       id: 3,
-      title: "The Art of Tarot",
-      author: "Christina Olsen",
-      format: "Tarot Art & Illustration",
-      image: "/Folios/Folios3.webp",
+      title: "The S.H.T.F. Art of War",
+      author: "Jeffrey M. Olson",
+      format: "Survival Strategy & Preparedness",
+      image: "/Folios/Folios3.jpg",
       amazonUrl:
-        "https://www.amazon.com/Art-Tarot-Tiny-Folio/dp/0789213060/ref=sr_1_1?dib=eyJ2IjoiMSJ9.rbkdR2MCouJDA0W_Q-uMnw.SXJLmhx93UcES_0tRtF723TKSCyD8AvV3Ez28UEt2vM&dib_tag=se&keywords=9780789213068&qid=1794247989&sr=8-1",
-    },
+"https://www.amazon.com/S-H-T-F-Art-War-Jeffrey-Olson/dp/1495326578/ref=sr_1_1?dib=eyJ2IjoiMSJ9.8ngILwjtKywmyCJmJuyoboYeN3X1pd8f5UjPQAabY7hbmDB1QHpyGBEnb0medPVpFaE8xca1fucIeiCnwToAW9F93BMSbV8fuLJC8VvYEkaQH1gaEIAEdohxHksottrCm0eR-sB0JfqYb8p21D7aJf6XwljA5xii5sCm-_TTpjtoo0K7CnLuG46XuwjveuOXwJH1YnXFznf5D6bqYgHLZQ.ibB9czDFD2lH113-xeZ5Vs6OXAb5f3rwa12At7xnycI&dib_tag=se&keywords=The+SHTF+Art+of+War+Jeffrey+M+Olson&nsdOptOutParam=true&qid=1794422600&sr=8-1"    },
     {
       id: 4,
-      title: "Treasures of Impressionism and Post-Impressionism",
-      author: "Florence E. Coman",
-      format: "Impressionist Art & Museum Collections",
+      title: "A Moment Past: L. F. Tantillo Paints New York History",
+      author: "L. F. Tantillo",
+      format: "Historical Art & New York Heritage",
       image: "/Folios/Folios4.jpg",
       amazonUrl:
-        "https://www.amazon.com/Treasures-Impressionism-Post-Impressionism-National-Gallery/dp/0789204916/ref=sr_1_1?dib=eyJ2IjoiMSJ9.AQ-ZIjtnJ5gjdWjBS5n6Zg.DCfJURRGQCzmh3Enjb8Oea5hWO3dIlAWu6EhYjkTQiI&dib_tag=se&keywords=9780789204912&qid=1794248012&sr=8-1",
-    },
+"https://www.amazon.com/Moment-Past-Tantillo-Paints-History/dp/1484947444/ref=sr_1_1?dib=eyJ2IjoiMSJ9.Vh82geLqLPZZ2AY9jqqyyA.RvPsHR0AuiD3yAoM7-MzWlY1LvuuSccSMYNBYdPdRY4&dib_tag=se&keywords=A+Moment+Past+L+F+Tantillo+Paints+New+York+History&nsdOptOutParam=true&qid=1794422681&sr=8-1"    },
     {
       id: 5,
-      title: "Women Artists: National Museum of Women in the Arts",
-      author: "National Museum of Women in the Arts",
-      format: "Women Artists & Art History",
+      title: "Julia Flock Fine Art: Portfolio 2025",
+      author: "Julia Flock",
+      format: "Fine Art & Artist Portfolio",
       image: "/Folios/Folios5.jpg",
       amazonUrl:
-        "https://www.amazon.com/Women-Artists-National-Museum-Second/dp/B00ERK5R02/ref=sr_1_1?dib=eyJ2IjoiMSJ9.L0xayV7qnTvxiSdcTCk3yAlJTwUCn2pr3PjEjZBHv2aqGNbepPoHFMIt9WeOthw5MhSZxrILungJBeO60v0WnaYGFtGJyGiPzVZ-e1lmLWVbwWDxQxK96cTmDJkQPiHosOY1d-leXei13HW0Lo-agTUgWHtjzHnmxLT9pIq1gWUzaxQO0VuPq7nv2KxRID_zKB9oVHSFA53Ym5vcvKLGvKllkdosh0bVPXy364UVbKw.jaGeg4WXQMQ3nOYp7-PQPVXb1p4HJTQ8L9GdUjpvVxw&dib_tag=se&keywords=Women+Artists+National+Museum+of+Women+in+the+Arts+Second+Edition&nsdOptOutParam=true&qid=1794248083&sr=8-1&utm_source=chatgpt.com",
+        "https://www.amazon.com/Julia-Flock-Fine-Portfolio-2025/dp/B0FJ7BNRLQ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.HX3sgiT7cvKLGIIkewp4kfRmgsD6zq7iAs6ktfkCMiI.xawVfWl6sgQ_6iPVCJBiNHEIgEdRVtNtO7XLv8Y2YWo&dib_tag=se&keywords=Julia+Flock+Fine+Art+Portfolio+2025&qid=1794422567&sr=8-1",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
-
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        {/* ======================================
+        {/* ==========================================
             BREADCRUMB NAVIGATION
-        ====================================== */}
+        ========================================== */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
 
           <Link
             to="/"
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
           <span>/</span>
+
           <span>Classical Rarities</span>
+
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Fine Arts & Folios
           </span>
 
-        </div>
+        </nav>
 
-        {/* ======================================
+        {/* ==========================================
             PAGE HEADER
-        ====================================== */}
+        ========================================== */}
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-          <div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-            <div className="text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
-              Museum Collections, Fine Art & Visual Heritage
+            <div className="flex-1">
+
+              <div className="text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
+                Fine Art, Literary Collections & Cultural Heritage
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Fine Arts & Folios
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Discover a distinctive collection of
+                literary essays, theatrical works,
+                strategic writings, historical paintings,
+                and fine art portfolios. Explore
+                fascinating works celebrating creative
+                expression, cultural commentary,
+                visual storytelling, artistic heritage,
+                and the enduring value of printed literature.
+              </p>
+
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Fine Arts & Folios
-            </h1>
+            {/* ==========================================
+                CURATED INDEX
+            ========================================== */}
 
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Discover remarkable collections of American
-              art, traditional folk art, historical tarot
-              illustrations, Impressionist masterpieces,
-              and the artistic achievements of women.
-              Explore beautifully illustrated volumes
-              celebrating the creativity, history, and
-              cultural significance of the visual arts.
-            </p>
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
 
-          </div>
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
+              </span>
 
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
-
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
+            </div>
 
           </div>
 
-        </div>
+        </header>
 
-        {/* ======================================
+        {/* ==========================================
             BOOK COLLECTION GRID
-        ====================================== */}
+        ========================================== */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
             <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
-              {/* BOOK COVER */}
+              {/* ==========================================
+                  BOOK COVER
+              ========================================== */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
@@ -163,48 +181,58 @@ export default function FineArtsFolios() {
 
               </div>
 
-              {/* ======================================
-                  BOOK INFORMATION
-              ====================================== */}
+              {/* ==========================================
+                  CATEGORY BADGE
+              ========================================== */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* CATEGORY BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
+              </div>
+
+              {/* ==========================================
+                  BOOK INFORMATION
+              ========================================== */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
                 {/* BOOK TITLE */}
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-4 min-h-[110px]">
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                {/* AUTHOR / CONTRIBUTOR */}
+                {/* AUTHOR NAME */}
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
+                <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
                   by {book.author}
                 </p>
 
-                {/* ======================================
+                {/* ==========================================
                     AMAZON VIEW BOOK BUTTON
-                ====================================== */}
+                ========================================== */}
 
-                <div className="mt-auto pt-5">
+                <div className="mt-auto pt-4">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Find ${book.title} on Amazon`}
-                      className="w-full bg-[#241a15] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
+
                       <BookOpen size={15} />
+
                       View Book
+
                       <ArrowUpRight size={15} />
+
                     </a>
 
                   </div>
@@ -217,26 +245,25 @@ export default function FineArtsFolios() {
 
           ))}
 
-        </div>
+        </section>
 
-        {/* ======================================
+        {/* ==========================================
             BOTTOM DIVIDER
-        ====================================== */}
+        ========================================== */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 
       </div>
-
     </div>
   );
 }

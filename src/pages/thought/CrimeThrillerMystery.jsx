@@ -13,148 +13,163 @@ export default function CrimeThrillerMystery() {
   // ==========================================
   // CRIME, THRILLER & MYSTERY
   // Images: public/crime/
-  // Correct titles and authors
-  // Prices removed
-  // Amazon search links included
+  // Titles matched with actual book covers
+  // No prices
+  // Compact cards
+  // No hover animations
+  // Amazon book search / edition links
   // ==========================================
 
   const books = [
     {
       id: 1,
-      title: "The Girl from Silent Lake",
-      author: "Leslie Wolfe",
-      format: "Detective Crime Thriller",
+      title: "The Mother",
+      author: "J. E. Clarkson",
+      format: "Detective Mystery & Suspense",
       image: "/crime/crime1.jpg",
       amazonUrl:
-        "https://www.amazon.com/Girl-Silent-Lake-heart-pounding-Detective-ebook/dp/B08P1Z9HZ8/ref=sr_1_1?dib=eyJ2IjoiMSJ9.PFvDyaYr0_2P9w8A-Ql6QNNQ5ZKfspzMLyKSVcIFAtucF_WmVd6zRfWi4isD_-Ku16ApqaegRjQU7Tr58ilOg1rfYskrnC4Hc7LqXbLpvcsW1WiILUQUBhoTB9Epm7yUrDqaq4javsqUvnumHWIwWq7wmFmEkCnT-cWQKJNXh33knMFmWVll7jiNA0LjYvrixrziVe_DRDkFTmfSd-CdqVAWwr3K4ri29r_Ql0JRwrY.AVE7RkAqDmehMnKHH7uZB3Yb6ivAIxTi6pSriMXcni4&dib_tag=se&keywords=The+Girl+from+Silent+Lake+Leslie+Wolfe&qid=1794015327&sr=8-1",
+        "https://www.amazon.com/Mother-Detective-Monroe-Thriller-Monroe-ebook/dp/B09X2G1446/ref=sr_1_1?dib=eyJ2IjoiMSJ9.VClkS1XQhcl15PBot8VXNA.d_xOiBwDZ5lQY6j69MW_ueJGKfJcnLa82WL0Lnix1tA&dib_tag=se&keywords=The+Mother+J+E+Clarkson+Kate+Monroe&qid=1794412065&sr=8-1",
     },
     {
       id: 2,
-      title: "His Perfect Crime",
-      author: "Alex Sigmore",
-      format: "Mystery Thriller",
+      title: "Storm Surge",
+      author: "B. D. Toms",
+      format: "Crime & Mystery Thriller",
       image: "/crime/crime2.jpg",
       amazonUrl:
-        "https://www.amazon.com/His-Perfect-Crime-Mystery-Thriller/dp/B0DZY3T849/ref=sr_1_1?dib=eyJ2IjoiMSJ9.Ly0-MyQtLUuSWKE1zuXHSliGW5kftZDlR1Mwl_vt6IZlzizNtMajuycrE_PucpL-6gmkDqJx99AFAMSKx__EBgAiPV27ok3Uvk-aTD7w2-YH-w8E-ThqrKESQnGuvVYUCiNgymSHS7P1UVYeX9IwIs0feh8715LK-drbyd62UxOG_qkBqTdj2sxikfie66ZW-oe3L0uylPkbyQfgySgUqv7MYbSM3xc8y5SOl3nWC8U.9aSCjnYDG2daU7eYk91nUKuAx-wHeD2Qg1ISp8cIJt8&dib_tag=se&keywords=His+Perfect+Crime+Alex+Sigmore&qid=1794015360&sr=8-1",
+        "https://www.amazon.com/Storm-Surge-B-D-Toms-ebook/dp/B0HHB65DRG/ref=sr_1_1?dib=eyJ2IjoiMSJ9.xiQtQuNFzB9yN5vsalMOAl0F4MEqJ23jZfjLeRk3sto.GFgfDtOL_LpNdnMrXdo3kWfMrg88VQhdonJesQ6afE0&dib_tag=se&keywords=Storm+Surge+B+D+Toms&qid=1794412094&sr=8-1",
     },
     {
       id: 3,
-      title: "Lines of Inquiry",
-      author: "Rhys Dylan",
-      format: "British Detective Thriller",
+      title: "Dead Man's Tiles",
+      author: "Mary Stowell & Walter A. Cook",
+      format: "Mahjong Murder Mystery",
       image: "/crime/crime3.jpg",
       amazonUrl:
-        "https://www.amazon.com/Lines-Inquiry-Beacons-Mystery-Thriller/dp/B0D98VTFSP/ref=sr_1_1?dib=eyJ2IjoiMSJ9.4rczyitTsPcMmAoleOpSBEuBiDx5jYiEJ6rtv6uSodM.6HaUSA4xKmGIsa2s_ZKnuq4MWTitLAH752mWMw-njUI&dib_tag=se&keywords=Lines+of+Inquiry+Rhys+Dylan+Audiobook&qid=1794015390&sr=8-1",
+        "https://www.amazon.com/Dead-Mans-Tiles-Mahjong-Mystery/dp/B0FXR9X3P5/ref=sr_1_1?dib=eyJ2IjoiMSJ9.I5iuYaZPQtezmB2jeffhzw.RNgUYGD8LahCxJYlrWtaZNvda0gmvBrtf-V3QOYG2w4&dib_tag=se&keywords=dead+man%27s+tiles+mary+stowell+walter+cook&qid=1794412119&sr=8-1",
     },
     {
       id: 4,
-      title: "Murder in the Hollows",
-      author: "Declan James",
-      format: "Crime & Murder Mystery",
+      title: "Whitewashed Tombs",
+      author: "Russell Jones",
+      format: "Psychological Crime Thriller",
       image: "/crime/crime4.jpg",
       amazonUrl:
-        "https://www.amazon.com/Murder-Hollows-Cashen-Crime-Thriller/dp/B0BYPK9C79/ref=sr_1_1?dib=eyJ2IjoiMSJ9.-SINxHVspf_Ezo7XcScqaPBiSpxna8JST7B6vTD1SdFt_8WH4L8h8fG2_vxM6BlG0TWB7T0k7qv26NQLJajoA-GslOtgDsEu_2krq-a2Ik6C5nGUvE0ENvfG2siQJU8S8q-Vr5JcC3esLV7oPfeX1SZrkXGsf0Kq89rolnN6TWcrHB-cW2UFcP73AavO7_0WcgeQwJWvXbhQOpwVRY16s4ZRPPB4g8xfqQGmasNBMDI.xniSpipm2L1ksxisiZ_gavsrnqAv0dgOj8A74qnz6UI&dib_tag=se&keywords=Murder+in+the+Hollows+Declan+James+Audiobook&qid=1794015456&sr=8-1",
+        "https://www.amazon.com/Whitewashed-Tombs-Psychological-Conspiracy-Thrillers-ebook/dp/B0GTW2536D/ref=sr_1_1?dib=eyJ2IjoiMSJ9.zXcsSG3exbbKKWBlVCk3Pw.hiGuVcaph57vRMdM-G1JmPk-I1HUNJDPdXGXO5H94AU&dib_tag=se&keywords=Whitewashed+Tombs+Russell+Jones&qid=1794412148&sr=8-1",
     },
     {
       id: 5,
-      title: "The Bodies on Horse Heaven Hill",
-      author: "D. D. Black",
-      format: "Detective Crime Thriller",
-      image: "/crime/crime5.webp",
+      title: "The Lamb",
+      author: "J. E. Clarkson",
+      format: "Detective Crime & Serial Killer Thriller",
+      image: "/crime/crime5.jpg",
       amazonUrl:
-        "https://www.amazon.com/Bodies-Horse-Heaven-Hill-Thriller/dp/B0GR6QPS5M/ref=sr_1_1?dib=eyJ2IjoiMSJ9.bg04naliGj_pAiPxf_pqN5R3Z_SWhx0y-l7L7pljDVDxn0iGk67pI3oRybWRiWX7.1-pd9-_fU95NUqk9zxGtJ_w6Q5qtdKJ7_y6_CVcmU28&dib_tag=se&keywords=The+Bodies+on+Horse+Heaven+Hill+D+D+Black&nsdOptOutParam=true&qid=1794015481&sr=8-1",
+        "https://www.amazon.com/dp/B09LGY94SK",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        {/* ======================================
+        {/* ==========================================
             BREADCRUMB NAVIGATION
-        ====================================== */}
+        ========================================== */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
 
           <Link
             to="/"
-            className="hover:text-[#8c2d19] hover:underline flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
           <span>/</span>
+
           <span>Thought & Science</span>
+
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Crime, Thriller & Mystery
           </span>
 
-        </div>
+        </nav>
 
-        {/* ======================================
+        {/* ==========================================
             PAGE HEADER
-        ====================================== */}
+        ========================================== */}
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-          <div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
+            <div className="flex-1">
 
-              <Search className="w-4 h-4" />
+              <div className="flex items-center gap-2 text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
 
-              <span>
-                Suspense, Intrigue & Detective Mysteries
+                <Search size={16} />
+
+                <span>
+                  Suspense, Intrigue & Detective Mysteries
+                </span>
+
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Crime, Thriller & Mystery
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Discover gripping detective investigations,
+                psychological suspense, chilling murder
+                mysteries, and unforgettable crime thrillers
+                from acclaimed contemporary storytellers.
+              </p>
+
+            </div>
+
+            {/* CURATED INDEX */}
+
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
+
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
+
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
               </span>
 
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Crime, Thriller & Mystery
-            </h1>
-
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Discover gripping detective investigations,
-              psychological suspense, chilling murder
-              mysteries, and unforgettable crime thrillers
-              from acclaimed contemporary storytellers.
-            </p>
-
           </div>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+        </header>
 
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
-
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
-
-          </div>
-
-        </div>
-
-        {/* ======================================
+        {/* ==========================================
             BOOK COLLECTION GRID
-        ====================================== */}
+        ========================================== */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
-            <div
+            <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col hover:border-[#8c2d19]"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
               {/* BOOK COVER */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] shadow-inner overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
@@ -165,44 +180,58 @@ export default function CrimeThrillerMystery() {
 
               </div>
 
-              {/* BOOK INFORMATION */}
+              {/* ==========================================
+                  CATEGORY BADGE
+              ========================================== */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* CATEGORY BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
+              </div>
+
+              {/* ==========================================
+                  BOOK DETAILS
+              ========================================== */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
                 {/* BOOK TITLE */}
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-3 min-h-[70px]">
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
                 {/* AUTHOR NAME */}
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
+                <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
                   by {book.author}
                 </p>
 
-                {/* AMAZON VIEW BOOK BUTTON */}
+                {/* ==========================================
+                    AMAZON VIEW BOOK BUTTON
+                ========================================== */}
 
-                <div className="mt-auto pt-5">
+                <div className="mt-auto pt-4">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`View ${book.title} on Amazon`}
-                      className="w-full bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      aria-label={`Find ${book.title} by ${book.author} on Amazon`}
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
+
                       <BookOpen size={15} />
+
                       View Book
+
                       <ArrowUpRight size={15} />
+
                     </a>
 
                   </div>
@@ -211,25 +240,25 @@ export default function CrimeThrillerMystery() {
 
               </div>
 
-            </div>
+            </article>
 
           ))}
 
-        </div>
+        </section>
 
-        {/* ======================================
+        {/* ==========================================
             BOTTOM DIVIDER
-        ====================================== */}
+        ========================================== */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 

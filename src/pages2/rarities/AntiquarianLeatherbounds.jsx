@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -8,79 +7,71 @@ import {
 } from "lucide-react";
 
 export default function AntiquarianLeatherbounds() {
-
   // ==========================================
   // ANTIQUARIAN LEATHERBOUNDS
   // Images: public/Antiquarian/
-  // Correct book titles and authors
-  // Prices removed
-  // Amazon search links included
-  // No hover effects or animations
+  // Updated according to screenshot covers
+  // No prices
+  // No hover animations
   // ==========================================
 
   const books = [
     {
       id: 1,
-      title: "Lifting the Veil: Imagination and the Kingdom of God",
-      author: "Malcolm Guite",
-      format: "Christian Literature & Imagination",
-      image: "/Antiquarian/Antiquarian1.webp",
+      title: "The Antiquarian's Folio: Ghosts of Olde England",
+      author: "Michael Collins",
+      format: "Ghost Stories & Antiquarian Fiction",
+      image: "/Antiquarian/Antiquarian1.jpg",
       amazonUrl:
-        "https://www.amazon.com/Lifting-Veil-Imagination-Kingdom-God/dp/1941106226/ref=sr_1_1?dib=eyJ2IjoiMSJ9.1pD32jhVN4Ntn15WUggNYW_f_IKJ7EXo1lxChy2caD0.CDH0raDZaDl15h5HsShduCIvYYLhqpKkdWZNahfp6lY&dib_tag=se&keywords=Lifting+the+Veil+Imagination+and+the+Kingdom+of+God+Malcolm+Guite&nsdOptOutParam=true&qid=1794246769&sr=8-1",
+        "https://www.amazon.com/Antiquarians-Folio-Ghosts-Olde-England/dp/B0HK65V6JY/ref=sr_1_1?dib=eyJ2IjoiMSJ9.D4ksw3GkYFxADVKBw3hgEAiXp7VVc5jm7PHAAW8Dc8qgOFJiTK-iB8R1Oyax8UANgZ24v48b3VTKVPsiTjNQI08oT6wyrj9Kg9YR1qZ89UF5cBD7vwsU38Vu4bB4iuAJmiOAxtMZap03hV-wK3kb4rkCEMGKUdzhbfLFnIcsEZMpEK_wBZkohKG23lQfdkuJUfWOQDL4r2vSLSgp-8Nm90k4kIgI963VOE6nkRgdJF4.xh3LBhyiyU1dL-rQumzur0M1YVD6tPi03TyjVGEf50M&dib_tag=se&keywords=The+Antiquarian%27s+Folio+Ghosts+of+Olde+England+Michael+Collins&nsdOptOutParam=true&qid=1794419715&sr=8-1",
     },
     {
       id: 2,
-      title: "The Coming of Arthur",
-      author: "Malcolm Guite",
-      format: "Arthurian Poetry & Literature",
-      image: "/Antiquarian/Antiquarian2.webp",
+      title: "On the Hooghly",
+      author: "Malcolm Beattie",
+      format: "Historical Maritime Fiction",
+      image: "/Antiquarian/Antiquarian2.jpg",
       amazonUrl:
-        "https://www.amazon.com/Coming-Arthur-Merlins-Isle-Arthuriad/dp/1951872479/ref=sr_1_1?dib=eyJ2IjoiMSJ9.MPCoVDFo9sGVJx6UseK7huOcGhEvWGp9XEbVtrIF1vIl2S_axNOYKr4zc-JrtinhcDfp-NDcjD9PpvyrhkqGom9XL5rcyH8dN-CidhYbZJ7GrvDQj3cl7_5Suea0dZ4DWJS9TWHM1jofZvAKpcgCqYS8n4THwEZK-1Nj8TM_mHnsYhXs9-GbnklxzapdZc82pgHFj4oQwVVbIiy6j7DPWZxWANboxgNc16khrw2MxB0.5FfgE-USlJTY0CpSLZx49A6xULQT44j-BCOgHSSLVqo&dib_tag=se&keywords=The+Coming+of+Arthur+Malcolm+Guite&qid=1794246794&sr=8-1",
+        "https://www.amazon.com/Hooghly-pilots-worlds-dangerous-waterways/dp/B0HR3H3BQK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.ZnN09J-D7UtYuzKInmtuYQ.8y0lizW4qaeaKvW_BUa2cvkilHVjRL1fMbZLdkz4DYk&dib_tag=se&keywords=On+the+Hooghly+Malcolm+Beattie&qid=1794419741&sr=8-1",
     },
     {
       id: 3,
-      title: "Le Morte d'Arthur: King Arthur and the Knights of the Round Table",
-      author: "Sir Thomas Malory",
-      format: "Medieval Arthurian Literature",
-      image: "/Antiquarian/Antiquarian3.webp",
+      title: "The Jack London Classics Collection: The Call of the Wild, White Fang, The Sea-Wolf, Martin Eden, The Iron Heel",
+      author: "Jack London",
+      format: "Classic Supernatural Literature",
+      image: "/Antiquarian/Antiquarian3.jpg",
       amazonUrl:
-        "https://www.amazon.com/Morte-dArthur-Knights-Leather-bound-Classics/dp/1667211528/ref=sr_1_1?dib=eyJ2IjoiMSJ9.iQ0xopS2v_tVU3Ui40ae_3kOmb5-iOIfzs4hgwmXiki-RRV5nYGVqP8xCjBGqPVTxHYRuavZl13oCBPCQKzbAn1ZdxeFrb_EpMSZ-eG0_HWxTHzUGPd0g_ZY1RaBAJjWaalxeoyGS-CxovFotllnIDuun7ONNY4DmPXwUnSAHAlLFiEZ_Q4QYJM7xSv67lOVTuht4QvFL0YqD24JJYguYHZu76oSQXmk3o4eVfjJ0i8.2P2CQAAj3LkDbTO_4k6pCpbn2v96WUKxh3PiJJw4lNo&dib_tag=se&keywords=Le+Morte+d+Arthur+Thomas+Malory&qid=1794246831&sr=8-1",
+        "https://www.amazon.com/Jack-London-Classics-Collection-Sea-Wolf/dp/B084WKXP6C/ref=pd_sbs_d_sccl_1_5/144-9673751-9760741?pd_rd_w=F3ilU&content-id=amzn1.sym.0cb10f30-7cd4-4985-9826-58b2c1174c19&pf_rd_p=0cb10f30-7cd4-4985-9826-58b2c1174c19&pf_rd_r=3NTZV07H5ZF596M52JQH&pd_rd_wg=1qCJM&pd_rd_r=4276dba8-3bf9-46b8-86d8-60bd26f13f00&pd_rd_i=B084WKXP6C&psc=1",
     },
     {
       id: 4,
-      title: "Galahad and the Grail",
-      author: "Malcolm Guite",
-      format: "Arthurian Legend & Poetry",
-      image: "/Antiquarian/Antiquarian4.webp",
+      title: "The Antiquarian's Cabinet: Five Tales of Unearthly Things",
+      author: "Michael Collins",
+      format: "Antiquarian Legend & Gothic Tales",
+      image: "/Antiquarian/Antiquarian4.jpg",
       amazonUrl:
-        "https://www.amazon.com/Galahad-Grail-Merlins-Isle-Arthuriad/dp/1951872703/ref=sr_1_1?dib=eyJ2IjoiMSJ9.pjWKpb9552iunaQl3CIig_YhDYzRDLVbMMUakFBXyNB6QNA6c7GQUoANK-pxktOrUpmCrtofuQC8fBuMo37W6BGK0C3FRwOj9vkWPGD-Om2u-V5MBkXw2-yYI28vwDRoVaDgu6c-ok7_to4TkVLrHTBYhx_l5V3K3q_F8y5FBPv3OOtVhP-B1DpaXEd99GQI4M5WUEwliv1GD1JNan5W8sY4YoPbRbE9DhecboefpHU.ThYKg5QM03T3JAoho0U7UdMytvxhjKCVYZX7EZ49kD8&dib_tag=se&keywords=Galahad+and+the+Grail+Malcolm+Guite&qid=1794246853&sr=8-1",
+        "https://www.amazon.com/Antiquarians-Cabinet-Tales-Unearthly-Things/dp/B0HGYTQRM7/ref=sr_1_1?dib=eyJ2IjoiMSJ9.53bGlmamWvAsU1RFCOWZ0jntL29aYzkGMYYOhDL5tdnGjHj071QN20LucGBJIEps.LNxVA5qVbA9qy-JWi-EWarfx89qH9sAR3TCxHVUhO-U&dib_tag=se&keywords=The+Antiquarian%27s+Cabinet+Michael+Collins&qid=1794419802&sr=8-1",
     },
     {
       id: 5,
-      title: "Bulfinch's Mythology",
-      author: "Thomas Bulfinch",
-      format: "Classical Myths & Legends",
+      title: "101 Antiquarian Fairy Tale Illustrations",
+      author: "Little Gypsy Press",
+      format: "Antique Fairy Tale Art & Illustration",
       image: "/Antiquarian/Antiquarian5.jpg",
       amazonUrl:
-        "https://www.amazon.com/Bulfinchs-Mythology-Leather-bound-Classics-Bulfinch/dp/1667211595/ref=sr_1_4?dib=eyJ2IjoiMSJ9.rMpXjFgOMeFLzCkzyhf0zhh_xIS8aTRyZEsniSBxtZ3GZqGUYmopgtLgjb4PxeWcoClW9VMALimcEGATXRfO7vKfUBYFGG5y_4mpvpJZc39gKsa-J4qFmBdWTFoqqUUB-dEsPTiNS0cCZQc4SSaeVmbFvE8iEAKNc_Yagkxmnrgh2EQiQZ8WxHzwMt3SMYKynn8wJiLioEpH-E8vCJpJpXQPmrmaShOPWvYbMim0imc.3uFNcwWRWvEuFYMlkjcMJ0iaeLks4OX_6v7IxZBFtZo&dib_tag=se&keywords=Bulfinch%27s+Mythology+Thomas+Bulfinch&qid=1794246941&sr=8-4&utm_source=chatgpt.com",
+        "https://www.amazon.com/101-Antiquarian-Fairy-Tale-Illustrations/dp/B097SRGBJZ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.LJ8JcwgeZCzuYyNFc1kQPWGmnmPlbQ4Zbt4-h2EyEt24XCh3eMrDYiSrwSWJ-_LbE88p20PDdRN6w42SXtslvX_DGob-c9NmROJlqSN9Jyh1lBhEhtpOvT91x2UDfmqLoDiiUgHEUUHZ5_9d3IM8VkYvvpqXxfR5q2_rv4PU1zxSmYSQNEiiq1R-HXLAXsRyhexq86aiYO_j7Vq_yypTaqJvSxymqcz5fTbG-k6M5V4.57MR3kG_OGAK4nYtY5LiY8oIFlTqaWkkTKmcuuMnlTY&dib_tag=se&keywords=101+Antiquarian+Fairy+Tale+Illustrations&qid=1794419872&sr=8-1",
     },
   ];
 
   return (
     <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
-
       <div className="max-w-7xl mx-auto">
-
         {/* ======================================
             BREADCRUMB NAVIGATION
         ====================================== */}
 
         <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
-
-          <Link
-            to="/"
-            className="flex items-center gap-1"
-          >
+          <Link to="/" className="flex items-center gap-1">
             <ArrowLeft className="w-3.5 h-3.5" />
             Back to Home
           </Link>
@@ -92,7 +83,6 @@ export default function AntiquarianLeatherbounds() {
           <span className="text-[#8c2d19] font-bold">
             Antiquarian Leatherbounds
           </span>
-
         </div>
 
         {/* ======================================
@@ -100,17 +90,13 @@ export default function AntiquarianLeatherbounds() {
         ====================================== */}
 
         <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
-
           <div>
-
             <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
-
               <BookOpen className="w-4 h-4" />
 
               <span>
-                Arthurian Legends, Mythology & Literary Heritage
+                Ghostly Folios, Fairy Tale Art & Literary Curiosities
               </span>
-
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-bold font-serif">
@@ -118,19 +104,15 @@ export default function AntiquarianLeatherbounds() {
             </h1>
 
             <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Discover timeless Arthurian legends,
-              medieval literary traditions, classical
-              mythology, Christian imagination, and
-              extraordinary works of poetic storytelling.
-              Explore influential writings that celebrate
-              legendary heroes, ancient myths, spiritual
-              themes, and the enduring beauty of literature.
+              Discover haunting antiquarian tales, rare literary curiosities,
+              ghostly collections, maritime fiction, and vintage fairy tale
+              imagery. Explore a refined selection of books inspired by old
+              libraries, folklore, supernatural storytelling, and the timeless
+              beauty of classic printed works.
             </p>
-
           </div>
 
           <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
-
             <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
               Curated Index
             </span>
@@ -138,9 +120,7 @@ export default function AntiquarianLeatherbounds() {
             <span className="text-2xl font-bold font-sans text-white">
               {books.length} Volumes
             </span>
-
           </div>
-
         </div>
 
         {/* ======================================
@@ -148,33 +128,25 @@ export default function AntiquarianLeatherbounds() {
         ====================================== */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-
           {books.map((book) => (
-
             <article
               key={book.id}
               className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col"
             >
-
               {/* BOOK COVER */}
 
               <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] overflow-hidden mb-4 flex items-center justify-center">
-
                 <img
                   src={book.image}
                   alt={`${book.title} by ${book.author}`}
                   loading="lazy"
                   className="w-full h-full object-contain"
                 />
-
               </div>
 
-              {/* ======================================
-                  BOOK INFORMATION
-              ====================================== */}
+              {/* BOOK INFORMATION */}
 
               <div className="flex flex-col flex-1">
-
                 {/* CATEGORY BADGE */}
 
                 <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
@@ -193,14 +165,10 @@ export default function AntiquarianLeatherbounds() {
                   by {book.author}
                 </p>
 
-                {/* ======================================
-                    AMAZON VIEW BOOK BUTTON
-                ====================================== */}
+                {/* AMAZON VIEW BOOK BUTTON */}
 
                 <div className="mt-auto pt-5">
-
                   <div className="border-t border-[#e2d7c5] pt-4">
-
                     <a
                       href={book.amazonUrl}
                       target="_blank"
@@ -209,22 +177,14 @@ export default function AntiquarianLeatherbounds() {
                       className="w-full bg-[#241a15] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
                     >
                       <BookOpen size={15} />
-
                       View Book
-
                       <ArrowUpRight size={15} />
                     </a>
-
                   </div>
-
                 </div>
-
               </div>
-
             </article>
-
           ))}
-
         </div>
 
         {/* ======================================
@@ -232,7 +192,6 @@ export default function AntiquarianLeatherbounds() {
         ====================================== */}
 
         <div className="flex items-center justify-center gap-4 mt-16">
-
           <span className="h-[1px] w-full bg-[#d6c7b2]" />
 
           <span className="text-[#8c7355] text-xs whitespace-nowrap">
@@ -240,11 +199,8 @@ export default function AntiquarianLeatherbounds() {
           </span>
 
           <span className="h-[1px] w-full bg-[#d6c7b2]" />
-
         </div>
-
       </div>
-
     </div>
   );
 }

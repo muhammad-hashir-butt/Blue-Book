@@ -12,142 +12,166 @@ export default function LawFinanceStatecraft() {
   // ==========================================
   // LAW, FINANCE & STATECRAFT
   // Images: public/Law/
-  // Correct book titles and authors
-  // Prices removed
-  // Amazon search links included
-  // No hover effects or animations
+  // All image extensions: .jpg
+  // Titles matched with actual book covers
+  // No prices
+  // Compact cards
+  // Georgia font
+  // No animations or hover effects
+  // Amazon links included
   // ==========================================
 
   const books = [
     {
       id: 1,
-      title: "Corporate Finance Law: Principles and Policy",
-      author: "Louise Gullifer & Jennifer Payne",
-      format: "Corporate Finance & Business Law",
-      image: "/Law/Law1.webp",
+      title:
+        "THE HONEY BEE DEMOCRACY: The Dance of Democracy: Explore how bees communicate, collaborate, and reach consensus through nature’s most efficient and peaceful decision-making system.",
+      author: " ERICA EDWARDS",
+      format: "Political Philosophy & Sovereignty",
+      image: "/Law/Law1.jpg",
       amazonUrl:
-        "https://www.amazon.com/Corporate-Finance-Law-Principles-Policy-ebook/dp/B0FKSGN58X/ref=sr_1_1?dib=eyJ2IjoiMSJ9.2AiIm20dUSvwUBOGNi5kYCXdXij0lSsyiwD2Glu97s9O7FkudTt0kOTKTO4ipFd3_MRsReT36713Gnp6Rcc5RO5z0O4WhfaPYT3oBylwnwg_--M_idNhmI5uto4fu_gEsExGjlPle7okpm10_KIjAC-NyVMNz45OIvSIeZo3IIUrSxFKFyOm1BD7w70BAyfFDMM_95BLKd0cZYc7ql-RB1C-nm8RDikjbk14rV7zImQ.t_XaZSEebTqVT-yXY-wE6M_pZ-TYxzcDoYKZyLHMUaU&dib_tag=se&keywords=Corporate+Finance+Law+Principles+and+Policy+Louise+Gullifer+Jennifer+Payne&nsdOptOutParam=true&qid=1794249930&sr=8-1",
+        "https://www.amazon.com/HONEY-BEE-DEMOCRACY-communicate-decision-making/dp/B0G1B7PS52",
     },
     {
       id: 2,
-      title: "Financial Statecraft: The Role of Financial Markets in American Foreign Policy",
-      author: "Benn Steil & Robert E. Litan",
-      format: "Financial Markets & Foreign Policy",
+      title:
+        "The Bond: The Hidden Financial Instrument That Runs the Courts, Commands Commerce, and Could Be Your Greatest Shield",
+      author: "Adrian Shapiro",
+      format: "Financial Law & Legal Instruments",
       image: "/Law/Law2.jpg",
       amazonUrl:
-        "https://www.amazon.com/Financial-Statecraft-Markets-American-Foreign/dp/030010975X/ref=sr_1_1?dib=eyJ2IjoiMSJ9.Xb6qrsGZrPYe14VGscCd7uukMoaNMXDdfK_gbC1GTAFo_z7JS_TNPthaGXDDoA-0na98ucCnCcCvHzhsTjkhAwNgPvmTekLy2m8ueYwiAjlQbT-ERa6EiYI7Yx0AlOr4yfsW82eGDoKbFXtOLN08W3IqAvFvFIGeeYLsEqqHSIDESOj-Ew9oqXL4hjfe0vHm6PnAJMwCjCdM_KC7wyOrGdQO8pA2dcLpL83VTRjkb-k.lKnuzHiDe09i4eKXa28Z48QFQevebzkUxkfXJUtIFLM&dib_tag=se&keywords=Financial+Statecraft+Benn+Steil+Robert+Litan&qid=1794249967&sr=8-1",
-    },
+"https://www.amazon.com/Bond-Financial-Instrument-Commands-Commerce/dp/B0HC9Q53NQ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.cpfnq-Fl1DhXfs6br0ABZyJtCo6IRkJQtXEbZunfi1hJKB5578UVnzfIHm6J0ZAx.lMTM5Pdw3iN1Fs3NkGlACOAvcKBEvudbyu66uczQWeA&dib_tag=se&keywords=The+Bond+Adrian+Shapiro&qid=1794423536&sr=8-1"    },
     {
       id: 3,
-      title: "The Political Economy of Financial Regulation",
-      author: "Emilios Avgouleas & David C. Donald (Editors)",
-      format: "Financial Regulation & Political Economy",
-      image: "/Law/Law3.webp",
+      title:
+        "Anarchy and the Law: The Political Economy of Choice",
+      author: "Edward P. Stringham (Editor)",
+      format: "Political Economy & Legal Philosophy",
+      image: "/Law/Law3.jpg",
       amazonUrl:
-        "https://www.amazon.com/Political-Financial-Regulation-International-Corporate/dp/1108455913/ref=sr_1_1?dib=eyJ2IjoiMSJ9.e2T-YmRrapTxsS3gOyw8kil6dZSsM0JImlkxf5E9Xg_8vokhzRXL6pbpRtQ5m1Pn4kUa-2GMU1JDpgADn5tLYJnwC7wzBEENm_RsuM3SGKwzgiXc4G8lYSc_-2dl3J2zYy18n63gcYM0wrMI6cYN1I7MAlAAoRRMIelg1xdEdFsyTt7jj_rOImtQOEB4c4d9YaEl76pzbZ2foPVJhUQzNaE6gX-Ixc0vm-81dM1oC8w.1KJYxL9vaGWrQmnJLSB7qnOlfzjBoWTblyGws3IfGdY&dib_tag=se&keywords=The+Political+Economy+of+Financial+Regulation+Avgouleas+Donald&nsdOptOutParam=true&qid=1794249995&sr=8-1",
-    },
+"https://www.amazon.com/Anarchy-Law-Political-Economy-Choice-ebook/dp/B0G961KPP5/ref=sr_1_1?dib=eyJ2IjoiMSJ9.APwI3xp97nErxuj-LYqV1QoTUOkj4_50oV1Y2r_BR89UtAmjv4dBIfbGk4zwwh2xENszwMLOlkyfIKuYVDuxnRFCS_YIcx9Bp3NvXC5xXm4f29wsvdTscnjn42ZzPXIIpBEaDyf1dMrFiwvGbcHmBsjASbjgse7xCi87cJw2hfZ3eH2WYtbakPo1m9vFCwWLS3r7E84RsGarA1DRPczUeTeKxU29bm2We8jzUyUGmCk.Q3oNqpmYf3Y0CYBw3y2d0w2ZJ33Fb_DmeqnK2w2RE9E&dib_tag=se&keywords=Anarchy+and+the+Law+Edward+P+Stringham&qid=1794423568&sr=8-1"    },
     {
       id: 4,
-      title: "The Law and Business of International Project Finance",
-      author: "Scott L. Hoffman",
-      format: "International Project Finance Law",
-      image: "/Law/Law4.webp",
+      title:
+        "PACs, Activism & Campaign Finance Law: Super PACs and FARA",
+      author: "Dr. Eric Engle, LL.M.",
+      format: "Campaign Finance & Political Law",
+      image: "/Law/Law4.jpg",
       amazonUrl:
-        "https://www.amazon.com/Law-Business-International-Project-Finance/dp/0521708788/ref=sr_1_1?dib=eyJ2IjoiMSJ9.ivB8eCIRfPJ2qK6oURheHSCXV4dWdJbYinpe-aN9z_ob7QkVJFLMLQA7SSP4VdnbF8Vvk-qvwyTnI681Axl0FaMiuIwdCr0woDw4BzYaNwazMO040LcudDT4srD6w2YJ1YpRxwOTedNKMoMWiemvF5z8IlGa4gs9rAS-NeTsurFln7YxAM3PjFpVWdxgqbvcnW6K51NZd455RFAR-Xv8h4Ju_KPsxtk-yGDYYxu6yqk.I2gC4y1jt23VGmMnN70ToOYz8-oKKHFcQi8tjz01X8c&dib_tag=se&keywords=The+Law+and+Business+of+International+Project+Finance+Scott+Hoffman&nsdOptOutParam=true&qid=1794250107&sr=8-1",
+        "https://www.amazon.com/dp/B0DMNYNMKZ",
     },
     {
       id: 5,
-      title: "The Financial Statecraft of Borrowers: African Governments and External Finance",
-      author: "Alexandra O. Zeitz",
-      format: "African Finance & Economic Statecraft",
-      image: "/Law/Law5.webp",
+      title:
+        "The Enterprise of Law: Justice Without the State",
+      author: "Bruce L. Benson",
+      format: "Law, Justice & Political Economy",
+      image: "/Law/Law5.jpg",
       amazonUrl:
-        "https://www.amazon.com/Financial-Statecraft-Borrowers-Governments-External-ebook/dp/B0DNTH8MD1/ref=sr_1_1?dib=eyJ2IjoiMSJ9.Nh-_ESE8HskiMpF0vxOIZjxsaxur3jlKGiR1qAh_WcF3tDAI7zsez5ZTZvIxGLUBuV106kjcLinFbbCQH0DGJKedi35IISSBfRclVf1XyBU-zJGmay2RtK-aFEcR5CqdXV26PwLt7eHrMBH1msV10AZkZVuMFANzTK0vYcgFRS9xxiIh-zTFxEXOs9UYmcuw.5n72sBY_YVFCZtiVuh3GaBjJNlRsieV6kLDopwpBM-g&dib_tag=se&keywords=The+Financial+Statecraft+of+Borrowers+Alexandra+Zeitz&qid=1794250155&sr=8-1",
-    },
+"https://www.amazon.com/Enterprise-Law-Justice-Without-State/dp/1598130447/ref=sr_1_1?dib=eyJ2IjoiMSJ9.wMClj05vc6kLdHOyjcB3S_LN8Y66PJz0L3MMRPqt3wVjbKoydEAEecs63tvzVqwaAZs0iDyqZ0eh9_r6JI9GEVgaoIpZHBLPqVwnJzIGWP8.hdNBXiSMs0XGpVYYxg-jhD_cVWS_B6OS_Y_Z05uhZpg&dib_tag=se&keywords=The+Enterprise+of+Law+Bruce+L+Benson&qid=1794423596&sr=8-1"    },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
-
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        {/* BREADCRUMB NAVIGATION */}
+        {/* ======================================
+            BREADCRUMB NAVIGATION
+        ====================================== */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
 
           <Link
             to="/"
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
           <span>/</span>
+
           <span>Classical Rarities</span>
+
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Law, Finance & Statecraft
           </span>
 
-        </div>
+        </nav>
 
-        {/* PAGE HEADER */}
+        {/* ======================================
+            PAGE HEADER
+        ====================================== */}
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-          <div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-            <div className="text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
-              Corporate Law, Financial Markets & Global Governance
+            <div className="flex-1">
+
+              <div className="text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
+                Law, Political Economy & Financial Statecraft
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Law, Finance & Statecraft
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Explore thought-provoking works examining
+                legal philosophy, financial instruments,
+                political sovereignty, economic freedom,
+                campaign finance, and the foundations
+                of justice. Discover perspectives on
+                the relationship between law, individual
+                liberty, financial systems, political
+                institutions, and the evolving role
+                of government in society.
+              </p>
+
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Law, Finance & Statecraft
-            </h1>
+            {/* CURATED INDEX */}
 
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Explore influential works examining corporate
-              finance law, international financial markets,
-              economic governance, regulatory institutions,
-              and global financial policy. Discover scholarly
-              perspectives on financial statecraft,
-              international project finance, political
-              economy, and the relationship between
-              governments and financial systems.
-            </p>
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
 
-          </div>
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
+              </span>
 
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
-
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
+            </div>
 
           </div>
 
-        </div>
+        </header>
 
-        {/* BOOK COLLECTION GRID */}
+        {/* ======================================
+            BOOK COLLECTION GRID
+        ====================================== */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
             <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
               {/* BOOK COVER */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
@@ -158,44 +182,52 @@ export default function LawFinanceStatecraft() {
 
               </div>
 
-              {/* BOOK INFORMATION */}
+              {/* CATEGORY BADGE */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* CATEGORY BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
+              </div>
+
+              {/* BOOK INFORMATION */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
                 {/* BOOK TITLE */}
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-4 min-h-[110px]">
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
                 {/* AUTHOR NAME */}
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
+                <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
                   by {book.author}
                 </p>
 
                 {/* AMAZON VIEW BOOK BUTTON */}
 
-                <div className="mt-auto pt-5">
+                <div className="mt-auto pt-4">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Find ${book.title} on Amazon`}
-                      className="w-full bg-[#241a15] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
+
                       <BookOpen size={15} />
+
                       View Book
+
                       <ArrowUpRight size={15} />
+
                     </a>
 
                   </div>
@@ -208,24 +240,25 @@ export default function LawFinanceStatecraft() {
 
           ))}
 
-        </div>
+        </section>
 
-        {/* BOTTOM DIVIDER */}
+        {/* ======================================
+            BOTTOM DIVIDER
+        ====================================== */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 
       </div>
-
     </div>
   );
 }

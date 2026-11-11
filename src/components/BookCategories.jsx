@@ -3,9 +3,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // ======================================================
-// BLUE BOOK - HOMEPAGE BOOK CATEGORIES
-// Images are loaded directly from the public folder.
-// Prices, decorative icons and animations removed.
+// HOMEPAGE BOOK CATEGORIES
+// Local images from public folder
+// No prices or animations
 // ======================================================
 
 // ======================================================
@@ -18,7 +18,7 @@ const spotlightBook = {
   author: "John Steinbeck",
   format: "Literary Classic",
   image: "/fiction/fiction1.webp",
-      amazonUrl: "https://www.amazon.com/East-Eden-John-Steinbeck-ebook/dp/B001BC5HXG?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.eAx_2kWpGNTsZCRGqw2U4g9xKLCyb_NPXGhnlmF0s-cErnOG21a3KETUbv1005dHUz5daVhAwyq6B203JLEUGSbB-hP9b0ntkBduFk2LXJ95CHAqRMFDA-cfr2u9CnW-qFI6YkmLhgxvABviMEqJcx0uL14c1GmH5nmQVbUFqe4WYZesOrEkrjbTAIyW7FuKV14dhu7iQbbvWHom_ki_wch8N78034ban4xAYgkl36M.J7-f3Nz5GDRrNAvScmvy-lD4TXGztjngWMilb-a6Um0&dib_tag=AUTHOR",
+  amazonUrl: "https://www.amazon.com/dp/B001BC5HXG",
   description:
     "Set in California's Salinas Valley, East of Eden is John Steinbeck's sweeping exploration of family, identity, love, jealousy, and the enduring struggle between good and evil. A remarkable American literary classic that continues to captivate generations of readers.",
 };
@@ -40,7 +40,7 @@ const shelfBooks = [
     author: "George Orwell",
     format: "Political Satire",
     image: "/fiction/fiction3.webp",
-    amazonUrl: "https://www.amazon.de/Animal-Farm-zv%C3%AD%C5%99at-Signet-Classics/dp/0451526341",
+    amazonUrl: "https://www.amazon.com/dp/0451526341",
     description:
       "A powerful allegorical novel exploring power, revolution, and corruption.",
   },
@@ -50,7 +50,8 @@ const shelfBooks = [
     author: "Jane Austen",
     format: "Classic Literature Collection",
     image: "/fiction/fiction4.webp",
-   amazonUrl: "https://www.amazon.com/Complete-Novels-Austen-Knickerbocker-Classics/dp/1631066439",
+    amazonUrl:
+      "https://www.amazon.com/Complete-Novels-Austen-Knickerbocker-Classics/dp/1631066439",
     description:
       "A treasured collection of Austen's celebrated novels of love, society, and human relationships.",
   },
@@ -68,64 +69,71 @@ const shelfBooks = [
 
 // ======================================================
 // SECTION 2 - PHILOSOPHY & THEOLOGY
-// Five Books from Your Existing Theology Collection
+// Five books matched to actual covers
 // ======================================================
 
 const wisdomBooks = [
   {
     id: 1,
     entry: "NO. 01",
-    title: "Philosophy & Theology: A Lutheran Perspective",
-    author: "Nathan Greeley",
-    format: "Lutheran Philosophy & Theology",
-    image: "/theology/theory1.webp",
-    amazonUrl:
-      "https://www.amazon.com/Philosophy-Theology-Perspective-Nathan-Greeley/dp/1952295793/ref=sr_1_1?dib=eyJ2IjoiMSJ9.hG-gRiRIlp2BYUf5Sz32nbJgpbjvZXcLu91AZHNY43x2OeVFcU6SqMQwwLSlsBilIiuITWLNdJMe2YkrT2ftztlatpihtyrtFSY-BhzkD2qiNBXaKyYp7XdAb4JIFth-fFmR9XoxY2D9I_GZdEXZxmjRef3ubLOR0PGyN4gKOD4zrWp92tS0zlpLokKEbHfvdM0T-oMPuz7HaK56mLeQ-881fFEiJZDo4VZxfeXfTM8.mc6ADVyT1DLVDAN9goDQkKqyesKLexinSV308YHDKnk&dib_tag=se&keywords=Philosophy+Theology+Nathan+Greeley&qid=1794239586&sr=8-1",
-  },
+    title: "The Blackwell Companion to Natural Theology",
+    author: "William Lane Craig & J. P. Moreland (Editors)",
+    format: "Natural Theology & Philosophy",
+     image: "/theology/theory1.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Hell-Pay-Discreet-Blackwell-Bastards/dp/B0FFN5263T/ref=sr_1_3?crid=3HQ5T5D92K4WB&dib=eyJ2IjoiMSJ9.QSFU094QOVTxttHXePmKKn7xpMlwP33LRzxRyTENdjPGMx2uJiVZylDDQxx8YjSWlWsasix0_l3N8BgK-KmyqZ2dsf2iwf-KS9gu3hYXwP-gnemULGKmGT2JSy17iXT4l02t_QUYXbCIQu7ypsqISWHft9LEG6ec8TIwRtRqcekackrE3uiL3dwZuLaDP1JdtCPV5dyGKSqnig3xkOUbTcikqoJ53SAXSs0_5w1pEJE.ISDu8xtq81Zox5iM7kRkmblBCZ-ItOZ-2IOHca4vl3Q&dib_tag=se&keywords=the+blackwell+company+Independent&qid=1794357410&s=books&sprefix=the+blackwell+company+independent%2Cstripbooks-intl-ship%2C1321&sr=1-3-catcorr",
+    },
   {
     id: 2,
     entry: "NO. 02",
-    title: "Philosophy and Theology",
-    author: "John D. Caputo",
-    format: "Philosophy of Religion",
-    image: "/theology/theory2.webp",
-    amazonUrl: "https://www.amazon.com/dp/0687331269",
-  },
+    title: "Fairy Tales for a Modern Age: Book 2",
+    author: "C. R. Beaumont",
+    format: "Modern Fairy Tales & Folklore",
+     image: "/theology/theory2.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Fairy-Tales-Modern-Age-Book-ebook/dp/B0F9FJ52ZP/ref=sr_1_1?dib=eyJ2IjoiMSJ9.mUVsI2N9qX-_yzT_c3zKTw.qzlxxoEQjaYRYnA_TVW6zmsXM_g3Sg80MNbAIML6u4Q&dib_tag=se&keywords=Fairy+Tales+for+a+Modern+Age+Book+2+C+R+Beaumont&nsdOptOutParam=true&qid=1794356545&sr=8-1",
+    },
   {
     id: 3,
     entry: "NO. 03",
-    title: "101 Key Terms in Philosophy and Their Importance for Theology",
-    author: "Kelly James Clark, Richard Lints & James K. A. Smith",
-    format: "Philosophical Reference",
-    image: "/theology/theory3.webp",
-    amazonUrl: "https://www.amazon.com/dp/0664225241",
-  },
+    title: "Trixi Palone: Siren (The Last Verdant Series, Book 2.5)",
+    author: "C. R. Beaumont",
+    format: "Speculative Fiction & Fantasy",
+    image: "/theology/theory3.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Trixi-Palone-Siren-Last-Verdant-ebook/dp/B0GL8Y7JB2/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9scqlLFsnPVXQYaxLBXkBQ.9wPhnfqUi8mlOFhZbvuwBrzE25NxHedog-dfU750h3U&dib_tag=se&keywords=trixie+palone+siren+c+r+beaumont&qid=1794356738&sr=8-1",
+    },
   {
     id: 4,
     entry: "NO. 04",
-    title: "The Blackwell Companion to Natural Theology",
-    author: "William Lane Craig & J. P. Moreland (Editors)",
-    format: "Natural Theology",
-    image: "/theology/theory4.webp",
-    amazonUrl: "https://www.amazon.com/dp/1405176571",
-  },
+    title: "The Stolen Scriptures: How Ancient Myths Became the Bible",
+    author: "C. R. Beaumont",
+    format: "Comparative Religion & Biblical History",
+    image: "/theology/theory4.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Stolen-Scriptures-Ancient-Philosophy-Sociology-ebook/dp/B0FKMP2HTK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.sgsdn--ABPKVL_2kbVXCnfeQgaYL3cI1CLDhyFH7JgPQH-KNwc_-hOUIxYJH3Ozx.D23RLwN3HJq4mhVKA9gTXY1KS50BABfXcZAGP55_-6w&dib_tag=se&keywords=The+Stolen+Scriptures+C+R+Beaumont&qid=1794356771&sr=8-1",
+    },
   {
     id: 5,
     entry: "NO. 05",
-    title: "Primary Readings in Philosophy for Understanding Theology",
-    author: "Diogenes Allen & Eric O. Springsted (Editors)",
-    format: "Philosophy & Christian Theology",
-    image: "/theology/theory5.webp",
-    amazonUrl: "https://www.amazon.com/dp/0664252087",
-  },
+    title: "The Old Ways and the Hidden Powers",
+    author: "C. R. Beaumont",
+    format: "Magic, Witchcraft & Cultural History",
+    image: "/theology/theory5.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Old-Ways-Hidden-Powers-Witchcraft/dp/B0HG26MHRJ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.sk0ASPGsH6e1DWUvak75ToegMKQ_9hG0yW6ZbljnlYPB5EMLDngy5sHyyYqJx8yvUNRvOtvuyA2MkHFPJ76d6w.Sy-jwN7yQVYfn1Uc8MBjoXT5wg7f3Of4s-TvgNeaRqw&dib_tag=se&keywords=The+Old+Ways+and+the+Hidden+Powers+C+R+Beaumont&nsdOptOutParam=true&qid=1794356805&sr=8-1",
+    },
 ];
 
 // ======================================================
 // REUSABLE VIEW BOOK BUTTON
-// No hover styling or animations
 // ======================================================
 
-function ViewBookButton({ url, light = false, compact = false }) {
+function ViewBookButton({
+  url,
+  light = false,
+  compact = false,
+}) {
   return (
     <a
       href={url}
@@ -157,9 +165,9 @@ export default function BookCategories() {
     <section className="w-full bg-[#fbf8f2]">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 py-12 md:py-16 flex flex-col gap-16 font-serif">
 
-        {/* ==================================================
+        {/* ==========================================
             SECTION 1 - LITERARY CLASSICS
-        ================================================== */}
+        ========================================== */}
 
         <section>
 
@@ -255,7 +263,7 @@ export default function BookCategories() {
 
               </div>
 
-              {/* FEATURED BOOK BUTTON - NO PRICE */}
+              {/* FEATURED BOOK BUTTON */}
 
               <div className="mt-8 pt-5 border-t border-[#514032]">
 
@@ -320,7 +328,7 @@ export default function BookCategories() {
 
                   </div>
 
-                  {/* BOOK BUTTON - NO PRICE */}
+                  {/* VIEW BOOK BUTTON */}
 
                   <div className="mt-5 pt-4 border-t border-[#e2d7c5]">
 
@@ -341,24 +349,24 @@ export default function BookCategories() {
 
         </section>
 
-        {/* ==================================================
-            SIMPLE DECORATIVE DIVIDER
-            No Sparkles / Cloud / Decorative Icons
-        ================================================== */}
+        {/* ==========================================
+            DECORATIVE DIVIDER
+        ========================================== */}
 
-        <div className="flex items-center gap-5" aria-hidden="true">
-
+        <div
+          className="flex items-center gap-5"
+          aria-hidden="true"
+        >
           <span className="h-px flex-1 bg-[#d6c7b2]" />
 
           <span className="w-2 h-2 bg-[#8c2d19] rotate-45" />
 
           <span className="h-px flex-1 bg-[#d6c7b2]" />
-
         </div>
 
-        {/* ==================================================
+        {/* ==========================================
             SECTION 2 - PHILOSOPHY & THEOLOGY
-        ================================================== */}
+        ========================================== */}
 
         <section className="bg-[#f4eee2] p-5 sm:p-8 border-2 border-[#b8a68f]">
 
@@ -454,7 +462,7 @@ export default function BookCategories() {
 
                 </div>
 
-                {/* VIEW BOOK BUTTON - NO PRICE */}
+                {/* VIEW BOOK BUTTON */}
 
                 <div className="mt-6 pt-4 border-t border-[#e2d7c5]">
 
@@ -463,7 +471,7 @@ export default function BookCategories() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`View ${book.title} on Amazon`}
-                    className="w-full bg-[#241a15] text-[#fbf8f2] text-[10px] font-sans font-bold py-3 px-3 uppercase tracking-wider flex items-center justify-center text-center"
+                    className="w-full bg-[#241a15] text-[#fbf8f2] text-[10px] font-sans font-bold py-3 px-3 uppercase tracking-wider flex items-center justify-center text-center no-underline"
                   >
                     View Book
                   </a>

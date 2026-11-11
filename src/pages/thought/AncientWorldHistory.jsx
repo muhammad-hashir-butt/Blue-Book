@@ -13,75 +13,78 @@ export default function AncientWorldHistory() {
   // ==========================================
   // ANCIENT & WORLD HISTORY
   // Images: public/ancient/
-  // Correct book titles and authors
+  // Titles matched with actual book covers
   // No prices
-  // Amazon links included
+  // No hover animations
   // ==========================================
 
   const books = [
     {
       id: 1,
-      title: "World Civilizations and Cultures, Grades 5–8",
-      author: "Don Blattner",
-      format: "World Civilizations",
-      image: "/ancient/ancient1.webp",
+      title: "Hellenistic Philosophies for the Modern Man",
+      author: "George Smeader",
+      format: "Ancient Greek Philosophy",
+      image: "/ancient/ancient1.jpg",
       amazonUrl:
-        "https://www.amazon.com/World-Civilizations-Cultures-Grades-History/dp/1580376347/ref=sr_1_1?dib=eyJ2IjoiMSJ9.Qhn3B0mRfXZT4iF_Nrj7_A.-dVrx8LxVsoldWMZeMoh0Iw4mDaI2DdbHOStKPx-FNE&dib_tag=se&keywords=9781580376341&qid=1794011418&sr=8-1",
+        "https://www.amazon.ca/Hellenistic-Philosophies-Modern-Man-Epicureanism/dp/B0CHL9N3JG",
     },
     {
       id: 2,
-      title: "Ancient History: History of the Ancient World",
-      author: "Robert Dean",
-      format: "Ancient Empires & History",
-      image: "/ancient/ancient2.webp",
+      title: "Pensie: A Path of Virtue, Wisdom, and Reflection",
+      author: "Author not specified",
+      format: "Ancient Wisdom & Reflection",
+      image: "/ancient/ancient2.jpg",
       amazonUrl:
-        "https://www.amazon.com/Ancient-History-Civilizations-Empires-Mythology-ebook/dp/B01M4FR8V3/ref=sr_1_1?dib=eyJ2IjoiMSJ9.cFoHyLd9GKGUc2UKvrXsTfnL_H2zXu_dITxc33hvXb8R1OsKKpUUoepxe-woYvddEL9BlXWLdr5ozOiWBRTGN1h8YK_1vTHuVMjWxfGFxbPqpMpi-aFl4AxbibAcoNjsQe2hIDpfo73T_ss_LvL3qD1DHKcp8upin9p3YJ8PFtZgI4ksJFcfLtzqhd4rwIH_DPfd09SlrAxT6IQyX40ojrkPwckEbFj9_a2TK5vOLgI.OJ7V4vjmWoeyW-5ptw22FH_q0PJArz5SiV2xcIt-wE0&dib_tag=se&keywords=Ancient+History+Robert+Dean&qid=1794011519&sr=8-1",
+        "https://www.amazon.com/Pensif-Reflection-Education-Philosophy-Sociology-ebook/dp/B0FDDC6JS3/ref=sr_1_1?dib=eyJ2IjoiMSJ9.bhMShBYXKTF9A15nGNE76K5XGqjm9q_qxo9vaInszsbGEXcC-cUNXnUlNzHxBZZ2zCemvF68AEYyLYNLpmNy7r3zXPrMpXyjLolTe9wfxhMUQRU35T-3gYv36kOEykEk6jkN6zwWhHNWaRgDRTJYHz_hdcKmBxg4DYPCUUa5mwTe18ldm19Pm5W_eCdt1wb8.JZRf1-733-VcVz18ksMHRy3P4s7fgOWQWCFREEH1p8c&dib_tag=se&keywords=Pensie+A+Path+of+Virtue+Wisdom+and+Reflection&nsdOptOutParam=true&qid=1794410835&sr=8-1",
     },
     {
       id: 3,
-      title: "The History of the Ancient World",
-      author: "Susan Wise Bauer",
-      format: "Ancient World History",
-      image: "/ancient/ancient3.jpeg",
+      title: "G.R.'s Bizarre, Vol. 1: The Good, the Bad & the Math",
+      author: "Greg Ricker",
+      format: "Ancient Mysteries & Mathematics",
+      image: "/ancient/ancient3.jpg",
       amazonUrl:
-        "https://www.amazon.com/History-of-Ancient-World-audiobook/dp/B00D1YRUL4/ref=sr_1_1?crid=3EPI0NXZOZ7V1&dib=eyJ2IjoiMSJ9.7Mq_q3Zw-P7f7trh7KcllX-Q7NHeFzmim0htNg2UrOB23Dx3hsczwcoU-nQ2qX3VsoNyY48D-JeRpE4dh5rrYSujl0Am2oqAZxEtdHsFZ5YQ7a7dFoTkmv2ziw-zZjK4etu0M_ZVmpLxJ8J69TX_sfzE5gaWlsmkvZQ_riyyULNLWBeQRpb3rcI1AFpmq5atOnNPZqTWtEQcpM3uakWI-E79KnM9ep4yu_Ha7NtRwt0.Xn-euieZ25YJy28jaNpYBGRFPjZKAttKbuuILa2HBic&dib_tag=se&keywords=THE+HISTORY+OF+THE+ANCIENT+WORLD+BOOKS&qid=1794012308&s=audible&sprefix=the+history+of+the+ancient+world+books%2Caudible%2C444&sr=1-1",
+        "https://www.amazon.com/G-R-s-Bizarre-Good-Bad-Math-ebook/dp/B07T2WL21B/ref=sr_1_1?dib=eyJ2IjoiMSJ9.EE6tAClz1Lv17A_WPeVP9g.r83Dq4ZvmUsOIsuuueid72SUxvcVS4cSx6sJrfyyT94&dib_tag=se&keywords=GRs+Bizarre+The+Good+The+Bad+and+The+Math+Greg+Ricker&nsdOptOutParam=true&qid=1794410874&sr=8-1",
     },
     {
       id: 4,
-      title: "History: The Ancient Civilizations That Defined World History",
-      author: "Roman Collins",
-      format: "World Civilizations",
+      title: "Vesta and Her Children: A Tale of the Fall of Rome",
+      author: "Marcia J. H. Twain",
+      format: "Ancient Roman Historical Fiction",
       image: "/ancient/ancient4.jpg",
       amazonUrl:
-        "https://www.amazon.com/History-Ancient-Civilizations-Defined-World-ebook/dp/B01AYRJRCK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.7wKnZGghuhT1wmjty065Hg.LxLpasS5gl_SeAtAV1oIcozoFnELq3uifqBCoiXDujA&dib_tag=se&keywords=9781540668974&qid=1794011705&sr=8-1",
+        "https://www.amazon.in/Vesta-Her-Children-Tale-Fall/dp/B0DKTKBY8N",
     },
     {
       id: 5,
-      title: "Ancient Civilizations of the World: An Encyclopedia for Students & Knowledge Seekers",
-      author: "U K Tripathi",
-      format: "Ancient Civilizations",
+      title: "The Polite Apocalypse: Manners and the Death of Discourse",
+      author: "C. R. Beaumont",
+      format: "Social History & Philosophy",
       image: "/ancient/ancient5.jpg",
       amazonUrl:
-        "https://www.amazon.com/ANCIENT-CIVILIZATIONS-WORLD-Encyclopedia-Knowledge-ebook/dp/B0HFNDLBLK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.1wX92iYc9ftGNR_m5Kee_A.8bT1wkX1hs_ATTPNCZjhBgNw6n1qWxaGItLmS3tuBqg&dib_tag=se&keywords=9798193447665&qid=1794011774&sr=8-1",
+        "https://www.amazon.com/POLITE-APOCALYPSE-DISCOURSE-Philosophy-Sociology-ebook/dp/B0G36ZW438?ref_=saga_dp_bnx_dsk_dp",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
 
       <div className="max-w-7xl mx-auto">
 
-        {/* ======================================
-            BREADCRUMB NAVIGATION
-        ====================================== */}
+        {/* BREADCRUMB NAVIGATION */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
 
           <Link
             to="/"
-            className="hover:text-[#8c2d19] hover:underline flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
@@ -89,73 +92,75 @@ export default function AncientWorldHistory() {
           <span>Thought & Science</span>
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Ancient & World History
           </span>
 
-        </div>
+        </nav>
 
-        {/* ======================================
-            PAGE HEADER
-        ====================================== */}
+        {/* PAGE HEADER */}
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-          <div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
+            <div className="flex-1">
 
-              <Landmark className="w-4 h-4" />
+              <div className="flex items-center gap-2 text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
 
-              <span>
-                Civilizations, Empires & World Heritage
+                <Landmark size={16} />
+
+                <span>
+                  Civilizations, Empires & World Heritage
+                </span>
+
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Ancient & World History
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Explore fascinating ancient civilizations,
+                powerful empires, historical discoveries,
+                and the cultural achievements that shaped
+                human history across centuries.
+              </p>
+
+            </div>
+
+            {/* CURATED INDEX */}
+
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
+
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
+
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
               </span>
 
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Ancient & World History
-            </h1>
-
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Explore fascinating ancient civilizations,
-              powerful empires, historical discoveries,
-              and the cultural achievements that shaped
-              human history across centuries.
-            </p>
-
           </div>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+        </header>
 
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
+        {/* BOOK COLLECTION GRID */}
 
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
-
-          </div>
-
-        </div>
-
-        {/* ======================================
-            BOOK COLLECTION GRID
-        ====================================== */}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
-            <div
+            <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col hover:border-[#8c2d19]"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
               {/* BOOK COVER */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] shadow-inner overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
@@ -166,46 +171,54 @@ export default function AncientWorldHistory() {
 
               </div>
 
-              {/* BOOK INFORMATION */}
+              {/* CATEGORY */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* CATEGORY BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
+              </div>
+
+              {/* BOOK INFORMATION */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
                 {/* BOOK TITLE */}
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-4 min-h-[90px]">
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                {/* AUTHOR NAME */}
+                {/* AUTHOR */}
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
-                  by {book.author}
-                </p>
+                {book.author !== "Author not specified" && (
+                  <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
+                    by {book.author}
+                  </p>
+                )}
 
-                {/* AMAZON VIEW BOOK BUTTON */}
+                {/* AMAZON VIEW BUTTON */}
 
-                <div className="mt-auto pt-5">
+                <div className="mt-auto pt-4">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`View ${book.title} on Amazon`}
-                      className="w-full bg-[#241a15] hover:bg-[#8c2d19] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      aria-label={`Find ${book.title} on Amazon`}
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
+
                       <BookOpen size={15} />
 
                       View Book
 
                       <ArrowUpRight size={15} />
+
                     </a>
 
                   </div>
@@ -214,25 +227,23 @@ export default function AncientWorldHistory() {
 
               </div>
 
-            </div>
+            </article>
 
           ))}
 
-        </div>
+        </section>
 
-        {/* ======================================
-            BOTTOM DIVIDER
-        ====================================== */}
+        {/* BOTTOM DIVIDER */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 

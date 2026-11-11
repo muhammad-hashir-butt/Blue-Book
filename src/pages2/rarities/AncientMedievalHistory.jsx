@@ -12,201 +12,262 @@ export default function AncientMedievalHistory() {
   // ==========================================
   // ANCIENT & MEDIEVAL HISTORY
   // Images: public/Ancient & Medieval/
-  // Actual titles from book covers
-  // No prices or hover animations
-  // Amazon search links
+  // All images: .jpg
+  // Titles matched with actual covers
+  // No prices
+  // Compact cards
+  // Georgia font
+  // No hover animations
+  // Amazon links included
   // ==========================================
 
   const books = [
     {
       id: 1,
-      title: "Castles: A Fortified History of the World",
-      author: "Dan Jones",
-      format: "Castles & World History",
-      image: "/Ancient & Medieval/Ancient & Medieval1.webp",
+      title:
+        "Naxos – Paros: The Hidden Greek Islands of Ancient Wonders, Marble Masterpieces, and Medieval Treasures",
+      author: "Denis Roubien",
+      format: "Ancient Greek History & Cultural Heritage",
+      image: "/Ancient & Medieval/Ancient & Medieval1.jpg",
       amazonUrl:
-        "https://www.amazon.com/Castles-Fortified-History-Dan-Jones/dp/B0GLG2YYM4/ref=sr_1_1?dib=eyJ2IjoiMSJ9.lvwlfao_aSJX4MW_VesFydJ2Lrw6cKEFDiVRNcya3sNLNu2kfaUiPjYKOJ6LnR_djyOh391VZp6BFhwtIiLsNCwZuwBLXiwTXxyc7SbFYsvufvcskPBg4gH5NPo2MHuEa9RGQMGTddtJRooiDIS_V9MIgXwyCP6SowLWuhFJYVFc95tAiHRQt-WNwk06ZYo13wQINqrO4BLJfANfHKQLzog_Q1tSLCXWUGzL-3qDQJo.vpIN-2Lm1wEpT43-xZoaF_kOBrvx40tWuk1c62Evm4s&dib_tag=se&keywords=Castles+A+Fortified+History+of+the+World+Dan+Jones&nsdOptOutParam=true&qid=1794248776&sr=8-1",
+        "https://www.amazon.com/Naxos-Islands-different-architecture-landscape-ebook/dp/B08Z8957BJ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.DIfLoZesGhbj0XKdDO3kW8sKDcdiKWlGUKopOCm-oH41v2wCfXiSNnvkl8sOfJ_CCXw0M5HQh3tHaabi-NQrTyjyFREZPQEFrpKvVLB2GKjKzGqh2CvNdV5SYLKHPTXJ5Nj2K_RUpL2doO66MM0v0YIsgTZDj2ZOl3p4jHH4Npvl5ukRea42DflM0mAx0gQR9i8c6lsqHxAXesudqnlxUWDDmoSIYux468RjLN_RkvQ.9guzrKKHQzpoucOJALtp5utdUEloq8OQ7qfizCAoDaw&dib_tag=se&keywords=Naxos+Paros+Denis+Roubien+Hidden+Greek+Islands&qid=1794423100&sr=8-1",
     },
     {
       id: 2,
-      title: "Powers and Thrones: A New History of the Middle Ages",
-      author: "Dan Jones",
-      format: "Medieval European History",
-      image: "/Ancient & Medieval/Ancient & Medieval2.webp",
+      title:
+        "Ancient and Medieval Conspiracy Theories: The History of the World's Most Persistent Conspiracy Theories",
+      author: "Charles River Editors",
+      format: "Ancient & Medieval Historical Mysteries",
+      image: "/Ancient & Medieval/Ancient & Medieval2.jpg",
       amazonUrl:
-        "https://www.amazon.com/Powers-Thrones-History-Middle-Ages/dp/1984880896/ref=sr_1_1?dib=eyJ2IjoiMSJ9.Q3eDHvj_dWFTcxP6zsUelu-Q9a6fon6CmR5jrsB5FqD9qagO2rsKTVmJZjFAh4v2D3M96uDecW1uHWwAY7Vc5-kvznMvWeQ8Ta9JjA6fUWzv26dxbLJCpG4qlyUDouTYX34E9yuncp1vKxEhXmPwblcJ8-beptZ1Mlvijg4g_Qaa1bkhTbURabCnNGo16fX5j-eIhm7H1KbKjf2kxYzIxC8Ggj5OPjtcyxazeDNJZTU.CH16hBDmXBXvl4DyyXpIuaKoY9OSlcEsv2pe6rR6uCI&dib_tag=se&keywords=Powers+and+Thrones+Dan+Jones&qid=1794248812&sr=8-1",
-    },
+"https://www.amazon.com/Ancient-Medieval-Conspiracy-Theories-Persistent/dp/B0CQXM5T19/ref=sr_1_1?dib=eyJ2IjoiMSJ9.B9my3aR9KegQzMb43_SBjgkn-Lh-5G9kVQl1UU_Dqrf_UmVdlsRaJ-17gi1fUbBUH-LoL7iY1lRmHYbclFy0N-jb75VSciakscoj8_su5swyvsb2kiAfrfCwIcp5808cDzu92UFBhnN_LWuQeXtjNfrp_9-1fH-6fR79k6cZ_UI8WGsHzUJy7GEJUk6rfTlwrU4d850fo4gza02Z-hmppU7XxIXMSbeRJ17jw2K77OA.kfVwAev0uHSO17C6EklvymqEoU3rDW3LZvh_dusjKtA&dib_tag=se&keywords=Ancient+and+Medieval+Conspiracy+Theories+Charles+River+Editors&nsdOptOutParam=true&qid=1794423126&sr=8-1"    },
     {
       id: 3,
-      title: "The Book of Ancient Weapons: Weapons, Armor, and Siege Engines of History",
-      author: null,
-      format: "Ancient Weapons & Warfare",
+      title:
+        "The Roman Empire & the Medieval World: Volume III – The Thales Canon",
+      author: "Thales Press",
+      format: "Roman Empire & Medieval World History",
       image: "/Ancient & Medieval/Ancient & Medieval3.jpg",
       amazonUrl:
-        "https://www.amazon.com/Book-Ancient-Weapons-Historical-Encyclopedia/dp/B0H3NT8SD6/ref=sr_1_1?dib=eyJ2IjoiMSJ9.sL1CBw5q3VS8DGpENKZ4TNAULGviIL6d2wcdaL4XCQgv_s6tFpolO40yKjga3vsuLJUeUBi0Pn67hcKLM094uG3f0gZgSMGWSnTU-Ogsk8xmXRPopTs-5avusFVRca6y1BllhwU-qbeUsUwVzJCINZKhL2UIYzrSmk06xXGSUI9KZFk-8ej-lnN2CtkiUickhL2aePje5TogOBEzCyzpBSbtEjSAXJ77k491PS6usho.FhWZsDBYBpdyZVXUss9bpRQRQpKTK96wwR53zOhUbbY&dib_tag=se&keywords=The+Book+of+Ancient+Weapons&qid=1794248953&sr=8-1&utm_source=chatgpt.com",
-    },
+"https://www.amazon.com/Roman-Empire-Medieval-World/dp/B0H692MS3G/ref=sr_1_1?dib=eyJ2IjoiMSJ9.spY6_lnF2OVCC8RuM-dIYystoADQZ6IKZFVFWHH4QdJrreE2QSsSgl3ldId607yOfWJGjt-1nlEbg4TNxyvhWzl_IUbCkBjDKtUtLEsrzolfdALedaz8wP6H71Ex497hDn_-qNLjcCSPCzLNSbJCCDpK8pC4UOVpm5SEma_rg8kAG_d0D34OMk1B8l0_MtXiN4_l0XXUoSOMqC4M-J5ZhNCuXlRkCv4PgrBNRe_YH8A.R_Kd2wD96J_8n3n4kiO6TqKP2dBP9apZy9ovtTjyPCQ&dib_tag=se&keywords=The+Roman+Empire+and+the+Medieval+World+Thales+Canon&nsdOptOutParam=true&qid=1794423149&sr=8-1"    },
     {
       id: 4,
-      title: "The Plantagenets: The Warrior Kings and Queens Who Made England",
-      author: "Dan Jones",
-      format: "Medieval English Royalty",
+      title:
+        "The Aethelred Cipher: A Medieval Conspiracy Shepherding the Black Death",
+      author: "Randy Pellegrini",
+      format: "Medieval Historical Mystery & Fiction",
       image: "/Ancient & Medieval/Ancient & Medieval4.jpg",
       amazonUrl:
-        "https://www.amazon.com/Plantagenets-Warrior-Kings-Queens-England/dp/B0CF6HS3L8/ref=sr_1_1?dib=eyJ2IjoiMSJ9.nOytkgB4LL3MH6b2-IAbJoUmcAj43KkDr9CAuXwhM_wvUEBQ9atox5OkCk9TxrC9DCCPmGOe7dgimhtXgAYNi0MWWZtJiCQgPFt6qHDwc--Rusck839IITvqRr0eIeNYlhV99TW2VyLowIX4r1RID1yaf1TDoox1_ihXMl5YrwTxACTuLyx4yl85eKNL3z7Mfr-eE8LuuJRRirWRBzOveOnKRAU9WCKqzp0S2tS-T14.x2EHq4joBvMAkjvE936jFFYqKII7WSaNB3mpTcHy3fA&dib_tag=se&keywords=The+Plantagenets+Dan+Jones&qid=1794249021&sr=8-1",
+        "https://www.amazon.com/dp/B0GJTGCHS2",
     },
     {
       id: 5,
-      title: "The Norman Conquest: The Battle of Hastings and the Fall of Anglo-Saxon England",
-      author: "Marc Morris",
-      format: "Norman & Anglo-Saxon History",
+      title:
+        "Mechanical Computers of the Ancient Cosmos: Astronomicum Caesareum",
+      author: "Petrus Apianus (Original Work)",
+      format: "Historical Astronomy & Ancient Scientific Instruments",
       image: "/Ancient & Medieval/Ancient & Medieval5.jpg",
       amazonUrl:
-        "https://www.amazon.com/The-Norman-Conquest-Marc-Morris-audiobook/dp/B00ET84AIC/ref=sr_1_1?dib=eyJ2IjoiMSJ9.4wB9jMBh9uB3c-k_aN4Zp8QzcGaoAr2Q-nRdx_XRx9LyoRHA2oDYcG1PZNdGLZ2E-xMDJ8KIt3ai_RqXJdT0wVcm024l0LvmGeqYsq2EdP4KsdoQhBK9kJ0Ha2UYyBntyNs1ouKI4yom97VVY_hQ1biTfnRpN8yMIDBmRNjUppVGymi_T5WoxrhPSo7Qm1Nv4g9Q4Nd-L4rRlVS2EYYYHJprCIf-U_7PkPrfei9Ayis.m53ByGnswTWdSCZs8gunwvLiXsO38lqNqd2p6l1xzAE&dib_tag=se&keywords=The+Norman+Conquest+Marc+Morris&qid=1794249045&sr=8-1",
-    },
+"https://www.amazon.com/Mechanical-Computers-Ancient-Cosmos-Astronomicum/dp/B0H226K7K2/ref=sr_1_1?dib=eyJ2IjoiMSJ9.cIW0_sBJ6bO5KK_epiyvpm5tl3e8KnZ1H9xOqFnS9RrLezo1qsDowpBRPBdw2m928iztZuBFPMgzdHnGYI0FtFqpcc74NP3TI4zePogzIsjq8DwWoyApAo7qcXgc9eiTRuLqDCSH7_d-cLltc9U7Y4IrOEu2oIrg41G5qaf5kHA0Up_d3Gcr0tyQjFPoMMNOrwpBlngZpyO1LvkX1WBNlgmZnSG3dMsbLsIZmDq6nwE.0nstC31cK7bXHqRY1sjgC1dLsUPyL7otshvT347sd60&dib_tag=se&keywords=Mechanical+Computers+of+the+Ancient+Cosmos+Astronomicum+Caesareum&nsdOptOutParam=true&qid=1794423183&sr=8-1"    },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
-
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        {/* BREADCRUMB NAVIGATION */}
+        {/* ==========================================
+            BREADCRUMB NAVIGATION
+        ========================================== */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
+
           <Link
             to="/"
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
           <span>/</span>
+
           <span>Classical Rarities</span>
+
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Ancient & Medieval History
           </span>
-        </div>
 
-        {/* PAGE HEADER */}
+        </nav>
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        {/* ==========================================
+            PAGE HEADER
+        ========================================== */}
 
-          <div>
-            <div className="text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
-              Castles, Medieval Kingdoms & Historical Warfare
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+            <div className="flex-1">
+
+              <div className="text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
+                Ancient Civilizations, Medieval Mysteries & Historical Discoveries
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Ancient & Medieval History
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Explore the extraordinary heritage of
+                ancient civilizations and the medieval world.
+                Discover the cultural treasures of Greece,
+                fascinating historical conspiracy theories,
+                the rise of the Roman Empire, medieval
+                mysteries surrounding the Black Death,
+                and remarkable astronomical inventions.
+                Journey through influential periods of
+                history and uncover the discoveries,
+                traditions, and ideas that shaped
+                human civilization.
+              </p>
+
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Ancient & Medieval History
-            </h1>
+            {/* ==========================================
+                CURATED INDEX
+            ========================================== */}
 
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Explore the fascinating world of ancient
-              warfare, medieval castles, powerful dynasties,
-              royal kingdoms, and historic conquests.
-              Discover remarkable accounts of the Middle
-              Ages, the Plantagenet rulers, Norman England,
-              military innovation, and the events that
-              shaped European civilization.
-            </p>
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
+
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
+
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
+              </span>
+
+            </div>
+
           </div>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+        </header>
 
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
+        {/* ==========================================
+            BOOK COLLECTION GRID
+        ========================================== */}
 
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
-          </div>
-        </div>
-
-        {/* BOOK COLLECTION GRID */}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
+
             <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
-              {/* BOOK COVER */}
+              {/* ==========================================
+                  BOOK COVER
+              ========================================== */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
+
                 <img
                   src={book.image}
-                  alt={`${book.title}${book.author ? ` by ${book.author}` : ""}`}
+                  alt={`${book.title} by ${book.author}`}
                   loading="lazy"
                   className="w-full h-full object-contain"
                 />
+
               </div>
 
-              {/* BOOK INFORMATION */}
+              {/* ==========================================
+                  CATEGORY BADGE
+              ========================================== */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* CATEGORY BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
+              </div>
+
+              {/* ==========================================
+                  BOOK INFORMATION
+              ========================================== */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
                 {/* BOOK TITLE */}
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-4 min-h-[110px]">
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                {/* AUTHOR */}
+                {/* AUTHOR NAME */}
 
-                {book.author && (
-                  <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
-                    by {book.author}
-                  </p>
-                )}
+                <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
+                  by {book.author}
+                </p>
 
-                {/* AMAZON VIEW BOOK BUTTON */}
+                {/* ==========================================
+                    AMAZON VIEW BOOK BUTTON
+                ========================================== */}
 
-                <div className="mt-auto pt-5">
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                <div className="mt-auto pt-4">
+
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Find ${book.title} on Amazon`}
-                      className="w-full bg-[#241a15] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
+
                       <BookOpen size={15} />
+
                       View Book
+
                       <ArrowUpRight size={15} />
+
                     </a>
 
                   </div>
+
                 </div>
 
               </div>
+
             </article>
+
           ))}
 
-        </div>
+        </section>
 
-        {/* BOTTOM DIVIDER */}
+        {/* ==========================================
+            BOTTOM DIVIDER
+        ========================================== */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
+
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
+
         </div>
 
       </div>

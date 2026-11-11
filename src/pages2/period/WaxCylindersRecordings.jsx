@@ -10,150 +10,182 @@ import {
 
 export default function WaxCylindersRecordings() {
 
+  // ==========================================
   // WAX CYLINDERS & RECORDINGS
   // Images: public/Wax Cylinders/
-  // Prices removed
-  // Amazon search links
+  // Image 1: .webp
+  // Images 2-5: .jpg
+  // Actual titles matched with book covers
+  // No prices
+  // Georgia font
+  // Compact cards
   // No hover effects or animations
+  // Amazon search links included
+  // ==========================================
 
-  
-const books = [
-  {
-    id: 1,
-    title: "Edison Cylinder Phonograph Companion",
-    author: "George L. Frow",
-    format: "Edison Phonograph History",
-    image: "/Wax Cylinders/Wax Cylinders1.jpg",
-    amazonUrl:
-      "https://www.amazon.com/Edison-Cylinder-Phonograph-Companion-George/dp/0960646612/ref=sr_1_1?dib=eyJ2IjoiMSJ9.jRZgWJDLC2p6JYK4LL-KMF5ppPiFJYaplA66NjZzg5Vz8Aqgkl1GjOlDVP5S2P1XmXaWrBXq9RLxzaGig149KrRbKfRHYA5kKcbKs5Cg4gkr0kSp7BCoHEnitqA9O27p1rGem0KyG1mLQhP8hodrpGA8n8WLIL-9Yl1DjU7xg9dI_HhIKSumvxddHxrtUtJtMHB_2udXCdIW98FrYc_OitUoBadalGwu65CPzxdvLoI.9DVQzvaR0e2flcjFxSforBhW9RMxEecJOMcOJdos6_E&dib_tag=se&keywords=Edison+Cylinder+Phonograph+Companion+George+Frow&qid=1794255385&sr=8-1",
-  },
-  {
-    id: 2,
-    title: "The Deaf Inventor's Sound Machine",
-    author: "Thomas F. Gillen",
-    format: "Sound Invention & Technology",
-    image: "/Wax Cylinders/Wax Cylinders2.jpg",
-    amazonUrl:
-      "https://www.amazon.com/Deaf-Inventors-Sound-Machine-ebook/dp/B00GDQRZAS/ref=sr_1_1?dib=eyJ2IjoiMSJ9.7Gur5grL2RY8G8pFgozVoWMBIJ1tSE9UBllTmEglCxM.R7WBGDhqgq48FXPpieaal_-cXh6m_1uIV9txDoILrP8&dib_tag=se&keywords=The+Deaf+Inventors+Sound+Machine+Thomas+Gillen&qid=1794255410&sr=8-1",
-  },
-  {
-    id: 3,
-    title: "Edison Blue Amberol Recordings 1915-1929",
-    author: " Ronald Dethlefson",
-    format: "Paperback",
-    image: "/Wax Cylinders/Wax Cylinders3.webp",
-    amazonUrl:
-      "https://www.amazon.com/Edison-Blue-Amberol-Recordings-1915-1929/dp/0960646647/ref=sr_1_5?dib=eyJ2IjoiMSJ9.8d_xccTPBY3qVuqk_1jk06HLeyZGBv31OqQqjvLaeeihPTQHdtUSNaYVdAHkqEthmuBzm-3-j8DjT2uzYwKKJA.T0_yQ_-1PzcnE6mgBAScKFBKez0jG9QmMWV4Io67Xao&dib_tag=se&keywords=Edison+Cylinder+Records+1889-1912+Allen+Koenigsberg&qid=1794255565&sr=8-5&utm_source=chatgpt.com",
-  },
-  {
-    id: 4,
-    title: "Edison Cylinder Records, 1889–1912",
-    author: "Allen Koenigsberg",
-    format: "Phonograph Recording Archives",
-    image: "/Wax Cylinders/Wax Cylinders4.jpg",
-    amazonUrl:
-      "https://www.amazon.com/Edison-Cylinder-Records-1889-1912-Illustrated/dp/B0006BZK76/ref=sr_1_1?dib=eyJ2IjoiMSJ9.Q2W-WKV0ecD8F9LzvjXIhTyYgCZfHh0rJzkJqYly4SbGjHj071QN20LucGBJIEps.xiNaJS0Ht4t1Y-dwEBDJN4MSAfAerjjA8jFBaU2OWIk&dib_tag=se&keywords=Edison+Cylinder+Records+1889+1912+Allen+Koenigsberg&qid=1794255787&sr=8-1",
-  },
-  {
-    id: 5,
-    title: "The Edison Cylinder Phonographs, 1877–1929",
-    author: "George L. Frow & Albert F. Sefl",
-    format: "Edison Phonograph Collectors' Reference",
-    image: "/Wax Cylinders/Wax Cylinders5.jpg",
-    amazonUrl:
-      "https://www.amazon.com/Edison-cylinder-phonographs-detailed-entertainment/dp/0950546224/ref=sr_1_1?dib=eyJ2IjoiMSJ9.hKK_AHcgDqH1xa5ad3EG2vFVhzNvKuuAejwaXozbfCbT57pmtWDWMCOykvmxsqt6e7DFO7Q67xbqcT5bzzVwaio9a98OOB8uV4yei6ir3ldtOO13-afwusviV2XCLuHaB9vLk5u6tiApHFfNIkSNwR6azYybgYOeFDBfGGjWea8_Gvsu3orEAGcWvsLYR2e7YE2kYDKz4FCktzH79jCsSmv59qQ3_eRfpqtRMUktUWc.hDRq36_W4CKwP7fSrJpQxr2bc6bckO6gdZaS1JNmPJo&dib_tag=se&keywords=The+Edison+Cylinder+Phonographs+George+Frow+Albert+Sefl&nsdOptOutParam=true&qid=1794255808&sr=8-1",
-  },
-];
-
+  const books = [
+    {
+      id: 1,
+      title: "The Cat Who Wouldn't Stay Put",
+      author: "Tessa Hart",
+      format: "Cozy Cat Mystery Fiction",
+      image: "/Wax Cylinders/Wax Cylinders1.webp",
+      amazonUrl:
+        "https://www.amazon.com/Cat-Who-Wouldnt-Stay-Put/dp/B0H45XFBH1/ref=sr_1_1?dib=eyJ2IjoiMSJ9.cL8yy_G0Ko1jSwA1CihYnUcE4mw0zOud_WylYBJZujVAYXpkAdf2PyaORiaLAcz2FYctknPqhzK4E5PRyK-Og0BNjLPBGio5JQq8sqCN8zYo4BwryyzCarOpZY54EPqx90kGPeM66O1z_jnbJMtVj6rItpvmmgeTlLo-LKXWe98.rteHvbk8QA8FelMmgc09Kelb9s03eRqEJe3vbk550Gw&dib_tag=se&keywords=the+cat+who+wouldn%27t+stay+put+tessa+hart&nsdOptOutParam=true&qid=1794426837&sr=8-1",
+    },
+    {
+      id: 2,
+      title:
+        "No Longer Even a Memory: Early Recorded Voices and the Wish to Be Remembered",
+      author: "Rodney L. Kelley",
+      format: "Early Recorded Voices & Sound History",
+      image: "/Wax Cylinders/Wax Cylinders2.jpg",
+      amazonUrl:
+        "https://www.amazon.com/No-Longer-Even-Memory-Remembered/dp/B0HQY61LCZ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.m40y_RJjm5-SQahTHjAMJA.jHSHf2jUNl8ZNLBS1rmoT5HwoVHiVI1pb2GB-NDTWdU&dib_tag=se&keywords=No+Longer+Even+a+Memory+Rodney+L+Kelley&nsdOptOutParam=true&qid=1794426860&sr=8-1",
+    },
+    {
+      id: 3,
+      title:
+        "The Silent Song of Maple Hollow",
+      author: "Tessa Hart",
+      format: "Cozy Mystery & Historic Recordings",
+      image: "/Wax Cylinders/Wax Cylinders3.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Silent-Maple-Hollow-Crumpet-Mysteries/dp/B0HK33ZGPD/ref=sr_1_1?dib=eyJ2IjoiMSJ9.AQggMwOdjllJEHuk1Ar5MA.Zt3zgGvA66Y2xXCZE7Ij5UEvYza0GQnMx1_vHU_Z1X0&dib_tag=se&keywords=The+Silent+Song+of+Maple+Hollow+Tessa+Hart&nsdOptOutParam=true&qid=1794426884&sr=8-1",
+    },
+    {
+      id: 4,
+      title: "The Singer Who Vanished",
+      author: "Taryn Ashbourne",
+      format: "Historical Music Mystery",
+      image: "/Wax Cylinders/Wax Cylinders4.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Singer-Who-Vanished-Phantom-Opera/dp/B0HPZZ3RST/ref=sr_1_1?dib=eyJ2IjoiMSJ9.omDezHmJ0opUduD0ixdXIw.mDyuTRRqo9V4_oRSS2pagd6c2x1HrLPMHJERMxWiqqI&dib_tag=se&keywords=The+Singer+Who+Vanished+Taryn+Ashbourne&qid=1794426904&sr=8-1",
+    },
+    {
+      id: 5,
+      title: "The Borrowed Voice",
+      author: "Taryn Ashbourne",
+      format: "Historical Fiction & Musical Mystery",
+      image: "/Wax Cylinders/Wax Cylinders5.jpg",
+      amazonUrl:
+        "https://www.amazon.com/Borrowed-Voice-Phantom-Opera-Book-ebook/dp/B0HQXK72V4/ref=sr_1_1?dib=eyJ2IjoiMSJ9.JymV8g01buwH8L6kIBN0XQ.JfpikNlqo1lRF7xi68YwvWd_oG7L10r3VuLmcpHobtI&dib_tag=se&keywords=The+Borrowed+Voice+Taryn+Ashbourne&qid=1794426933&sr=8-1",
+    },
+  ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        {/* BREADCRUMB NAVIGATION */}
+        {/* ======================================
+            BREADCRUMB NAVIGATION
+        ====================================== */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
 
           <Link
             to="/"
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
           <span>/</span>
+
           <span>Period Treasures</span>
+
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Wax Cylinders & Recordings
           </span>
 
-        </div>
+        </nav>
 
-        {/* PAGE HEADER */}
+        {/* ======================================
+            PAGE HEADER
+        ====================================== */}
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-          <div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
+            <div className="flex-1 min-w-0">
 
-              <Disc className="w-4 h-4" />
+              <div className="flex items-center gap-2 text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
 
-              <span>
-                Early Sound Technology & Historic Recordings
+                <Disc size={15} />
+
+                <span>
+                  Early Recorded Voices, Musical Mysteries & Historic Sound
+                </span>
+
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Wax Cylinders & Recordings
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Discover fascinating stories inspired by
+                early sound recordings, forgotten voices,
+                historic phonographs, and the mysteries
+                of musical history. Explore captivating
+                cozy mysteries, historical fiction,
+                and remarkable reflections on the
+                preservation of recorded sound.
+                Journey through forgotten melodies,
+                mysterious disappearances, and the
+                enduring legacy of voices captured
+                across generations.
+              </p>
+
+            </div>
+
+            {/* ======================================
+                CURATED INDEX
+            ====================================== */}
+
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
+
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
+
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
               </span>
 
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Wax Cylinders & Recordings
-            </h1>
-
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Explore the fascinating beginnings of
-              recorded sound through historic wax
-              cylinders, early phonograph technology,
-              classical music performances, Victorian
-              speeches, and pioneering acoustic recordings.
-              Discover remarkable artifacts that preserve
-              the voices, musical traditions, and
-              technological achievements of the
-              nineteenth and early twentieth centuries.
-            </p>
-
           </div>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
+        </header>
 
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
+        {/* ======================================
+            BOOK COLLECTION GRID
+        ====================================== */}
 
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Artifacts
-            </span>
-
-          </div>
-
-        </div>
-
-        {/* COLLECTION GRID */}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
             <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full min-w-0"
             >
 
-              {/* COVER IMAGE */}
+              {/* ======================================
+                  BOOK COVER
+              ====================================== */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
@@ -164,44 +196,58 @@ const books = [
 
               </div>
 
-              {/* ITEM INFORMATION */}
+              {/* ======================================
+                  CATEGORY BADGE
+              ====================================== */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* CATEGORY BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
-                {/* ITEM TITLE */}
+              </div>
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-4 min-h-[110px]">
+              {/* ======================================
+                  BOOK INFORMATION
+              ====================================== */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
+                {/* BOOK TITLE */}
+
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                {/* CREATOR / COMPANY */}
+                {/* AUTHOR NAME */}
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
+                <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
                   by {book.author}
                 </p>
 
-                {/* AMAZON VIEW BUTTON */}
+                {/* ======================================
+                    AMAZON VIEW BOOK BUTTON
+                ====================================== */}
 
-                <div className="mt-auto pt-5">
+                <div className="mt-auto pt-4">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Find ${book.title} on Amazon`}
-                      className="w-full bg-[#241a15] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
+
                       <BookOpen size={15} />
+
                       View Book
+
                       <ArrowUpRight size={15} />
+
                     </a>
 
                   </div>
@@ -214,19 +260,21 @@ const books = [
 
           ))}
 
-        </div>
+        </section>
 
-        {/* BOTTOM DIVIDER */}
+        {/* ======================================
+            BOTTOM DIVIDER
+        ====================================== */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 

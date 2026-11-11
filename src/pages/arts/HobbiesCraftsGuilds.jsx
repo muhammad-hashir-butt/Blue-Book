@@ -13,197 +13,224 @@ export default function HobbiesCraftsGuilds() {
   // ==========================================
   // HOBBIES, CRAFTS & GUILDS
   // Images: public/Hobbies/
-  // Screenshot-matching book titles
-  // Prices removed
-  // Amazon search links
-  // No hover effects or animations
+  // Actual titles matched to screenshots
+  // All images: .jpg
+  // No prices
+  // Compact cards
+  // Georgia font
+  // No hover animations
   // ==========================================
 
   const books = [
     {
       id: 1,
-      title: "DIY Crafts for Adults: Creepy (Book 6)",
-      author: null,
-      format: "Creative DIY & Halloween Crafts",
-      image: "/Hobbies/Hobbies1.webp",
+      title: "Color Adventures: The Little Lantern Guild",
+      author: "E. R. Tazwood",
+      format: "Fantasy Coloring & Cozy Adventures",
+      image: "/Hobbies/Hobbies1.jpg",
       amazonUrl:
-        "https://www.amazon.com/DIY-Crafts-Adults-Projects-Materials/dp/B0HHXKTCX5/ref=sr_1_1?dib=eyJ2IjoiMSJ9.vWlQmsIlpjQy8FK0Kgott1zPpj068Z4f2pOyFWFjMMsSQcvjjFyBJ_irSe2wEhXUrVwQLv2xmOwuwJ4CwmT3GcDnPoKOKWv9i2um2TVKvZC9YNpuLQjOjkGpcbAYpe_c3CeKUeUZPXnBp1mHqeiCGoyfm8Q7lxm9LfStWA_m5n5AzxC5-abwYDqnwdciwHM2pxIQ24Z_9ubLi8GPU-9ZDKJMrgYf9jYeprCo0ZcJwvQ.E10WjOWfJXSsoHaNXwEM-XKxof5XS6dBOYRPOEV9Pjk&dib_tag=se&keywords=DIY+Crafts+for+Adults+Creepy+Book+6&qid=1794244624&sr=8-1",
+        "https://www.amazon.com/Little-Lantern-Guild-Story-Writing-Adventures/dp/B0HNF16MR9/ref=sr_1_6?Adv-Srch-Books-Submit.x=0&Adv-Srch-Books-Submit.y=0&dib=eyJ2IjoiMSJ9.d8bdEQ7Wib77HtAHYRvmgX7oZrMEq5KTjMoXm5B9fdb0jrvvpHSgsGa5b1pvuZls592ptsv0UYTaEv5voK2Z2XvgbwQkGsXkbnfm6RdSL7IHKS40ygPATrcoP7H61DZ-hsceh1_0ZyJoxMx3SjIe7kcEG7wG3niqt3re7-UD_28uek4irdW7W8rx5eTR-S57zuBD1rUSO22ZxV1vaJRalW7PjLWPADyqZJmzsSzql38.wWWZ2o38IwxBiYH53c-xB9NwTt2AMaLsvYAJRB0Nv2k&dib_tag=se&keywords=hobbies+crafts+guilds+Independent&qid=1794418089&s=books&sr=1-6&unfiltered=1",
     },
     {
       id: 2,
-      title: "DIY Crafts for Adults (Book One)",
-      author: null,
-      format: "DIY Projects & Handmade Crafts",
-      image: "/Hobbies/Hobbies2.webp",
+      title: "Stitching Stories: Celebrating Our Heritage",
+      author: "African American Quilt & Doll Guild",
+      format: "Quilting, Doll Making & Cultural Heritage",
+      image: "/Hobbies/Hobbies2.jpg",
       amazonUrl:
-        "https://www.amazon.com/DIY-Crafts-Adults-Projects-Materials/dp/B0HCGNM8GV/ref=sr_1_7?dib=eyJ2IjoiMSJ9.OExnVhDn2G-epbY4q48Ti3xQmei9SHFKvbJQEDS8SvcMVQYaVAu9t7ZFHg7fj5HLmffs-kCXJQtGPX6bER17T9w01TPA01I1_i3_QfyZjtFuIyMp5SPMP03pQAaGr4LLY7HuBuMnWyVWQoA_kTI_YEH9tWmC4DZHTYlKL_vtD6dzeQycTk79i4wxHV4jIAtEfkpnEcHuLoBsIflX6sv-yzmQadguorbZdaPM23RFuKI.7vsSqua_uf9GXW2GXXpEDnwHmKGTchlgrmOTpDxGehc&dib_tag=se&keywords=DIY+Crafts+for+Adults+Book+One&qid=1794244656&sr=8-7",
+        "https://www.amazon.com/Stitching-Stories-Celebrating-Our-Heritage/dp/B0D2RTZ9M6/ref=sr_1_1?dib=eyJ2IjoiMSJ9.ASd0eLT66fOfbhANBWQEPw9ke4IC2C6lSaUnG-LR9FNoWeh20sOubYb3nH5Grth4mvKiztXXPbuQjvxhNkvn2tbAe9ObzewBnVl0smaO1cDDSNBTgpx-MD1ioYtKMIfc32D3mykgmPeaaR4ou-lOcpodyCaRudY-NlctIrNHzbcPqsBVaq0gDBStks4xtcOGZzFfvR0MXgHpH1PFNtbEDpFkBT8ZfwXzxkse_VW9QvM.99BvdtUhame1pqSECPOBsOaU63AWPeS5hEPGVDkgmwk&dib_tag=se&keywords=Stitching+Stories+Celebrating+Our+Heritage+Quilt+Doll+Guild&nsdOptOutParam=true&qid=1794417530&sr=8-1",
     },
     {
       id: 3,
-      title: "Crafting the Wheel of the Year",
-      author: "Claire Gelder & Deb Bowen",
-      format: "Seasonal Crafts & Traditions",
-      image: "/Hobbies/Hobbies3.webp",
+      title: "Christmas at Home: 51 Vintage Scenes for Coloring",
+      author: null,
+      format: "Christmas Coloring & Seasonal Crafts",
+      image: "/Hobbies/Hobbies3.jpg",
       amazonUrl:
-        "https://www.amazon.com/Crafting-Wheel-Year-magical-projects/dp/180092237X/ref=sr_1_1?dib=eyJ2IjoiMSJ9.i1Z76d7cXaPlYm8_MPGbTw.Ry8LXivizKF_f8YyFQJbfHHZDal3qWLY5joYi3OpPy4&dib_tag=se&keywords=9781800922372&qid=1794244679&sr=8-1",
+        "https://www.amazon.com/Christmas-Home-Illustrated-Vintage-Coloring/dp/B0HR55YSRK/ref=sr_1_7?Adv-Srch-Books-Submit.x=0&Adv-Srch-Books-Submit.y=0&dib=eyJ2IjoiMSJ9.d8bdEQ7Wib77HtAHYRvmgX7oZrMEq5KTjMoXm5B9fdb0jrvvpHSgsGa5b1pvuZls592ptsv0UYTaEv5voK2Z2XvgbwQkGsXkbnfm6RdSL7IHKS40ygPATrcoP7H61DZ-hsceh1_0ZyJoxMx3SjIe7kcEG7wG3niqt3re7-UD_28uek4irdW7W8rx5eTR-S57zuBD1rUSO22ZxV1vaJRalW7PjLWPADyqZJmzsSzql38.wWWZ2o38IwxBiYH53c-xB9NwTt2AMaLsvYAJRB0Nv2k&dib_tag=se&keywords=hobbies+crafts+guilds+Independent&qid=1794418089&s=books&sr=1-7&unfiltered=1",
     },
     {
       id: 4,
-      title: "Cozy Cottagecore Crafts: 50 Slow-Living DIY Projects Made with Natural and Simple Materials",
-      author: "Omar S. Alamad",
-      format: "Cottagecore & Natural Crafts",
+      title: "Animal Adventurers Guild",
+      author: "Spudbits",
+      format: "Fantasy Animals & Creative Coloring",
       image: "/Hobbies/Hobbies4.jpg",
       amazonUrl:
-        "https://www.amazon.com/Cozy-Cottagecore-Crafts-Slow-Living-Materials/dp/B0FZ8C8YZT/ref=sr_1_1?dib=eyJ2IjoiMSJ9.uSBVPHKHq-HquZDvgVNEVw.-l0Zt6VgrvAVUcYAgkGqoFzkHGQSbx1SvMFahjROdr4&dib_tag=se&keywords=9798272689788&qid=1794244712&sr=8-1",
+        "https://www.amazon.com/Animal-Adventurers-Guild-Coloring-Costumes/dp/B0HKRWMP1Q/ref=sr_1_1?dib=eyJ2IjoiMSJ9.xOYqOyF-ee4ElrgLrQefHQ.XahHZpcuNgfUIFh5q6MNvxhQA3JdwxI3kmLB2PS3aS4&dib_tag=se&keywords=9798176503784&qid=1794417656&sr=8-1",
     },
     {
       id: 5,
-      title: "A Beginners' Guide to the Dolls' House Hobby",
-      author: "Jean Nisbett",
-      format: "Miniature Crafts & Dollhouses",
+      title: "Glowgarden Guild: A Cozy Coloring Adventure Through a Little World of Wonder",
+      author: "Nikhil Singhal",
+      format: "Cozy Coloring & Fantasy Gardens",
       image: "/Hobbies/Hobbies5.jpg",
       amazonUrl:
-        "https://www.amazon.co.uk/Beginners-Guide-Dolls-House-Hobby/dp/1861080379",
+        "https://www.amazon.com/Glowgarden-Guild-Coloring-Adventure-Through/dp/B0HLTNTVK6/ref=sr_1_1?dib=eyJ2IjoiMSJ9.NQKzwv-MpMNdDJkNxnIXaw.GYR0Nn5PvE_J_IUNCbRHSI_KCRWhymHXhN3EqftejXw&dib_tag=se&keywords=Glowgarden+Guild+Nikhil+Singhal&qid=1794417708&sr=8-1",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
-
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
         {/* BREADCRUMB NAVIGATION */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
 
           <Link
             to="/"
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
           <span>/</span>
+
           <span>Arts & Special Interests</span>
+
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Hobbies, Crafts & Guilds
           </span>
 
-        </div>
+        </nav>
 
         {/* PAGE HEADER */}
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
 
-          <div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
+            <div className="flex-1">
 
-              <Scissors className="w-4 h-4" />
+              <div className="flex items-center gap-2 text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
 
-              <span>
-                Creative Hobbies & Handmade Traditions
+                <Scissors size={16} />
+
+                <span>
+                  Creative Hobbies & Handmade Traditions
+                </span>
+
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Hobbies, Crafts & Guilds
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Discover creative hobbies, inspiring
+                coloring adventures, traditional quilting,
+                handmade crafts, seasonal activities,
+                and imaginative artistic projects.
+                Explore books celebrating craftsmanship,
+                cultural heritage, fantasy illustrations,
+                and the joy of creative expression.
+              </p>
+
+            </div>
+
+            {/* CURATED INDEX */}
+
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
+
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
+
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
               </span>
 
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Hobbies, Crafts & Guilds
-            </h1>
-
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Discover creative hobbies, inspiring DIY
-              projects, seasonal decorations, traditional
-              crafting techniques, miniature dollhouse
-              designs, and handmade creations.
-              Explore books that celebrate imagination,
-              craftsmanship, and the joy of making
-              something beautiful by hand.
-            </p>
-
           </div>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
-
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
-
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
-
-          </div>
-
-        </div>
+        </header>
 
         {/* BOOK COLLECTION GRID */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
 
             <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
               {/* BOOK COVER */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
 
                 <img
                   src={book.image}
-                  alt={book.title}
+                  alt={
+                    book.author
+                      ? `${book.title} by ${book.author}`
+                      : book.title
+                  }
                   loading="lazy"
                   className="w-full h-full object-contain"
                 />
 
               </div>
 
-              {/* BOOK INFORMATION */}
+              {/* CATEGORY BADGE */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                {/* CATEGORY BADGE */}
-
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
+              </div>
+
+              {/* BOOK INFORMATION */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
                 {/* BOOK TITLE */}
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-4 min-h-[90px]">
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                {/* AUTHOR NAME */}
+                {/* AUTHOR / ORGANIZATION */}
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
-                  {book.author
-                    ? `by ${book.author}`
-                    : "Creative DIY Craft Collection"}
-                </p>
+                {book.author && (
+                  <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
+                    {book.id === 2 ? "Published by " : "by "}
+                    {book.author}
+                  </p>
+                )}
 
                 {/* AMAZON VIEW BOOK BUTTON */}
 
-                <div className="mt-auto pt-5">
+                <div className="mt-auto pt-4">
 
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Find ${book.title} on Amazon`}
-                      className="w-full bg-[#241a15] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
+
                       <BookOpen size={15} />
+
                       View Book
+
                       <ArrowUpRight size={15} />
+
                     </a>
 
                   </div>
@@ -216,19 +243,19 @@ export default function HobbiesCraftsGuilds() {
 
           ))}
 
-        </div>
+        </section>
 
         {/* BOTTOM DIVIDER */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-3 mt-9">
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
 
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
 
         </div>
 

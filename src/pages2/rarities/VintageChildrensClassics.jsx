@@ -9,189 +9,271 @@ import {
 
 export default function VintageChildrensClassics() {
 
-  // Vintage Children's Classics
-  // Local images: public/Vintage/
-  // Prices removed
-  // Amazon search links
-  // No hover effects or animations
+  // ==========================================
+  // VINTAGE CHILDREN'S CLASSICS
+  // Images: public/Vintage/
+  // All images: .jpg
+  // Titles matched with actual book covers
+  // No prices
+  // Compact cards
+  // Georgia font
+  // No hover animations
+  // Amazon links included
+  // ==========================================
 
   const books = [
     {
       id: 1,
-      title: "The Velveteen Rabbit",
-      author: "Margery Williams",
-      format: "Classic Children's Literature",
-      image: "/Vintage/Vintage1.webp",
+      title:
+        "Vintage Christmas Coloring Book for Kids and Adults",
+      author: "Alanna Page ",
+      format: "Vintage Christmas & Holiday Coloring",
+      image: "/Vintage/Vintage1.jpg",
       amazonUrl:
-"https://www.amazon.com/Velveteen-Rabbit-Margery-Williams/dp/0385375662/ref=sr_1_1?dib=eyJ2IjoiMSJ9.yJ6wFzOdJ4YeJlJ_8BR2FFAw9mBlvqDQbtZLoiBvBzD8Cb8zyjOS-YOHXmB-v060uGUPAEnaDdXrIWD1HrgyyVek8aWybaUUyfP1HGLrr8YuRgTemJKSmjXeGciX6Q0bS258LD_OvnQlxIuvLxAktrD157ynulfiDCXr48V_cN5FSsfnsisqijuenI-GWH-HuUVhHldTupMmNBMxYfemoIrZ5JpjkumRHjXEQZRsYcs.7iNAEDn-kNSW_Fw0ZUY2TqpGtpEUylsxifnDS85x27Y&dib_tag=se&keywords=The+Velveteen+Rabbit+Margery+Williams&qid=1794250588&sr=8-1",    },
+"https://www.amazon.com/Vintage-Christmas-Coloring-Book-Adults/dp/B0G29N5VN2/ref=sr_1_3?dib=eyJ2IjoiMSJ9.M8NN8Wy0HvHaOjRJwhNe_uPLHHEqzrvLjCUMhtwauqoM2FlpxEsFTeG9Ixn1skVkX0eNdqK7MeAOeVlrPHsQPImqEu-6TQLRLRCheRgQuk2oRnHoTQ2wz1JYYLqtIYN8gKEck-D0VGTnVjsjG0gnlUbtQDi5Bx4DzIZ3lPpWXz49IV2vgyuhmj-tgVJukdVmVMCBX-78AjsBrSlF0Y4aOGmf9gTu1vDj2HKvNJfx6g0.XeG7H_loN0-R59yCyueCgHFEyMwkCP0WVTrKWoNxFII&dib_tag=se&keywords=Vintage+Christmas+Coloring+Book+for+Kids+and+Adults&nsdOptOutParam=true&qid=1794424069&sr=8-3"    },
     {
       id: 2,
-      title: "Aesop's Fables: The Classic Edition",
-      author: "Aesop, illustrated by Charles Santore",
-      format: "Classic Fables & Illustrated Stories",
-      image: "/Vintage/Vintage2.webp",
+      title:
+        "Old Fashioned Christmas Coloring Book",
+      author: "Shiny Lemon Press",
+      format: "Nostalgic Christmas Coloring",
+      image: "/Vintage/Vintage2.jpg",
       amazonUrl:
-        "https://www.amazon.com/Aesops-Fables-Classic-Charles-Santore/dp/1604338105/ref=sr_1_1?dib=eyJ2IjoiMSJ9.o4I7S0S3VU6QlfHg17uuQP8oqaYJFoCuyME-MuO5Hb2GA2fbJvdy10BG_mRRgvztUja7e5JKCm-YKPbeSYHWfSWEVnjxBEAb2VBldphjZeG1BUY5RwMgcYk4X9y2tsykhXYnsbr9DDiDUcavReVukI8fHN78ozLq11168dJ323VHTTVLBIq-2k9_BrbX4-2aMpvWYJ87ajanLaVt6O1c2FbCciKrqUdjhyvzzI5Jxr8.ZCip3WL8hnYGObmDdszKix5BVUL09trLkVkjnsaX2rk&dib_tag=se&keywords=aesop%27s+fables+classic+edition+charles+santore&qid=1794250629&sr=8-1",
-    },
+"https://www.amazon.com/Old-Fashioned-Christmas-Coloring-Book/dp/B0F2H4C7FS/ref=pd_sbs_d_sccl_1_3/141-2292669-5146048?pd_rd_w=qsInn&content-id=amzn1.sym.0cb10f30-7cd4-4985-9826-58b2c1174c19&pf_rd_p=0cb10f30-7cd4-4985-9826-58b2c1174c19&pf_rd_r=CZBMMM58BZE1DTVGADAC&pd_rd_wg=af4s0&pd_rd_r=bc4a145d-f370-4a73-bf55-2fd083a4662a&pd_rd_i=B0F2H4C7FS&psc=1"    },
     {
       id: 3,
-      title: "The Classic Tale of Peter Rabbit and Other Cherished Stories",
-      author: "Beatrix Potter, illustrated by Charles Santore",
+      title:
+        "The Classic Tale of Peter Rabbit and Other Cherished Stories",
+      author:
+        " Shiny Lemon Press",
       format: "Illustrated Children's Classics",
       image: "/Vintage/Vintage3.jpg",
       amazonUrl:
-        "https://www.amazon.com/Classic-Tale-Peter-Rabbit-Cherished/dp/1604333766/ref=sr_1_1?dib=eyJ2IjoiMSJ9.2c39zYoK8qJmupE1h8A_KJXMr1ogUX7ni1lk5oHOP4AGZgUEaCMJ6cNBLkfvUcjAgTQm6bHJgwyD0X3pXqd-piZyMFkzbnMyYwb8MQXaE1eWzAkSu0R7hBEFX0VFmwmhO6Q9ACZxD40SFDzLyK0PLBPMe53kbtbbnf-3LmLAju5kK5tDB8omFlZ2XYE2z8W3VnGIpTuzrZmKXlyaSHpIdUj_ViHsejG-VFk_7wgkXuU.lw195Rm__tNWceZlz2PJf5SKCJQxer-69RUX3RzFdRU&dib_tag=se&keywords=Classic+Tale+of+Peter+Rabbit+Charles+Santore&qid=1794250659&sr=8-1",
+        "https://www.amazon.co.uk/Country-Farm-Coloring-Book-Nostalgic/dp/B0H2PN4CKC",
     },
     {
       id: 4,
-      title: "The Fuzzy Duckling",
-      author: "Jane Werner Watson",
-      format: "Little Golden Book Classic",
-      image: "/Vintage/Vintage4.webp",
+      title:
+        "Retro Children Coloring Book: Little Homemakers",
+      author: "Shiny Lemon Press",
+      format: "Retro Children's Coloring & Activities",
+      image: "/Vintage/Vintage4.jpg",
       amazonUrl:
-        "https://www.amazon.com/Fuzzy-Duckling-Little-Golden-Book/dp/0553522132/ref=sr_1_1?dib=eyJ2IjoiMSJ9.UCs2szUSLOmT5BO9x0seE6aWvQm53wW5DA7-o6XXkYTFBrZw2MmtpQgdA6arpw6yUNz4NCoi8pQBXPEK1L7hDfOw8MWFCBGV3u3mSfZzFvn86OgRbrugsErGd4UssosTzcNnuCpKRyakrF31gfrVIVWxi6xAuJhDAx7W594G-Ks0iOiD0lLJOU1TCCqzK8NSsWOXgv-WpgxFUA4FEpf2NyjEDXoybYrspU2RzCRCWAs.WsQT2wICrFwAcO3O_zC18fNfZE58XsYHybsrmv0EbPA&dib_tag=se&keywords=The+Fuzzy+Duckling+Jane+Werner+Watson&qid=1794250686&sr=8-1",
+        "https://www.amazon.com/Retro-Children-Coloring-Book-Homemakers/dp/B0H2J2QQS4/ref=sr_1_1?dib=eyJ2IjoiMSJ9.GqlTEDTOO3J62lumaPO82nsuCRGlzuKiNmlMLyh5h8Ss44wXFrD81ZkXwqOQvvdX_3UnKBvXnt715NRAGiHnbgnaFDTKrYyb9A9fSyJ27eyYYFyymG0xnR9fbTdVmDLEMbATxlmNAlaF4KDUhloWJ9TAJUA-OEZg1dy6iiEHjHhfBIsrWwspHHqiZ-Svtvc4hxVMl37zi4b4p94c7wfokEWnAE-_k32e61c_fvSVOIs.5eoiv2iZUbASSQ2pU8fCVLaonZz04EoWOG4TSChEQXc&dib_tag=se&keywords=Retro+Children+Coloring+Book+Little+Homemakers&qid=1794424211&sr=8-1",
     },
     {
       id: 5,
-      title: "Mother Goose Treasury",
-      author: "Traditional Nursery Rhymes",
-      format: "Nursery Rhymes & Poetry",
-      image: "/Vintage/Vintage5.webp",
+      title:
+        "1950s Christmas Coloring Book",
+      author: "Cozy Claudia Studio",
+      format: "1950s Vintage Christmas Coloring",
+      image: "/Vintage/Vintage5.jpg",
       amazonUrl:
-        "https://www.amazon.com/Mother-Goose-Treasury-Beautiful-Collection/dp/1680524615/ref=sr_1_1?dib=eyJ2IjoiMSJ9.CSpUTNdn79em34HkDvIDAhAGuaQcd9XStpWwaxMMZCJqUlIA_h2KAgx2bQt67x8bLTrFJvs6k44mmmbhuGEhtgc6u2y7DFzSbVIJZ0lDSsVoKQkpkGLtFVBMFzVII7Yu_ckgpYwGHqFcUw8VUf1whr_RbP6B-ErYq52WT68xn2zQP4yQxpyc1j3zmhi5QPua8pdhG82KqKdb8EGWnxOZYxErp8IpBsbSTpZK-IEK1Bk.Cs5nd15s_eVGPDaV7rti9A4rsaBYN_hGXfalEfPqo64&dib_tag=se&keywords=Mother+Goose+Treasury+Timeless+Collection+Favorite+Nursery+Rhymes&nsdOptOutParam=true&qid=1794250713&sr=8-1",
+        "https://www.amazon.com/1950s-Christmas-Coloring-Book-Traditions/dp/B0HJMWJXSS/ref=sr_1_1?dib=eyJ2IjoiMSJ9.SGgDleRiAXPPMK7aXr88HEvYb1qUYU4m6uAgt08gw-9irbe0gU2AK9iUeYNPIZUYySZj9ivgaJMbzNbpKJyN92K1M4uL9JKPLSqDRMMK0jQJSbeVt_t9qRrJT2goExab31tCClg1Ymv2qXFaJATUGR_8nD0-N_i6Paev43qPB7v6fS6ZAsXBJW_5bv4028csBYxZmDNT1gJpC-pUDA8veomXdXAqc8N2nA4AFaNOk10.JoT8fnYpjZBdnVaaW_H00XJIqgxeKWj0oxeEw-IwSu4&dib_tag=se&keywords=1950s+Christmas+Coloring+Book+Cozy+Claudia+Studio&qid=1794424246&sr=8-1",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#fbf8f2] text-[#2c241e] font-serif py-10 px-6">
+    <div
+      className="w-full min-h-screen bg-[#fbf8f2] text-[#241a15] px-4 sm:px-6 py-7"
+      style={{
+        fontFamily: "Georgia, 'Times New Roman', serif",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
 
-        {/* BREADCRUMB */}
+        {/* ======================================
+            BREADCRUMB NAVIGATION
+        ====================================== */}
 
-        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-[#7a6452] mb-6">
+        <nav className="flex flex-wrap items-center gap-2 text-xs text-[#7a6452] mb-5">
+
           <Link
             to="/"
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 text-[#7a6452] no-underline"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft size={14} />
             Back to Home
           </Link>
 
           <span>/</span>
+
           <span>Classical Rarities</span>
+
           <span>/</span>
 
-          <span className="text-[#8c2d19] font-bold">
+          <span className="font-bold text-[#8c2d19]">
             Vintage Children's Classics
           </span>
-        </div>
 
-        {/* PAGE HEADER */}
+        </nav>
 
-        <div className="bg-[#241a15] text-[#fbf8f2] p-8 border-2 border-[#c29b38] shadow-md mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        {/* ======================================
+            PAGE HEADER
+        ====================================== */}
 
-          <div>
-            <div className="text-[#c29b38] text-[10px] tracking-[0.3em] uppercase font-sans font-bold mb-2">
-              Timeless Stories, Fables & Childhood Treasures
+        <header className="bg-[#241a15] text-[#fbf8f2] border border-[#c29b38] px-6 py-6 mb-6">
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+            <div className="flex-1">
+
+              <div className="text-[#c29b38] text-[11px] font-bold tracking-[0.15em] uppercase mb-2">
+                Timeless Stories, Vintage Christmas & Childhood Treasures
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+                Vintage Children's Classics
+              </h1>
+
+              <p className="text-[14px] text-[#cbb9a5] mt-2 max-w-2xl leading-relaxed">
+                Discover nostalgic Christmas coloring books,
+                beautifully illustrated childhood classics,
+                retro holiday artwork, and timeless
+                seasonal treasures. Explore charming
+                vintage Santa illustrations, old-fashioned
+                Christmas celebrations, beloved children's
+                stories, and creative coloring collections
+                inspired by the warmth and wonder
+                of generations past.
+              </p>
+
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif">
-              Vintage Children's Classics
-            </h1>
+            {/* ======================================
+                CURATED INDEX
+            ====================================== */}
 
-            <p className="text-xs text-[#b8a68f] mt-2 max-w-xl font-serif italic leading-relaxed">
-              Discover beloved childhood stories,
-              beautifully illustrated fables, classic
-              nursery rhymes, and timeless picture books.
-              Explore cherished tales of friendship,
-              imagination, kindness, and adventure
-              that have delighted generations of
-              children and families.
-            </p>
+            <div className="sm:border-l border-[#594638] sm:pl-6 shrink-0">
+
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-[#c29b38]">
+                Curated Index
+              </span>
+
+              <span className="block text-xl font-bold text-white mt-1">
+                {books.length} Volumes
+              </span>
+
+            </div>
+
           </div>
 
-          <div className="text-center sm:text-right shrink-0 border-t sm:border-t-0 sm:border-l border-[#3d2c23] pt-4 sm:pt-0 sm:pl-8">
-            <span className="text-xs text-[#c29b38] font-sans font-bold uppercase tracking-widest block">
-              Curated Index
-            </span>
+        </header>
 
-            <span className="text-2xl font-bold font-sans text-white">
-              {books.length} Volumes
-            </span>
-          </div>
-        </div>
+        {/* ======================================
+            BOOK COLLECTION GRID
+        ====================================== */}
 
-        {/* BOOK COLLECTION */}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {books.map((book) => (
+
             <article
               key={book.id}
-              className="bg-[#fdfbf7] p-4 border-2 border-[#b8a68f] shadow-sm flex flex-col"
+              className="bg-[#fdfbf7] border border-[#b8a68f] p-3 flex flex-col h-full"
             >
 
-              {/* BOOK IMAGE */}
+              {/* ======================================
+                  BOOK COVER
+              ====================================== */}
 
-              <div className="w-full h-64 bg-[#efe8db] p-2 border border-[#c7b8a3] overflow-hidden mb-4 flex items-center justify-center">
+              <div className="w-full h-60 bg-[#efe8db] border border-[#c7b8a3] p-2 flex items-center justify-center overflow-hidden">
+
                 <img
                   src={book.image}
-                  alt={`${book.title} by ${book.author}`}
+                  alt={
+                    book.author
+                      ? `${book.title} by ${book.author}`
+                      : book.title
+                  }
                   loading="lazy"
                   className="w-full h-full object-contain"
                 />
+
               </div>
 
-              {/* BOOK DETAILS */}
+              {/* ======================================
+                  CATEGORY BADGE
+              ====================================== */}
 
-              <div className="flex flex-col flex-1">
+              <div className="mt-3">
 
-                <span className="text-[9px] font-sans font-bold text-[#8c2d19] border border-[#c29b38] bg-[#fbf8f2] px-2 py-1 uppercase tracking-wide inline-block self-start mb-3">
+                <span className="inline-block text-[10px] font-bold uppercase leading-snug text-[#8c2d19] border border-[#c29b38] px-2 py-1">
                   {book.format}
                 </span>
 
-                <h3 className="text-base font-bold text-[#241a15] leading-snug line-clamp-4 min-h-[110px]">
+              </div>
+
+              {/* ======================================
+                  BOOK INFORMATION
+              ====================================== */}
+
+              <div className="flex flex-col flex-1 mt-2">
+
+                {/* BOOK TITLE */}
+
+                <h2 className="text-[17px] font-bold text-[#241a15] leading-[1.35]">
                   {book.title}
-                </h3>
+                </h2>
 
-                <p className="text-xs text-[#7a6452] italic mt-2 leading-relaxed">
-                  by {book.author}
-                </p>
+                {/* AUTHOR NAME */}
 
-                {/* AMAZON BUTTON */}
+                {book.author && (
+                  <p className="text-[13px] text-[#8a593f] italic mt-2 leading-snug">
+                    by {book.author}
+                  </p>
+                )}
 
-                <div className="mt-auto pt-5">
-                  <div className="border-t border-[#e2d7c5] pt-4">
+                {/* ======================================
+                    AMAZON VIEW BOOK BUTTON
+                ====================================== */}
+
+                <div className="mt-auto pt-4">
+
+                  <div className="border-t border-[#e2d7c5] pt-3">
 
                     <a
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Find ${book.title} on Amazon`}
-                      className="w-full bg-[#241a15] text-[#fbf8f2] text-xs font-sans font-bold py-3 px-4 uppercase tracking-wider flex items-center justify-center gap-2"
+                      className="w-full bg-[#241a15] text-[#fffaf4] text-[12px] font-bold py-3 px-3 uppercase tracking-wide flex items-center justify-center gap-2 no-underline"
                     >
+
                       <BookOpen size={15} />
+
                       View Book
+
                       <ArrowUpRight size={15} />
+
                     </a>
 
                   </div>
+
                 </div>
 
               </div>
+
             </article>
+
           ))}
 
-        </div>
+        </section>
 
-        {/* BOTTOM DIVIDER */}
+        {/* ======================================
+            BOTTOM DIVIDER
+        ====================================== */}
 
-        <div className="flex items-center justify-center gap-4 mt-16">
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
-          <span className="text-[#8c7355] text-xs whitespace-nowrap">
+        <div className="flex items-center gap-3 mt-9">
+
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
+
+          <span className="text-[#8c7355] text-xs">
             ♦ ♦ ♦
           </span>
-          <span className="h-[1px] w-full bg-[#d6c7b2]" />
+
+          <span className="h-px flex-1 bg-[#d6c7b2]" />
+
         </div>
 
       </div>
