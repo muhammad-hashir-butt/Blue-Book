@@ -12,7 +12,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
-import thundersmouthLogo from "../assets/Thundersmouth logo.png";
+import longstreetLogo from "../assets/longstreet logo.png";
 
 // ======================================================
 // ALL SEARCHABLE WEBSITE PAGES
@@ -96,7 +96,6 @@ const normalizeText = (value) => {
 };
 
 export default function Navbar() {
-
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -120,7 +119,6 @@ export default function Navbar() {
   // ======================================================
 
   const filteredPages = useMemo(() => {
-
     const query = normalizeText(searchQuery);
 
     if (!query) return [];
@@ -129,7 +127,6 @@ export default function Navbar() {
 
     return searchablePages
       .filter((page) => {
-
         if (!page || !page.name) return false;
 
         const name = normalizeText(page.name);
@@ -138,21 +135,18 @@ export default function Navbar() {
         return (
           name.includes(query) ||
           path.includes(query) ||
-          queryWords.every((word) =>
-            name.includes(word) || path.includes(word)
+          queryWords.every(
+            (word) =>
+              name.includes(word) || path.includes(word)
           )
         );
-
       })
       .sort((a, b) => {
-
         const nameA = normalizeText(a.name);
         const nameB = normalizeText(b.name);
 
         const getScore = (name) => {
-
           if (name === query) return 0;
-
           if (name.startsWith(query)) return 1;
 
           if (
@@ -168,7 +162,6 @@ export default function Navbar() {
 
         return getScore(nameA) - getScore(nameB);
       });
-
   }, [searchQuery]);
 
   // ======================================================
@@ -176,7 +169,6 @@ export default function Navbar() {
   // ======================================================
 
   const openPage = (page) => {
-
     if (!page) return;
 
     setSearchQuery("");
@@ -185,15 +177,10 @@ export default function Navbar() {
     setSelectedIndex(-1);
 
     if (page.dropdown) {
-
       setActiveDropdown(page.dropdown);
-
     } else if (page.path) {
-
       setActiveDropdown(null);
-
       navigate(page.path);
-
       window.scrollTo(0, 0);
     }
   };
@@ -203,15 +190,12 @@ export default function Navbar() {
   // ======================================================
 
   const handleSearch = (e) => {
-
     e.preventDefault();
 
     if (!searchQuery.trim()) {
-
       setSearchError(
         "Please enter a page or category name."
       );
-
       return;
     }
 
@@ -222,11 +206,8 @@ export default function Navbar() {
         : filteredPages[0];
 
     if (page) {
-
       openPage(page);
-
     } else {
-
       setSearchError("No matching page found.");
       setShowSuggestions(true);
     }
@@ -237,13 +218,10 @@ export default function Navbar() {
   // ======================================================
 
   const handleSearchKeyDown = (e) => {
-
     if (e.key === "ArrowDown") {
-
       if (!filteredPages.length) return;
 
       e.preventDefault();
-
       setShowSuggestions(true);
 
       setSelectedIndex((previous) =>
@@ -254,11 +232,9 @@ export default function Navbar() {
     }
 
     if (e.key === "ArrowUp") {
-
       if (!filteredPages.length) return;
 
       e.preventDefault();
-
       setShowSuggestions(true);
 
       setSelectedIndex((previous) =>
@@ -269,22 +245,18 @@ export default function Navbar() {
     }
 
     if (e.key === "Escape") {
-
       setShowSuggestions(false);
       setSelectedIndex(-1);
     }
   };
 
   return (
-
     <header
       className="w-full bg-[#fbf8f2] text-[#2c241e] border-b-2 border-[#d6c7b2] font-serif"
       onKeyDown={(e) => {
-
         if (e.key === "Escape") {
           setActiveDropdown(null);
         }
-
       }}
     >
 
@@ -293,32 +265,25 @@ export default function Navbar() {
       ================================================== */}
 
       <div className="bg-[#241a15] text-[#e8dfcf] text-[11px] py-1.5 px-6 border-b border-[#c29b38] font-sans">
-
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
 
           <div className="tracking-widest uppercase text-gray-300">
-            BLUE BOOK — The World's Premier Rare, Antiquarian & Collectible Marketplace
+            LONGSTREET — The World's Premier Rare, Antiquarian & Collectible Marketplace
           </div>
 
           <div className="flex items-center gap-4 text-xs">
-
-            <Link
-              to="/help"
-              className="hover:text-[#c29b38] hover:underline"
-            >
-              Collector Support
-            </Link>
+            <span className="text-[#c29b38] font-semibold tracking-wide">
+  A World of Timeless Stories
+</span>
 
             <span className="text-gray-500">|</span>
 
             <div className="flex items-center gap-1 font-semibold text-[#e8dfcf]">
               <span>USD ($)</span>
             </div>
-
           </div>
 
         </div>
-
       </div>
 
       {/* ==================================================
@@ -332,15 +297,13 @@ export default function Navbar() {
         <Link
           to="/"
           className="flex items-center shrink-0"
-          aria-label="Blue Book Home"
+          aria-label="Longstreet Home"
         >
-
           <img
-            src={thundersmouthLogo}
-            alt="Blue Book - Rare Books & Manuscripts"
+            src={longstreetLogo}
+            alt="Longstreet - Rare Books & Manuscripts"
             className="block w-auto h-auto max-h-[76px] max-w-[260px] sm:max-w-[390px] md:max-w-[480px] object-contain"
           />
-
         </Link>
 
         {/* ==================================================
@@ -354,38 +317,26 @@ export default function Navbar() {
             role="search"
             className="flex border-2 border-[#b8a68f] bg-white rounded-none shadow-inner"
           >
-
             <input
               type="text"
               value={searchQuery}
-
               onChange={(e) => {
-
                 setSearchQuery(e.target.value);
                 setShowSuggestions(true);
                 setSelectedIndex(-1);
                 setSearchError("");
-
               }}
-
               onFocus={() => {
-
                 if (searchQuery.trim()) {
                   setShowSuggestions(true);
                 }
-
               }}
-
               onKeyDown={handleSearchKeyDown}
-
               onBlur={() => {
                 setShowSuggestions(false);
               }}
-
               placeholder="Search pages, categories..."
-
               className="px-3 py-1.5 text-xs w-64 sm:w-80 md:w-96 outline-none text-[#241a15] placeholder-stone-400 bg-transparent font-serif"
-
               aria-label="Search website pages"
               aria-autocomplete="list"
               aria-expanded={
@@ -400,11 +351,8 @@ export default function Navbar() {
               className="bg-[#382b22] hover:bg-[#241a15] px-4 flex items-center justify-center text-[#e8dfcf]"
               aria-label="Search"
             >
-
               <Search className="w-3.5 h-3.5" />
-
             </button>
-
           </form>
 
           {/* ==================================================
@@ -412,46 +360,33 @@ export default function Navbar() {
           ================================================== */}
 
           {showSuggestions && searchQuery.trim() && (
-
             <div
               id="navbar-search-results"
               role="listbox"
               className="absolute top-[40px] left-0 w-full bg-[#fdfbf7] border-2 border-[#b8a68f] shadow-xl z-[100] max-h-[320px] overflow-y-auto"
             >
-
               {filteredPages.length > 0 ? (
-
                 <>
-
                   <div className="px-3 py-2 text-[10px] uppercase tracking-wider font-bold text-[#8c2d19] border-b border-[#e2d7c5]">
-
                     Matching Pages ({filteredPages.length})
-
                   </div>
 
                   {filteredPages.map((page, index) => (
-
                     <button
                       key={page.path || page.dropdown}
                       type="button"
                       role="option"
-                      aria-selected={
-                        selectedIndex === index
-                      }
-
+                      aria-selected={selectedIndex === index}
                       onMouseDown={(e) => {
                         e.preventDefault();
                       }}
-
                       onClick={() => openPage(page)}
-
                       className={`w-full flex items-center gap-3 px-3 py-3 text-left border-b border-[#eee5d9] text-[12px] ${
                         selectedIndex === index
                           ? "bg-[#efe8db] text-[#8c2d19]"
                           : "bg-[#fdfbf7] text-[#241a15]"
                       }`}
                     >
-
                       <Search
                         size={13}
                         className="text-[#8c7355] shrink-0"
@@ -465,33 +400,23 @@ export default function Navbar() {
                         size={13}
                         className="text-[#8c7355] shrink-0"
                       />
-
                     </button>
-
                   ))}
-
                 </>
-
               ) : (
-
                 <div className="px-4 py-4 text-[12px] text-[#7a6452]">
                   No matching pages found.
                 </div>
-
               )}
-
             </div>
-
           )}
 
           {/* SEARCH ERROR MESSAGE */}
 
           {searchError && (
-
             <p className="text-[11px] text-[#8c2d19] font-serif">
               {searchError}
             </p>
-
           )}
 
           {/* ADVANCED SEARCH */}
@@ -504,7 +429,6 @@ export default function Navbar() {
           </Link>
 
         </div>
-
       </div>
 
       {/* ==================================================
@@ -514,7 +438,6 @@ export default function Navbar() {
       <div className="border-t border-[#dfd4c3] bg-[#f4eee2] relative shadow-sm">
 
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-center text-xs tracking-wider uppercase font-semibold">
-
           <nav className="flex items-center justify-center gap-6 sm:gap-9">
 
             {/* HOME */}
@@ -534,25 +457,17 @@ export default function Navbar() {
                 setActiveDropdown("browse")
               }
             >
-
               <button
-                onClick={() =>
-                  toggleDropdown("browse")
-                }
-
+                onClick={() => toggleDropdown("browse")}
                 className={`py-3 flex items-center gap-1 hover:text-[#8c2d19] ${
                   activeDropdown === "browse"
                     ? "text-[#8c2d19] border-b-2 border-[#8c2d19]"
                     : "text-[#241a15]"
                 }`}
               >
-
                 Browse Books
-
                 <ChevronDown className="w-3 h-3" />
-
               </button>
-
             </div>
 
             {/* RARE BOOKS DROPDOWN */}
@@ -563,25 +478,17 @@ export default function Navbar() {
                 setActiveDropdown("rare")
               }
             >
-
               <button
-                onClick={() =>
-                  toggleDropdown("rare")
-                }
-
+                onClick={() => toggleDropdown("rare")}
                 className={`py-3 flex items-center gap-1 hover:text-[#8c2d19] ${
                   activeDropdown === "rare"
                     ? "text-[#8c2d19] border-b-2 border-[#8c2d19]"
                     : "text-[#241a15]"
                 }`}
               >
-
                 Rare & Antiquarian
-
                 <ChevronDown className="w-3 h-3" />
-
               </button>
-
             </div>
 
             {/* BOOKSTORES */}
@@ -593,7 +500,7 @@ export default function Navbar() {
               Bookstores
             </Link>
 
-            {/* bookmarketing */}
+            {/* BOOK MARKETING */}
 
             <Link
               to="/book-marketing"
@@ -603,7 +510,6 @@ export default function Navbar() {
             </Link>
 
           </nav>
-
         </div>
 
         {/* ==================================================
@@ -611,21 +517,15 @@ export default function Navbar() {
         ================================================== */}
 
         {activeDropdown === "browse" && (
-
           <div
-            onMouseLeave={() =>
-              setActiveDropdown(null)
-            }
-
+            onMouseLeave={() => setActiveDropdown(null)}
             className="absolute left-1/2 -translate-x-1/2 top-full w-full max-w-5xl bg-[#fdfbf7] border-2 border-[#b8a68f] shadow-2xl z-50 text-xs normal-case overflow-hidden p-8"
           >
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
               {/* COLUMN 1: LITERATURE & CLASSICS */}
 
               <div>
-
                 <h5 className="text-[11px] tracking-wider uppercase font-bold text-[#241a15] pb-2 mb-3 border-b border-[#e2d7c5] font-sans">
                   Literature & Classics
                 </h5>
@@ -675,13 +575,11 @@ export default function Navbar() {
                   </Link>
 
                 </div>
-
               </div>
 
               {/* COLUMN 2: THOUGHT & SCIENCE */}
 
               <div>
-
                 <h5 className="text-[11px] tracking-wider uppercase font-bold text-[#241a15] pb-2 mb-3 border-b border-[#e2d7c5] font-sans">
                   Thought & Science
                 </h5>
@@ -731,13 +629,11 @@ export default function Navbar() {
                   </Link>
 
                 </div>
-
               </div>
 
               {/* COLUMN 3: ARTS & SPECIAL INTERESTS */}
 
               <div>
-
                 <h5 className="text-[11px] tracking-wider uppercase font-bold text-[#241a15] pb-2 mb-3 border-b border-[#e2d7c5] font-sans">
                   Arts & Special Interests
                 </h5>
@@ -787,13 +683,10 @@ export default function Navbar() {
                   </Link>
 
                 </div>
-
               </div>
 
             </div>
-
           </div>
-
         )}
 
         {/* ==================================================
@@ -801,21 +694,15 @@ export default function Navbar() {
         ================================================== */}
 
         {activeDropdown === "rare" && (
-
           <div
-            onMouseLeave={() =>
-              setActiveDropdown(null)
-            }
-
+            onMouseLeave={() => setActiveDropdown(null)}
             className="absolute left-1/2 -translate-x-1/2 top-full w-full max-w-5xl bg-[#fdfbf7] border-2 border-[#b8a68f] shadow-2xl z-50 text-xs normal-case overflow-hidden p-8"
           >
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
               {/* COLUMN 1: CLASSICAL RARITIES */}
 
               <div>
-
                 <h5 className="text-[11px] tracking-wider uppercase font-bold text-[#241a15] pb-2 mb-3 border-b border-[#e2d7c5] font-sans">
                   Classical Rarities
                 </h5>
@@ -865,13 +752,11 @@ export default function Navbar() {
                   </Link>
 
                 </div>
-
               </div>
 
               {/* COLUMN 2: PERIOD TREASURES */}
 
               <div>
-
                 <h5 className="text-[11px] tracking-wider uppercase font-bold text-[#241a15] pb-2 mb-3 border-b border-[#e2d7c5] font-sans">
                   Period Treasures
                 </h5>
@@ -921,13 +806,11 @@ export default function Navbar() {
                   </Link>
 
                 </div>
-
               </div>
 
               {/* COLUMN 3: MANUSCRIPTS & SCIENCE */}
 
               <div>
-
                 <h5 className="text-[11px] tracking-wider uppercase font-bold text-[#241a15] pb-2 mb-3 border-b border-[#e2d7c5] font-sans">
                   Manuscripts & Science
                 </h5>
@@ -977,18 +860,14 @@ export default function Navbar() {
                   </Link>
 
                 </div>
-
               </div>
 
             </div>
-
           </div>
-
         )}
 
       </div>
 
     </header>
-
   );
 }

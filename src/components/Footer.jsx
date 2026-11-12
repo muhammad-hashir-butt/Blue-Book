@@ -8,8 +8,7 @@ import {
   PhoneCall,
 } from "lucide-react";
 
-import thundersmouthLogo from "../assets/Thundersmouth logo.png";
-
+import footerLogo from "../assets/footer logo.png";
 // ================================================
 // FOOTER NAVIGATION - 4 COLUMNS, 5 LINKS EACH
 // ================================================
@@ -121,6 +120,7 @@ export default function Footer() {
   const location = useLocation();
 
   // SCROLL TO TOP ON PAGE CHANGE
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -155,15 +155,15 @@ export default function Footer() {
               <Link
                 to="/"
                 onClick={handleFooterNavigation}
-                aria-label="Blue Book Home"
+                aria-label="Longstreet Home"
                 className="shrink-0 flex items-center justify-center"
               >
-                <img
-                  src={thundersmouthLogo}
-                  alt="Blue Book - Rare Books & Manuscripts"
-                  loading="lazy"
-                  className="block w-auto h-auto max-w-[230px] sm:max-w-[260px] max-h-[110px] object-contain"
-                />
+               <img
+  src={footerLogo}
+  alt="Longstreet - Rare Books & Manuscripts"
+  loading="lazy"
+  className="block w-auto h-auto max-w-[230px] sm:max-w-[260px] max-h-[110px] object-contain"
+/>
               </Link>
 
               {/* BRAND CONTENT */}
@@ -183,7 +183,7 @@ export default function Footer() {
                   of rare books, timeless literary classics,
                   historical treasures, fine art editions,
                   and extraordinary manuscripts.
-                  At BLUE BOOK, we celebrate the beauty
+                  At LONGSTREET, we celebrate the beauty
                   of literature, the value of knowledge,
                   and the lasting legacy of the written word.
                 </p>
@@ -215,7 +215,7 @@ export default function Footer() {
               <p className="text-[12px] text-white mt-2 mb-4 leading-relaxed">
                 Explore new arrivals, timeless classics,
                 rare collections, and featured literary
-                discoveries from BLUE BOOK.
+                discoveries from LONGSTREET.
               </p>
 
               {/* NEWSLETTER FORM */}
@@ -375,8 +375,8 @@ export default function Footer() {
             <PhoneCall className="w-4 h-4 text-white" />
 
             <span>
-              Collector Support: 1-800-813-9432
-            </span>
+Address: 2974 Hardman Ct NE
+Atlanta, GA 30305-3425            </span>
 
           </div>
 
@@ -389,7 +389,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 mt-5 pt-4 border-t border-[#333333] text-center text-[11px] text-white">
 
           <p>
-            Copyright © {new Date().getFullYear()} BLUE BOOK.
+            Copyright © {new Date().getFullYear()} LONGSTREET.
             All Rights Reserved.
           </p>
 

@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 
 export default function MarketingPage() {
+  // ==============================================================
+  // STEP: YAHAN APNI WEB3FORMS ACCESS KEY PASTE KAREIN
+  // (Jo aapko associatesalman@gmail.com par aayegi)
+  // ==============================================================
+  const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
   const [activeTab, setActiveTab] = useState("amazon");
   const [form, setForm] = useState({
     authorOrPublisher: "",
@@ -14,6 +20,7 @@ export default function MarketingPage() {
     campaignNotes: "",
     termsAccepted: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
@@ -26,22 +33,78 @@ export default function MarketingPage() {
     setError("");
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+
+    // Required fields check
     if (!form.authorOrPublisher || !form.contactName || !form.email || !form.campaignNotes) {
       setError("Please complete all required fields marked with an asterisk.");
       return;
     }
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(form.email)) {
       setError("Please provide a valid professional email address.");
       return;
     }
+
     if (!form.termsAccepted) {
       setError("Please acknowledge our privacy and campaign terms.");
       return;
     }
-    setSubmitted(true);
+
+    setIsSubmitting(true);
+
+    try {
+      // Direct Email Sending to associatesalman@gmail.com via Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Campaign Proposal: ${form.authorOrPublisher} (${form.contactName})`,
+          from_name: "Thundersmouth Book Portal",
+          to_email: "associatesalman@gmail.com",
+          "Author / Press Name": form.authorOrPublisher,
+          "Contact Name": form.contactName,
+          "Email Address": form.email,
+          "Amazon ASIN / ISBN / URL": form.amazonLinkOrAsin || "Not provided (Unpublished)",
+          "Target Marketplace": form.targetMarket,
+          "Primary Service Requested": form.primaryService,
+          "Monthly Promotion Budget": form.monthlyBudget,
+          "Campaign Objectives & Notes": form.campaignNotes,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        // Form reset after submission
+        setForm({
+          authorOrPublisher: "",
+          contactName: "",
+          email: "",
+          amazonLinkOrAsin: "",
+          genre: "Literary Fiction",
+          targetMarket: "Amazon US and Global",
+          primaryService: "Full-Service Book Publishing and Print Production",
+          monthlyBudget: "$1,500 - $3,500",
+          campaignNotes: "",
+          termsAccepted: false,
+        });
+      } else {
+        setError(result.message || "Failed to deliver submission. Please check your Access Key.");
+      }
+    } catch (err) {
+      setError("Network error occurred. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToForm = () => {
@@ -70,13 +133,11 @@ export default function MarketingPage() {
       `}</style>
 
       {/* =========================================================
-          HERO SECTION: THUNDERSMOUTH LITERARY
+          HERO SECTION
       ========================================================= */}
       <section className="border-b border-[#E3D7C5]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 py-16 sm:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
-            {/* Left Content Side */}
             <div className="lg:col-span-7">
               <div className="flex items-center gap-3 mb-6">
                 <span className="w-8 h-px bg-[#8C2D19]" />
@@ -95,7 +156,6 @@ export default function MarketingPage() {
                 for authors, university presses, and independent imprints.
               </p>
 
-              {/* Action Buttons */}
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <button
                   onClick={scrollToForm}
@@ -112,15 +172,16 @@ export default function MarketingPage() {
               </div>
 
               <div className="mt-9 pt-6 border-t border-[#E8DDCE] flex flex-wrap items-center gap-6 text-xs text-[#7A6758] font-serif-body">
-                <span>Independent Authors</span>
+                <span>Manuscript Editing</span>
                 <span>•</span>
-                <span>Mid-Sized Presses</span>
+                <span>Interior Typesetting</span>
                 <span>•</span>
-                <span>Academic and University Imprints</span>
+                <span>Global Distribution</span>
+                <span>•</span>
+                <span>Amazon Advertising</span>
               </div>
             </div>
 
-            {/* Right Editorial Image Frame */}
             <div className="lg:col-span-5">
               <div className="bg-[#FCFAF6] p-3 border border-[#D8CCBD] shadow-sm">
                 <div className="relative h-[320px] sm:h-[380px] overflow-hidden bg-[#E8DECE]">
@@ -141,7 +202,6 @@ export default function MarketingPage() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -196,8 +256,6 @@ export default function MarketingPage() {
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          
-          {/* Left Column */}
           <div className="lg:col-span-7">
             <p className="text-[11px] uppercase tracking-[0.2em] font-sans font-bold text-[#8C2D19] mb-4">
               COMMERCIAL AND EDITORIAL STRATEGY
@@ -227,7 +285,6 @@ export default function MarketingPage() {
             </p>
           </div>
 
-          {/* Right Image Card with Dark Banner */}
           <div className="lg:col-span-5">
             <div className="relative h-[340px] sm:h-[380px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
               <img
@@ -246,18 +303,14 @@ export default function MarketingPage() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* =========================================================
           EDITORIAL SECTION 1: ISBN REGISTRATION AND BARCODE
-          (Layout: Content on LEFT, Image Canvas on RIGHT)
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24 border-t border-[#E3D7C5]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          
-          {/* Content on LEFT */}
           <div className="lg:col-span-7">
             <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-4 font-editorial-caps">
               BIBLIOGRAPHIC INFRASTRUCTURE AND GLOBAL TRADE
@@ -288,11 +341,10 @@ export default function MarketingPage() {
             </p>
           </div>
 
-          {/* Image Canvas on RIGHT with Dark Overlay */}
           <div className="lg:col-span-5">
             <div className="relative h-[340px] sm:h-[380px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
               <img
-                src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=85"
+                src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Bibliographic registers and vintage book printing"
                 className="w-full h-full object-cover"
               />
@@ -307,18 +359,14 @@ export default function MarketingPage() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* =========================================================
           EDITORIAL SECTION 2: PRINT-ON-DEMAND (POD)
-          (Layout: Image Canvas on LEFT, Content on RIGHT - ALTERNATING)
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24 border-t border-[#E3D7C5]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          
-          {/* Image Canvas on LEFT with Dark Overlay */}
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative h-[340px] sm:h-[380px] bg-[#E8DECE] overflow-hidden border border-[#D8CCBD]">
               <img
@@ -338,7 +386,6 @@ export default function MarketingPage() {
             </div>
           </div>
 
-          {/* Content on RIGHT */}
           <div className="lg:col-span-7 order-1 lg:order-2">
             <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-4 font-editorial-caps">
               AGILE SUPPLY CHAIN AND DISTRIBUTION
@@ -367,7 +414,6 @@ export default function MarketingPage() {
               guaranteed wholesale availability in ordering databases utilized by Barnes and Noble, Waterstones, and independent bookshops.
             </p>
           </div>
-
         </div>
       </section>
 
@@ -376,7 +422,6 @@ export default function MarketingPage() {
       ========================================================= */}
       <section id="publishing-suite" className="bg-[#FAF7F2] py-16 md:py-24 border-t border-[#E3D7C5]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
-          
           <div className="border-b border-[#E3D7C5] pb-8 mb-12 sm:mb-14">
             <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-3">
               PRODUCTION AND DISTRIBUTION ARCHITECTURE
@@ -391,10 +436,8 @@ export default function MarketingPage() {
             </p>
           </div>
 
-          {/* 4 Pillars of Book Publishing */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
-            
-            {/* Publishing Pillar 1: Editorial */}
+            {/* Stage 1 */}
             <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-6 sm:p-7 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
@@ -426,7 +469,7 @@ export default function MarketingPage() {
               </div>
             </div>
 
-            {/* Publishing Pillar 2: Typesetting */}
+            {/* Stage 2 */}
             <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-6 sm:p-7 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
@@ -458,7 +501,7 @@ export default function MarketingPage() {
               </div>
             </div>
 
-            {/* Publishing Pillar 3: Cover & Finishes */}
+            {/* Stage 3 */}
             <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-6 sm:p-7 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
@@ -490,7 +533,7 @@ export default function MarketingPage() {
               </div>
             </div>
 
-            {/* Publishing Pillar 4: Distribution & Rights */}
+            {/* Stage 4 */}
             <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-6 sm:p-7 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2 font-editorial-caps">
@@ -521,7 +564,6 @@ export default function MarketingPage() {
                 Over 40,000 Retailers
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -531,7 +573,6 @@ export default function MarketingPage() {
       ========================================================= */}
       <section id="services-suite" className="bg-[#F4EEE3] border-y border-[#E2D5C3] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
-          
           <div className="border-b border-[#DDD0BF] pb-8 mb-12 sm:mb-14">
             <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-3">
               SPECIALIZED AMAZON SERVICES
@@ -545,10 +586,8 @@ export default function MarketingPage() {
             </p>
           </div>
 
-          {/* 3 Core Amazon Service Blocks */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            {/* 1. Amazon Book Marketing */}
+            {/* Pillar 1 */}
             <div className="bg-[#FAF7F2] border border-[#DDD0BF] p-7 sm:p-8 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2.5">
@@ -585,7 +624,7 @@ export default function MarketingPage() {
               </div>
             </div>
 
-            {/* 2. Amazon Advertising */}
+            {/* Pillar 2 */}
             <div className="bg-[#FAF7F2] border border-[#DDD0BF] p-7 sm:p-8 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2.5">
@@ -622,7 +661,7 @@ export default function MarketingPage() {
               </div>
             </div>
 
-            {/* 3. Amazon A+ Content */}
+            {/* Pillar 3 */}
             <div className="bg-[#FAF7F2] border border-[#DDD0BF] p-7 sm:p-8 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2.5">
@@ -658,7 +697,6 @@ export default function MarketingPage() {
                 Full Copywriting and Asset Creation
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -667,7 +705,6 @@ export default function MarketingPage() {
           SECTION: CAMPAIGNS, SOCIAL MEDIA, AND AD SERVICES
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 md:py-24">
-        
         <div className="border-b border-[#E3D7C5] pb-8 mb-12 sm:mb-14">
           <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-3">
             INTEGRATED EXECUTION
@@ -681,10 +718,8 @@ export default function MarketingPage() {
           </p>
         </div>
 
-        {/* 3 Extended Service Blocks */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
-          {/* 4. Campaigns Architecture */}
+          {/* Service 1 */}
           <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-7 sm:p-8 flex flex-col justify-between">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2.5">
@@ -721,7 +756,7 @@ export default function MarketingPage() {
             </div>
           </div>
 
-          {/* 5. Social Media Marketing */}
+          {/* Service 2 */}
           <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-7 sm:p-8 flex flex-col justify-between">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2.5">
@@ -758,7 +793,7 @@ export default function MarketingPage() {
             </div>
           </div>
 
-          {/* 6. Advertising Services */}
+          {/* Service 3 */}
           <div className="bg-[#FCFAF6] border border-[#DDD0BF] p-7 sm:p-8 flex flex-col justify-between">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C2D19] block mb-2.5">
@@ -794,7 +829,6 @@ export default function MarketingPage() {
               Dedicated Senior Campaign Strategist
             </div>
           </div>
-
         </div>
       </section>
 
@@ -804,7 +838,6 @@ export default function MarketingPage() {
       <section className="bg-[#FAF7F2] border-t border-[#E2D5C3] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
             <div className="lg:col-span-6">
               <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8C2D19] mb-3">
                 CRITIC AND READER SOCIAL PROOF
@@ -853,7 +886,6 @@ export default function MarketingPage() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -876,7 +908,6 @@ export default function MarketingPage() {
             </p>
           </div>
 
-          {/* Tabs */}
           <div className="flex flex-wrap gap-2.5 border-b border-[#DDD0BF] pb-4 mb-8">
             {[
               { id: "amazon", label: "01. Amazon PPC and A+ Content" },
@@ -899,7 +930,6 @@ export default function MarketingPage() {
             ))}
           </div>
 
-          {/* Tab Panel */}
           <div className="bg-[#FAF7F2] border border-[#DDD0BF] p-6 sm:p-10">
             {activeTab === "amazon" && (
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -1056,7 +1086,7 @@ export default function MarketingPage() {
                   <div className="border border-[#E2D5C3] p-5 sm:p-6 bg-[#FCFAF6]">
                     <h4 className="text-sm font-bold font-serif-heading mb-1.5">Author Q and A Profiles</h4>
                     <p className="font-serif-body text-xs text-[#614F42] leading-relaxed sm:leading-6">
-                      Thoughtfully crafted long-form interviews distributed through Thundersmouth digital channels.
+                      Thoughtfully crafted long-form interviews distributed through curated digital channels.
                     </p>
                   </div>
                   <div className="border border-[#E2D5C3] p-5 sm:p-6 bg-[#FCFAF6]">
@@ -1105,7 +1135,7 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          THE 90-DAY VELOCITY BLUEPRINT (SPACED TIMELINE)
+          THE 90-DAY VELOCITY BLUEPRINT
       ========================================================= */}
       <section className="bg-[#FAF7F2] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
@@ -1174,7 +1204,7 @@ export default function MarketingPage() {
       </section>
 
       {/* =========================================================
-          CAMPAIGN INQUIRY CONSOLE
+          CAMPAIGN INQUIRY CONSOLE (CONNECTED WITH EMAIL DISPATCH)
       ========================================================= */}
       <section id="inquiry-desk" className="bg-[#F3EDE2] border-t border-[#DFD3C3] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
@@ -1196,11 +1226,11 @@ export default function MarketingPage() {
               <div className="mt-9 border-t border-[#E3D7C5] pt-6 space-y-3.5 text-xs font-serif-body">
                 <div>
                   <span className="block font-bold text-[#241A15]">Campaign Strategy:</span>
-                  <span className="text-[#7A6758] mt-0.5 block">campaigns@thundersmouth.com</span>
+                  <span className="text-[#7A6758] mt-0.5 block">Contact us through the inquiry form below.</span>
                 </div>
                 <div>
                   <span className="block font-bold text-[#241A15]">Amazon A+ and Advertising Services:</span>
-                  <span className="text-[#7A6758] mt-0.5 block">ads@thundersmouth.com</span>
+                  <span className="text-[#7A6758] mt-0.5 block">Contact us through the inquiry form below.</span>
                 </div>
               </div>
             </div>
@@ -1366,7 +1396,7 @@ export default function MarketingPage() {
                     />
                     <span className="text-[11px] font-serif-body text-[#5A4A3F] leading-relaxed">
                       I confirm that I represent this title or publishing catalog and request a formal
-                      campaign audit and strategic proposal from Thundersmouth Literary.
+                      campaign audit and strategic proposal from the publishing team.
                     </span>
                   </label>
                 </div>
@@ -1381,17 +1411,18 @@ export default function MarketingPage() {
                   <div className="mt-4 p-4 bg-[#EDF3E8] border border-[#B3C9A7] text-[#2F4A24]">
                     <h4 className="font-bold text-xs">Campaign Brief Received</h4>
                     <p className="text-xs mt-1 font-serif-body leading-relaxed">
-                      Thank you. We have received your title specifications. Our Amazon and digital campaign specialists
-                      will conduct an initial ASIN, keyword, and category audit and respond within 24 business hours.
+                      Thank you. Your proposal has been dispatched directly to our marketing desk (associatesalman@gmail.com).
+                      Our specialists will conduct an initial ASIN, keyword, and category audit and respond within 24 business hours.
                     </p>
                   </div>
                 )}
 
                 <button
                   type="submit"
-                  className="mt-6 bg-[#8C2D19] text-white px-7 py-3.5 text-xs font-semibold tracking-widest uppercase cursor-pointer"
+                  disabled={isSubmitting}
+                  className="mt-6 bg-[#8C2D19] text-white px-7 py-3.5 text-xs font-semibold tracking-widest uppercase cursor-pointer disabled:opacity-60"
                 >
-                  Submit Campaign Details
+                  {isSubmitting ? "Submitting..." : "Submit Campaign Details"}
                 </button>
               </form>
             </div>
