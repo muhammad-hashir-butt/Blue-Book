@@ -3,12 +3,11 @@ import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   ShieldCheck,
-  Mail,
-  Feather,
-  PhoneCall,
+  MapPin,
 } from "lucide-react";
 
 import footerLogo from "../assets/footer logo.png";
+
 // ================================================
 // FOOTER NAVIGATION - 4 COLUMNS, 5 LINKS EACH
 // ================================================
@@ -148,7 +147,7 @@ export default function Footer() {
 
             {/* LOGO AND DESCRIPTION */}
 
-            <div className="lg:col-span-7 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+            <div className="lg:col-span-12 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
 
               {/* BRAND LOGO */}
 
@@ -158,12 +157,12 @@ export default function Footer() {
                 aria-label="Longstreet Home"
                 className="shrink-0 flex items-center justify-center"
               >
-               <img
-  src={footerLogo}
-  alt="Longstreet - Rare Books & Manuscripts"
-  loading="lazy"
-  className="block w-auto h-auto max-w-[230px] sm:max-w-[260px] max-h-[110px] object-contain"
-/>
+                <img
+                  src={footerLogo}
+                  alt="Longstreet - Rare Books & Manuscripts"
+                  loading="lazy"
+                  className="block w-auto h-auto max-w-[230px] sm:max-w-[260px] max-h-[110px] object-contain"
+                />
               </Link>
 
               {/* BRAND CONTENT */}
@@ -189,61 +188,6 @@ export default function Footer() {
                 </p>
 
               </div>
-
-            </div>
-
-            {/* ================================================
-                NEWSLETTER SECTION
-            ================================================ */}
-
-            <div className="lg:col-span-5 bg-black p-6 border border-[#444444]">
-
-              <div className="flex items-center gap-2 text-white mb-2 font-sans font-bold text-[10px] tracking-widest uppercase">
-
-                <Feather className="w-3.5 h-3.5" />
-
-                <span>
-                  The Literary Newsletter
-                </span>
-
-              </div>
-
-              <h4 className="text-base font-bold text-white">
-                Discover Your Next Great Read
-              </h4>
-
-              <p className="text-[12px] text-white mt-2 mb-4 leading-relaxed">
-                Explore new arrivals, timeless classics,
-                rare collections, and featured literary
-                discoveries from LONGSTREET.
-              </p>
-
-              {/* NEWSLETTER FORM */}
-
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="flex items-center bg-white border border-[#666666] overflow-hidden"
-              >
-
-                <div className="pl-3 text-black">
-                  <Mail className="w-4 h-4" />
-                </div>
-
-                <input
-                  type="email"
-                  required
-                  placeholder="Enter your email address..."
-                  className="w-full min-w-0 px-3 py-3 text-xs text-black bg-transparent outline-none placeholder-[#666666] font-serif"
-                />
-
-                <button
-                  type="submit"
-                  className="bg-white text-black border-l border-[#cccccc] font-sans font-bold px-4 py-3 uppercase tracking-wider text-[10px] whitespace-nowrap"
-                >
-                  Subscribe
-                </button>
-
-              </form>
 
             </div>
 
@@ -368,15 +312,20 @@ export default function Footer() {
 
           </div>
 
-          {/* CUSTOMER SUPPORT */}
+          {/* OFFICE ADDRESS */}
 
           <div className="flex items-center gap-2 text-white">
 
-            <PhoneCall className="w-4 h-4 text-white" />
+            <MapPin className="w-4 h-4 text-white shrink-0" />
 
-            <span>
-Address: 2974 Hardman Ct NE
-Atlanta, GA 30305-3425            </span>
+            <address className="not-italic leading-relaxed text-white">
+              <span className="block">
+                2974 Hardman Ct NE
+              </span>
+              <span className="block">
+                Atlanta, GA 30305-3425
+              </span>
+            </address>
 
           </div>
 
