@@ -338,8 +338,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 mt-5 pt-4 border-t border-[#333333] text-center text-[11px] text-white">
 
           <p>
-            Copyright © {new Date().getFullYear()} LONGSTREET.
-            All Rights Reserved.
+            Copyright © LONGSTREET | Rare Books, Timeless Literature & Collectible Editions. All Rights Reserved.
           </p>
 
           <p className="mt-2 italic text-white">
